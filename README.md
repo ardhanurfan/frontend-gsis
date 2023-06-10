@@ -44,24 +44,27 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Design System
+## Code Styling & Repository
 
-<h1 className="header1">Header1</h1>
-<h1 className="header2">Header2</h1>
-<h1 className="header3">Header3</h1>
-<h1 className="body">Body</h1>
-<h1 className="button-text">Button Text</h1>
-<br />
-<h1 className="bg-primaryYellow">Primary Yellow</h1>
-<h1 className="bg-primaryOrange">Primary Orange</h1>
-<h1 className="bg-primaryBlue">Primary Blue</h1>
-<h1 className="bg-primaryGreen">Primary Green</h1>
-<h1 className="bg-seccondaryYellow">seccondary Yellow</h1>
-<h1 className="bg-seccondaryOrange">seccondary Orange</h1>
-<h1 className="bg-seccondaryBlue">seccondary Blue</h1>
-<h1 className="bg-seccondaryGreen">seccondary Green</h1>
-<br />
-<h1 className="bg-error">Error</h1>
-<h1 className="bg-link">Link</h1>
-<h1 className="bg-warning">Warning</h1>
-<h1 className="bg-success">Success</h1>
+Sangat dimohon untuk memperhatikan hal-hal berikut:
+
+1. Penamaan variabel, fungsi, dan kelas yang bermakna
+2. Penyingkatan harus mudah ditebak dan masih terbaca
+   - Misalkan, codeStylingAndRepository, terlalu panjang, disingkat menjadi: codeStyleNRepo
+   - Yang Salah: csnr, cdStNrep
+     3.Membuat kelas dengan pascal case (ClassName)
+3. Membuat fungsi dan variable dengan camel case (fungsiDanVariabel)
+4. Membuat folder dengan snake case (folder_styling)
+5. Membuat file dengan kebab case (file-styling.tsx)
+6. Membuat komponen React dan nama filenya dengan pascal case (NamaKomponen)
+7. Gunakan design sistem yang sudah tersedia pada konfigurasi tailwindcss
+
+## Semantic Commit Message
+
+- `feat`: (new feature for the user, not a new feature for build script)
+- `fix`: (bug fix for the user, not a fix to a build script)
+- `docs`: (changes to the documentation)
+- `style`: (formatting, missing semi colons, etc; no production code change)
+- `refactor`: (refactoring production code, eg. renaming a variable)
+- `test`: (adding missing tests, refactoring tests; no production code change)
+- `chore`: (updating grunt tasks etc; no production code change)
