@@ -14,7 +14,7 @@
   @apply font-monserrat font-bold tracking-[0.2] leading-none text-[24px];
 }
 
-.body {
+.body-text {
   @apply font-monserrat font-normal tracking-[0.1] leading-[1.4] text-[16px];
 }
 
