@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.carousel-item{
+    height: 200px;
+    width: 945px;
+}
+
+.inner-card{
+    background: linear-gradient(140.77deg, rgba(255, 255, 255, 0.6) 6.15%, rgba(255, 255, 255, 0.2) 88.95%);
+}
+
+.inner-card-red{
+    background: linear-gradient(140.77deg, rgba(255, 255, 255, 0.6) 6.15%, rgba(255, 255, 255, 0.2) 88.95%);
+}
+
+.inner-card-yellow{
+    background: linear-gradient(140.77deg, rgba(255, 255, 255, 0.6) 6.15%, rgba(255, 255, 255, 0.2) 88.95%);
+}
+
+.inner-card-green{
+    background: linear-gradient(140.77deg, rgba(255, 255, 255, 0.6) 6.15%, rgba(255, 255, 255, 0.2) 88.95%);
+}
+
+.badge-name{
+    background: linear-gradient(96.9deg, rgba(255, 255, 255, 0.6) 27.43%, rgba(255, 255, 255, 0.2) 72.05%);
+}
+
+.badge-name-red{
+    background: linear-gradient(96.9deg, rgba(255, 255, 255, 0.6) 27.43%, rgba(255, 255, 255, 0.2) 72.05%);
+}
+
+.badge-name-yellow{
+    background: linear-gradient(96.9deg, rgba(255, 255, 255, 0.6) 27.43%, rgba(255, 255, 255, 0.2) 72.05%);
+}
+
+.badge-name-green{
+    background: linear-gradient(96.9deg, rgba(255, 255, 255, 0.6) 27.43%, rgba(255, 255, 255, 0.2) 72.05%);
+}
