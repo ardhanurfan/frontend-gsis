@@ -23,3 +23,7 @@ details[open] > summary::after {
 details[open] > summary {
     @apply rounded-t-xl rounded-b-none;
 }
+
+/* details[close] > summary {
+    @apply w-[1230px];
+} */
