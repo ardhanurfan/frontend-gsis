@@ -36,7 +36,7 @@ const ProfilePeserta = () => {
                             </div>
                             <div className="flex flex-col gap-[5px]">
                                 <h3 className="header3 text-primaryBlue">Year</h3>
-                                <p className="body-text text-primaryBlue">2021/2022</p>
+                                <p className="body-text text-primaryBlue">2022/2023</p>
                             </div>
                         </div>
                         <div className="flex flex-col gap-[5px]">
