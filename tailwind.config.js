@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", 'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      boxShadow: {
+        'blue': '0px -5px 15px 5px rgba(0, 92, 186, 0.25)',
+      },
       fontFamily: {
         monserrat: ["Monserrat", "sans-serif"],
       },
