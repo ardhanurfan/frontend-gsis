@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .header1 {
-  @apply font-monserrat font-extrabold tracking-[0.2] leading-none text-[64px];
+  @apply font-monserrat font-bold tracking-[0.2] leading-none text-[64px];
 }
 
 .header2 {
