@@ -25,7 +25,7 @@ const ProfilePeserta = () => {
                             <h3 className="header3 text-primaryBlue">Phone Number</h3>
                             <p className="body-text text-primaryBlue">+62XXXXXXXXXXX</p>
                         </div>
-                        <div className="flex gap-[11.78%]">
+                        <div className="flex lg:gap-[11.78%] lg:flex-row gap-3 flex-col flex-wrap">
                             <div className="flex flex-col gap-[5px]">
                                 <h3 className="header3 text-primaryBlue">University</h3>
                                 <p className="body-text text-primaryBlue">Bandung Institute of Technology</p>
