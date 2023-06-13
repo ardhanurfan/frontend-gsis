@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <div className="relative shadow-md shadow-slate-600 bottom-0">
+        <div className="relative shadow-md shadow-slate-600 bottom-0 clear-both">
             <div className="px-[35px] flex justify-between items-center w-full h-[50px] bg-slate-100 bg-opacity-20 backdrop-blur-lg mx-auto top-[40px] border-2 border-white border-opacity-20 shadow-md ">
                 <img src="./src/assets/logo_gsis.svg" alt="" />
                 <div className="flex gap-[5px] items-center">
