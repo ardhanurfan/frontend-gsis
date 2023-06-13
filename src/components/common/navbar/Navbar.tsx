@@ -7,7 +7,7 @@ const Navbar = () => {
           <div className="flex gap-[50px] button-text text-primaryBlue">
             <a>Home</a>
             <a>About Us</a>
-            <a>Ceremnony</a>
+            <a>FAQ</a>
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
+import './style.css';
+
 const Footer = () => {
     return (
-      <div className="flex w-full justify-between h-[50px] box-shadow-blue">
+      <div className="flex footer w-full justify-between h-[50px] box-shadow-blue">
         <div className="relative">
           <img
             src="./src/assets/logo_gsis.svg"
