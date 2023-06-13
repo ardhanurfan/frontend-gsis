@@ -1,5 +1,5 @@
 import "./App.css";
-import AboutUs from "./pages/aboutUs/index";
+import AboutUs from "./pages/aboutus/index";
 import FAQ from "./pages/faq";
 import Footer from "./components/footer/index";
 import Navbar from "./components/navbar/Navbar";

@@ -11,7 +11,7 @@ const ProfilePeserta = () => {
                     </button>
                 </div>
                 <div className="clear-both flex flex-col gap-[30px] items-center lg:items-start lg:flex-row justify-between mt-[27px] mb-[67px]">
-                    <div className="bg-[url(./assets/placeholder_picture.svg)] h-[250px] w-[250px] rounded-full shrink-0"></div>
+                    <div className="bg-[url(../../../src/assets/placeholder_picture.svg)] h-[250px] w-[250px] rounded-full shrink-0"></div>
                     <div className="h-[561px] lg:w-[908px] w-auto bg-slate-100 bg-opacity-30 shadow-sm rounded-lg border-primaryBlue border-2 shadow-slate-700 flex flex-col gap-3 pt-[19px] px-[1.32%]">
                         <div className="flex flex-col gap-[5px]">
                             <h3 className="header3 text-primaryBlue">Nama</h3>
