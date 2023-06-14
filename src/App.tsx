@@ -5,17 +5,19 @@ import Footer from "./components/footer/index";
 import Navbar from "./components/navbar/Navbar";
 import Homepage from "./pages/homepage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DashboardExhibition from "./pages/dashboardPeserta/exhibition";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
+      <DashboardExhibition />
+      {/* <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="*" element={<FAQ />} />
-      </Routes>
+      </Routes> */}
       <Footer />
     </BrowserRouter>
   );
