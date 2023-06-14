@@ -1,5 +1,4 @@
 import "./App.css";
-import AboutUs from "./pages/aboutus/index";
 import FAQ from "./pages/faq";
 import Homepage from "./pages/homepage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -7,6 +6,9 @@ import Login from "./pages/account/login";
 import SignUp from "./pages/account/signUp";
 import ForgotPassword from "./pages/account/forgot";
 import ForgotSent from "./pages/account/forgotSent";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer";
+import AboutUs from "./pages/aboutUs";
 
 function App() {
   return (
