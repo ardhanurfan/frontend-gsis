@@ -3,25 +3,29 @@
 @tailwind utilities;
 
 .header1 {
-  @apply font-monserrat font-bold tracking-[0.2] leading-none text-[64px];
+  @apply font-montserrat font-bold tracking-[0.2] leading-none text-[64px];
 }
 
 .header2 {
-  @apply font-monserrat font-bold tracking-[0.2] leading-none text-[36px];
+  @apply font-montserrat font-bold tracking-[0.2] leading-none text-[36px];
 }
 
 .header3 {
-  @apply font-monserrat font-bold tracking-[0.2] leading-none text-[24px];
+  @apply font-montserrat font-bold tracking-[0.2] leading-none text-[24px];
 }
 
 .body-text {
-  @apply font-monserrat font-normal tracking-[0.1] leading-[1.4] text-[16px];
+  @apply font-montserrat font-normal tracking-[0.1] leading-[1.4] text-[16px];
 }
 
 .button-text {
-  @apply font-monserrat font-semibold text-[16px];
+  @apply font-montserrat font-semibold text-[16px];
 }
 
 .normal-button{
   @apply max-w-[158px] h-[40px] py-[10px] px-[50px] text-center rounded-lg;
+}
+
+.small {
+  @apply font-montserrat font-normal text-[12px];
 }
