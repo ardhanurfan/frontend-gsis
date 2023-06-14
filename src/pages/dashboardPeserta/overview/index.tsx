@@ -1,6 +1,4 @@
-import "./style.css";
-
-import Overview from "./dashboard-overview";
+import Overview from "../../../components/dashboard_peserta/overview";
 
 const DashboardOverview = () => {
   return (
