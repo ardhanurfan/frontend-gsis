@@ -1,23 +1,29 @@
 import "./App.css";
-import AboutUs from "./pages/aboutus/index";
 import FAQ from "./pages/faq";
-import Footer from "./components/footer/index";
-import Navbar from "./components/navbar/Navbar";
 import Homepage from "./pages/homepage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import EditProfile from "./pages/dashboardPeserta/profilePeserta/edit";
+import Login from "./pages/account/login";
+import SignUp from "./pages/account/signUp";
+import ForgotPassword from "./pages/account/forgot";
+import ForgotSent from "./pages/account/forgotSent";
+import AboutUs from "./pages/aboutus";
+import NotFound from "./pages/addingPages/notFount";
+import ComingSoon from "./pages/addingPages/comingSoon";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="*" element={<FAQ />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/forgot-sent" element={<ForgotSent />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }
