@@ -6,20 +6,22 @@ import Navbar from "./components/navbar/Navbar";
 import Homepage from "./pages/homepage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import EditProfile from "./pages/dashboardPeserta/profilePeserta/edit";
+import EditSubmissionExhibition from "./pages/dashboardPeserta/exhibition/edit_submission";
 
 function App() {
   return (
-    // <BrowserRouter>
-    //   <Navbar />
-    //   <Routes>
-    //     <Route path="/" element={<Homepage />} />
-    //     <Route path="/faq" element={<FAQ />} />
-    //     <Route path="/about-us" element={<AboutUs />} />
-    //     <Route path="*" element={<FAQ />} />
-    //   </Routes>
-    //   <Footer />
-    // </BrowserRouter>
-    <EditProfile/>
+    <BrowserRouter>
+      <Navbar />
+      {/* <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="*" element={<FAQ />} />
+      </Routes> */}
+      <EditSubmissionExhibition />
+      <Footer />
+    </BrowserRouter>
+    // <EditProfile/>
   );
 }
 
