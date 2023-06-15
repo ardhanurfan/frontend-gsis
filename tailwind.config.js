@@ -7,7 +7,7 @@ export default {
         'blue': '0px -5px 15px 5px rgba(0, 92, 186, 0.25)',
       },
       fontFamily: {
-        monserrat: ["Monserrat", "sans-serif"],
+        monserrat: ["Montserrat", "sans-serif"],
       },
       textColor: {
         primaryText: "#015CBA",
