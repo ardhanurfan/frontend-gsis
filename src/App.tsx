@@ -11,16 +11,15 @@ import Announcement from "./pages/dashboardAdmin/announcement";
 function App() {
   return (
     <BrowserRouter>
-      <Announcement />
-      {/* <Navbar /> */}
-      {/* <Routes>
+      <Navbar />
+      <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/overview" element={<Overview />} />
         <Route path="*" element={<FAQ />} />
-      </Routes> */}
-      {/* <Footer /> */}
+      </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
