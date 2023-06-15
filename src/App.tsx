@@ -6,6 +6,8 @@ import Navbar from "./components/navbar/Navbar";
 import Homepage from "./pages/homepage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Overview from "./pages/dashboardAdmin/overview";
+import DashboardBCC from "./pages/dashboardAdmin/dashboardBCC";
+import DashboardCeremony from "./pages/dashboardAdmin/dashboardCeremony";
 
 function App() {
   return (
