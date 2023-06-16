@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <EditSubmissionExhibition />
       <Routes>
-        {/* <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<Homepage />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
@@ -24,7 +24,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/forgot-sent" element={<ForgotSent />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
-        <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
