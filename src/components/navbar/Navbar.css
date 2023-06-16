@@ -1,0 +1,29 @@
+.line{
+    transform: rotate(0deg);
+    transition: all 0.4s;
+}
+
+.line1spin{
+    transform: rotate(135deg);
+}
+
+.line3spin{
+    transform: rotate(45deg);
+}
+
+.overlay{
+    -webkit-transition: max-height 1s; 
+    -moz-transition: max-height 1s; 
+    -ms-transition: max-height 1s; 
+    -o-transition: max-height 1s; 
+    transition: max-height 1s; 
+    overflow: hidden;
+    max-height: 0;
+    z-index: 9;
+}
+
+.hamboxOpen{
+    .overlay{
+        max-height: 500px;
+    }
+}

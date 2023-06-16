@@ -1,21 +1,25 @@
+import Footer from "../../components/footer";
+import Navbar from "../../components/navbar/Navbar";
 import "./style.css";
 
 const FAQ = () => {
   return (
     <>
+      <Navbar />
       <div className="w-full h-auto bg-[url(./src/assets/Background_FAQ.svg)] bg-cover">
         <div className="flex flex-col justify-center py-4">
           <h1 className="pt-[241px] text-7xl font-bold text-center text-[#005CBA] title mb-16">
             FAQ
           </h1>
           <div className="mt-9.5 space-y-4">
-
             <details className="px-52 pb-5 hover:cursor-pointer rounded-xl">
               <summary className="w-full h-[70px] text-lg bg-gradient-to-l from-[#060B81] to-[#005CBA] rounded-xl text-white px-10 mx-auto flex items-center justify-between shadow-lg hover:">
                 How do I join the program?
               </summary>
               <p className="w-auto h-auto bg-white rounded-b-xl flex items-center justify-between shadow-lg px-10 py-5">
-                We have 4 main events that you can join, business case competition, ganesha social impact challenge, exhibition, and grand summit. You can register for these events.
+                We have 4 main events that you can join, business case
+                competition, ganesha social impact challenge, exhibition, and
+                grand summit. You can register for these events.
               </p>
             </details>
 
@@ -24,7 +28,8 @@ const FAQ = () => {
                 What minimum requirement / age to join competition / events?
               </summary>
               <p className="w-auto h-auto bg-white rounded-b-xl flex items-center justify-between shadow-lg px-10 py-5">
-                Minimum requirement / age depends on the event you are participating in. You can read back on each event on this web.
+                Minimum requirement / age depends on the event you are
+                participating in. You can read back on each event on this web.
               </p>
             </details>
 
@@ -51,6 +56,7 @@ const FAQ = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
