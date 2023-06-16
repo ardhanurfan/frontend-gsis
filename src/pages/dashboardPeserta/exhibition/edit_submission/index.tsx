@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+
 import "./style.css";
 import UploadFile from "../../../../components/dashboard_peserta/exhibition/edit_submission/upload-file";
 
@@ -9,6 +11,9 @@ const EditSubmissionExhibition = () => {
   }) => {
     setCharCount(e.target.value);
   };
+
+  const notifySuccess = () => toast.success("Succesfully submitted");
+  const notifyFailed = () => toast.error("Failed to Submit");
 
   return (
     <>
@@ -115,12 +120,13 @@ const EditSubmissionExhibition = () => {
           >
             Cancel
           </a>
-          <a
+          <button
+            onClick={notifySuccess}
             className="cursor-pointer bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center"
-            href=""
           >
-            Save
-          </a>
+            SAVE
+          </button>
+          <Toaster />
         </div>
         <div className="flex flex-col items-center mt-14">
           <h2 className="header2 text-primaryText mb-9">
