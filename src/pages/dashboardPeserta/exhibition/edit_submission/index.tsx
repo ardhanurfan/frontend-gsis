@@ -3,6 +3,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 import "./style.css";
 import UploadFile from "../../../../components/dashboard_peserta/exhibition/edit_submission/upload-file";
+import ContactList from "../../../../components/contact_list";
 
 const EditSubmissionExhibition = () => {
   const [charCount, setCharCount] = useState("");
@@ -132,7 +133,7 @@ const EditSubmissionExhibition = () => {
           <h2 className="header2 text-primaryText mb-9">
             If you’re having trouble, please contact
           </h2>
-          <h2 className="header1">LIST CONTACT</h2>
+          <ContactList />
         </div>
       </div>
     </>
