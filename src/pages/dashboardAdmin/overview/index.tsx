@@ -78,8 +78,8 @@ const Overview = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full h-auto flex justify-end">
-                <button className="">
+            <div className="fixed bottom-16 right-6">
+                <button>
                     <img src={toa} alt="" className="w-[80px] h-[80px] mr-6"/>
                 </button>
             </div>
