@@ -14,7 +14,15 @@ const UploadFile = () => {
 
   const files = acceptedFiles.map((file: FileWithPath) => (
     <li key={file.path}>
-      {file.path} - {file.size} bytes
+      <div className="flex">
+        <img src="./src/assets/doc-upload-success.svg" alt="" />
+        <div className=" ml-1">
+          <p>
+            {file.path} - {file.size} bytes
+          </p>
+          <p className=" text-success font-[8px]">Successfully uploaded!</p>
+        </div>
+      </div>
     </li>
   ));
 
@@ -44,7 +52,7 @@ const UploadFile = () => {
           Uploaded files:
         </h4>
         <ul className="text-primaryText font-semibold text-xs font-monserrat">
-          {files}
+          <div>{files}</div>
         </ul>
       </aside>
     </div>

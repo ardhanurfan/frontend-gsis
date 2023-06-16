@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 import "./style.css";
-import UploadFile from "../../../../components/dashboard_peserta/exhibition/edit_submission/upload-file";
+import UploadFile from "../../../../components/upload-file/upload-file";
 import ContactList from "../../../../components/contact_list";
 
 const EditSubmissionExhibition = () => {
