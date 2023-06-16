@@ -9,6 +9,7 @@ import ForgotSent from "./pages/account/forgotSent";
 import AboutUs from "./pages/aboutUs";
 import NotFound from "./pages/addingPages/notFount";
 import ComingSoon from "./pages/addingPages/comingSoon";
+import BCC from "./pages/event_bcc";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/bcc" element={<BCC />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
