@@ -1,7 +1,7 @@
 import "./style.css";
 import { Carousel } from "flowbite-react";
-import Footer from "../../components/footer";
-import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../../components/footer";
+import Navbar from "../../../components/navbar/Navbar";
 
 const BCC = () => {
   return (
@@ -21,8 +21,40 @@ const BCC = () => {
               <div className="h-[10px] w-[10px] rounded-full bg-primaryOrange"></div>
             </div>
             <div className="w-[1149px] h-auto flex">
-              <div className="w-[497px] mx-10">
-                <p>Foto</p>
+              <div className="relative w-auto mx-10 flex justify-center items-center">
+                <div className="">
+                  <button
+                    type="button"
+                    className="bg-primaryBlue w-[24px] h-[24px] rounded-md flex justify-center items-center"
+                  >
+                    <img
+                      className=""
+                      src="../src/assets/left_white.svg"
+                      alt="Business"
+                    />
+                  </button>
+                </div>
+                <div className="flex items-center justify-center rounded-lg m-10">
+                  <div className="object-cover w-[400px] h-[300px] rounded-lg">
+                    <img
+                      className="object-cover w-[400px] h-[300px] rounded-lg"
+                      src="../src/assets/placeholder_picture.svg"
+                      alt="Business"
+                    />
+                  </div>
+                </div>
+                <div className="">
+                  <button
+                    type="button"
+                    className="bg-primaryBlue w-[24px] h-[24px] rounded-md flex justify-center items-center"
+                  >
+                    <img
+                      className=""
+                      src="../src/assets/right_white.svg"
+                      alt="Business"
+                    />
+                  </button>
+                </div>
               </div>
               <div className="w-[578px] h-[415px] text-justify body-text text-primaryText">
                 <p>
@@ -108,7 +140,7 @@ const BCC = () => {
             <div className="text-center">
               <h1 className="w-auto header1 text-primaryText">Stages</h1>
             </div>
-            <div className="w-auto h-auto flex space-x-10 justify-center mt-20">
+            <div className="w-auto h-auto flex justify-center align-center mt-20">
               <div>
                 <div className="flex items-center justify-center">
                   <img
@@ -130,17 +162,17 @@ const BCC = () => {
                   alt="Business Stream"
                 />
               </div>
+
               <div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center w-[158px] h-[150px]">
                   <img
-                    className=""
                     src="../src/assets/bcc_stages_yellow.svg"
                     alt="Business Stream"
                   />
                 </div>
                 <div>
-                  <h3 className="text-center text-primaryBlue header3">
-                    Phase 1
+                  <h3 className="text-center text-primaryBlue header3 mt-2">
+                    Phase 2
                   </h3>
                 </div>
               </div>
@@ -151,16 +183,16 @@ const BCC = () => {
                   alt="Business Stream"
                 />
               </div>
+
               <div>
-                <div className="flex items-center justify-center">
+                <div className="flex justify-center w-[158px] h-[150px]">
                   <img
-                    className=""
                     src="../src/assets/bcc_stages_orange.svg"
                     alt="Business Stream"
                   />
                 </div>
                 <div>
-                  <h3 className="text-center text-primaryBlue header3">
+                  <h3 className="text-center text-primaryBlue header3 mt-2">
                     Phase 1
                   </h3>
                 </div>
@@ -172,6 +204,7 @@ const BCC = () => {
                   alt="Business Stream"
                 />
               </div>
+
               <div>
                 <div className="flex items-center justify-center">
                   <img
