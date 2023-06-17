@@ -2,11 +2,13 @@ import "./style.css";
 import { Carousel } from "flowbite-react";
 import Footer from "../../../components/footer";
 import Navbar from "../../../components/navbar/Navbar";
+import ModalNotLogin from "../../../components/modalNotLogin/modalNotLogin";
 
 const BCC = () => {
   return (
     <>
       <Navbar />
+      <ModalNotLogin />
       <div className="w-full h-auto bg-cover bg-[url(./assets/Background_BCC.svg)]">
         <div className="pt-[200px] w-[1159px] mx-auto text-center">
           <h1 className="w-auto header1 text-primaryText">
