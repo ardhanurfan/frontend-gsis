@@ -5,10 +5,14 @@ import Navbar from "../../../components/navbar/Navbar";
 import ModalNotLogin from "../../../components/modalNotLogin/modalNotLogin";
 
 const BCC = () => {
+
+  function goToRegisPage() {
+    window.open("/register-bcc", "_blank");
+  }
+  
   return (
     <>
       <Navbar />
-      <ModalNotLogin />
       <div className="w-full h-auto bg-cover bg-[url(./assets/Background_BCC.svg)]">
         <div className="pt-[200px] w-[1159px] mx-auto text-center">
           <h1 className="w-auto header1 text-primaryText">
@@ -256,6 +260,7 @@ const BCC = () => {
                 <button
                   type="button"
                   className="cursor-pointer button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
+                  onClick={goToRegisPage}
                 >
                   Register Here
                 </button>
