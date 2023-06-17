@@ -9,6 +9,7 @@ import { Carousel } from "flowbite-react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer";
 import { useState } from "react";
+import BigCard from "../../components/about_us/big_card";
 
 const AboutUs = () => {
   const [sliderRef, setSliderRef] = useState(null)
@@ -69,14 +70,15 @@ const AboutUs = () => {
           mollit anim id est laborum.
         </p>
       </div>
-      <div className="w-[90.3vw] h-[auto] lg:h-[615px] bg-slate-100 mt-[120px] lg:mt-[250px] mx-auto rounded-xl shadow-lg shadow-slate-500 bg-opacity-30 overflow-auto lg:overflow-visible">
-        <div className="w-[300px] lg:w-[350px] h-[400px] lg:h-[450px] my-[30px] lg:my-[83px] lg:ml-[59px] lg:mr-[74px] mx-auto rounded-xl lg:float-left shadow-md shadow-slate-700 overflow-hidden bg-gradient-to-l from-primaryBlue to-seccondaryBlue">
+      {/* <div className="w-[90.3vw] h-[auto] lg:h-[615px] bg-slate-100 mt-[120px] lg:mt-[250px] mx-auto rounded-xl shadow-lg shadow-slate-500 bg-opacity-30 overflow-auto lg:overflow-visible">
+        <div className="w-[300px] lg:w-[350px] h-[400px] lg:h-[450px] my-[30px] lg:my-[83px] lg:ml-[59px] lg:mr-[74px] mx-auto rounded-xl lg:float-left shadow-md shadow-slate-700 bg-gradient-to-l from-primaryBlue to-seccondaryBlue">
           <div className="inner-card h-[77.78%] rounded-xl shadow-md shadow-slate-600 relative">
             <div className="h-auto w-[38px] flex justify-between float-left m-[4%]">
               <div className="h-[10px] w-[10px] rounded-full bg-primaryGreen"></div>
               <div className="h-[10px] w-[10px] rounded-full bg-primaryYellow"></div>
               <div className="h-[10px] w-[10px] rounded-full bg-primaryOrange"></div>
             </div>
+            <img src="../src/assets/Timeline1.svg" className="absolute h-full w-full bottom-[22%]" alt="" />
             <div className="badge-name w-[85.7%] h-[55px] mx-auto flex justify-center items-center rounded-md absolute bottom-0 left-0 right-0 top-[77.71%] shadow-sm shadow-slate-700 body-text">
               Nama Anggota
             </div>
@@ -106,7 +108,21 @@ const AboutUs = () => {
             officia deserunt mollit anim id est laborum.
           </p>
         </div>
-      </div>
+      </div> */}
+      <BigCard name="Nama Staff" title="Warm Regards," paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum." jabatan="[JABATAN JABATAN]" foto="../src/assets/Timeline1.svg"/>
       <div className="w-auto h-auto">
         <div className="mt-[296px]">
           <h1 className="text-center header1 text-primaryText">Goals</h1>
