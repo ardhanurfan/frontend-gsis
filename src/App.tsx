@@ -9,7 +9,7 @@ import ForgotSent from "./pages/account/forgotSent";
 import AboutUs from "./pages/aboutUs";
 import NotFound from "./pages/addingPages/notFount";
 import ComingSoon from "./pages/addingPages/comingSoon";
-import BCC from "./pages/event_bcc";
+import BCC from "./pages/bcc/landingpage";
 import DashboardBCC from "./pages/dashboardAdmin/dashboardBCC";
 import DashboardCeremony from "./pages/dashboardAdmin/dashboardCeremony";
 import DashboardEx from "./pages/dashboardAdmin/dashboardEx";
