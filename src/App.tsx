@@ -1,28 +1,65 @@
 import "./App.css";
+import FAQ from "./pages/faq";
+import Homepage from "./pages/homepage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/account/login";
+import SignUp from "./pages/account/signUp";
+import ForgotPassword from "./pages/account/forgot";
+import ForgotSent from "./pages/account/forgotSent";
+import AboutUs from "./pages/aboutUs";
+import NotFound from "./pages/addingPages/notFount";
+import ComingSoon from "./pages/addingPages/comingSoon";
+import DashboardBCC from "./pages/dashboardAdmin/dashboardBCC";
+import DashboardCeremony from "./pages/dashboardAdmin/dashboardCeremony";
+import DashboardEx from "./pages/dashboardAdmin/dashboardEx";
+import DashboardGSIC from "./pages/dashboardAdmin/dashboardGSIC";
+import Overview from "./pages/dashboardAdmin/overview";
+import DashboardExhibition from "./pages/dashboardPeserta/exhibition/participant_information";
+import EditSubmissionExhibition from "./pages/dashboardPeserta/exhibition/edit_submission";
+import DashboardOverview from "./pages/dashboardPeserta/overview";
+import ProfilePeserta from "./pages/dashboardPeserta/profilePeserta/profile";
+import EditProfile from "./pages/dashboardPeserta/profilePeserta/edit";
 
 function App() {
   return (
-    <>
-      <h1 className="header1">Header1</h1>
-      <h1 className="header2">Header2</h1>
-      <h1 className="header3">Header3</h1>
-      <h1 className="body">Body</h1>
-      <h1 className="button-text">Button Text</h1>
-      <br />
-      <h1 className="bg-primaryYellow">Primary Yellow</h1>
-      <h1 className="bg-primaryOrange">Primary Orange</h1>
-      <h1 className="bg-primaryBlue">Primary Blue</h1>
-      <h1 className="bg-primaryGreen">Primary Green</h1>
-      <h1 className="bg-seccondaryYellow">seccondary Yellow</h1>
-      <h1 className="bg-seccondaryOrange">seccondary Orange</h1>
-      <h1 className="bg-seccondaryBlue">seccondary Blue</h1>
-      <h1 className="bg-seccondaryGreen">seccondary Green</h1>
-      <br />
-      <h1 className="bg-error">Error</h1>
-      <h1 className="bg-link">Link</h1>
-      <h1 className="bg-warning">Warning</h1>
-      <h1 className="bg-success">Success</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        {/* Main Page */}
+        <Route path="/" element={<Homepage />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/forgot-sent" element={<ForgotSent />} />
+
+        {/* Dashboard Peserta */}
+        <Route path="/dashboard" element={<DashboardOverview />} />
+        {/* PROFILE */}
+        <Route path="/profile" element={<ProfilePeserta />} />
+        <Route path="/edit-profile" element={<EditProfile />} />
+        {/* EXHIBITION */}
+        <Route path="/dashboard-exhibition" element={<DashboardExhibition />} />
+        <Route
+          path="/dashboard-exhibition-edit"
+          element={<EditSubmissionExhibition />}
+        />
+
+        {/* Dashboard Admin */}
+        <Route path="/dashboard-admin" element={<Overview />} />
+        <Route
+          path="/dashboard-ceremony-admin"
+          element={<DashboardCeremony />}
+        />
+        <Route path="/dashboard-exhibition-admin" element={<DashboardEx />} />
+        <Route path="/dashboard-bcc-admin" element={<DashboardBCC />} />
+        <Route path="/dashboard-gsic-admin" element={<DashboardGSIC />} />
+
+        {/* Adding */}
+        <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

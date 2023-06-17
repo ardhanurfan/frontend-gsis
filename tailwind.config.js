@@ -1,10 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
+      boxShadow: {
+        blue: "0px -5px 15px 5px rgba(0, 92, 186, 0.25)",
+      },
       fontFamily: {
-        monserrat: ["Monserrat", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       textColor: {
         primaryText: "#015CBA",
@@ -26,5 +33,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
