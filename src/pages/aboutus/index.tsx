@@ -122,7 +122,7 @@ const AboutUs = () => {
             ea commodo consequat. Duis aute irure dolor in reprehenderit in
             voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum." jabatan="[JABATAN JABATAN]" foto="../src/assets/Timeline1.svg"/>
+            officia deserunt mollit anim id est laborum." jabatan="[JABATAN JABATAN]" foto="../src/assets/BillGates.svg"/>
       <div className="w-auto h-auto">
         <div className="mt-[296px]">
           <h1 className="text-center header1 text-primaryText">Goals</h1>

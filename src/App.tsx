@@ -19,6 +19,7 @@ import EditSubmissionExhibition from "./pages/dashboardPeserta/exhibition/edit_s
 import DashboardOverview from "./pages/dashboardPeserta/overview";
 import ProfilePeserta from "./pages/dashboardPeserta/profilePeserta/profile";
 import EditProfile from "./pages/dashboardPeserta/profilePeserta/edit";
+import Ceremony from "./pages/ceremony";
 
 function App() {
   return (
@@ -54,6 +55,9 @@ function App() {
         <Route path="/dashboard-exhibition-admin" element={<DashboardEx />} />
         <Route path="/dashboard-bcc-admin" element={<DashboardBCC />} />
         <Route path="/dashboard-gsic-admin" element={<DashboardGSIC />} />
+
+        {/* Ceremony */}
+        <Route path="/ceremony" element={<Ceremony />} />
 
         {/* Adding */}
         <Route path="/coming-soon" element={<ComingSoon />} />
