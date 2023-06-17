@@ -209,7 +209,7 @@ const AboutUs = () => {
               </div>
               <div className="absolute top-0 bottom-0 left-0 right-0">
                 <div>
-                  <span className="h-52 w-52 bg-indigo-500 absolute"></span>
+                  <span></span>
                   <img
                     className="w-[16.85%] h-[12.94%] min-h-[207.75px] min-w-[164.25px] ml-[33.7%] pt-[10.25%] float-left"
                     src="../src/assets/Timeline1.svg"
