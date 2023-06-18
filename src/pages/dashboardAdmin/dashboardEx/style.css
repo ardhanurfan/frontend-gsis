@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+details > summary::after {
+    content: url(../../../assets/dropdown.svg);
+}
+
+details[open] > summary::after {
+    content: url(../../../assets/dropdown.svg);
+    @apply transform rotate-180 origin-center transition-all; 
+}
+
+details[open] > summary {
+    @apply rounded-t-xl rounded-b-none;
+}
+
+select{
+    list-style: none;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    /* outline: 0;
+    box-shadow: none;
+    border: 0!important;
+    background-image: none; */
+    /* flex: 1; */
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+/* .select{
+    position: relative;
+    display: flex;
+    width: 50%;
+    overflow: hidden;
+} */
+
+.select::after{
+    content: url(../../../assets/dropdown.svg);
+    position: absolute;
+    right:11%;
+    top: 20.5%;
+    cursor: pointer;
+    pointer-events: none;
+    transition:.25s all ease;
+}
