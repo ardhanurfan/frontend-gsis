@@ -22,6 +22,7 @@ import EditSubmissionExhibition from "./pages/dashboardPeserta/exhibition/edit_s
 import DashboardOverview from "./pages/dashboardPeserta/overview";
 import ProfilePeserta from "./pages/dashboardPeserta/profilePeserta/profile";
 import EditProfile from "./pages/dashboardPeserta/profilePeserta/edit";
+import RegisterBCC from "./pages/bcc/registration";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/bcc" element={<BCC />} />
+        <Route path="/register-bcc" element={<RegisterBCC />} />
         <Route path="/exhibition" element={<Exhibition />} />
         <Route path="/register-exhibition" element={<RegistrationExhibition />} />
         <Route path="/login" element={<Login />} />
