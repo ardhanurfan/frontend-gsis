@@ -14,7 +14,7 @@ const Event = () => {
             <img
                 src="./src/assets/event_right.svg"
                 alt="next"
-                className='ml-[15px]'
+                className='ml-[15px] cursor-pointer'
                 onClick={sliderRef?.slickNext}
             />
         )
@@ -26,7 +26,7 @@ const Event = () => {
                 src="./src/assets/event_right.svg"
                 alt="prev"
                 style={{ transform: 'rotate(180deg)' }}
-                className='mr-[30px]'
+                className='mr-[30px] cursor-pointer'
                 onClick={sliderRef?.slickPrev}
             />
         );
@@ -48,10 +48,11 @@ const Event = () => {
                 <PrevArrow />
                 <div className="w-[1111px] h-[450px] mx-auto ">
                     <Slider ref={setSliderRef} {...settings}>
-                        <EventCard image="image url" label="[EVENT]"/>
-                        <EventCard image="image url" label="[EVENT]"/>
-                        <EventCard image="image url" label="[EVENT]"/>
-                        <EventCard image="image url" label="[EVENT]"/>   
+                        <EventCard image="image url" label="EXHIBITION"/>
+                        <EventCard image="image url" label="COLOUR RUN"/>
+                        <EventCard image="image url" label="BUSSINESS CASE COMPETITION"/>
+                        <EventCard image="image url" label="SOCIAL IMPACT CHALLENGE"/>   
+                        <EventCard image="image url" label="GRAND SUMMIT"/>   
                     </Slider>
                 </div>
                 <NextArrow/>
