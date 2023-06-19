@@ -33,7 +33,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/bcc" element={<BCC />} />
         <Route path="/exhibition" element={<Exhibition />} />
-        <Route path="/registration-exhibition" element={<RegistrationExhibition />}
+        <Route path="/register-exhibition" element={<RegistrationExhibition />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />

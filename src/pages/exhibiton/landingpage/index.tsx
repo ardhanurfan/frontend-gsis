@@ -102,6 +102,20 @@ const Exhibition = () => {
           </div>
           <div className="w-auto h-auto mt-20">
             <div className="text-center">
+              <h1 className="w-auto header1 text-primaryText">Submit Here</h1>
+            </div>
+            <div className="flex justify-center items-center mt-10">
+                <button
+                  type="button"
+                  className="cursor-pointer button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
+                  onClick={goToRegistration}
+                >
+                  Register Here
+                </button>
+              </div>
+          </div>
+          <div className="w-auto h-auto mt-20">
+            <div className="text-center">
               <h1 className="w-auto header1 text-primaryText">
                 Contact Person
               </h1>
