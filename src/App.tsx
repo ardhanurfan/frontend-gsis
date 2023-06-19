@@ -22,6 +22,9 @@ import ProfilePeserta from "./pages/dashboardPeserta/profilePeserta/profile";
 import EditProfile from "./pages/dashboardPeserta/profilePeserta/edit";
 import ParticipantCer from "./pages/dashboardPeserta/ceremony/participant_information";
 import EditSubmissionCer from "./pages/dashboardPeserta/ceremony/edit_submission";
+import ParticipantBCC from "./pages/dashboardPeserta/BCC/participant_information";
+import EditSubmissionBCC from "./pages/dashboardPeserta/BCC/edit_submission";
+import CreateTeamBCC from "./pages/dashboardPeserta/BCC/create_team";
 
 function App() {
   return (
@@ -44,25 +47,27 @@ function App() {
         <Route path="/edit-profile" element={<EditProfile />} />
         {/* EXHIBITION */}
         <Route path="/dashboard-exhibition" element={<DashboardExhibition />} />
-        <Route
-          path="/dashboard-exhibition-edit"
-          element={<EditSubmissionExhibition />}
-        />
+        <Route path="/dashboard-exhibition-edit" element={<EditSubmissionExhibition />}/>
+        {/* BCC */}
+        <Route path="/participant-bcc" element={<ParticipantBCC />}/>
+        <Route path="/submission-bcc" element={<EditSubmissionBCC />}/>
+        <Route path="/createteam-bcc" element={<CreateTeamBCC />}/>
+        {/* Ceremony */}
+        <Route path="/submission-ceremony" element={<EditSubmissionCer />} />
+        <Route path="/participant-ceremony" element={<ParticipantCer />} />
+
 
         {/* Dashboard Admin */}
         <Route path="/dashboard-admin" element={<Overview />} />
-        <Route
-          path="/dashboard-ceremony-admin"
-          element={<DashboardCeremony />}
-        />
+        <Route path="/dashboard-ceremony-admin" element={<DashboardCeremony />}/>
         <Route path="/dashboard-exhibition-admin" element={<DashboardEx />} />
         <Route path="/dashboard-bcc-admin" element={<DashboardBCC />} />
         <Route path="/dashboard-gsic-admin" element={<DashboardGSIC />} />
 
         {/* Adding */}
         <Route path="/coming-soon" element={<ComingSoon />} />
-        <Route path="/parcer" element={<EditSubmissionCer />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/dashboard-gsic" element={<DashboardGSIC />} />
       </Routes>
     </BrowserRouter>
   );

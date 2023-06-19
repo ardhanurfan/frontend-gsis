@@ -1,7 +1,7 @@
 const ContactList = () => {
   return (
     <>
-      <div className="w-full flex">
+      <div className="w-[70vw] flex">
         <div className="flex-wrap w-1/4 flex flex-col items-center">
           <img src="./src/assets/line.svg" alt="" />
           <p className="body-text font-montserrat text-primaryText">

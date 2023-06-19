@@ -19,7 +19,7 @@ const DashboardGSIC = () => {
                     <p className="small text-[#FCFCFC]">ACTIVE</p>
                   </div>
                 </div>
-                <p className="text-sm ml-2">Team Id</p>
+                <p className="small ml-2">Team Id</p>
               </div>
             </summary>
             <div className="grid grid-cols-3 gap-3 p-2 shadow-2xl rounded-b-xl">
@@ -177,7 +177,7 @@ const DashboardGSIC = () => {
                     <p className="small text-[#FCFCFC]">ACTIVE</p>
                   </div>
                 </div>
-                <p className="text-sm ml-2">Team Id</p>
+                <p className="small ml-2">Team Id</p>
               </div>
             </summary>
             <div className="grid grid-cols-3 gap-3 p-2 shadow-2xl rounded-b-xl">
@@ -335,7 +335,7 @@ const DashboardGSIC = () => {
                     <p className="small text-[#FCFCFC]">ACTIVE</p>
                   </div>
                 </div>
-                <p className="text-sm ml-2">Team Id</p>
+                <p className="small ml-2">Team Id</p>
               </div>
             </summary>
             <div className="grid grid-cols-3 gap-3 p-2 shadow-2xl rounded-b-xl">
@@ -493,7 +493,7 @@ const DashboardGSIC = () => {
                     <p className="small text-[#FCFCFC]">ACTIVE</p>
                   </div>
                 </div>
-                <p className="text-sm ml-2">Team Id</p>
+                <p className="small ml-2">Team Id</p>
               </div>
             </summary>
             <div className="grid grid-cols-3 gap-3 p-2 shadow-2xl rounded-b-xl">
