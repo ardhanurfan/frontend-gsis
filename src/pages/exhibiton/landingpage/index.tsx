@@ -101,6 +101,9 @@ const Exhibition = () => {
             </div>
           </div>
           <div className="w-auto h-auto mt-20">
+            disini tempat naro business, text curator dll
+          </div>
+          <div className="w-auto h-auto mt-20">
             <div className="text-center">
               <h1 className="w-auto header1 text-primaryText">Submit Here</h1>
             </div>
