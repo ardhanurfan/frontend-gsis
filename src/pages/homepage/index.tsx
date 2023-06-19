@@ -5,16 +5,22 @@ import Supported from "../../components/homepage/support";
 import Sponsored from "../../components/homepage/sponsor";
 
 import "./style.css";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer";
 
 const Homepage = () => {
   return (
-    <div className="w-full h-auto bg-cover bg-[url(./assets/background_homepage.svg)]">
-      <Intro />
-      <Event />
-      <Benefit />
-      <Supported />
-      <Sponsored />
-    </div>
+    <>
+      <Navbar />
+      <div className="w-full h-auto bg-cover bg-[url(./assets/background_homepage.svg)]">
+        <Intro />
+        <Event />
+        <Benefit />
+        <Supported />
+        <Sponsored />
+      </div>
+      <Footer />
+    </>
   );
 };
 

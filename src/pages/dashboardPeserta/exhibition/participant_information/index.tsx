@@ -14,7 +14,7 @@ const DashboardExhibition = () => {
       </div>
       <div className="w-full flex flex-col items-center">
         <h2 className="header2 text-primaryText mb-[34px]">
-          If you’re having trouble, please contact
+          If you're having trouble, please contact
         </h2>
         <ContactList/>
       </div>
