@@ -1,10 +1,11 @@
 interface AboutWebinarCardProps {
-    description: string;
+    description1: string;
+    description2: string;
     date: string;
     place: string;
 }
 
-const AboutWebinarCard = ({description, date, place}:AboutWebinarCardProps) => {
+const AboutWebinarCard = ({description1, description2, date, place}:AboutWebinarCardProps) => {
     return (
         <>
         <div className="w-full h-auto bg-white rounded-xl shadow-xl shadow-blue-200 bg-opacity-50">
@@ -14,9 +15,13 @@ const AboutWebinarCard = ({description, date, place}:AboutWebinarCardProps) => {
                     <img src="../src/assets/AboutWebinarDescription.svg" alt="" />
                         <div className="">
                             <div className="w-full h-auto bg-white shadow-lg  shadow-blue-300 rounded-lg bg-opacity-60 ">
-                                <h3 className="header3 text-left p-5 text-primaryBlue">Penjelasan Singkat Tentang Webinar</h3>
+                                <h3 className="header3 text-left p-5 text-primaryBlue">Opening Ceremony</h3>
                                 <div className="text-justify px-5 pb-5 text-primaryBlue">
-                                {description}
+                                {description1}
+                                </div>
+                                <h3 className="header3 text-left p-5 text-primaryBlue">About Webinar</h3>
+                                <div className="text-justify px-5 pb-5 text-primaryBlue">
+                                {description2}
                                 </div>
                             </div>
                         </div>
@@ -44,6 +49,6 @@ const AboutWebinarCard = ({description, date, place}:AboutWebinarCardProps) => {
         </>
     )
 
-}
+};
 
 export default AboutWebinarCard;
