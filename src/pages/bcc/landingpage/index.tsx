@@ -27,12 +27,11 @@ const BCC = () => {
                 <div className="">
                   <button
                     type="button"
-                    className="bg-primaryBlue w-[24px] h-[24px] rounded-md flex justify-center items-center"
-                  >
+                    className="bg-primaryBlue w-[24px] h-[24px] rounded-md flex justify-center items-center">
                     <img
                       className=""
                       src="../src/assets/left_white.svg"
-                      alt="Business"
+                      alt=""
                     />
                   </button>
                 </div>
@@ -48,8 +47,7 @@ const BCC = () => {
                 <div className="">
                   <button
                     type="button"
-                    className="bg-primaryBlue w-[24px] h-[24px] rounded-md flex justify-center items-center"
-                  >
+                    className="bg-primaryBlue w-[24px] h-[24px] rounded-md flex justify-center items-center">
                     <img
                       className=""
                       src="../src/assets/right_white.svg"
