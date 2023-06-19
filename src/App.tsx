@@ -10,6 +10,8 @@ import AboutUs from "./pages/aboutUs";
 import NotFound from "./pages/addingPages/notFount";
 import ComingSoon from "./pages/addingPages/comingSoon";
 import BCC from "./pages/bcc/landingpage";
+import Exhibition from "./pages/exhibiton/landingpage";
+import RegistrationExhibition from "./pages/exhibiton/registration";
 import DashboardBCC from "./pages/dashboardAdmin/dashboardBCC";
 import DashboardCeremony from "./pages/dashboardAdmin/dashboardCeremony";
 import DashboardEx from "./pages/dashboardAdmin/dashboardEx";
@@ -32,6 +34,8 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/bcc" element={<BCC />} />
         <Route path="/register-bcc" element={<RegisterBCC />} />
+        <Route path="/exhibition" element={<Exhibition />} />
+        <Route path="/register-exhibition" element={<RegistrationExhibition />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
