@@ -22,6 +22,8 @@ import EditSubmissionExhibition from "./pages/dashboardPeserta/exhibition/edit_s
 import DashboardOverview from "./pages/dashboardPeserta/overview";
 import ProfilePeserta from "./pages/dashboardPeserta/profilePeserta/profile";
 import EditProfile from "./pages/dashboardPeserta/profilePeserta/edit";
+import HomePageGSIC from "./pages/gsic/home";
+import RegisterGSIC from "./pages/gsic/register";
 
 function App() {
   return (
@@ -60,6 +62,10 @@ function App() {
         <Route path="/dashboard-exhibition-admin" element={<DashboardEx />} />
         <Route path="/dashboard-bcc-admin" element={<DashboardBCC />} />
         <Route path="/dashboard-gsic-admin" element={<DashboardGSIC />} />
+
+        {/* GSIC */}
+        <Route path="/gsic" element={<HomePageGSIC/>}/>
+        <Route path="/gsic/register" element={<RegisterGSIC/>}/>
 
         {/* Adding */}
         <Route path="/coming-soon" element={<ComingSoon />} />
