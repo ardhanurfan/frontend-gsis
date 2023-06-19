@@ -26,7 +26,6 @@ import EditSubmissionCer from "./pages/dashboardPeserta/ceremony/edit_submission
 function App() {
   return (
     <BrowserRouter>
-      <EditSubmissionExhibition />
       <Routes>
         {/* Main Page */}
         <Route path="/" element={<Homepage />} />
