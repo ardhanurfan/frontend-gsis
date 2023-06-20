@@ -25,6 +25,7 @@ import EditProfile from "./pages/dashboardPeserta/profilePeserta/edit";
 import HomePageGSIC from "./pages/gsic/home";
 import RegisterGSIC from "./pages/gsic/register";
 import RegisterBCC from "./pages/bcc/registration";
+import Announcement from "./pages/dashboardAdmin/announcement";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
           path="/dashboard-ceremony-admin"
           element={<DashboardCeremony />}
         />
+        <Route path="/dashboard-announcement-admin" element={<Announcement />} />
         <Route path="/dashboard-exhibition-admin" element={<DashboardEx />} />
         <Route path="/dashboard-bcc-admin" element={<DashboardBCC />} />
         <Route path="/dashboard-gsic-admin" element={<DashboardGSIC />} />

@@ -11,13 +11,12 @@ const Announcement = () => {
   return (
     <>
       {/* <div className="w-full h-screen bg-[url(./src/assets/dashboard_overview.svg)] bg-cover"></div> */}
-      <div className="bg-[#005CBA] w-full h-[1011px] z-0">
-        <div className="px-32 pt-40 ">
-          <div className="bg-white w-full h-[auto] rounded-xl z-10 text-center">
-            <h1 className="text-[#015CBA] header1 w-auto mx-auto pt-5">
+      <div className="fixed bg-primaryBlue bg-opacity-30 w-screen h-screen z-0 flex items-center justify-center">
+          <div className="fixed bg-black w-[80%] mx-auto h-auto rounded-2xl z-10 text-center">
+            <h1 className="text-[#015CBA] header1 w-auto pt-5">
               CREATE ANNOUNCEMENT
             </h1>
-            <div className="pt-10 grid grid-cols-2 gap-1">
+            <div className="pt-5 grid grid-cols-2 gap-1">
               <div>
                 <form action="" className="px-20">
                   <label className="title">
@@ -39,7 +38,7 @@ const Announcement = () => {
                   <span className="block text-left text-[#015CBA] font-semibold">
                     Type
                   </span>
-                  <div className="select h-[60px] flex w-full pr-52">
+                  <div className="select relative h-[60px] flex w-full pr-52">
                     <select
                       className="body-text w-full bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 rounded-lg flex items-center justify-between"
                       name="select"
@@ -48,10 +47,10 @@ const Announcement = () => {
                       <option className="text-seccondaryBlue" selected disabled>
                         Choose type
                       </option>
-                      <option value="Institut Teknologi Bandung">BCC</option>
-                      <option value="Universitas Gadjah Mada">Ceremony</option>
-                      <option value="Universitas Indonesia">Exhibition</option>
-                      <option value="Universitas Indonesia">GSIC</option>
+                      <option value="BCC">BCC</option>
+                      <option value="Ceremony">Ceremony</option>
+                      <option value="Exhibition">Exhibition</option>
+                      <option value="GSIC">GSIC</option>
                     </select>
                   </div>
                 </label>
@@ -76,86 +75,21 @@ const Announcement = () => {
                 </div>
               </div>
 
-              {/* <div className="pr-24">
-                                <div className="flex flex-col">
-                                    <div className="mb-5 w-full font-semibold text-primaryBlue text-left ">Publish later</div>
-                                    <div className="grid grid-cols-3">
-                                        <label className="pr-12">
-                                            <span className="block text-left">Year <span className="text-red-600">*</span></span>
-                                            <div>
-                                                <select className="body-text w-full bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 rounded-lg" name="" id="">
-                                                    <option className="text-seccondaryBlue" selected disabled>Year</option>
-                                                    <option value=""></option>
-                                                </select>
-                                            </div>
-                                        </label>
-                                        <label className="pr-12">
-                                            <span className="block text-left">Month <span className="text-red-600">*</span></span>
-                                            <div>
-                                                <select className="body-text w-full bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 rounded-lg" name="" id="">
-                                                    <option className="text-seccondaryBlue" selected disabled>Month</option>
-                                                    <option value=""></option>
-                                                </select>
-                                            </div>
-                                        </label>
-                                        <label className="pr-12">
-                                            <span className="block text-left">Day <span className="text-red-600">*</span></span>
-                                            <div>
-                                                <select className="body-text w-full bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 rounded-lg" name="" id="">
-                                                    <option className="text-seccondaryBlue" selected disabled>Day</option>
-                                                    <option value=""></option>
-                                                </select>
-                                            </div>
-                                        </label>
-                                        <label className="pr-12">
-                                            <span className="block text-left">Hour <span className="text-red-600">*</span></span>
-                                            <div>
-                                                <select className="body-text w-full bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 rounded-lg" name="" id="">
-                                                    <option className="text-seccondaryBlue" selected disabled>Hour</option>
-                                                    <option value=""></option>
-                                                </select>
-                                            </div>
-                                        </label>
-                                        <label className="pr-12">
-                                            <span className="block text-left">Minute <span className="text-red-600">*</span></span>
-                                            <div>
-                                                <select className="body-text w-full bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 rounded-lg" name="" id="">
-                                                    <option className="text-seccondaryBlue" selected disabled>Minute</option>
-                                                    <option value=""></option>
-                                                </select>
-                                            </div>
-                                        </label>
-                                        <label className="pr-12">
-                                            <span className="block text-left">Second <span className="text-red-600">*</span></span>
-                                            <div>
-                                                <select className="body-text w-full bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 rounded-lg" name="" id="">
-                                                    <option className="text-seccondaryBlue">Second</option>
-                                                    <option value=""></option>
-                                                </select>
-                                            </div>
-                                        </label>
-                                        
-                                    </div>
-                                    
-                                    
-                                </div>
-                            </div> */}
-
-              <div className="mt-20 mb-5 w-full h-auto col-span-2">
+              <div className="mt-10 mb-5 w-full h-auto col-span-2">
                 <div className="grid grid-cols-2">
-                  <div className="pr-80 px-20">
-                    <button className="bg-[#BD1B1B] w-auto h-auto text-white rounded-lg">
+                  <div className="pr-80">
+                    <button className="bg-[#BD1B1B] w-auto h-auto text-white rounded-lg hover:bg-red-900">
                       <div className="m-2 px-2">Cancel</div>
                     </button>
                   </div>
                   <div className="grid grid-cols-2 gap-0">
                     <div className="px-16">
-                      <button className="bg-primaryBlue w-auto h-auto text-white rounded-lg shadow-lg">
+                      <button className="bg-primaryBlue w-auto h-auto text-white rounded-lg shadow-lg hover:bg-blue-900">
                         <div className="m-2 px-2">Save</div>
                       </button>
                     </div>
-                    <div className="px-20">
-                      <button className="bg-white w-auto h-auto rounded-lg border-2 border-[#005CBA] text-[#005CBA] shadow-lg">
+                    <div className="px-10">
+                      <button className="bg-white w-auto h-auto rounded-lg border-2 border-[#005CBA] text-[#005CBA] shadow-lg hover:bg-slate-300">
                         <div className="m-2">Announce Now</div>
                       </button>
                     </div>
@@ -164,7 +98,6 @@ const Announcement = () => {
               </div>
             </div>
           </div>
-        </div>
       </div>
     </>
   );
