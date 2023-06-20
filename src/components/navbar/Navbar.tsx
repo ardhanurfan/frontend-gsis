@@ -10,8 +10,8 @@ const Navbar = () => {
         <div
           className={
             navOpen
-              ? "px-[8px] lg:px-[35px] rounded-t-3xl fixed flex justify-between items-center w-[98vw] max-w-[1300px] h-[50px] bg-slate-100 bg-opacity-30 backdrop-blur-sm mx-auto top-[40px] border-2 border-white border-opacity-20 shadow-md"
-              : "px-[8px] lg:px-[35px] rounded-full fixed flex justify-between items-center w-[98vw] max-w-[1300px] h-[50px] bg-slate-100 bg-opacity-30 backdrop-blur-sm mx-auto top-[40px] border-2 border-white border-opacity-20 shadow-md"
+              ? "px-[8px] lg:px-[35px] rounded-t-3xl fixed flex justify-between items-center w-[90vw] max-w-[1300px] h-[50px] bg-slate-100 bg-opacity-30 backdrop-blur-sm mx-auto top-[40px] border-2 border-white border-opacity-20 shadow-md"
+              : "px-[8px] lg:px-[35px] rounded-full fixed flex justify-between items-center w-[90vw] max-w-[1300px] h-[50px] bg-slate-100 bg-opacity-30 backdrop-blur-sm mx-auto top-[40px] border-2 border-white border-opacity-20 shadow-md"
           }
         >
           <img src="./src/assets/logo_gsis.svg" alt="" />

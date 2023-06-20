@@ -4,7 +4,7 @@ import "./style.css";
 const Overview = () => {
   return (
     <>
-      <div className="w-full px-[70px] pb-80">
+      <div className="w-[90vw] mx-auto px-[70px] pb-80">
         <h1 className="pt-[183px] header1 text-primaryText mb-[10px]">
           Announcement
         </h1>
