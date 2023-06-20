@@ -12,7 +12,7 @@ const Announcement = () => {
     <>
       {/* <div className="w-full h-screen bg-[url(./src/assets/dashboard_overview.svg)] bg-cover"></div> */}
       <div className="fixed bg-primaryBlue bg-opacity-30 w-screen h-screen z-0 flex items-center justify-center">
-          <div className="fixed bg-black w-[80%] mx-auto h-auto rounded-2xl z-10 text-center">
+          <div className="fixed bg-white w-[80%] mx-auto h-auto rounded-2xl z-10 text-center">
             <h1 className="text-[#015CBA] header1 w-auto pt-5">
               CREATE ANNOUNCEMENT
             </h1>
