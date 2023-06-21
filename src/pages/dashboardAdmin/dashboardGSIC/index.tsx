@@ -1,6 +1,5 @@
 import "./style.css";
 import toa from "../../../assets/toa.svg";
-import up from "../../../assets/upload.svg";
 import TeamLeaderCard from "../../../components/dashboard_admin/gsic_participant/teamLeaderCard";
 import TeamParticipantCard from "../../../components/dashboard_admin/gsic_participant/teamParticipantCard";
 
