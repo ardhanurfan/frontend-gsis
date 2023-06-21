@@ -6,11 +6,15 @@ const TextField = ({
   placeholder,
   type,
   style,
+  onChange,
+  value,
 }: {
   label: string;
   placeholder: string;
   type: string;
   style: string;
+  onChange?:React.ChangeEventHandler<HTMLInputElement> | undefined,
+  value?: string | number | readonly string[] | undefined,
 }) => {
   const [currType, setCurrType] = useState("password");
   const [icon, setIcon] = useState(<AiFillEyeInvisible></AiFillEyeInvisible>);
@@ -36,6 +40,8 @@ const TextField = ({
             type={currType}
             id={label}
             placeholder={placeholder}
+            onChange={onChange}
+            value={value}
             required
             className="w-full border-none placeholder:text-seccondaryBlue rounded-[10px] bg-[#F2F4FF] p-[20px] text-slate-900 focus:border-2 focus:border-primaryBlue"
           />
@@ -51,6 +57,8 @@ const TextField = ({
           type={type}
           id={label}
           placeholder={placeholder}
+          onChange={onChange}
+          value={value}
           required
           className="w-full border-none placeholder:text-seccondaryBlue rounded-[10px] bg-[#F2F4FF] p-[20px] text-slate-900 focus:border-2 focus:border-primaryBlue"
         />
