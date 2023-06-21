@@ -35,17 +35,22 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/forgot-sent" element={<ForgotSent />} />
+        {/* BCC */}
         <Route path="/bcc" element={<BCC />} />
         <Route path="/register-bcc" element={<RegisterBCC />} />
+        {/* EXHIBITION */}
         <Route path="/exhibition" element={<Exhibition />} />
         <Route
           path="/register-exhibition"
           element={<RegistrationExhibition />}
         />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/forgot-sent" element={<ForgotSent />} />
+        {/* GSIC */}
+        <Route path="/gsic" element={<HomePageGSIC />} />
+        <Route path="/gsic/register" element={<RegisterGSIC />} />
 
         {/* Dashboard Peserta : Harus login pakek protected route */}
         <Route
@@ -132,10 +137,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
-        {/* GSIC */}
-        <Route path="/gsic" element={<HomePageGSIC/>}/>
-        <Route path="/gsic/register" element={<RegisterGSIC/>}/>
 
         {/* Adding */}
         <Route path="/coming-soon" element={<ComingSoon />} />

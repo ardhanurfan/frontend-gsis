@@ -67,7 +67,7 @@ const Login = () => {
                 <button
                   disabled={loading}
                   type="submit"
-                  className="mb-[16px] py-[10px] px-[50px] rounded-[10px] text-button text-white bg-primaryBlue transition duration-500 ease-in-out hover:opacity-50"
+                  className="mb-[16px] py-[10px] px-[50px] rounded-[10px] text-button text-white bg-primaryBlue transition duration-500 ease-in-out hover:bg-seccondaryBlue"
                 >
                   {loading && (
                     <div className="flex justify-center">
