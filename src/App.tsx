@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1 className="header1">Header1</h1>
+      <h1 className="header1">Headerrr1</h1>
       <h1 className="header2">Header2</h1>
       <h1 className="header3">Header3</h1>
       <h1 className="body">Body</h1>
