@@ -1,12 +1,62 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Navbar.css";
+import { getWithAuth, postWithAuth } from "../../API/api";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenCompetition, setIsOpenCompetition] = useState(false);
+  const [isOpenAccount, setIsOpenAccount] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [user, setUser] = useState<any>();
+  const navigate = useNavigate();
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+  const toogleCompetition = () => {
+    setIsOpenCompetition(!isOpenCompetition);
+    if (isOpenAccount) {
+      setIsOpenAccount(!isOpenAccount);
+    }
+  };
+
+  const toogleAccount = () => {
+    setIsOpenAccount(!isOpenAccount);
+    if (isOpenCompetition) {
+      setIsOpenCompetition(!isOpenCompetition);
+    }
+  };
+
+  const token = localStorage.getItem("access_token");
+  const getUser = async () => {
+    if (token) {
+      try {
+        const response = await getWithAuth("user", token);
+        const data = response.data?.data;
+        setUser(data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+
+  useEffect(() => {
+    getUser();
+  }, []);
+
+  const handleLogOut = async () => {
+    setLoading(true);
+
+    try {
+      if (token) {
+        const res = await postWithAuth("logout", null, token);
+        console.log(res);
+        localStorage.removeItem("access_token");
+        navigate("/");
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -15,12 +65,12 @@ const Navbar = () => {
         <div
           className={
             navOpen
-              ? "px-[8px] lg:px-[35px] rounded-t-3xl fixed flex justify-between items-center w-[98vw] max-w-[1300px] h-[50px] bg-slate-100 bg-opacity-30 backdrop-blur-sm mx-auto top-[40px] border-2 border-white border-opacity-20 shadow-md"
-              : "px-[8px] lg:px-[35px] rounded-full fixed flex justify-between items-center w-[98vw] max-w-[1300px] h-[50px] bg-slate-100 bg-opacity-30 backdrop-blur-sm mx-auto top-[40px] border-2 border-white border-opacity-20 shadow-md"
+              ? "px-[8px] lg:px-[35px] rounded-t-3xl fixed flex justify-between items-center w-[98vw] max-w-[1300px] h-[60px] bg-slate-100 bg-opacity-30 backdrop-blur-sm mx-auto top-[40px] border-2 border-white border-opacity-20 shadow-md"
+              : "px-[8px] lg:px-[35px] rounded-full fixed flex justify-between items-center w-[98vw] max-w-[1300px] h-[60px] bg-slate-100 bg-opacity-30 backdrop-blur-sm mx-auto top-[40px] border-2 border-white border-opacity-20 shadow-md"
           }
         >
           <img src="./src/assets/logo_gsis.svg" alt="" />
-          <div className="hidden lg:flex gap-[40px] xl:gap-[50px] button-text text-primaryBlue">
+          <div className="hidden lg:flex gap-[40px] xl:gap-[50px] button-text text-primaryBlue lg:items-center">
             <a className="cursor-pointer hover:text-seccondaryBlue" href="/">
               Home
             </a>
@@ -36,11 +86,11 @@ const Navbar = () => {
             >
               Ceremony
             </a>
-            <div className="">
+            <div className="flex justify-center relative">
               <button
                 className="flex cursor-pointer hover:text-seccondaryBlue"
                 type="button"
-                onClick={toggleDropdown}
+                onClick={toogleCompetition}
               >
                 Competition
                 <span className="ml-2 w-2">
@@ -55,12 +105,12 @@ const Navbar = () => {
                   </svg>
                 </span>
               </button>
-              {isOpen && (
-                <ul className="absolute z-[500] float-left mt-4 min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-xl shadow-primaryBlue">
+              {isOpenCompetition && (
+                <ul className="absolute z-[500] float-left top-10 min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-xl shadow-primaryBlue">
                   <li>
                     <a
                       className="block w-[200px] h-auto bg-transparent px-4 py-2 text-sm text-primaryBlue hover:bg-primaryBlue hover:text-seccondaryBlue"
-                      href="/coming-soon"
+                      href="/gsic"
                     >
                       Ganesha Social Impact Challenge
                     </a>
@@ -85,20 +135,74 @@ const Navbar = () => {
             <a className="cursor-pointer hover:text-seccondaryBlue" href="/faq">
               FAQ
             </a>
-            <div className="bg-primaryBlue text-white w-auto rounded px-2 flex justify-around items-center">
-              <a
-                className="cursor-pointer hover:text-seccondaryBlue"
-                href="/login"
-              >
-                Login
-              </a>
-              <span className="bg-white h-[2px] w-[15px] inline-block rounded-full rotate-90"></span>
-              <a
-                className="cursor-pointer hover:text-seccondaryBlue"
-                href="/sign-up"
-              >
-                Sign Up
-              </a>
+            <div className="relative bg-primaryBlue text-sm text-white w-[140px] h-[40px] rounded-xl px-2 flex justify-center items-center hover:bg-seccondaryBlue">
+              {!token ? (
+                <>
+                  <a
+                    className="cursor-pointer hover:text-primaryBlue"
+                    href="/login"
+                  >
+                    Login
+                  </a>
+                  <span className="bg-white h-[2px] w-[15px] inline-block rounded-full rotate-90"></span>
+                  <a
+                    className="cursor-pointer hover:text-primaryBlue"
+                    href="/sign-up"
+                  >
+                    Sign Up
+                  </a>
+                </>
+              ) : (
+                <>
+                  <button
+                    type="button"
+                    onClick={toogleAccount}
+                    className="w-full flex justify-evenly items-center"
+                  >
+                    <img
+                      src="../src/assets/VectorAdminProfile.svg"
+                      className="w-[23px] h-[26px] p-1"
+                      alt=""
+                    />
+                    <p className="text-ellipsis body-text overflow-hidden cursor-pointer">
+                      {user?.name}
+                    </p>
+                    <img
+                      src="../src/assets/dropdown.svg"
+                      className="w-[23px] h-[26px] p-1"
+                      alt=""
+                    />
+                  </button>
+                  {isOpenAccount && (
+                    <ul className="absolute z-[500] float-left top-12 w-full list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-xl shadow-primaryBlue">
+                      <li>
+                        <a
+                          className="block w-[200px] h-auto bg-transparent px-4 py-2 text-sm text-primaryBlue hover:bg-primaryBlue hover:text-seccondaryBlue"
+                          href="/dashboard"
+                        >
+                          Dashboard
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className="block w-[200px] bg-transparent px-4 py-2 text-sm text-primaryBlue hover:bg-primaryBlue hover:text-seccondaryBlue"
+                          href="/profile"
+                        >
+                          Profile
+                        </a>
+                      </li>
+                      <li>
+                        <button
+                          onClick={() => handleLogOut()}
+                          className="block text-left w-[200px] bg-transparent px-4 py-2 text-sm text-primaryBlue hover:bg-primaryBlue hover:text-seccondaryBlue"
+                        >
+                          Logout
+                        </button>
+                      </li>
+                    </ul>
+                  )}
+                </>
+              )}
             </div>
           </div>
           <div
