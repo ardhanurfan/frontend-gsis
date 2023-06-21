@@ -49,28 +49,35 @@ const Ceremony = () => {
     return(
         <>
         {/* u have not logged in */}
-        {/* <div className={popUp === 1 ? " fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30"} onClick={() => setPopUp(0)}>
-            <div className="z-60 w-[45%] h-auto mx-auto rounded-xl bg-white flex flex-col items-center py-8 px-1 gap-5" onClick={() => setPopUp(1)}>
-                <img src={as} className="h-[20%] w-[20%]" alt="" />
-                <h1 className="text-primaryBlue header2">You have not log in</h1>
-                <button className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[15%] button-text">Log In</button>
+        <div className={popUp === 1 ? " fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30"}>
+            <div className="z-60 w-[45%] h-auto rounded-xl bg-white flex flex-col py-8 px-1 gap-5">
+                <div className="flex flex-col items-end pr-5 ">
+                    <button className="hover:bg-slate-200 rounded-full p-1" onClick={() => setPopUp(0)}>✖</button>
                 </div>
-            </div> */}
-
-        {/* proof poster */}
-        <div className={popUp === 1 ? " fixed z-[1055] w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed w-full h-screen bg-primaryBlue bg-opacity-30"} onClick={() => setPopUp(0)}>
-            <div className="absolute w-[45%] h-auto rounded-xl bg-white flex flex-col items-center py-8 px-1 gap-5" onClick={() => setPopUp(0)}>
-                {/* <div>
-                    <button className="hover:bg-slate-400 rounded-full p-1">✖</button>
-                </div> */}
-                <h2 className="text-primaryBlue header2">Proof of Poster Upload <span className="text-red-500"> *</span></h2>
-                <h3 className="text-primaryBlue header3">UPLOAD FILES</h3>
-                <div className="w-[66%]">
-                    <UploadFile/>
+                <div className="flex flex-col items-center gap-5">
+                    <img src={as} className="h-[20%] w-[20%]" alt="" />
+                    <h1 className="text-primaryBlue header2">You have not log in</h1>
+                    <button className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[30%] button-text hover:bg-seccondaryBlue">Log In</button>
                 </div>
-                <button className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[15%] button-text">Submit</button>
             </div>
         </div>
+
+        {/* proof poster */}
+        {/* <div className={popUp === 1 ? " fixed z-[1055] w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed w-full h-screen bg-primaryBlue bg-opacity-30"}>
+            <div className="absolute w-[45%] h-auto rounded-xl bg-white flex flex-col py-8 px-1 gap-5">
+                <div className="flex flex-col items-end pr-5">
+                    <button className="hover:bg-slate-200 rounded-full p-1" onClick={() => setPopUp(0)}>✖</button>
+                </div>
+                <div className="flex flex-col items-center gap-5">
+                    <h2 className="text-primaryBlue header2">Proof of Poster Upload <span className="text-red-500"> *</span></h2>
+                    <h3 className="text-primaryBlue header3">UPLOAD FILES</h3>
+                    <div className="w-[66%]">
+                        <UploadFile/>
+                    </div>
+                    <button className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[15%] button-text">Submit</button>
+                </div>
+            </div>
+        </div> */}
         
 
         <div className="w-full h-[auto] bg-[url(./src/assets/Background_Ceremony.svg)] bg-cover">
