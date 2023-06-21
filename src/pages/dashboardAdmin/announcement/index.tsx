@@ -78,13 +78,13 @@ const Announcement = () => {
               <div className="mt-10 mb-5 w-full h-auto col-span-2">
                 <div className="grid grid-cols-2">
                   <div className="pr-80">
-                    <button className="bg-[#BD1B1B] w-auto h-auto text-white rounded-lg hover:bg-red-900">
+                    <button className="bg-[#BD1B1B] w-auto h-auto text-white rounded-lg hover:bg-red-600">
                       <div className="m-2 px-2">Cancel</div>
                     </button>
                   </div>
                   <div className="grid grid-cols-2 gap-0">
                     <div className="px-16">
-                      <button className="bg-primaryBlue w-auto h-auto text-white rounded-lg shadow-lg hover:bg-blue-900">
+                      <button className="bg-primaryBlue w-auto h-auto text-white rounded-lg shadow-lg hover:bg-seccondaryBlue">
                         <div className="m-2 px-2">Save</div>
                       </button>
                     </div>
