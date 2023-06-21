@@ -16,7 +16,7 @@ const BigCard = ({name, title, jabatan, paragraph, foto}: BigCardProps) =>{
               <div className="h-[10px] w-[10px] rounded-full bg-primaryYellow"></div>
               <div className="h-[10px] w-[10px] rounded-full bg-primaryOrange"></div>
             </div>
-            <img src={foto} className="absolute h-full w-full bottom-[22%]" alt="" />
+            <img src={foto} className="absolute right-0 left-0 mx-auto h-[90%] w-[80%] bottom-[22%]" alt="" />
             <div className="badge-name w-[85.7%] h-[55px] mx-auto flex justify-center items-center rounded-md absolute bottom-0 left-0 right-0 top-[77.71%] shadow-sm shadow-slate-700 body-text">
               {name}
             </div>

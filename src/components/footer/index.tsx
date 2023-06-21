@@ -1,9 +1,9 @@
-// import "./style.css"
+import "./style.css"
 
 const Footer = () => {
     return (
         <div className="relative bottom-0 clear-both">
-            <div className="px-[35px] flex justify-between items-center w-full h-[50px] bg-slate-100 bg-opacity-20 backdrop-blur-lg mx-auto overflow-hidden border-2 border-white border-opacity-20 shadow-md ">
+            <div className="custom-shadow px-[35px] flex justify-between items-center w-full h-[50px] bg-slate-100 bg-opacity-20 backdrop-blur-lg mx-auto overflow-hidden border-2 border-white border-opacity-20 shadow-md ">
                 <img src="./src/assets/logo_gsis.svg" alt="" />
                 <div className="flex gap-[5px] items-center">
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
