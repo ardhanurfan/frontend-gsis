@@ -33,16 +33,16 @@ const Login = () => {
 
   return (
     <>
-      <div className="h-screen w-screen bg-white py-[62px] px-[70px]">
+      <div className="h-screen w-screen bg-white p-4 xl:py-[62px] xl:px-[70px]">
         <div className="w-full h-full rounded-[10px] shadow-lg shadow-primaryBlue bg-gradient-to-br from-primaryBlue to-white p-[3px]">
-          <div className="relative w-full h-full rounded-[10px] px-[425px] flex flex-col justify-center items-center bg-white">
+          <div className="relative w-full h-full rounded-[10px] px-[45px] lg:px-[30%] flex flex-col justify-center items-center bg-white">
             <Dot></Dot>
-            <h1 className="header1 text-primaryText mb-[62px] text-center">
+            <h1 className="header1-mobile lg:header1 text-primaryText mb-[62px] text-center">
               Log In
             </h1>
             <form
               onSubmit={(e) => handleLogin(e)}
-              className="w-full field-text"
+              className="w-full field-text-mobile lg:field-text"
             >
               <TextField
                 value={email}
@@ -83,7 +83,7 @@ const Login = () => {
                 </button>
               </div>
             </form>
-            <p className="button-text text-primaryBlue">
+            <p className="button-text-mobile lg:button-text text-primaryBlue text-center">
               Don't have an account?{" "}
               <span>
                 <a href="/sign-up" className="text-primaryOrange">
