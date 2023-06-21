@@ -22,6 +22,8 @@ import EditSubmissionExhibition from "./pages/dashboardPeserta/exhibition/edit_s
 import DashboardOverview from "./pages/dashboardPeserta/overview";
 import ProfilePeserta from "./pages/dashboardPeserta/profilePeserta/profile";
 import EditProfile from "./pages/dashboardPeserta/profilePeserta/edit";
+import HomePageGSIC from "./pages/gsic/home";
+import RegisterGSIC from "./pages/gsic/register";
 import RegisterBCC from "./pages/bcc/registration";
 import ProtectedRoute from "./API/ProtectedRoute";
 
@@ -130,6 +132,10 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        {/* GSIC */}
+        <Route path="/gsic" element={<HomePageGSIC/>}/>
+        <Route path="/gsic/register" element={<RegisterGSIC/>}/>
 
         {/* Adding */}
         <Route path="/coming-soon" element={<ComingSoon />} />
