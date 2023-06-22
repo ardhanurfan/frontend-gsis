@@ -13,8 +13,8 @@ const TextField = ({
   placeholder: string;
   type: string;
   style: string;
-  onChange?:React.ChangeEventHandler<HTMLInputElement> | undefined,
-  value?: string | number | readonly string[] | undefined,
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
+  value?: string | number | readonly string[] | undefined;
 }) => {
   const [currType, setCurrType] = useState("password");
   const [icon, setIcon] = useState(<AiFillEyeInvisible></AiFillEyeInvisible>);
@@ -43,10 +43,10 @@ const TextField = ({
             onChange={onChange}
             value={value}
             required
-            className="w-full border-none placeholder:text-seccondaryBlue rounded-[10px] bg-[#F2F4FF] p-[20px] text-slate-900 focus:border-2 focus:border-primaryBlue"
+            className="field-text-mobile w-full border-none placeholder:text-seccondaryBlue rounded-[10px] bg-[#F2F4FF] p-[12px] text-slate-900 focus:border-2 focus:border-primaryBlue lg:field-text lg:p-[20px]"
           />
           <span
-            className="absolute flex justify-around items-center right-[20px] text-2xl text-primaryBlue"
+            className="absolute flex justify-around items-center right-[20px] text-lg lg:text-2xl text-primaryBlue"
             onClick={handleToggle}
           >
             {icon}
@@ -60,7 +60,7 @@ const TextField = ({
           onChange={onChange}
           value={value}
           required
-          className="w-full border-none placeholder:text-seccondaryBlue rounded-[10px] bg-[#F2F4FF] p-[20px] text-slate-900 focus:border-2 focus:border-primaryBlue"
+          className="field-text-mobile w-full border-none placeholder:text-seccondaryBlue rounded-[10px] bg-[#F2F4FF] p-[12px] text-slate-900 focus:border-2 focus:border-primaryBlue lg:field-text lg:p-[20px]"
         />
       )}
     </div>

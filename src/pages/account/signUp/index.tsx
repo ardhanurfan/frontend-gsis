@@ -55,16 +55,16 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="h-auto w-full bg-white py-[62px] px-[70px]">
+      <div className="h-auto w-full bg-white p-4 xl:py-[62px] xl:px-[70px]">
         <div className="w-full h-full rounded-[10px]  items-center shadow-lg shadow-primaryBlue bg-gradient-to-br from-primaryBlue to-white p-[3px]">
-          <div className="relative w-full h-full rounded-[10px] px-[425px]  flex flex-col justify-center items-center bg-white">
+          <div className="relative w-full h-full rounded-[10px] px-[45px] lg:px-[30%]  flex flex-col justify-center items-center bg-white">
             <Dot></Dot>
-            <h1 className="header1 text-primaryText mb-[62px] mt-[50px]">
+            <h1 className="header1-mobile lg:header1 text-primaryText mb-[62px] mt-[50px]">
               Sign Up
             </h1>
             <form
               onSubmit={(e) => handleSignup(e)}
-              className="w-full field-text"
+              className="w-full field-text-mobile lg:field-text"
             >
               <TextField
                 value={name}
@@ -118,11 +118,11 @@ const SignUp = () => {
                 <label htmlFor="university" className="text-primaryText mb-2">
                   University/Institution
                 </label>
-                <div className="select relative h-[60px] flex w-full bg-primaryBlue rounded-lg">
+                <div className="select overflow-hidden text-ellipsis relative py-4 flex w-full bg-primaryBlue rounded-lg">
                   <select
                     defaultValue={""}
                     onChange={(val) => setUniversity(val.target.value)}
-                    className="body-text bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 flex-1 rounded-lg"
+                    className="body-text-mobile lg:body-text bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 flex-1 rounded-lg"
                     name="select"
                     id="university"
                     required
@@ -146,11 +146,11 @@ const SignUp = () => {
                 <label htmlFor="major" className="text-primaryText mb-2">
                   Major
                 </label>
-                <div className="select relative h-[60px] flex w-full bg-primaryBlue rounded-lg">
+                <div className="select overflow-hidden text-ellipsis relative py-4 flex w-full bg-primaryBlue rounded-lg">
                   <select
                     defaultValue={""}
                     onChange={(val) => setMajor(val.target.value)}
-                    className="body-text bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 flex-1 rounded-lg"
+                    className="body-text-mobile lg:body-text bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 flex-1 rounded-lg"
                     name="select"
                     id="major"
                     required
@@ -170,11 +170,11 @@ const SignUp = () => {
                 <label htmlFor="year" className="text-primaryText mb-2">
                   Year
                 </label>
-                <div className="select relative h-[60px] flex w-full bg-primaryBlue rounded-lg">
+                <div className="select overflow-hidden text-ellipsis relative py-4 flex w-full bg-primaryBlue rounded-lg">
                   <select
                     defaultValue={""}
                     onChange={(val) => setYear(val.target.value)}
-                    className="body-text bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 flex-1 rounded-lg"
+                    className="body-text-mobile lg:body-text bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 flex-1 rounded-lg"
                     name="select"
                     id="year"
                     required
@@ -208,7 +208,7 @@ const SignUp = () => {
                 </button>
               </div>
             </form>
-            <p className="button-text text-primaryBlue mb-[80px]">
+            <p className="button-text-mobile lg:button-text text-primaryBlue mb-[80px] text-center">
               Already have an Account?{" "}
               <span>
                 <a href="/login" className="text-primaryOrange">

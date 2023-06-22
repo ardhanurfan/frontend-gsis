@@ -23,3 +23,15 @@ select::-ms-expand {
   pointer-events: none;
   transition: 0.25s all ease;
 }
+
+@media (min-width: 1024px) {
+  .select::after {
+    content: url(../../../assets/dropdown.svg);
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.25s all ease;
+  }
+}
