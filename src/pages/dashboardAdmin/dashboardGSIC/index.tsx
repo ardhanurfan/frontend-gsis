@@ -1,11 +1,19 @@
 import "./style.css";
-import toa from "../../../assets/toa.svg";
 import TeamLeaderCard from "../../../components/dashboard_admin/gsic_participant/teamLeaderCard";
 import TeamParticipantCard from "../../../components/dashboard_admin/gsic_participant/teamParticipantCard";
+import Toa from "../../../components/dashboard_admin/gsic_participant/Toa";
+import { useContext } from "react";
+import { AnnouncementContext } from "../announcement/announcementContext";
+import Announcement from "../announcement";
+import Navbar from "../../../components/navbar/Navbar";
+import Footer from "../../../components/footer";
 
 const DashboardGSIC = () => {
+  const announContext = useContext(AnnouncementContext);
   return (
     <>
+      {announContext?.isAnnounce? <Announcement/> : ""} 
+      <Navbar/>
       <div className="flex flex-col justify-center py-4 bg-[#FCFCFC]">
         <h1 className="pt-[100px] text-7xl font-bold text-left text-[#005CBA] title mb-10 pl-40">
           GSIC Participant
@@ -73,11 +81,10 @@ const DashboardGSIC = () => {
           
         </div>
         <div className="fixed bottom-16 right-6">
-          <button>
-            <img src={toa} alt="" className="w-[80px] h-[80px] mr-6" />
-          </button>
+          <Toa/>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

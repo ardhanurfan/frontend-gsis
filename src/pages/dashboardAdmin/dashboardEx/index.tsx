@@ -1,9 +1,17 @@
 import "./style.css";
-import toa from "../../../assets/toa.svg";
+import Toa from "../../../components/dashboard_admin/gsic_participant/Toa";
+import Navbar from "../../../components/navbar/Navbar";
+import Footer from "../../../components/footer";
+import { useContext } from "react";
+import { AnnouncementContext } from "../announcement/announcementContext";
+import Announcement from "../announcement";
 
 const DashboardEx = () => {
+  const announContext = useContext(AnnouncementContext);
   return (
     <>
+      {announContext?.isAnnounce? <Announcement/> : ""} 
+      <Navbar/>
       <div className="flex flex-col justify-center py-4 bg-white">
         <div className="w-full flex items-center justify-between pt-[100px] px-40">
           <h1 className="text-7xl font-bold text-left text-[#005CBA] title mb-10">
@@ -395,10 +403,9 @@ const DashboardEx = () => {
         </div>
       </div>
       <div className="fixed bottom-16 right-6">
-        <button>
-          <img src={toa} alt="" className="w-[80px] h-[80px] mr-6" />
-        </button>
+        <Toa/>
       </div>
+      <Footer/>
     </>
   );
 };
