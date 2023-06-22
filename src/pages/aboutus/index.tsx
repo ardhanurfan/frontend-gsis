@@ -58,11 +58,11 @@ const AboutUs = () => {
     <>
     <Navbar/>
     <div className="w-full h-auto bg-cover bg-[url(../src/assets/Background_AboutUS.svg)]">
-      <div className="pt-[150px] lg:pt-[285px] w-[64.5vw] mx-auto text-center">
-        <h1 className="w-auto mx-auto inline-block header1 text-primaryText">
+      <div className="pt-[150px] lg:pt-[285px] w-[90vw] max-w-[928px] mx-auto text-center">
+        <h1 className="w-auto mx-auto inline-block header1-mobile lg:header1 text-primaryText">
           About Us
         </h1>
-        <p className="mt-[75px] text-justify text-primaryText body-text">
+        <p className="mt-[75px] rounded-xl p-6 bg-slate-100 shadow-md backdrop-blur-sm shadow-slate-500 bg-opacity-30 lg:bg-transparent lg:shadow-none text-justify text-primaryText body-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -94,9 +94,9 @@ const AboutUs = () => {
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
             officia deserunt mollit anim id est laborum." jabatan="Executive Director of GSIS 2023" foto="../src/assets/warm_regards.png"/>
       <div className="w-auto h-auto">
-        <div className="mt-[296px]">
-          <h1 className="text-center header1 text-primaryText">Goals</h1>
-          <h2 className="text-center header3 mt-[45px] text-primaryText">
+        <div className="mt-[156px] lg:mt-[296px]">
+          <h1 className="text-center header1-mobile lg:header1 text-primaryText">Goals</h1>
+          <h2 className="text-center header3-mobile lg:header3 mt-[45px] text-primaryText">
             Our Vision
           </h2>
           <div className="relative mt-[31px] w-[85vw] lg:w-[62vw] h-[200px] rounded-xl mx-auto bg-slate-100 shadow-md shadow-slate-500 bg-opacity-30">
@@ -110,7 +110,7 @@ const AboutUs = () => {
               solve the problem around them
             </p>
           </div>
-          <h2 className="text-center header3 mt-[109px] text-primaryText">
+          <h2 className="text-center header3-mobile lg:header3 mt-[109px] text-primaryText">
             Our Mission
           </h2>
           <div className="flex items-center justify-between w-[85vw] lg:w-[73vw] h-[200px] mt-[31px] mb-[20px] mx-auto">
@@ -127,8 +127,8 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="w-auto h-auto overflow-auto">
-        <div className="mt-[290px] mb-[125px]">
-          <h1 className="mx-auto text-center header1 text-primaryText">
+        <div className="mt-[150px] lg:mt-[290px] mb-[125px]">
+          <h1 className="mx-auto text-center header1-mobile lg:header1 text-primaryText">
             Timeline
           </h1>
           <div className="overflow-auto w-full mx-auto pb-[22px]">
