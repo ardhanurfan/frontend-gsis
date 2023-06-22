@@ -1,9 +1,12 @@
 import "./style.css";
 import toa from "../../../assets/toa.svg";
+import NavbarDashboard from "../../../components/navbarDashboard/NavbarDashboard";
+import Footer from "../../../components/footer";
 
 const Overview = () => {
   return (
     <>
+      <NavbarDashboard></NavbarDashboard>
       <div className="w-full h-auto bg-[#FCFCFC]">
         <h1 className="w-auto ml-14 mt-32 inline-block header1 text-primaryText">
           Dashboard Overview
@@ -84,6 +87,7 @@ const Overview = () => {
           </button>
         </div>
       </div>{" "}
+      <Footer></Footer>
     </>
   );
 };
