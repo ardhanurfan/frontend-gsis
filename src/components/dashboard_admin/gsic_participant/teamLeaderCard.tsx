@@ -49,10 +49,10 @@ const TeamLeaderCard = ({name,email,phone,university,major,year}:TeamLeaderCardP
                     </div>
                     <div className="flex gap-1">
                     <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B]">
-                        <p className="small text-[#FCFCFC]">Decline</p>
+                        <p className="button-text-mobile md:button-text text-[#FCFCFC]">Decline</p>
                     </button>
                     <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27]">
-                        <p className="small text-[#FCFCFC]">Accept</p>
+                        <p className="button-text-mobile md:button-text small text-[#FCFCFC]">Accept</p>
                     </button>
                     </div>
                 </div>
