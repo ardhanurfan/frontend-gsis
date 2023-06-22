@@ -49,42 +49,43 @@ const Ceremony = () => {
     return(
         <>
         {/* u have not logged in */}
-        <div className={popUp === 1 ? " fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30"}>
-            <div className="z-60 w-[45%] h-auto rounded-xl bg-white flex flex-col py-8 px-1 gap-5">
+        {/* <div className={popUp === 1 ? " fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30"}>
+            <div className="z-60 w-[45%] h-auto rounded-xl bg-white flex flex-col py-5 px-2 gap-5">
                 <div className="flex flex-col items-end pr-5 ">
                     <button className="hover:bg-slate-200 rounded-full p-1" onClick={() => setPopUp(0)}>✖</button>
                 </div>
                 <div className="flex flex-col items-center gap-5">
-                    <img src={as} className="h-[20%] w-[20%]" alt="" />
-                    <h1 className="text-primaryBlue header2">You have not log in</h1>
-                    <button className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[30%] button-text hover:bg-seccondaryBlue">Log In</button>
+                    <img src={as} className="h-[30%] w-[30%] md:h-[20%] md:w-[20%]" alt="" />
+                    <h2 className="text-primaryBlue text-center header2-mobile lg:header2">You have not log in</h2>
+                    <button className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[auto] button-text-mobile lg:button-text hover:bg-seccondaryBlue">Log In</button>
                 </div>
             </div>
-        </div>
+        </div> */}
 
         {/* proof poster */}
-        {/* <div className={popUp === 1 ? " fixed z-[1055] w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed w-full h-screen bg-primaryBlue bg-opacity-30"}>
-            <div className="absolute w-[45%] h-auto rounded-xl bg-white flex flex-col py-8 px-1 gap-5">
+        {/* upload file blm rnspnsf */}
+        <div className={popUp === 1 ? " fixed z-[1055] w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed w-full h-screen bg-primaryBlue bg-opacity-30"}>
+            <div className="absolute w-[45%] h-auto rounded-xl bg-white flex flex-col py-8 px-2 gap-5">
                 <div className="flex flex-col items-end pr-5">
                     <button className="hover:bg-slate-200 rounded-full p-1" onClick={() => setPopUp(0)}>✖</button>
                 </div>
                 <div className="flex flex-col items-center gap-5">
-                    <h2 className="text-primaryBlue header2">Proof of Poster Upload <span className="text-red-500"> *</span></h2>
-                    <h3 className="text-primaryBlue header3">UPLOAD FILES</h3>
-                    <div className="w-[66%]">
+                    <h2 className="text-primaryBlue text-center header2-mobile lg:header2">Proof of Poster Upload <span className="text-red-500"> *</span></h2>
+                    <h3 className="text-primaryBlue text-center header3-mobile lg:header3">UPLOAD FILES</h3>
+                    <div className="w-[50%]">
                         <UploadFile/>
                     </div>
-                    <button className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[15%] button-text">Submit</button>
+                    <button className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[auto] button-text-mobile lg:button-text">Submit</button>
                 </div>
             </div>
-        </div> */}
+        </div>
         
 
         <div className="w-full h-[auto] bg-[url(./src/assets/Background_Ceremony.svg)] bg-cover">
-            <div className="pt-[200px] w-full mx-auto text-center">
+            <div className="pt-[150px] w-full mx-auto text-center">
                 {/* Judul Webinar */}
-                <h1 className="w-[70vw] mx-auto inline-block header1 text-primaryBlue pb-5">Opening Ceremony</h1>
-                <h2 className="w-[70vw] mx-auto inline-block header2 text-primaryBlue pb-5">Unleashing the Potential of AI: <span className="text-primaryBlue">Empowering Youth for Positive Breakthroughs in Art, Tech, and Business</span></h2>
+                <h1 className="w-[70vw] header1-mobile lg:header1 mx-auto inline-block text-primaryBlue pb-5">Opening Ceremony</h1>
+                <h2 className="w-[70vw] mx-auto inline-block header2-mobile lg:header2 text-primaryBlue pb-5">Unleashing the Potential of AI: <span className="text-primaryBlue">Empowering Youth for Positive Breakthroughs in Art, Tech, and Business</span></h2>
 
                 {/* <div className="flex items-center justify-between w-[62vw] lg:w-[77vw] h-[303px] mx-auto">
                     <PrevArrow/>
@@ -100,18 +101,18 @@ const Ceremony = () => {
                 </div>
                 
                 {/* About Webinar */}
-                <div className="mt-28 px-36">
-                    <h1 className="w-auto mx-auto inline-block header1 text-primaryText py-5 mb-5">About Opening Ceremony</h1>
+                <div className="mt-28 px-10 lg:px-36">
+                    <h1 className="w-auto mx-auto inline-block header1-mobile lg:header1 text-primaryText py-5 mb-5">About Opening Ceremony</h1>
                     <AboutWebinarCard description1="The event that marks the start of the Ganesha Student Innovation Summit (GSIS)! It is designed to set the tone for the event and create a sense of excitement and anticipation among the participants and attendees. Opening ceremonies will bring webinars, workshops, performances, and other forms of entertainment, and may involve the formal introduction of key participants or guests of honor." description2="Explore the transformative power of artificial intelligence (AI) in unlocking the potential of youth in the realms of art, technology, and business. Discover how AI-driven innovations are revolutionizing creative expression, entrepreneurial endeavors, and technological advancements. Empower the youth to maximize AI's potentials, generate positive breakthroughs, and shape a future where art, tech, and business collaborate effectively. Don't miss this opportunity to gain insights, a workshop about AI potentials, network with industry experts, and unleash the untapped potential of AI for youth empowerment!" date="8 July 2023, 13.00" place="Zoom Meeting (link TBA)"/>
                 </div>
                 {/* Benefit */}
                 <BenefitWebinarCard title="Benefit" b1="Expand knowledge and gain insights from the expert" b2="Hands-on workshop" b3="Networking and collaboration opportunity" b4="Various benefits from our sponsors" b5="Free webinar recording" b6="E-Certificates"/>
 
                 {/* Register Here */}
-                <div className="mt-28 mx-52">
+                <div className="mt-28 mx-10 md:mx-52">
                     <div className="w-full h-auto py-12 bg-white rounded-xl shadow-xl shadow-blue-200 bg-opacity-50">
-                        <h2 className="header2 text-primaryBlue px-72 pb-5">Are You Ready To Develop Your Knowledge?</h2>
-                        <button className="bg-primaryBlue px-14 py-2 rounded-xl text-white" onClick={() => setPopUp(1)}>Register Here</button>
+                        <h2 className="header2-mobile lg:header2 text-primaryBlue px-10 xl:px-40 text-center pb-5">Are You Ready To Develop Your Knowledge?</h2>
+                        <button className="bg-primaryBlue w-auto p-5 py-2 button-text-mobile lg:button-text rounded-xl text-white" onClick={() => setPopUp(1)}>Register Here</button>
                     </div>
                 </div>
 
