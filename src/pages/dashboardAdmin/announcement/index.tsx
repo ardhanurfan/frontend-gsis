@@ -1,5 +1,6 @@
+import { AnnouncementContext } from "./announcementContext";
 import "./style.css";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 const Announcement = () => {
   const [charCount, setCharCount] = useState("");
@@ -8,9 +9,13 @@ const Announcement = () => {
   }) => {
     setCharCount(e.target.value);
   };
+
+  const announContext = useContext(AnnouncementContext);
+
   return (
     <>
       {/* <div className="w-full h-screen bg-[url(./src/assets/dashboard_overview.svg)] bg-cover"></div> */}
+      {/* {isAnnounce?  */}
       <div className="fixed bg-primaryBlue bg-opacity-30 w-screen h-screen z-0 flex items-center justify-center">
           <div className="fixed bg-white w-[80%] mx-auto h-auto rounded-2xl z-10 text-center">
             <h1 className="text-[#015CBA] header1 w-auto pt-5">
@@ -78,7 +83,7 @@ const Announcement = () => {
               <div className="mt-10 mb-5 w-full h-auto col-span-2">
                 <div className="grid grid-cols-2">
                   <div className="pr-80">
-                    <button className="bg-[#BD1B1B] w-auto h-auto text-white rounded-lg hover:bg-red-600">
+                    <button className="bg-[#BD1B1B] w-auto h-auto text-white rounded-lg hover:bg-red-600" onClick={() => announContext?.setAnnounce(false)}>
                       <div className="m-2 px-2">Cancel</div>
                     </button>
                   </div>
@@ -98,7 +103,7 @@ const Announcement = () => {
               </div>
             </div>
           </div>
-      </div>
+      </div> 
     </>
   );
 };

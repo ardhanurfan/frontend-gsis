@@ -14,10 +14,10 @@ interface BCCParticipantCardProps {
 const BCCParticipantCard = ({name,email,phone,university,major,year,streams}:BCCParticipantCardProps) => {
     return (
         <>
-         <details className="w-[530px] hover:cursor-pointer rounded-xl">
+         <details className="w-auto md:w-[500px] lg:w-[510px] xl:w-[530px] hover:cursor-pointer rounded-xl">
               <summary className="w-auto h-auto text-lg bg-gradient-to-l from-[#060B81] to-[#005CBA] rounded-xl text-white px-6 pt-4 pb-2 mx-auto flex items-center justify-between shadow-lg hover:">
                 <div className="w-auto h-auto flex flex-col items-center">
-                  <h2 className="header2 mb-2">Participant Name</h2>
+                  <h2 className="mobile-header2 lg:header2 lg:text-[36px] mb-2">Participant Name</h2>
                   <div className="w-20 h-4 rounded-2xl flex items-center justify-center bg-[#F8DB25]">
                     <p className="small text-[#FCFCFC]">ACTIVE</p>
                   </div>

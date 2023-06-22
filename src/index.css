@@ -59,3 +59,14 @@
     @apply font-montserrat font-semibold text-[12px];
   }
 }
+.field-text{
+  @apply font-montserrat font-semibold text-[16px];
+}
+
+.mobile-header1{
+  @apply font-montserrat font-bold tracking-[0.02em] leading-none text-[36px];
+}
+
+.mobile-header2{
+  @apply font-montserrat font-bold tracking-[0.02em] leading-none text-[20px];
+}
