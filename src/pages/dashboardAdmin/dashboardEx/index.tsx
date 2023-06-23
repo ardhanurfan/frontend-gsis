@@ -1,9 +1,12 @@
 import "./style.css";
 import toa from "../../../assets/toa.svg";
+import NavbarDashboard from "../../../components/navbarDashboard/NavbarDashboard";
+import Footer from "../../../components/footer";
 
 const DashboardEx = () => {
   return (
     <>
+      <NavbarDashboard></NavbarDashboard>
       <div className="flex flex-col justify-center py-4 bg-white">
         <div className="w-full flex items-center justify-between pt-[100px] px-40">
           <h1 className="text-7xl font-bold text-left text-[#005CBA] title mb-10">
@@ -399,6 +402,7 @@ const DashboardEx = () => {
           <img src={toa} alt="" className="w-[80px] h-[80px] mr-6" />
         </button>
       </div>
+      <Footer></Footer>
     </>
   );
 };

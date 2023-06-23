@@ -10,6 +10,8 @@ import AboutUs from "./pages/aboutUs";
 import NotFound from "./pages/addingPages/notFount";
 import ComingSoon from "./pages/addingPages/comingSoon";
 import BCC from "./pages/bcc/landingpage";
+import Exhibition from "./pages/exhibiton/landingpage";
+import RegistrationExhibition from "./pages/exhibiton/registration";
 import DashboardBCC from "./pages/dashboardAdmin/dashboardBCC";
 import DashboardCeremony from "./pages/dashboardAdmin/dashboardCeremony";
 import DashboardEx from "./pages/dashboardAdmin/dashboardEx";
@@ -25,6 +27,10 @@ import EditSubmissionCer from "./pages/dashboardPeserta/ceremony/edit_submission
 import ParticipantBCC from "./pages/dashboardPeserta/BCC/participant_information";
 import EditSubmissionBCC from "./pages/dashboardPeserta/BCC/edit_submission";
 import CreateTeamBCC from "./pages/dashboardPeserta/BCC/create_team";
+import HomePageGSIC from "./pages/gsic/home";
+import RegisterGSIC from "./pages/gsic/register";
+import RegisterBCC from "./pages/bcc/registration";
+import ProtectedRoute from "./API/ProtectedRoute";
 
 function App() {
   return (
@@ -34,20 +40,66 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/bcc" element={<BCC />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/forgot-sent" element={<ForgotSent />} />
-
-        {/* Dashboard Peserta */}
-        <Route path="/dashboard" element={<DashboardOverview />} />
-        {/* PROFILE */}
-        <Route path="/profile" element={<ProfilePeserta />} />
-        <Route path="/edit-profile" element={<EditProfile />} />
+        {/* BCC */}
+        <Route path="/bcc" element={<BCC />} />
+        <Route path="/register-bcc" element={<RegisterBCC />} />
         {/* EXHIBITION */}
-        <Route path="/dashboard-exhibition" element={<DashboardExhibition />} />
-        <Route path="/dashboard-exhibition-edit" element={<EditSubmissionExhibition />}/>
+        <Route path="/exhibition" element={<Exhibition />} />
+        <Route
+          path="/register-exhibition"
+          element={<RegistrationExhibition />}
+        />
+        {/* GSIC */}
+        <Route path="/gsic" element={<HomePageGSIC />} />
+        <Route path="/gsic/register" element={<RegisterGSIC />} />
+
+        {/* Dashboard Peserta : Harus login pakek protected route */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <DashboardOverview />
+            </ProtectedRoute>
+          }
+        />
+        {/* PROFILE */}
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <ProfilePeserta />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/edit-profile"
+          element={
+            <ProtectedRoute>
+              <EditProfile />
+            </ProtectedRoute>
+          }
+        />
+        {/* EXHIBITION */}
+        <Route
+          path="/dashboard-exhibition"
+          element={
+            <ProtectedRoute>
+              <DashboardExhibition />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard-exhibition-edit"
+          element={
+            <ProtectedRoute>
+              <EditSubmissionExhibition />
+            </ProtectedRoute>
+          }
+        />
         {/* BCC */}
         <Route path="/participant-bcc" element={<ParticipantBCC />}/>
         <Route path="/submission-bcc" element={<EditSubmissionBCC />}/>
@@ -63,6 +115,48 @@ function App() {
         <Route path="/dashboard-exhibition-admin" element={<DashboardEx />} />
         <Route path="/dashboard-bcc-admin" element={<DashboardBCC />} />
         <Route path="/dashboard-gsic-admin" element={<DashboardGSIC />} />
+
+        {/* Dashboard Admin : Harus login pakek protected route */}
+        <Route
+          path="/dashboard-admin"
+          element={
+            <ProtectedRoute>
+              <Overview />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard-ceremony-admin"
+          element={
+            <ProtectedRoute>
+              <DashboardCeremony />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard-exhibition-admin"
+          element={
+            <ProtectedRoute>
+              <DashboardEx />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard-bcc-admin"
+          element={
+            <ProtectedRoute>
+              <DashboardBCC />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard-gsic-admin"
+          element={
+            <ProtectedRoute>
+              <DashboardGSIC />
+            </ProtectedRoute>
+          }
+        />
 
         {/* Adding */}
         <Route path="/coming-soon" element={<ComingSoon />} />

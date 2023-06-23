@@ -4,6 +4,8 @@ import toast, { Toaster } from "react-hot-toast";
 import "./style.css";
 import UploadFile from "../../../../components/upload-file/upload-file";
 import ContactList from "../../../../components/contact_list";
+import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
+import Footer from "../../../../components/footer";
 
 const EditSubmissionExhibition = () => {
   const [charCount, setCharCount] = useState("");
@@ -18,6 +20,7 @@ const EditSubmissionExhibition = () => {
 
   return (
     <>
+      <NavbarDashboard></NavbarDashboard>
       <div className="w-full px-[149px] pt-[200px] pb-[60px]">
         <h1 className="header1 text-primaryText mb-[54px] text-center">
           Edit Submission
@@ -136,6 +139,7 @@ const EditSubmissionExhibition = () => {
           <ContactList />
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };
