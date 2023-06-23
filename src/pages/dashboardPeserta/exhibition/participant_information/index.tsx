@@ -1,8 +1,11 @@
 import SubmissionCard from "../../../../components/dashboard_peserta/exhibition/participant_information/submission-card";
+import Footer from "../../../../components/footer";
+import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
 
 const DashboardExhibition = () => {
   return (
     <>
+      <NavbarDashboard></NavbarDashboard>
       <div className="w-full px-[70px] pt-[200px] pb-[100px]">
         <h1 className="header1 text-primaryText mb-7">
           Participant Exhibition Information
@@ -17,6 +20,7 @@ const DashboardExhibition = () => {
         </h2>
         <div className="header2 mb-[100px]">LIST CONTACT</div>
       </div>
+      <Footer></Footer>
     </>
   );
 };

@@ -1,9 +1,12 @@
 import "./style.css";
 import toa from "../../../assets/toa.svg";
+import NavbarDashboard from "../../../components/navbarDashboard/NavbarDashboard";
+import Footer from "../../../components/footer";
 
 const DashboardCeremony = () => {
   return (
     <>
+      <NavbarDashboard></NavbarDashboard>
       <div className="w-full h-auto bg-[#FCFCFC]">
         <h1 className="w-auto ml-14 mt-32 mb-10 inline-block header1 text-primaryText">
           Ceremony Participant
@@ -370,6 +373,7 @@ const DashboardCeremony = () => {
           </button>
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };

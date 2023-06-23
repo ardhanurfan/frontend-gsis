@@ -1,10 +1,13 @@
 import "./style.css";
 import toa from "../../../assets/toa.svg";
 import up from "../../../assets/upload.svg";
+import NavbarDashboard from "../../../components/navbarDashboard/NavbarDashboard";
+import Footer from "../../../components/footer";
 
 const DashboardGSIC = () => {
   return (
     <>
+      <NavbarDashboard></NavbarDashboard>
       <div className="flex flex-col justify-center py-4 bg-[#FCFCFC]">
         <h1 className="pt-[100px] text-7xl font-bold text-left text-[#005CBA] title mb-10 pl-40">
           GSIC Participant
@@ -649,6 +652,7 @@ const DashboardGSIC = () => {
           </button>
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };
