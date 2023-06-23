@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.select::after{
-    content: url(../../../assets/dropdown-sm.svg);
-
-    position: absolute;
-    width: 100%;
-    left:90%;
-    top: 20%;
-    cursor: pointer;
-    pointer-events: none;
-    transition:.25s all ease;
-}
-
 details > summary {
     list-style: none;
 }

@@ -15,17 +15,17 @@ const DashboardEx = () => {
       <Navbar/>
 
       <div className="flex flex-col justify-center py-4 bg-black">
-        <div className="w-full flex items-center justify-between pt-[100px] px-40">
-          <h1 className="header1-mobile lg:header1 font-bold text-left text-[#005CBA] title mb-10">
+        <div className="w-full flex items-center justify-between pt-[100px] px-5 xl:px-40">
+          <h1 className="header1-mobile lg:header1 font-bold text-left text-[#005CBA] title ">
             Exhibition Participant
           </h1>
-          <div className="relative select">
+          <div className="">
             <select
-              className="body-text w-auto bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 rounded-lg"
+              className="body-text w-auto bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 rounded-lg body-text-mobile xl:body-text"
               name=""
               id=""
             >
-              <option value="" selected disabled>
+              <option value="" selected disabled className="">
                 Category
               </option>
               <option value="">Team</option>
@@ -33,7 +33,8 @@ const DashboardEx = () => {
             </select>
           </div>
         </div>
-        <div className="mt-2 space-y-4">
+        <div className="mt-10 space-y-4 h-">
+          <ExhibitionParticipantCard team_name="ANDARA" status="ACTIVE" teamid={123421} name_profile="Ana" email_profile="xxx@gmail.com" phone_profile="+62xxxxxxxxxxx" uni_profile="ITB" major_profile="STI" year_profile="2021/2022" name_cp="Ana" phone_cp="+62xxxxxxxxxxx" category_work="Masterpiece" year_created_work="2022" size_work="1028x1960" desc_work="Lorem50adfadhfhajdhgjahdj ajdfhjahfjhahdfuiahduif ahjahdjfhajfhjahfdjia "/>
           <ExhibitionParticipantCard team_name="ANDARA" status="ACTIVE" teamid={123421} name_profile="Ana" email_profile="xxx@gmail.com" phone_profile="+62xxxxxxxxxxx" uni_profile="ITB" major_profile="STI" year_profile="2021/2022" name_cp="Ana" phone_cp="+62xxxxxxxxxxx" category_work="Masterpiece" year_created_work="2022" size_work="1028x1960" desc_work="Lorem50adfadhfhajdhgjahdj ajdfhjahfjhahdfuiahduif ahjahdjfhajfhjahfdjia "/>
 
         </div>

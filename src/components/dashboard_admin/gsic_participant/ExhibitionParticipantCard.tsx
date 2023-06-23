@@ -18,8 +18,8 @@ interface ExhibitionParticipantCardProps {
 
 const ExhibitionParticipantCard = ({team_name,status,teamid,name_profile,email_profile,phone_profile,uni_profile,major_profile,year_profile,name_cp,phone_cp,category_work,year_created_work,size_work,desc_work}:ExhibitionParticipantCardProps) => {
     return(
-        <details className="px-5 pb-5 hover:cursor-pointer rounded-xl">
-            <summary className="w-full h-[113px] text-lg bg-gradient-to-l from-[#060B81] to-[#005CBA] rounded-xl bg-white text-white px-10 mx-auto flex items-center justify-between shadow-lg">
+        <details className="px-5 xl:px-44  hover:cursor-pointer rounded-xl">
+            <summary className="w-full h-[113px] text-lg bg-gradient-to-l from-[#060B81] to-[#005CBA] rounded-xl bg-white text-white px-5 sm:px-10 mx-auto flex items-center justify-between shadow-lg">
                 <div className="w-auto h-auto flex flex-col">
                     <div className="w-auto h-auto flex flex-row items-center">
                         <h2 className="header2-mobile lg:header2 mb-2">{team_name}</h2>
@@ -30,9 +30,9 @@ const ExhibitionParticipantCard = ({team_name,status,teamid,name_profile,email_p
                     <p className="small ml-2">{teamid}</p>
                 </div>
             </summary>
-            <div className="bg-white grid grid-cols-3 p-2 shadow-2xl rounded-b-xl">
+            <div className="bg-white flex flex-col xl:grid xl:grid-cols-3 p-2 shadow-2xl rounded-b-xl">
                 <div className="rounded-md h-[auto]">
-                    <div className="my-5 ml-5">
+                    <div className="py-5 pl-5">
                         <h3 className="header3 text-[#015CBA]">Profile</h3>
                         <p className="text-[#015CBA] body-text">Name</p>
                         <p className="text-[#4F9BFD] small mb-4">{name_profile}
@@ -65,24 +65,28 @@ const ExhibitionParticipantCard = ({team_name,status,teamid,name_profile,email_p
                     </div>
                 </div>
                 <div className="col-span-2 rounded-md h-[auto]">
-                    <div className="my-5 mr-5">
+                    <div className="pb-5 xl:py-5 pl-5">
                         <h3 className="header3 text-[#015CBA]">Work</h3>
-                        <div className="flex gap-16 my-5">
-                            <div className="flex flex-col w-auto">
-                                <p className="text-[#015CBA] body-text">Category</p>
-                                <p className="text-[#4F9BFD] small">{category_work}</p>
+                        <div className="flex gap-2 sm:gap-16 my-5">
+                            <div>
+                                <div className="flex flex-col w-auto">
+                                    <p className="text-[#015CBA] body-text">Category</p>
+                                    <p className="text-[#4F9BFD] small">{category_work}</p>
+                                </div>
+                                <div className="flex flex-col w-auto">
+                                    <p className="text-[#015CBA] body-text">Year Created</p>
+                                    <p className="text-[#4F9BFD] small">{year_created_work}</p>
+                                </div>
+                                <div className="flex flex-col w-auto mr-10">
+                                    <p className="text-[#015CBA] body-text">Size</p>
+                                    <p className="text-[#4F9BFD] small">{size_work}</p>
+                                </div>
                             </div>
-                            <div className="flex flex-col w-auto">
-                                <p className="text-[#015CBA] body-text">Year Created</p>
-                                <p className="text-[#4F9BFD] small">{year_created_work}</p>
-                            </div>
-                            <div className="flex flex-col w-auto mr-10">
-                                <p className="text-[#015CBA] body-text">Size</p>
-                                <p className="text-[#4F9BFD] small">{size_work}</p>
-                            </div>
-                            <div className="flex flex-row gap-5 w-[120px]">
-                                <button className="text-[#FCFCFC] body-text bg-success w-full rounded-lg px-5">Photo</button>
-                                <button className="text-[#FCFCFC] body-text bg-success w-full rounded-lg px-5">Video</button>
+                            <div>
+                                <div className="flex flex-row gap-1 w-[120px]">
+                                    <button className="text-[#FCFCFC] button-text-mobile sm:button-text bg-success w-full rounded-lg px-5">Photo</button>
+                                    <button className="text-[#FCFCFC] button-text-mobile sm:button-text bg-success w-full rounded-lg px-5">Video</button>
+                                </div>
                             </div>
                         </div>
                         <p className="text-[#015CBA] body-text">Description</p>
