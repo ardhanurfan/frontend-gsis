@@ -7,9 +7,11 @@ import ContactList from "../../components/contact_list";
 // import Slides from 'react-slick';
 // import 'slick-carousel/slick/slick.css';
 // import 'slick-carousel/slick/slick-theme.css';
-import as from '../../assets/orang.svg'
+// import as from '../../assets/orang.svg'
 import { useState } from "react";
 import UploadFile from "../../components/upload-file/upload-file";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer";
 
 const Ceremony = () => {
     // const [sliderRef, setSliderRef] = useState(null)
@@ -48,6 +50,7 @@ const Ceremony = () => {
     const [popUp, setPopUp] = useState(0);
     return(
         <>
+        <Navbar/>
         {/* u have not logged in */}
         {/* <div className={popUp === 1 ? " fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30"}>
             <div className="z-60 w-[45%] h-auto rounded-xl bg-white flex flex-col py-5 px-2 gap-5">
@@ -118,12 +121,12 @@ const Ceremony = () => {
 
                 {/* Contact List */}
                 <div className="mt-28 pb-20">
-                    <h1 className="header1 pb-10 text-primaryBlue">Contact Person</h1>
+                    <h1 className="header1-mobile lg:header1 pb-10 text-primaryBlue">Contact Person</h1>
                     <ContactList/>
                 </div>
             </div>
         </div>
-
+        <Footer/>
         </>
     )
 }
