@@ -1,11 +1,13 @@
 import Overview from "../../../components/dashboard_peserta/overview";
-import NavbarDP from "../../../components/navbarDashboardPeserta/NavbarDP";
+import Footer from "../../../components/footer";
+import NavbarDashboard from "../../../components/navbarDashboard/NavbarDashboard";
 
 const DashboardOverview = () => {
   return (
     <>
-    <NavbarDP/>
+      <NavbarDashboard />
       <Overview />
+      <Footer></Footer>
     </>
   );
 };

@@ -1,28 +1,17 @@
 import { useEffect, useRef, useState } from "react";
-import "./Navbar.css";
+import "./NavbarDashboard.css";
 import { getWithAuth, postWithAuth } from "../../API/api";
 import { useNavigate } from "react-router-dom";
 import { useEventListener } from "usehooks-ts";
 
-const Navbar = () => {
+const NavbarDashboard = () => {
   const [navOpen, setNavOpen] = useState(false);
-  const [isOpenCompetition, setIsOpenCompetition] = useState(false);
   const [isOpenAccount, setIsOpenAccount] = useState(false);
   const [user, setUser] = useState<any>();
   const navigate = useNavigate();
 
-  const toogleCompetition = () => {
-    setIsOpenCompetition(!isOpenCompetition);
-    if (isOpenAccount) {
-      setIsOpenAccount(!isOpenAccount);
-    }
-  };
-
   const toogleAccount = () => {
     setIsOpenAccount(!isOpenAccount);
-    if (isOpenCompetition) {
-      setIsOpenCompetition(!isOpenCompetition);
-    }
   };
 
   const token = localStorage.getItem("access_token");
@@ -81,72 +70,65 @@ const Navbar = () => {
         >
           <img src="./src/assets/logo_gsis.svg" alt="" />
           <div className="hidden lg:flex gap-[40px] xl:gap-[50px] button-text text-primaryBlue lg:items-center">
-            <a className="cursor-pointer hover:text-seccondaryBlue" href="/">
-              Home
-            </a>
             <a
               className="cursor-pointer hover:text-seccondaryBlue"
-              href="/about-us"
+              href={
+                user?.role == "USER"
+                  ? "/dashboard"
+                  : user?.role == "ADMIN"
+                  ? "/dashboard-admin"
+                  : "#"
+              }
             >
-              About Us
+              Announcement
             </a>
             <a
               className="cursor-pointer hover:text-seccondaryBlue"
-              href="/ceremony"
+              href={
+                user?.role == "USER"
+                  ? "/dashboard-bcc"
+                  : user?.role == "ADMIN"
+                  ? "/dashboard-bcc-admin"
+                  : "#"
+              }
+            >
+              BCC
+            </a>
+            <a
+              className="cursor-pointer hover:text-seccondaryBlue"
+              href={
+                user?.role == "USER"
+                  ? "/dashboard-gsic"
+                  : user?.role == "ADMIN"
+                  ? "/dashboard-gsic-admin"
+                  : "#"
+              }
+            >
+              GSIC
+            </a>
+            <a
+              className="cursor-pointer hover:text-seccondaryBlue"
+              href={
+                user?.role == "USER"
+                  ? "/dashboard-ceremony"
+                  : user?.role == "ADMIN"
+                  ? "/dashboard-ceremony-admin"
+                  : "#"
+              }
             >
               Ceremony
             </a>
-            <div className="flex justify-center relative">
-              <button
-                className="flex cursor-pointer hover:text-seccondaryBlue"
-                type="button"
-                onClick={toogleCompetition}
-              >
-                Competition
-                <span className="ml-2 w-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1em"
-                    viewBox="0 0 320 512"
-                    fill="currentcolor"
-                    className={
-                      (isOpenCompetition ? "origin-center rotate-180" : "") +
-                      " h-5 w-5"
-                    }
-                  >
-                    <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
-                  </svg>
-                </span>
-              </button>
-              {isOpenCompetition && (
-                <ul className="absolute z-[500] float-left top-10 min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-xl shadow-primaryBlue">
-                  <li>
-                    <a
-                      className="block w-[200px] h-auto bg-transparent px-4 py-2 text-sm text-primaryBlue hover:bg-primaryBlue hover:text-seccondaryBlue"
-                      href="/gsic"
-                    >
-                      Ganesha Social Impact Challenge
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="block w-[200px] bg-transparent px-4 py-2 text-sm text-primaryBlue hover:bg-primaryBlue hover:text-seccondaryBlue"
-                      href="/bcc"
-                    >
-                      Bussiness Case Competition
-                    </a>
-                  </li>
-                </ul>
-              )}
-            </div>
             <a
               className="cursor-pointer hover:text-seccondaryBlue"
-              href="/exhibition"
+              href={
+                user?.role == "USER"
+                  ? "/dashboard-exhibition"
+                  : user?.role == "ADMIN"
+                  ? "/dashboard-exhibition-admin"
+                  : "#"
+              }
             >
               Exhibition
-            </a>
-            <a className="cursor-pointer hover:text-seccondaryBlue" href="/faq">
-              FAQ
             </a>
             <div className="relative bg-primaryBlue text-sm text-white w-[140px] h-[40px] rounded-xl px-2 flex justify-center items-center hover:bg-seccondaryBlue">
               {!token ? (
@@ -194,15 +176,9 @@ const Navbar = () => {
                       <li>
                         <a
                           className="block w-[200px] h-auto bg-transparent px-4 py-2 text-sm text-primaryBlue hover:bg-primaryBlue hover:text-seccondaryBlue"
-                          href={
-                            user?.role == "USER"
-                              ? "/dashboard"
-                              : user?.role == "ADMIN"
-                              ? "/dashboard-admin"
-                              : "#"
-                          }
+                          href="/"
                         >
-                          Dashboard
+                          Main Page
                         </a>
                       </li>
                       <li>
@@ -266,74 +242,63 @@ const Navbar = () => {
             <div className="py-[20px] flex flex-col gap-[20px] items-center button-text text-primaryBlue">
               <a
                 className="cursor-pointer hover:text-seccondaryBlue w-full text-center"
-                href="/"
+                href={
+                  user?.role == "USER"
+                    ? "/dashboard"
+                    : user?.role == "ADMIN"
+                    ? "/dashboard-admin"
+                    : "#"
+                }
               >
-                Home
+                Announcement
               </a>
               <a
                 className="cursor-pointer hover:text-seccondaryBlue w-full text-center"
-                href="/about-us"
+                href={
+                  user?.role == "USER"
+                    ? "/dashboard-bcc"
+                    : user?.role == "ADMIN"
+                    ? "/dashboard-bcc-admin"
+                    : "#"
+                }
               >
-                About Us
+                BCC
               </a>
               <a
                 className="cursor-pointer hover:text-seccondaryBlue w-full text-center"
-                href="/ceremony"
+                href={
+                  user?.role == "USER"
+                    ? "/dashboard-gsic"
+                    : user?.role == "ADMIN"
+                    ? "/dashboard-gsic-admin"
+                    : "#"
+                }
+              >
+                GSIC
+              </a>
+              <a
+                className="cursor-pointer hover:text-seccondaryBlue w-full text-center"
+                href={
+                  user?.role == "USER"
+                    ? "/dashboard-ceremony"
+                    : user?.role == "ADMIN"
+                    ? "/dashboard-ceremony-admin"
+                    : "#"
+                }
               >
                 Ceremony
               </a>
-              <button
-                className="hamburger cursor-pointer hover:text-seccondaryBlue w-full text-center flex justify-center items-center"
-                type="button"
-                onClick={toogleCompetition}
-              >
-                Competition
-                <span className="ml-2 w-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1em"
-                    viewBox="0 0 320 512"
-                    fill="currentcolor"
-                    className={
-                      (isOpenCompetition ? "origin-center rotate-180" : "") +
-                      " h-5 w-5"
-                    }
-                  >
-                    <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
-                  </svg>
-                </span>
-              </button>
-              {isOpenCompetition && (
-                <ul className="w-full list-none border-none text-center text-base">
-                  <li className="mb-[20px]">
-                    <a
-                      className="block w-full bg-transparent text-sm text-primaryBlue hover:text-seccondaryBlue"
-                      href="/gsic"
-                    >
-                      Ganesha Social Impact Challenge
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="block w-full bg-transparent text-sm text-primaryBlue hover:text-seccondaryBlue"
-                      href="/bcc"
-                    >
-                      Bussiness Case Competition
-                    </a>
-                  </li>
-                </ul>
-              )}
               <a
                 className="cursor-pointer hover:text-seccondaryBlue w-full text-center"
-                href="/exhibition"
+                href={
+                  user?.role == "USER"
+                    ? "/dashboard-exhibition"
+                    : user?.role == "ADMIN"
+                    ? "/dashboard-exhibition-admin"
+                    : "#"
+                }
               >
                 Exhibition
-              </a>
-              <a
-                className="cursor-pointer hover:text-seccondaryBlue w-full text-center"
-                href="/faq"
-              >
-                FAQ
               </a>
               {!token ? (
                 <div className="text-[12px] bg-primaryBlue text-white rounded-lg w-[120px] h-[40px] flex justify-evenly items-center">
@@ -380,15 +345,9 @@ const Navbar = () => {
                       <li className="mb-[20px]">
                         <a
                           className="block w-full bg-transparent text-sm text-primaryBlue hover:text-seccondaryBlue"
-                          href={
-                            user?.role == "USER"
-                              ? "/dashboard"
-                              : user?.role == "ADMIN"
-                              ? "/dashboard-admin"
-                              : "#"
-                          }
+                          href="/"
                         >
-                          Dashboard
+                          Main Page
                         </a>
                       </li>
                       <li className="mb-[20px]">
@@ -419,4 +378,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarDashboard;
