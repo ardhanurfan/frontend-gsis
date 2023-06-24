@@ -6,7 +6,6 @@ import { AnnouncementContext } from "../announcement/announcementContext";
 import Announcement from "../announcement";
 import ExhibitionParticipantCard from "../../../components/dashboard_admin/admin/ExhibitionParticipantCard";
 import NavbarDashboard from "../../../components/navbarDashboard/NavbarDashboard";
-import Footer from "../../../components/footer";
 
 const DashboardEx = () => {
   const announContext = useContext(AnnouncementContext);
