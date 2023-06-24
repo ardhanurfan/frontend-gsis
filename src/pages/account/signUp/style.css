@@ -14,22 +14,24 @@ select::-ms-expand {
   display: none;
 }
 
-.select::after {
+.dropdown-icon::after {
   content: url(../../../assets/dropdown.svg);
   position: absolute;
   right: 10px;
-  bottom: 2px;
+  bottom: 0px;
+  transform: translate(0, -60%);
   cursor: pointer;
   pointer-events: none;
   transition: 0.25s all ease;
 }
 
-@media (min-width: 1024px) {
-  .select::after {
-    content: url(../../../assets/dropdown.svg);
+@media (max-width: 1024px) {
+  .dropdown-icon::after {
+    content: url(../../../assets/dropdown-sm.svg);
     position: absolute;
-    right: 10px;
-    bottom: 2px;
+    right: 8px;
+    bottom: 0px;
+    transform: translate(0, -15%);
     cursor: pointer;
     pointer-events: none;
     transition: 0.25s all ease;

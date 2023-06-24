@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Dot from "../../../components/account/dot";
 import TextField from "../../../components/account/text-field";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
-import { post } from "../../../API/api";
+import { get, post } from "../../../API/api";
 
 const SignUp = () => {
   const [loading, setLoading] = useState(false);
@@ -14,7 +14,11 @@ const SignUp = () => {
   const [username, setUsername] = useState("");
   const [phone, setPhone] = useState("");
   const [university, setUniversity] = useState("");
+  const [universityData, setUniversityData] = useState<
+    Array<{ id: number; nama_universitas: string }>
+  >([]);
   const [major, setMajor] = useState("");
+  const [yearData, setYearData] = useState<Array<string>>([]);
   const [year, setYear] = useState("");
   const navigate = useNavigate();
 
@@ -52,6 +56,26 @@ const SignUp = () => {
       setLoading(false);
     }
   };
+
+  const getUniversity = async () => {
+    try {
+      const response = await get("universities");
+      setUniversityData(response.data?.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getYear = async () => {
+    for (let index = 2010; index <= 2023; index++) {
+      setYearData([...yearData, index.toString()]);
+    }
+  };
+
+  useEffect(() => {
+    getUniversity();
+    getYear();
+  }, []);
 
   return (
     <>
@@ -118,7 +142,7 @@ const SignUp = () => {
                 <label htmlFor="university" className="text-primaryText mb-2">
                   University/Institution
                 </label>
-                <div className="select overflow-hidden text-ellipsis relative py-4 flex w-full bg-primaryBlue rounded-lg">
+                <div className="dropdown-icon overflow-hidden text-ellipsis relative py-2 lg:py-4 flex w-full bg-primaryBlue rounded-lg">
                   <select
                     defaultValue={""}
                     onChange={(val) => setUniversity(val.target.value)}
@@ -142,35 +166,19 @@ const SignUp = () => {
                   </select>
                 </div>
               </div>
-              <div className="flex flex-col mb-[38px]">
-                <label htmlFor="major" className="text-primaryText mb-2">
-                  Major
-                </label>
-                <div className="select overflow-hidden text-ellipsis relative py-4 flex w-full bg-primaryBlue rounded-lg">
-                  <select
-                    defaultValue={""}
-                    onChange={(val) => setMajor(val.target.value)}
-                    className="body-text-mobile lg:body-text bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 flex-1 rounded-lg"
-                    name="select"
-                    id="major"
-                    required
-                  >
-                    <option className="text-seccondaryBlue" value={""} disabled>
-                      Choose a major
-                    </option>
-                    <option value="Information System and Technology">
-                      Information System and Technology
-                    </option>
-                    <option value="Informatics">Informatics</option>
-                    <option value="Jogja Solo">Jogja Solo</option>
-                  </select>
-                </div>
-              </div>
+              <TextField
+                value={major}
+                onChange={(val) => setMajor(val.target.value)}
+                label={"Major"}
+                placeholder={"Enter Major"}
+                type={"text"}
+                style={"mb-[38px]"}
+              ></TextField>
               <div className="flex flex-col mb-[60px]">
                 <label htmlFor="year" className="text-primaryText mb-2">
                   Year
                 </label>
-                <div className="select overflow-hidden text-ellipsis relative py-4 flex w-full bg-primaryBlue rounded-lg">
+                <div className="dropdown-icon overflow-hidden text-ellipsis relative py-2 lg:py-4 flex w-full bg-primaryBlue rounded-lg">
                   <select
                     defaultValue={""}
                     onChange={(val) => setYear(val.target.value)}
