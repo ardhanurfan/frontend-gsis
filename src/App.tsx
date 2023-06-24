@@ -6,7 +6,7 @@ import Login from "./pages/account/login";
 import SignUp from "./pages/account/signUp";
 import ForgotPassword from "./pages/account/forgot";
 import ForgotSent from "./pages/account/forgotSent";
-import AboutUs from "./pages/aboutUs";
+import AboutUs from "./pages/aboutus";
 import NotFound from "./pages/addingPages/notFount";
 import ComingSoon from "./pages/addingPages/comingSoon";
 import BCC from "./pages/bcc/landingpage";
@@ -26,6 +26,7 @@ import HomePageGSIC from "./pages/gsic/home";
 import RegisterGSIC from "./pages/gsic/register";
 import RegisterBCC from "./pages/bcc/registration";
 import ProtectedRoute from "./API/ProtectedRoute";
+import Ceremony from "./pages/ceremony";
 
 function App() {
   return (
@@ -137,6 +138,9 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/dashboard-exhibition-admin" element={<DashboardEx />} />
+        <Route path="/dashboard-bcc-admin" element={<DashboardBCC />} />
+        <Route path="/dashboard-gsic-admin" element={<DashboardGSIC />} />
 
         {/* Adding */}
         <Route path="/coming-soon" element={<ComingSoon />} />
