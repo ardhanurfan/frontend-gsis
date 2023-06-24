@@ -1,11 +1,11 @@
 import "./style.css";
-import CeremonyCard from "../../../components/dashboard_admin/gsic_participant/CeremonyCard";
+import CeremonyCard from "../../../components/dashboard_admin/admin/CeremonyCard";
 import { useContext } from "react";
 import Announcement from "../announcement";
 import Navbar from "../../../components/navbar/Navbar";
 import Footer from "../../../components/footer";
 import { AnnouncementContext } from "../announcement/announcementContext";
-import Toa from "../../../components/dashboard_admin/gsic_participant/Toa";
+import Toa from "../../../components/dashboard_admin/admin/Toa";
 
 const DashboardCeremony = () => {
   const announContext = useContext(AnnouncementContext);

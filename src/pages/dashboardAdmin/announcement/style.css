@@ -26,10 +26,10 @@ select::-ms-expand{
 } */
 
 .select::after{
-    content: url(../../../assets/dropdown.svg);
+    content: url(../../../assets/dropdown-sm.svg);
     position: absolute;
-    right:36%;
-    top: 4%;
+    right:5%;
+    top: 20%;
     cursor: pointer;
     pointer-events: none;
     transition:.25s all ease;

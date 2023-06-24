@@ -41,10 +41,13 @@ select::-ms-expand{
     display: none;
 }
 
-/* .select{
-    position: relative;
-    display: flex;
-    width: 50%;
-    overflow: hidden;
-} */
+.kecil::after{
+    content: url(../../../assets/dropdown-sm.svg);
+    position: absolute;
+    right:8%;
+    top: 10%;
+    cursor: pointer;
+    pointer-events: none;
+    transition:.25s all ease;
+}
 

@@ -1,8 +1,8 @@
 import "./style.css";
-import BCCParticipantCard from "../../../components/dashboard_admin/gsic_participant/BCCParticipantCard";
+import BCCParticipantCard from "../../../components/dashboard_admin/admin/BCCParticipantCard";
 import Navbar from "../../../components/navbar/Navbar";
 import Footer from "../../../components/footer";
-import Toa from "../../../components/dashboard_admin/gsic_participant/Toa";
+import Toa from "../../../components/dashboard_admin/admin/Toa";
 import { useContext } from "react";
 import { AnnouncementContext } from "../announcement/announcementContext";
 import Announcement from "../announcement";

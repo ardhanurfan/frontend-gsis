@@ -4,8 +4,8 @@ import Footer from "../../../components/footer";
 import { useContext } from "react";
 import { AnnouncementContext } from "../announcement/announcementContext";
 import Announcement from "../announcement";
-import OverviewCard from "../../../components/dashboard_admin/gsic_participant/overviewCard";
-import Toa from "../../../components/dashboard_admin/gsic_participant/Toa";
+import OverviewCard from "../../../components/dashboard_admin/admin/overviewCard";
+import Toa from "../../../components/dashboard_admin/admin/Toa";
 
 const Overview = () => {
   const announContext = useContext(AnnouncementContext);
