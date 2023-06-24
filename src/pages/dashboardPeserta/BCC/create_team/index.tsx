@@ -1,37 +1,26 @@
 import Footer from "../../../../components/footer";
 import Navbar from "../../../../components/navbar/Navbar";
-import SubmitSuccess from "../../../../components/participant_bcc";
-import Check from "../../../../assets/checkmark.svg"
+
 import UploadFile from "../../../../components/upload-file/upload-file";
-import { Toaster, toast } from "react-hot-toast";
+import { Toast, Toaster, toast } from "react-hot-toast";
+import { To } from "react-router-dom";
+import PopUp from "../../../../components/dashboard_peserta/bcc/toast";
+import { useState } from "react";
+
 
 const CreateTeamBCC = () => {
-    const notifySuccess = () => toast.custom((t) => (
-        <div className={`${
-            t.visible ? 'animate-enter' : 'animate-leave'
-          } z-10 flex justify-center`}>
-            <div className="fixed bg-white top-[126px] w-[882px] h-[76px] border-2 border-success rounded-lg flex items-center justify-between px-[22px] mx-auto">
-                <div className="flex gap-[20px] items-center">
-                    <img src={Check} alt="" />
-                    <p className="body-text text-success">
-                        Successfully submitted!
-                    </p>
-                </div>
-                <div
-                onClick={() => toast.dismiss(t.id)} 
-                className="h-[40px] w-[40px] relative cursor-pointer rounded-full hover:bg-slate-100">
-                    <span className="absolute left-0 right-0 top-1/2 rotate-45 rounded-xl mx-auto w-[20px] h-[2px] bg-slate-500"></span>
-                    <span className="absolute left-0 right-0 top-1/2 rotate-[135deg] rounded-xl mx-auto w-[20px] h-[2px] bg-slate-500"></span>
-                </div>
-            </div>
-        </div>
-    ));
-    const notifyFailed = () => toast.error("Failed to Submit");
 
+    const notifyStatus = (t: Toast) => toast.custom(<PopUp t={t} status={true} text_success='Successfully submitted!' text_error="Submit error!"/> , {duration: 250});
+    // const notifyFailed = () => toast.error("Failed to Submit");
+
+    // const [popup, setPopUp] = useState(<div></div>);
+
+    // const kotol = (memek: any)=>{
+    //     setPopUp(<PopUp/>)
+    // }
     return(
         <>
         <Navbar/>
-        {/* <SubmitSuccess/> */}
         <div className="pt-[247px]">
             <h1 className="text-primaryBlue header1 text-center ">
                 Create Your Team
@@ -62,12 +51,12 @@ const CreateTeamBCC = () => {
                     <div className="mt-[58px] w-full">
                         <div className="w-96 mx-auto pt-[14px] flex flex-col items-center justify-center">
                             <h3 className="header3 text-primaryText mb-3">UPLOAD FILES</h3>
-                            <UploadFile/>
+                            <UploadFile size=""/>
                         </div>
                     </div>
                     <div className="flex justify-center w-full">
                         <button
-                            onClick={notifySuccess}
+                            onClick={notifyStatus as any}
                             className="button-text mx-auto cursor-pointer bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] mt-[182px]"
                         >
                             Register
