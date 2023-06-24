@@ -4,6 +4,8 @@ import Footer from '../../components/footer'
 import CarouselElement from '../../components/gsic/Carousel'
 import TimelineItem from '../../components/gsic/TimelineItem'
 import ContactItem from '../../components/gsic/ContactItem'
+import Slides from '../../components/gsic/Slides'
+import AnimatedElement from '../../components/gsic/Test'
 
 function HomePageGSIC() {
     return (
@@ -12,7 +14,7 @@ function HomePageGSIC() {
             <h1 className="mt-36 px-56 text-center font-bold  text-6xl text-primaryBlue">
                 Ganesha Social Impact Challenge (GSIC)
             </h1>
-            <div className="mt-12 mx-16 bg-slate-100 bg-opacity-30 rounded-xl mx-auto shadow-lg shadow-slate-500 flex overflow-hidden">
+            <div className="mt-12 mx-16 bg-slate-100 bg-opacity-30 rounded-xl shadow-lg shadow-slate-500 flex overflow-hidden">
                 <div className='w-1/3 py-12 flex justify-end items-center'>
                     <div className='w-80 h-96'>
                         <CarouselElement 
@@ -68,18 +70,18 @@ function HomePageGSIC() {
                     className='mt-[-70px]'
                 />
             </div>
+            <Slides className='mt-48'/>
             <h1 className="mt-12 px-64 text-center font-bold  text-6xl text-primaryBlue">
-                Are You Ready To Be The Next Winner?
+                Submit Here
             </h1>
-            <h4 className='text-center text-error'>*To participate in any event, first you must create an account</h4>
             <div className='w-full mt-4 flex justify-center'>
                 <a href='/gsic/register'>
                     <button className='bg-primaryBlue px-8 py-1 text-white font-semibold rounded-lg shadow-lg shadow-slate-400 hover:shadow-none duration-100'>
-                        Register Here
+                        Submit
                     </button>
                 </a>
             </div>
-            <h1 className="mt-12 px-64 text-center font-bold  text-6xl text-primaryBlue">
+            <h1 className="mt-48 px-64 text-center font-bold  text-6xl text-primaryBlue">
                 Contact Person
             </h1>
             <div className='w-min flex my-10 mx-auto'>
