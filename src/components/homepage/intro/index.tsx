@@ -3,16 +3,25 @@ import { Fragment } from "react"
 const Intro = () => {
     return (
         <Fragment>
-            <div className="flex flex-row justify-between">
-                <div className="font-montserrat relative pt-[264px] w-[666px] ml-[145px] ">
+            <div className="flex justify-between ">
+                <div className="font-montserrat relative z-10 pt-[264px] w-[46%] ml-[145px] ">
                     <h1 className=" font-bold  text-6xl text-primaryBlue">
                         Ganesha Student Innovation Summit
                     </h1>
                     <p className="mt-[15px] text-justify text-primaryBlue font-normal text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                    Ganesha Student Innovation Summit (GSIS) adalah acara tahunan yang
+                    diselenggarakan oleh Keluarga Mahasiswa Institut Teknologi Bandung (KM ITB)
+                    untuk memfasilitasi siswa dan mahasiswa dari berbagai sekolah dan perguruan
+                    tinggi di Indonesia untuk mengembangkan ide kreatif dan inovatif dalam
+                    berbagai bidang, terkait teknologi, sains, sosial, seni dan budaya. Acara ini
+                    bertujuan untuk mendorong para peserta untuk mengembangkan kemampuan
+                    inovasi dan kewirausahaan mereka serta memperluas jaringan profesional
+                    mereka. Acara ini meliputi serangkaian kegiatan seperti kompetisi inovasi dan
+                    business case, pameran, dan konferensi internasional yang diikuti oleh para
+                    peserta dari berbagai perguruan tinggi di Indonesia dan negara-negara
+                    tetangga.
                     </p>
                 </div>
-                <img src="./src/assets/title_ilustration.svg" alt="" className="pt-[130px]"/>
             </div>
             <img src="./src/assets/theme_elaboration.svg" alt="" className="pt-[62px] relative mx-auto"/>
         </Fragment>

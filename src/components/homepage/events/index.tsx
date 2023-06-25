@@ -34,7 +34,7 @@ const Event = () => {
     const settings = {
         infinite: false,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false
       };
@@ -46,7 +46,7 @@ const Event = () => {
             </h1>
             <div className='flex flex-row items-center'>
                 <PrevArrow />
-                <div className="w-[1111px] h-[450px] mx-auto ">
+                <div className="w-[375px] md:w-[1111px] h-[450px] mx-auto ">
                     <Slider ref={setSliderRef} {...settings}>
                         <EventCard image="image url" label="EXHIBITION"/>
                         <EventCard image="image url" label="COLOUR RUN"/>
