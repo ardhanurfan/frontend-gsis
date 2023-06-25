@@ -7,11 +7,12 @@ import ContactList from "../../components/contact_list";
 // import Slides from 'react-slick';
 // import 'slick-carousel/slick/slick.css';
 // import 'slick-carousel/slick/slick-theme.css';
-// import as from '../../assets/orang.svg'
-import { useState } from "react";
+import as from '../../assets/orang.svg'
+import { useEffect, useState } from "react";
 import UploadFile from "../../components/upload-file/upload-file";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer";
+import { getWithAuth } from "../../API/api";
 
 const Ceremony = () => {
     // const [sliderRef, setSliderRef] = useState(null)
@@ -47,30 +48,46 @@ const Ceremony = () => {
     //     slidesToScroll: 1,
     //     arrows: false
     // };
-    const [popUp, setPopUp] = useState(0);
+    const [popUp, setPopUp] = useState(false);
+    const [user, setUser] = useState<any>();
+
+    const token = localStorage.getItem("access_token");
+    const getUser = async () => {
+        if (token) {
+        try {
+            const response = await getWithAuth("user", token);
+            const data = response.data?.data;
+            setUser(data);
+        } catch (error) {
+            console.log(error);
+        }
+        }
+    };
+
+    useEffect(() => {
+        getUser();
+    }, []);
+
     return(
         <>
         <Navbar/>
         {/* u have not logged in */}
-        {/* <div className={popUp === 1 ? " fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30"}>
+        {!token ? <div className={popUp ? " fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30"}>
             <div className="z-60 w-[45%] h-auto rounded-xl bg-white flex flex-col py-5 px-2 gap-5">
                 <div className="flex flex-col items-end pr-5 ">
-                    <button className="hover:bg-slate-200 rounded-full p-1" onClick={() => setPopUp(0)}>✖</button>
+                    <button className="hover:bg-slate-200 rounded-full p-1" onClick={() => setPopUp(false)}>✖</button>
                 </div>
                 <div className="flex flex-col items-center gap-5">
                     <img src={as} className="h-[30%] w-[30%] md:h-[20%] md:w-[20%]" alt="" />
                     <h2 className="text-primaryBlue text-center header2-mobile lg:header2">You have not log in</h2>
-                    <button className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[auto] button-text-mobile lg:button-text hover:bg-seccondaryBlue">Log In</button>
+                    <a href="/login" className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[auto] button-text-mobile lg:button-text hover:bg-seccondaryBlue">Log In</a>
                 </div>
             </div>
-        </div> */}
-
-        {/* proof poster */}
-        {/* upload file blm rnspnsf */}
-        <div className={popUp === 1 ? " fixed z-[1055] w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed w-full h-screen bg-primaryBlue bg-opacity-30"}>
+        </div> :
+        <div className={popUp === true ? " fixed z-[1055] w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center" : "hidden fixed w-full h-screen bg-primaryBlue bg-opacity-30"}>
             <div className="absolute w-[45%] h-auto rounded-xl bg-white flex flex-col py-8 px-2 gap-5">
                 <div className="flex flex-col items-end pr-5">
-                    <button className="hover:bg-slate-200 rounded-full p-1" onClick={() => setPopUp(0)}>✖</button>
+                    <button className="hover:bg-slate-200 rounded-full p-1" onClick={() => setPopUp(false)}>✖</button>
                 </div>
                 <div className="flex flex-col items-center gap-5">
                     <h2 className="text-primaryBlue text-center header2-mobile lg:header2">Proof of Poster Upload <span className="text-red-500"> *</span></h2>
@@ -81,7 +98,7 @@ const Ceremony = () => {
                     <button className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[auto] button-text-mobile lg:button-text">Submit</button>
                 </div>
             </div>
-        </div>
+        </div>}
         
 
         <div className="w-full h-[auto] bg-[url(./src/assets/Background_Ceremony.svg)] bg-cover">
@@ -115,7 +132,7 @@ const Ceremony = () => {
                 <div className="mt-28 mx-10 md:mx-52">
                     <div className="w-full h-auto py-12 bg-white rounded-xl shadow-xl shadow-blue-200 bg-opacity-50">
                         <h2 className="header2-mobile lg:header2 text-primaryBlue px-10 xl:px-40 text-center pb-5">Are You Ready To Develop Your Knowledge?</h2>
-                        <button className="bg-primaryBlue w-auto p-5 py-2 button-text-mobile lg:button-text rounded-xl text-white" onClick={() => setPopUp(1)}>Register Here</button>
+                        <button className="bg-primaryBlue w-auto p-5 py-2 button-text-mobile lg:button-text rounded-xl text-white" onClick={() => setPopUp(true)}>Register Here</button>
                     </div>
                 </div>
 

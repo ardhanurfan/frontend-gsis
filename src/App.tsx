@@ -52,6 +52,8 @@ function App() {
         {/* GSIC */}
         <Route path="/gsic" element={<HomePageGSIC />} />
         <Route path="/gsic/register" element={<RegisterGSIC />} />
+        {/* CEREMONY */}
+        <Route path="/ceremony" element={<Ceremony />} />
 
         {/* Dashboard Peserta : Harus login pakek protected route */}
         <Route
