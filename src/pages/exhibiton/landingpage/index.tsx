@@ -2,6 +2,7 @@ import "./style.css";
 import Navbar from "../../../components/navbar/Navbar";
 import ModalNotLogin from "../../../components/modalNotLogin/modalNotLogin";
 import Footer from "../../../components/footer";
+import ContactList from "../../../components/contact_list";
 
 const Exhibition = () => {
 
@@ -16,8 +17,8 @@ const Exhibition = () => {
           <h1 className="w-auto header1 text-primaryText">
               EXHIBITION
           </h1>
-       </div>
-       <div className="w-auto h-auto mx-auto pt-5">
+        </div>
+        <div className="w-auto h-auto mx-auto pt-5">
           <div className="w-[1246px] h-[575px] lg:h-[615px] bg-slate-100 mt-[52px] mx-auto rounded-xl shadow-lg shadow-blue-800 bg-opacity-30 overflow-auto lg:overflow-visible">
             <div className="h-auto w-[38px] flex justify-between float-left m-[3%]">
               <div className="h-[10px] w-[10px] rounded-full bg-primaryGreen"></div>
@@ -117,38 +118,9 @@ const Exhibition = () => {
                 </button>
               </div>
           </div>
-          <div className="w-auto h-auto mt-20">
-            <div className="text-center">
-              <h1 className="w-auto header1 text-primaryText">
-                Contact Person
-              </h1>
-            </div>
-            <div className="mt-10 flex items-center justify-center">
-              <div>
-                <div className="flex items-center justify-center">
-                  <img className="" src="../src/assets/line.svg" alt="Line" />
-                </div>
-                <div>
-                  <p className="text-center text-primaryBlue body-text">
-                    idline
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center justify-center">
-                  <img
-                    className=""
-                    src="../src/assets/whatsapp.svg"
-                    alt="Line"
-                  />
-                </div>
-                <div>
-                  <p className="text-center text-primaryBlue body-text">
-                    idline
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="mt-28 pb-20">
+            <h1 className="header1-mobile lg:header1 pb-10 text-primaryBlue text-center">Contact Person</h1>
+            <ContactList/>
           </div>
       </div>
       <Footer />
