@@ -3,6 +3,7 @@ import Navbar from "../../../components/navbar/Navbar";
 import ModalNotLogin from "../../../components/modalNotLogin/modalNotLogin";
 import Footer from "../../../components/footer";
 import ContactList from "../../../components/contact_list";
+import Slides from "../../../components/gsic/Slides";
 
 const Exhibition = () => {
 
@@ -13,12 +14,12 @@ const Exhibition = () => {
     <>
       <Navbar />
       <div className="w-full h-auto bg-cover bg-[url(./assets/Background_Exhibition.svg)]">
-        <div className="pt-[200px] w-[1159px] mx-auto text-center">
-          <h1 className="w-auto header1 text-primaryText">
+        <div className="pt-[200px] text-center">
+          <h1 className="w-auto header1-mobile lg:header1 text-primaryText text-center">
               EXHIBITION
           </h1>
         </div>
-        <div className="w-auto h-auto mx-auto pt-5">
+        {/* <div className="w-auto h-auto mx-auto pt-5">
           <div className="w-[1246px] h-[575px] lg:h-[615px] bg-slate-100 mt-[52px] mx-auto rounded-xl shadow-lg shadow-blue-800 bg-opacity-30 overflow-auto lg:overflow-visible">
             <div className="h-auto w-[38px] flex justify-between float-left m-[3%]">
               <div className="h-[10px] w-[10px] rounded-full bg-primaryGreen"></div>
@@ -88,8 +89,8 @@ const Exhibition = () => {
               </div>
             </div>
           </div>
-          </div>
-          <div className="w-auto h-auto mt-20">
+        </div> */}
+          {/* <div className="w-auto h-auto mt-20">
             <div className="text-center">
               <h1 className="w-auto header1 text-primaryText">Timeline</h1>
             </div>
@@ -100,11 +101,11 @@ const Exhibition = () => {
                 <div className="h-[10px] w-[10px] rounded-full bg-primaryOrange"></div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="w-auto h-auto mt-20">
-            disini tempat naro business, text curator dll
+            <Slides className="mt-20"/>
           </div>
-          <div className="w-auto h-auto mt-20">
+          {/* <div className="w-auto h-auto mt-20">
             <div className="text-center">
               <h1 className="w-auto header1 text-primaryText">Submit Here</h1>
             </div>
@@ -117,7 +118,7 @@ const Exhibition = () => {
                   Register Here
                 </button>
               </div>
-          </div>
+          </div> */}
           <div className="mt-28 pb-20">
             <h1 className="header1-mobile lg:header1 pb-10 text-primaryBlue text-center">Contact Person</h1>
             <ContactList/>

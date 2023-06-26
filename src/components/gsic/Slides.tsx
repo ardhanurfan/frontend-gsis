@@ -27,7 +27,7 @@ function Slides({className}: SlidesProp) {
 
     return (
         <div className={clsx('relative w-full h-96 my-10 flex items-center overflow-hidden', className)}>
-            <div className='absolute flex duration-1000' style={{ left: `${(-33)*index}vw`}}>
+            <div className='absolute flex items-center duration-1000' style={{ left: `${(-33)*index}vw`}}>
                 <SlideItem type='text' active={index === -1} />
                 <SlideItem type='tech' active={index === 0}/>
                 <SlideItem type='buss' active={index === 1}/>
