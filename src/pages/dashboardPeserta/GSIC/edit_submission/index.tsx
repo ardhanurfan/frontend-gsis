@@ -5,16 +5,13 @@ import Footer from "../../../../components/footer";
 import PopUp from "../../../../components/dashboard_peserta/bcc/toast";
 import ContactList from "../../../../components/contact_list";
 
-const EditSubmissionCer = () => {
-  const notifyStatus = (t: Toast) => toast.custom(<PopUp t={t} status={true} text_success='Successfully submitted!' text_error="Submit error!"/> , {duration: 250});
-
+const EditSubmissionGSIC = () => {
+    const notifyStatus = (t: Toast) => toast.custom(<PopUp t={t} status={true} text_success='Successfully submitted!' text_error="Submit error!"/> , {duration: 250});
+    
     return(
         <>
         <Navbar/>
         <div className="w-full px-[5.3472%] lg:px-[70px] pt-[130px] lg:pt-[268px] pb-[100px]">
-            <h1 className="header1-mobile lg:header1 text-center text-primaryText mb-7">
-                Edit Document
-            </h1>
             <div className="w-[90%] max-w-[882px] mx-auto pt-[14px] flex flex-col justify-center">
                 <h3 className="header1-mobile lg:header1 text-primaryText self-center mb-3">UPLOAD FILES</h3>
                 <UploadFile size="lg"/>
@@ -40,4 +37,4 @@ const EditSubmissionCer = () => {
     )
 }
 
-export default EditSubmissionCer;
+export default EditSubmissionGSIC;

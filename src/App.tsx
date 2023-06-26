@@ -20,17 +20,22 @@ import Overview from "./pages/dashboardAdmin/overview";
 import DashboardExhibition from "./pages/dashboardPeserta/exhibition/participant_information";
 import EditSubmissionExhibition from "./pages/dashboardPeserta/exhibition/edit_submission";
 import DashboardOverview from "./pages/dashboardPeserta/overview";
-import ProfilePeserta from "./pages/dashboardPeserta/profilePeserta/profile";
+import ProfilePeserta from "./pages/dashboardPeserta/profilePeserta";
 import EditProfile from "./pages/dashboardPeserta/profilePeserta/edit";
 import ParticipantCer from "./pages/dashboardPeserta/ceremony/participant_information";
 import EditSubmissionCer from "./pages/dashboardPeserta/ceremony/edit_submission";
 import ParticipantBCC from "./pages/dashboardPeserta/BCC/participant_information";
-import EditSubmissionBCC from "./pages/dashboardPeserta/BCC/edit_submission";
 import CreateTeamBCC from "./pages/dashboardPeserta/BCC/create_team";
 import HomePageGSIC from "./pages/gsic/home";
 import RegisterGSIC from "./pages/gsic/register";
 import RegisterBCC from "./pages/bcc/registration";
 import ProtectedRoute from "./API/ProtectedRoute";
+import ParticipantGSIC from "./pages/dashboardPeserta/GSIC/participant_information";
+import EditSubmissionGSIC from "./pages/dashboardPeserta/GSIC/edit_submission";
+import ChangePassword from "./pages/dashboardPeserta/profilePeserta/change_password";
+import EditDocumentBCC from "./pages/dashboardPeserta/BCC/edit_document";
+import EditSubmissionBCC from "./pages/dashboardPeserta/BCC/edit_submission";
+import EditDocumentGSIC from "./pages/dashboardPeserta/GSIC/edit_document";
 
 function App() {
   return (
@@ -44,6 +49,14 @@ function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/forgot-sent" element={<ForgotSent />} />
+        <Route
+          path="/change-password"
+          element={
+            <ProtectedRoute>
+              <ChangePassword/>
+            </ProtectedRoute>
+          }
+        />
         {/* BCC */}
         <Route path="/bcc" element={<BCC />} />
         <Route path="/register-bcc" element={<RegisterBCC />} />
@@ -76,9 +89,9 @@ function App() {
           }
         />
         <Route
-          path="/edit-profile"
+          path="/profile/edit"
           element={
-            <ProtectedRoute>
+           <ProtectedRoute>
               <EditProfile />
             </ProtectedRoute>
           }
@@ -101,20 +114,121 @@ function App() {
           }
         />
         {/* BCC */}
-        <Route path="/participant-bcc" element={<ParticipantBCC />}/>
-        <Route path="/submission-bcc" element={<EditSubmissionBCC />}/>
-        <Route path="/createteam-bcc" element={<CreateTeamBCC />}/>
+        <Route 
+          path="/participant-bcc" 
+          element={
+          <ProtectedRoute>
+            <ParticipantBCC />
+          </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/document-bcc" 
+          element={
+          <ProtectedRoute>
+            <EditDocumentBCC />
+          </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/submission-bcc" 
+          element={
+          <ProtectedRoute>
+            <EditSubmissionBCC />
+          </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/createteam-bcc" 
+          element={
+            <ProtectedRoute>
+              <CreateTeamBCC />
+            </ProtectedRoute>
+          }
+        />
         {/* Ceremony */}
-        <Route path="/submission-ceremony" element={<EditSubmissionCer />} />
-        <Route path="/participant-ceremony" element={<ParticipantCer />} />
-
-
-        {/* Dashboard Admin */}
-        <Route path="/dashboard-admin" element={<Overview />} />
-        <Route path="/dashboard-ceremony-admin" element={<DashboardCeremony />}/>
-        <Route path="/dashboard-exhibition-admin" element={<DashboardEx />} />
-        <Route path="/dashboard-bcc-admin" element={<DashboardBCC />} />
-        <Route path="/dashboard-gsic-admin" element={<DashboardGSIC />} />
+        <Route 
+          path="/submission-ceremony" 
+          element={
+          <ProtectedRoute>
+            <EditSubmissionCer />
+          </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/participant-ceremony" 
+          element={
+            <ProtectedRoute>
+              <ParticipantCer />
+            </ProtectedRoute>
+          } 
+        />
+        {/* GSIC */}
+        <Route 
+          path="/participant-gsic" 
+          element={
+          <ProtectedRoute>
+            <ParticipantGSIC />
+          </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/submission-gsic" 
+          element={
+          <ProtectedRoute>
+            <EditSubmissionGSIC/>
+          </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/document-gsic" 
+          element={
+          <ProtectedRoute>
+            <EditDocumentGSIC/>
+          </ProtectedRoute>
+          }
+        />
+        {/* Dashboard Admin : Harus login pakek protected route */}
+        <Route
+          path="/dashboard-admin"
+          element={
+            <ProtectedRoute>
+              <Overview />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard-ceremony-admin"
+          element={
+            <ProtectedRoute>
+              <DashboardCeremony />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard-exhibition-admin"
+          element={
+            <ProtectedRoute>
+              <DashboardEx />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard-bcc-admin"
+          element={
+            <ProtectedRoute>
+              <DashboardBCC />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard-gsic-admin"
+          element={
+            <ProtectedRoute>
+              <DashboardGSIC />
+            </ProtectedRoute>
+          }
+        />
 
         {/* Dashboard Admin : Harus login pakek protected route */}
         <Route

@@ -15,7 +15,7 @@ const PopUp = ({t, status, text_success, text_error}: ToastProps) =>
             <div className={`${
                 !(t.visible) ? 'animate-enter' : 'animate-leave'
               } z-10 flex justify-center`}>
-                <div className={`${status === true ? 'border-success' : 'border-error'} fixed bg-white top-[126px] w-[882px] h-[76px] border-2 rounded-lg flex items-center justify-between px-[22px] mx-auto`}>
+                <div className={`${status === true ? 'border-success' : 'border-error'} fixed bg-white top-[126px] w-[300px] sm:w-[580px] md:w-[708px] lg:w-[882px] h-[76px] border-2 rounded-lg flex items-center justify-between px-[22px] mx-auto`}>
                     <div className="flex gap-[20px] items-center">
                         <img src={status === true ? Check : Cross} alt="" />
                         <p className={`${status === true ? 'text-success' : 'text-error'} body-text`}>
