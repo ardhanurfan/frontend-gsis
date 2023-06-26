@@ -5,13 +5,13 @@ const ContactList = () => {
         <div className="flex lg:w-1/2">
           <div className="flex-wrap w-1/2 flex flex-col items-center">
             <img src="./src/assets/line.svg" alt="" />
-            <p className="body-text text-center font-montserrat text-primaryText">
+            <p className="body-text-mobile lg:body-text text-center font-montserrat text-primaryText">
               ID Line (Nama )
             </p>
           </div>
           <div className=" flex-wrap w-1/2 flex flex-col items-center">
             <img src="./src/assets/whatsapp.svg" alt="" />
-            <p className="body-text break-all text-center font-montserrat text-primaryText">
+            <p className="body-text-mobile lg:body-text break-all text-center font-montserrat text-primaryText">
               +XXXXXXXXXXXXXX
             </p>
           </div>
@@ -19,13 +19,13 @@ const ContactList = () => {
         <div className="flex lg:w-1/2">
           <div className="flex-wrap w-1/2 flex flex-col items-center">
             <img src="./src/assets/line.svg" alt="" />
-            <p className="body-text text-center font-montserrat text-primaryText">
+            <p className="body-text-mobile lg:body-text text-center font-montserrat text-primaryText">
               ID Line (Nama )
             </p>
           </div>
           <div className=" flex-wrap w-1/2 flex flex-col items-center">
             <img src="./src/assets/whatsapp.svg" alt="" />
-            <p className="body-text break-all text-center font-montserrat text-primaryText">
+            <p className="body-text-mobile lg:body-text break-all text-center font-montserrat text-primaryText">
               +XXXXXXXXXXXXXX
             </p>
           </div>
