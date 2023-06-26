@@ -1,0 +1,8 @@
+.text-color{
+    color: white
+}
+
+.remove-input-txt-border{
+    input[type='text']:focus 
+    { box-shadow: none; }
+}

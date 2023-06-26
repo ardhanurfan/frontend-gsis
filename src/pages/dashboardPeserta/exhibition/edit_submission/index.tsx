@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 import "./style.css";
-import UploadFile from "../../../../components/upload-file/upload-file";
+import  UploadFile from "../../../../components/upload-file/upload-file";
 import ContactList from "../../../../components/contact_list";
 import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
 import Footer from "../../../../components/footer";
@@ -113,7 +113,7 @@ const EditSubmissionExhibition = () => {
             </h2>
             <div className="pt-[14px]px-[40px] flex flex-col items-center">
               <h3 className="header3 text-primaryText mb-3">UPLOAD FILES</h3>
-              <UploadFile />
+              <UploadFile size="" />
             </div>
           </div>
         </div>
