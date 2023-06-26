@@ -25,13 +25,12 @@ select::-ms-expand{
     overflow: hidden;
 } */
 
-/* .select::after{
-    content: url(../../../assets/dropdown.svg);
+.select::after{
+    content: url(../../../assets/dropdown-sm.svg);
+    position: absolute;
+    right:5%;
+    top: 20%;
     cursor: pointer;
     pointer-events: none;
     transition:.25s all ease;
-} */
-
-.type > select::after {
-    content: url(../../../assets/dropdown.svg);
 }

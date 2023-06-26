@@ -36,6 +36,7 @@ import ChangePassword from "./pages/dashboardPeserta/profilePeserta/change_passw
 import EditDocumentBCC from "./pages/dashboardPeserta/BCC/edit_document";
 import EditSubmissionBCC from "./pages/dashboardPeserta/BCC/edit_submission";
 import EditDocumentGSIC from "./pages/dashboardPeserta/GSIC/edit_document";
+import Ceremony from "./pages/ceremony";
 
 function App() {
   return (
@@ -69,6 +70,8 @@ function App() {
         {/* GSIC */}
         <Route path="/gsic" element={<HomePageGSIC />} />
         <Route path="/gsic/register" element={<RegisterGSIC />} />
+        {/* CEREMONY */}
+        <Route path="/ceremony" element={<Ceremony />} />
 
         {/* Dashboard Peserta : Harus login pakek protected route */}
         <Route
@@ -271,6 +274,9 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/dashboard-exhibition-admin" element={<DashboardEx />} />
+        <Route path="/dashboard-bcc-admin" element={<DashboardBCC />} />
+        <Route path="/dashboard-gsic-admin" element={<DashboardGSIC />} />
 
         {/* Adding */}
         <Route path="/coming-soon" element={<ComingSoon />} />
