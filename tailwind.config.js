@@ -31,6 +31,30 @@ export default {
         warning: "#FFC806",
         success: "#1B8E27",
       },
+      animation: {
+        enter: 'fadeInTop 300ms ease-out',
+        leave: 'fadeOut 300ms ease-in forwards',
+      },
+      keyframes: {
+        fadeInTop: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-2rem)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translate(0)',
+          },
+        },
+        fadeOut: {
+          '0%': {
+            opacity: '1',
+          },
+          '100%': {
+            opacity: '0',
+          },
+        },
+      },
     },
   },
   plugins: [require("flowbite/plugin")],

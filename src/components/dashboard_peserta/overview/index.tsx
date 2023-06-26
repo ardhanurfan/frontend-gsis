@@ -4,8 +4,8 @@ import "./style.css";
 const Overview = () => {
   return (
     <>
-      <div className="w-full px-[70px] pb-80">
-        <h1 className="pt-[183px] header1 text-primaryText mb-[10px]">
+      <div className="w-[90vw] mx-auto px-[5.681%] lg:px-[70px] pb-80">
+        <h1 className="pt-[130px] lg:pt-[183px] text-center lg:text-start header1-mobile lg:header1 text-primaryText mb-[30px] lg:mb-[10px]">
           Announcement
         </h1>
         <AnnouncementCard
