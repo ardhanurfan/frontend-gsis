@@ -8,11 +8,11 @@ type SlideItemProps = {
 
 function SlideItem({ className, type, active }: SlideItemProps) {
   return (
-    <div className={clsx(className, " w-screen flex justify-center")}>
+    <div className={clsx(className, "w-screen lg:w-[33vw] flex justify-center")}>
       <div
         className={clsx(
           "relative w-80 h-80 rounded-full bg-white shadow-xl flex justify-center items-center duration-200",
-          !active && " shadow-none ",
+          !active && " shadow-slate-300",
           type === "text" && "shadow-primaryBlue",
           type === "tech" && "shadow-seccondaryGreen",
           type === "buss" && "shadow-primaryYellow",
@@ -23,7 +23,7 @@ function SlideItem({ className, type, active }: SlideItemProps) {
         {/* <div className={clsx("absolute w-80 h-80 bg-white/90 rounded-full duration-1000", active && "z-[-1]", !active && "z-[1]")}>
 
                 </div> */}
-        <div className={clsx("duration-1000")}>
+        <div className={clsx("duration-1000",!active && "opacity-100 lg:opacity-20")}>
           {type === "text"
             ? text
             : type === "tech"

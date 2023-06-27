@@ -8,6 +8,26 @@ type SlidesProp = {
 
 function Slides({ className }: SlidesProp) {
   const [index, setIndex] = useState(-1);
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 1024px)").matches
+  )
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+    mediaQuery.addEventListener('change', e => setMatches( e.matches ));
+
+    return () => {
+      mediaQuery.removeEventListener('change', e => setMatches( e.matches ));
+    };
+  }, []);
+
+  const styleSlide  = {
+    container: (isScreenBased: any) => ({
+        left: isScreenBased ?`${-33 * index}vw` : `${-100 * index}vw`
+    })
+    
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,7 +38,7 @@ function Slides({ className }: SlidesProp) {
           return -1;
         }
       });
-    }, 4000);
+    }, 3000);
 
     return () => {
       clearInterval(interval);
@@ -34,7 +54,7 @@ function Slides({ className }: SlidesProp) {
     >
       <div
         className="absolute flex items-center duration-1000 slides"
-        style={{ left: `${-100 * index}vw` }}
+        style={styleSlide.container(matches)}
       >
         <SlideItem type="text" active={index === -1} />
         <SlideItem type="tech" active={index === 0} />
