@@ -1,3 +1,4 @@
+import ContactList from "../../../../components/contact_list";
 import SubmissionCard from "../../../../components/dashboard_peserta/exhibition/participant_information/submission-card";
 import Footer from "../../../../components/footer";
 import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
@@ -18,7 +19,7 @@ const DashboardExhibition = () => {
         <h2 className="header2 text-primaryText mb-[34px]">
           If you're having trouble, please contact
         </h2>
-        <div className="header2 mb-[100px]">LIST CONTACT</div>
+        <ContactList/>
       </div>
       <Footer></Footer>
     </>

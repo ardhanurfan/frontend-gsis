@@ -1,6 +1,10 @@
 import { useDropzone, FileWithPath } from "react-dropzone";
 
-const UploadFile = () => {
+interface DropzoneProps {
+  size: string
+}
+
+const UploadFile = ({size}: DropzoneProps) => {
   const { getRootProps, getInputProps, open, acceptedFiles } = useDropzone({
     maxFiles: 1,
     accept: {
@@ -30,12 +34,12 @@ const UploadFile = () => {
     <div className="container">
       <div {...getRootProps({ className: "dropzone" })}>
         <input {...getInputProps()} />
-        <div className="wrapper w-full bg-slate-200 rounded-xl py-3 flex flex-col gap-1 items-center border-2 border-primaryBlue border-dashed">
+        <div className="wrapper w-full bg-slate-200 rounded-xl py-[5.34%] flex flex-col gap-2 items-center border-2 border-primaryBlue border-dashed">
           <img src="./src/assets/upload-file.svg" alt="" />
-          <p className=" text-primaryText font-normal text-xs font-monserrat">
+          <p className={size === "lg" ? " text-primaryText text-center font-normal text-2xl font-monserrat" : " text-primaryText text-center font-normal text-xs font-monserrat"}>
             Drag and Drop Your Files Here
           </p>
-          <p className="text-primaryText font-normal text-xs font-monserrat">
+          <p className={size === "lg" ? " text-primaryText font-normal text-2xl font-monserrat" : " text-primaryText font-normal text-xs font-monserrat"}>
             or
           </p>
           <button
