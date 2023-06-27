@@ -1,5 +1,4 @@
 import Navbar from "../../../../components/navbar/Navbar";
-import up from "../../../../assets/upload.svg";
 import ContactList from "../../../../components/contact_list";
 import {useState} from "react"
 import "./style.css";

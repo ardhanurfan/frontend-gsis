@@ -2,23 +2,12 @@ import Footer from "../../../../components/footer";
 import Navbar from "../../../../components/navbar/Navbar";
 
 import UploadFile from "../../../../components/upload-file/upload-file";
-import { Toast, Toaster, toast } from "react-hot-toast";
-import { To } from "react-router-dom";
-import PopUp from "../../../../components/dashboard_peserta/bcc/toast";
-import { useState } from "react";
+import { Toaster } from "react-hot-toast";
+import { NotifyStatus } from "../../../../components/toast_pop_up/toast";
 import SelectComponent from "../../../../components/dashboard_peserta/profile";
 
 
 const CreateTeamBCC = () => {
-
-    const notifyStatus = (t: Toast) => toast.custom(<PopUp t={t} status={true} text_success='Successfully submitted!' text_error="Submit error!"/> , {duration: 250});
-    // const notifyFailed = () => toast.error("Failed to Submit");
-
-    // const [popup, setPopUp] = useState(<div></div>);
-
-    // const kotol = (memek: any)=>{
-    //     setPopUp(<PopUp/>)
-    // }
     return(
         <>
         <Navbar/>
@@ -52,7 +41,7 @@ const CreateTeamBCC = () => {
                     </div>
                     <div className="flex mt-[61px] mb-[30px] justify-center w-full">
                         <button
-                            onClick={notifyStatus as any}
+                            onClick={() => NotifyStatus("Succesfully Submitted", "Submit error", false)}
                             className="button-text mx-auto cursor-pointer bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px]"
                         >
                             Register

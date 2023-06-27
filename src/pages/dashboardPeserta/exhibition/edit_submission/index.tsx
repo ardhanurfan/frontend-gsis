@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 import "./style.css";
 import  UploadFile from "../../../../components/upload-file/upload-file";
 import ContactList from "../../../../components/contact_list";
 import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
 import Footer from "../../../../components/footer";
+import { NotifyStatus } from "../../../../components/toast_pop_up/toast";
 
 const EditSubmissionExhibition = () => {
   const [charCount, setCharCount] = useState("");
@@ -14,9 +15,6 @@ const EditSubmissionExhibition = () => {
   }) => {
     setCharCount(e.target.value);
   };
-
-  const notifySuccess = () => toast.success("Succesfully submitted");
-  const notifyFailed = () => toast.error("Failed to Submit");
 
   return (
     <>
@@ -125,7 +123,7 @@ const EditSubmissionExhibition = () => {
             Cancel
           </a>
           <button
-            onClick={notifySuccess}
+            onClick={() => NotifyStatus("Succesfully Submitted", "Submit error", true)}
             className="cursor-pointer bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center"
           >
             SAVE
