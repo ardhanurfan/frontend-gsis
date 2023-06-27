@@ -238,7 +238,7 @@ const AboutUs = () => {
                     PRE-EVENT
                   </h3>
                   <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryGreen 2xl:ml-[9.923%] text-right">
-                   YOUTH <br className="md:hidden"/> CONFERENCE <br /> (HMJ, UKM, <br className="md:hidden"/>ComPart)
+                  YOUTH <br className="md:hidden"/> CONFERENCE <br /> (HMJ, UKM, <br className="md:hidden"/>ComPart)
                   </h3>
                 </div>
                 <div className="pt-[1.25%] relative">
