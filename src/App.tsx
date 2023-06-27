@@ -54,7 +54,7 @@ function App() {
           path="/change-password"
           element={
             <ProtectedRoute>
-              <ChangePassword/>
+              <ChangePassword />
             </ProtectedRoute>
           }
         />
@@ -70,7 +70,7 @@ function App() {
         {/* GSIC */}
         <Route path="/gsic" element={<HomePageGSIC />} />
         <Route path="/gsic/register" element={<RegisterGSIC />} />
-        {/* CEREMONY */}
+        {/* Ceremony */}
         <Route path="/ceremony" element={<Ceremony />} />
 
         {/* Dashboard Peserta : Harus login pakek protected route */}
@@ -94,7 +94,7 @@ function App() {
         <Route
           path="/profile/edit"
           element={
-           <ProtectedRoute>
+            <ProtectedRoute>
               <EditProfile />
             </ProtectedRoute>
           }
@@ -117,32 +117,32 @@ function App() {
           }
         />
         {/* BCC */}
-        <Route 
-          path="/participant-bcc" 
+        <Route
+          path="/participant-bcc"
           element={
-          <ProtectedRoute>
-            <ParticipantBCC />
-          </ProtectedRoute>
+            <ProtectedRoute>
+              <ParticipantBCC />
+            </ProtectedRoute>
           }
         />
-        <Route 
-          path="/document-bcc" 
+        <Route
+          path="/document-bcc"
           element={
-          <ProtectedRoute>
-            <EditDocumentBCC />
-          </ProtectedRoute>
+            <ProtectedRoute>
+              <EditDocumentBCC />
+            </ProtectedRoute>
           }
         />
-        <Route 
-          path="/submission-bcc" 
+        <Route
+          path="/submission-bcc"
           element={
-          <ProtectedRoute>
-            <EditSubmissionBCC />
-          </ProtectedRoute>
+            <ProtectedRoute>
+              <EditSubmissionBCC />
+            </ProtectedRoute>
           }
         />
-        <Route 
-          path="/createteam-bcc" 
+        <Route
+          path="/createteam-bcc"
           element={
             <ProtectedRoute>
               <CreateTeamBCC />
@@ -150,45 +150,45 @@ function App() {
           }
         />
         {/* Ceremony */}
-        <Route 
-          path="/submission-ceremony" 
+        <Route
+          path="/submission-ceremony"
           element={
-          <ProtectedRoute>
-            <EditSubmissionCer />
-          </ProtectedRoute>
-          } 
+            <ProtectedRoute>
+              <EditSubmissionCer />
+            </ProtectedRoute>
+          }
         />
-        <Route 
-          path="/participant-ceremony" 
+        <Route
+          path="/participant-ceremony"
           element={
             <ProtectedRoute>
               <ParticipantCer />
             </ProtectedRoute>
-          } 
+          }
         />
         {/* GSIC */}
-        <Route 
-          path="/participant-gsic" 
+        <Route
+          path="/participant-gsic"
           element={
-          <ProtectedRoute>
-            <ParticipantGSIC />
-          </ProtectedRoute>
+            <ProtectedRoute>
+              <ParticipantGSIC />
+            </ProtectedRoute>
           }
         />
-        <Route 
-          path="/submission-gsic" 
+        <Route
+          path="/submission-gsic"
           element={
-          <ProtectedRoute>
-            <EditSubmissionGSIC/>
-          </ProtectedRoute>
+            <ProtectedRoute>
+              <EditSubmissionGSIC />
+            </ProtectedRoute>
           }
         />
-        <Route 
-          path="/document-gsic" 
+        <Route
+          path="/document-gsic"
           element={
-          <ProtectedRoute>
-            <EditDocumentGSIC/>
-          </ProtectedRoute>
+            <ProtectedRoute>
+              <EditDocumentGSIC />
+            </ProtectedRoute>
           }
         />
         {/* Dashboard Admin : Harus login pakek protected route */}
