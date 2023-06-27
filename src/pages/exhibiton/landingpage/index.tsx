@@ -26,14 +26,14 @@ const Exhibition = () => {
        </div>
        <div className="w-auto h-auto mx-auto pt-5 flex">
         </div>
-          <div className="mt-12 mx-16 bg-slate-100 bg-opacity-30 rounded-xl shadow-lg shadow-slate-500 flex flex-col lg:flex-row overflow-hidden">
+          <div className="mt-12 w-[90%] max-w-[1300px] mx-auto bg-slate-100 bg-opacity-30 rounded-xl shadow-lg shadow-slate-500 flex flex-col lg:flex-row overflow-hidden">
             <div className='w-full lg:w-1/3 pb-0 lg:py-12 px-5 flex justify-center lg:justify-end items-center'>
-              <div className='w-80 h-96'>
+              <div className='mt-12 w-[282px] h-[284px] lg:w-[382px] lg:h-[384px]'>
                 <CarouselElement className='' images={[as, d, as]} />
               </div>
             </div>
-            <div className="w-full lg:w-2/3 px-5 pb-5 lg:p-10 flex items-center">
-              <p className='body-text-mmobile lg:body-text text-primaryText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum minus cupiditate asperiores incidunt eos itaque repellendus animi autem expedita sed?
+            <div className="w-full lg:w-2/3 px-5 py-5 lg:p-10 flex items-center">
+              <p className='body-text-mmobile lg:body-text text-primaryText text-center lg:text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum minus cupiditate asperiores incidunt eos itaque repellendus animi autem expedita sed?
               </p>
             </div>
           </div>
