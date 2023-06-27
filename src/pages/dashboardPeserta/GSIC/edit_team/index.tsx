@@ -1,12 +1,10 @@
-import toast, { Toast, Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import UploadFile from "../../../../components/upload-file/upload-file";
 import Navbar from "../../../../components/navbar/Navbar";
 import Footer from "../../../../components/footer";
-import PopUp from "../../../../components/dashboard_peserta/bcc/toast";
+import { NotifyStatus } from "../../../../components/toast_pop_up/toast";
 
 const EditTeamGSIC = () => {
-    const notifyStatus = (t: Toast) => toast.custom(<PopUp t={t} status={true} text_success='Successfully submitted!' text_error="Submit error!"/> , {duration: 250});
-
     return (
         <>
         <Navbar/>
@@ -79,7 +77,7 @@ const EditTeamGSIC = () => {
             </div>
             <div className="flex justify-center">
                 <button
-                    onClick={notifyStatus as any}
+                    onClick={() => NotifyStatus("Succesfully Submitted", "Submit error", false)}
                     className="button-text mx-auto cursor-pointer bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] mt-10"
                 >
                     Submit

@@ -1,5 +1,4 @@
 import Navbar from "../../../../components/navbar/Navbar";
-import up from "../../../../assets/upload.svg";
 import ContactList from "../../../../components/contact_list";
 import Footer from "../../../../components/footer";
 import ParticipantCard from "../../../../components/dashboard_peserta/bcc/participant_card";
