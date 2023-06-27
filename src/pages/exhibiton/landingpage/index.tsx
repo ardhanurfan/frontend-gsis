@@ -17,7 +17,7 @@ const Exhibition = () => {
               EXHIBITION
           </h1>
        </div>
-       <div className="w-auto h-auto mx-auto pt-5">
+       <div className="w-auto h-auto mx-auto pt-5 flex">
           <div className="w-[1246px] h-[575px] lg:h-[615px] bg-slate-100 mt-[52px] mx-auto rounded-xl shadow-lg shadow-blue-800 bg-opacity-30 overflow-auto lg:overflow-visible">
             <div className="h-auto w-[38px] flex justify-between float-left m-[3%]">
               <div className="h-[10px] w-[10px] rounded-full bg-primaryGreen"></div>
@@ -100,14 +100,23 @@ const Exhibition = () => {
               </div>
             </div>
           </div>
-          <div className="w-auto h-auto mt-20">
-            disini tempat naro business, text curator dll
+          <div className="w-auto h-auto mt-20 flex">
+            <div className="flex  items-center justify-center">
+              <img className="" src="../src/assets/exhibition_technology.svg" alt="Technology" />
+        
+            </div>
+            <div className="flex  items-center justify-center">
+              <img className="" src="../src/assets/exhibition_currator.svg" alt="TextCurator" />
+            </div>
+            <div className="flex   items-center justify-center">
+              <img className="" src="../src/assets/exhibition_bussines.svg" alt="Bussines" />        
+            </div>
           </div>
           <div className="w-auto h-auto mt-20">
             <div className="text-center">
               <h1 className="w-auto header1 text-primaryText">Submit Here</h1>
             </div>
-            <div className="flex justify-center items-center mt-10">
+            <div className="flex flex-no-wrap justify-center items-center mt-10">
                 <button
                   type="button"
                   className="cursor-pointer button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
@@ -151,6 +160,7 @@ const Exhibition = () => {
             </div>
           </div>
       </div>
+
       <Footer />
     </>
   );
