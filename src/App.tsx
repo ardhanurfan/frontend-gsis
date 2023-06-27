@@ -6,7 +6,7 @@ import Login from "./pages/account/login";
 import SignUp from "./pages/account/signUp";
 import ForgotPassword from "./pages/account/forgot";
 import ForgotSent from "./pages/account/forgotSent";
-import AboutUs from "./pages/aboutus";
+import AboutUs from "./pages/aboutUs";
 import NotFound from "./pages/addingPages/notFount";
 import ComingSoon from "./pages/addingPages/comingSoon";
 import BCC from "./pages/bcc/landingpage";
@@ -52,6 +52,8 @@ function App() {
         {/* GSIC */}
         <Route path="/gsic" element={<HomePageGSIC />} />
         <Route path="/gsic/register" element={<RegisterGSIC />} />
+        {/* Ceremony */}
+        <Route path="/ceremony" element={<Ceremony />} />
 
         {/* Dashboard Peserta : Harus login pakek protected route */}
         <Route

@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 
-const url = "http://localhost/backend-gsis/public/api/";
+const url = "https://backend.ganeshasummit.com/api/";
 
 export const post = async (
   api: string,
