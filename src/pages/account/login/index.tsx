@@ -25,6 +25,7 @@ const Login = () => {
         password: password,
       });
       const access_token = response?.data?.data?.acess_token;
+      console.log(access_token);
       localStorage.setItem("access_token", access_token);
       setEmail("");
       setPassword("");

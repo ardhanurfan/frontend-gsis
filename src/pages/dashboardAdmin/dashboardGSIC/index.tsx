@@ -1,14 +1,29 @@
 import "./style.css";
 import Toa from "../../../components/dashboard_admin/admin/Toa";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AnnouncementContext } from "../announcement/announcementContext";
 import Announcement from "../announcement";
 import GSICParticipantCard from "../../../components/dashboard_admin/admin/GSICParticipantCard";
 import NavbarDashboard from "../../../components/navbarDashboard/NavbarDashboard";
 import Footer from "../../../components/footer";
+import { get } from "../../../API/api";
 
 const DashboardGSIC = () => {
   const announContext = useContext(AnnouncementContext);
+  const[data,setData] = useState([]);
+
+  const getData = async () => {
+    try{
+      const response = await get("gsic");
+      setData(response?.data);
+    }catch(error){
+      console.log(error);
+    }
+  };
+
+  useEffect (() => {
+    getData();
+  },[]);
   return (
     <>
     {announContext?.isAnnounce? <Announcement/> : ""} 
@@ -18,7 +33,11 @@ const DashboardGSIC = () => {
           GSIC Participant
         </h1>
         <div className="mt-2 pb-5 space-y-4">
-          <GSICParticipantCard teamname="ANDROMEDA" status="ACTIVE" teamid={12345} name1="Alan" email1="alan@gmail.com" phone1="081234567890" uni1="ITB" major1="STI" year1="2021/2022" name2="Antum" email2="antum@gmail.com" phone2="081023123124" uni2="ITB" major2="IF" year2="2021/2022" name3="Ana" email3="ana@gmail.com" phone3="081231231231" uni3="IPB" major3="UI" year3="2021/2022"/>
+          {data.map((row:any)=>{
+            return(
+              <GSICParticipantCard teamname={row.team_name} status={row.status} teamid={row.team_id} name1="Alan" email1="alan@gmail.com" phone1="081234567890" uni1="ITB" major1="STI" year1="2021/2022" name2="Antum" email2="antum@gmail.com" phone2="081023123124" uni2="ITB" major2="IF" year2="2021/2022" name3="Ana" email3="ana@gmail.com" phone3="081231231231" uni3="IPB" major3="UI" year3="2021/2022"/>
+            )
+          })}
           <GSICParticipantCard teamname="ANDROMEDA" status="ACTIVE" teamid={12345} name1="Alan" email1="alan@gmail.com" phone1="081234567890" uni1="ITB" major1="STI" year1="2021/2022" name2="Antum" email2="antum@gmail.com" phone2="081023123124" uni2="ITB" major2="IF" year2="2021/2022" name3="Ana" email3="ana@gmail.com" phone3="081231231231" uni3="IPB" major3="UI" year3="2021/2022"/>
           <GSICParticipantCard teamname="ANDROMEDA" status="ACTIVE" teamid={12345} name1="Alan" email1="alan@gmail.com" phone1="081234567890" uni1="ITB" major1="STI" year1="2021/2022" name2="Antum" email2="antum@gmail.com" phone2="081023123124" uni2="ITB" major2="IF" year2="2021/2022" name3="Ana" email3="ana@gmail.com" phone3="081231231231" uni3="IPB" major3="UI" year3="2021/2022"/>
           <GSICParticipantCard teamname="ANDROMEDA" status="ACTIVE" teamid={12345} name1="Alan" email1="alan@gmail.com" phone1="081234567890" uni1="ITB" major1="STI" year1="2021/2022" name2="Antum" email2="antum@gmail.com" phone2="081023123124" uni2="ITB" major2="IF" year2="2021/2022" name3="Ana" email3="ana@gmail.com" phone3="081231231231" uni3="IPB" major3="UI" year3="2021/2022"/>

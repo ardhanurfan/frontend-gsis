@@ -1,15 +1,30 @@
+// import { useState } from "react";
+import { post } from "../../../API/api";
 import up from "../../../assets/upload.svg";
 
 interface CeremonyCardProps {
+    id:number,
     name:string;
     email:string;
     phone:string;
     university:string;
     major:string;
     year:string;
+    url:string;
     category:string;
 }
-const CeremonyCard = ({name,email,phone,university,major,year,category}:CeremonyCardProps) =>{
+const CeremonyCard = ({id,name,email,phone,university,major,year,url,category}:CeremonyCardProps) =>{
+  const postData = async (approve:string) => {
+      try{
+        const response = await post("edit-ceremony-admin",{
+          id:id,
+          approve_poster:approve,
+        })
+        console.log(response);
+      }catch(error){
+        console.log(error);
+      }
+    }
     return(
         <>
         <details className="w-[100%] md:w-[500px] lg:w-[510px] xl:w-[530px] hover:cursor-pointer rounded-xl">
@@ -53,14 +68,14 @@ const CeremonyCard = ({name,email,phone,university,major,year,category}:Ceremony
                   </div>
                   <div className="w-[240px] h-auto mb-6">
                     <div className="small text-[#015CBA] flex gap-1 mb-2">
-                      Proof of Poster Upload
+                      <a href={url} className="">Proof of Poster Upload</a>
                       <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B]">
+                      <button onClick={() => postData("REJECTED")} className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B]">
                         <p className="small text-[#FCFCFC]">Decline</p>
                       </button>
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27]">
+                      <button onClick={() =>postData("ACCEPTED")} className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27]">
                         <p className="small text-[#FCFCFC]">Accept</p>
                       </button>
                     </div>
