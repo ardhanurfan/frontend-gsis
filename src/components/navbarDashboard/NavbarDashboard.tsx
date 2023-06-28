@@ -160,7 +160,7 @@ const NavbarDashboard = () => {
                       alt=""
                     />
                     <p className="text-ellipsis body-text overflow-hidden cursor-pointer">
-                      {user?.name}
+                      {user?.username}
                     </p>
                     <img
                       src="../src/assets/dropdown.svg"
@@ -329,7 +329,7 @@ const NavbarDashboard = () => {
                       alt=""
                     />
                     <p className="hamburger text-ellipsis body-text overflow-hidden cursor-pointer">
-                      {user?.name}
+                      {user?.username}
                     </p>
                     <img
                       src="../src/assets/dropdown.svg"

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Toaster } from "react-hot-toast";
 
 import "./style.css";
-import  UploadFile from "../../../../components/upload-file/upload-file";
+import UploadFile from "../../../../components/upload-file/upload-file";
 import ContactList from "../../../../components/contact_list";
 import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
 import Footer from "../../../../components/footer";
@@ -123,7 +123,7 @@ const EditSubmissionExhibition = () => {
             Cancel
           </a>
           <button
-            onClick={() => NotifyStatus("Succesfully Submitted", "Submit error", true)}
+            onClick={() => NotifyStatus("Succesfully Submitted", true)}
             className="cursor-pointer bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center"
           >
             SAVE

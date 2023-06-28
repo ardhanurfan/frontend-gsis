@@ -1,14 +1,19 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Dot from "../../../components/account/dot";
 import TextField from "../../../components/account/text-field";
 import { useNavigate } from "react-router-dom";
 import { post } from "../../../API/api";
+import toast, { Toast, Toaster } from "react-hot-toast";
+import { NotifyStatus } from "../../../components/toast_pop_up/toast";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  // const [isSucces, setIsSucces] = useState(true);
+  // const [messages, setMessages] = useState("");
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,16 +28,23 @@ const Login = () => {
       localStorage.setItem("access_token", access_token);
       setEmail("");
       setPassword("");
+      // setIsSucces(true);
+      // setMessages("Login Succesfully!");
       navigate("/");
     } catch (error) {
-      console.log(error);
+      const mess = error as any;
+      // setIsSucces(false);
+      // setMessages(mess.response.data.data.error as string);
+      NotifyStatus(mess.response.data.data.error as string, false);
     } finally {
       setLoading(false);
+      // notifyStatus as any;
     }
   };
 
   return (
     <>
+      <Toaster />
       <div className="h-screen w-screen bg-white p-4 xl:py-[62px] xl:px-[70px]">
         <div className="w-full h-full rounded-[10px] shadow-lg shadow-primaryBlue bg-gradient-to-br from-primaryBlue to-white p-[3px]">
           <div className="relative w-full h-full rounded-[10px] px-[45px] lg:px-[30%] flex flex-col justify-center items-center bg-white">
@@ -70,7 +82,7 @@ const Login = () => {
                   className="mb-[16px] py-[10px] px-[50px] rounded-[10px] text-button text-white bg-primaryBlue transition duration-500 ease-in-out hover:bg-seccondaryBlue"
                 >
                   {loading && (
-                    <div className="flex justify-center">
+                    <div className="flex justify-center items-center">
                       <img
                         className="mr-2"
                         src="../src/assets/Loading.svg"

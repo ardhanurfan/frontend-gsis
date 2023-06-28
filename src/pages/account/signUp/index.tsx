@@ -4,6 +4,8 @@ import TextField from "../../../components/account/text-field";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 import { post } from "../../../API/api";
+import toast, { Toast, Toaster } from "react-hot-toast";
+import { NotifyStatus } from "../../../components/toast_pop_up/toast";
 
 const SignUp = () => {
   const [loading, setLoading] = useState(false);
@@ -17,6 +19,9 @@ const SignUp = () => {
   const [major, setMajor] = useState("");
   const [year, setYear] = useState("");
   const navigate = useNavigate();
+
+  // const [isSucces, setIsSucces] = useState(false);
+  // const [messages, setMessages] = useState("");
 
   const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -45,9 +50,15 @@ const SignUp = () => {
       setUniversity("");
       setMajor("");
       setYear("");
+      // setIsSucces(true);
+      // setMessages("Sign Up Succesfully!");
       navigate("/");
     } catch (error) {
       console.log(error);
+      const mess = error as any;
+      // setIsSucces(false);
+      // setMessages(mess.response.data.data.error as string);
+      NotifyStatus(mess.response.data.data.error, false);
     } finally {
       setLoading(false);
     }
@@ -62,6 +73,7 @@ const SignUp = () => {
             <h1 className="header1-mobile lg:header1 text-primaryText mb-[62px] mt-[50px]">
               Sign Up
             </h1>
+            <Toaster />
             <form
               onSubmit={(e) => handleSignup(e)}
               className="w-full field-text-mobile lg:field-text"
@@ -195,7 +207,7 @@ const SignUp = () => {
                   className="mb-[16px] py-[10px] px-[50px] rounded-[10px] text-button text-white bg-primaryBlue transition duration-500 ease-in-out hover:bg-seccondaryBlue"
                 >
                   {loading && (
-                    <div className="flex justify-center">
+                    <div className="flex justify-center items-center">
                       <img
                         className="mr-2"
                         src="../src/assets/Loading.svg"
