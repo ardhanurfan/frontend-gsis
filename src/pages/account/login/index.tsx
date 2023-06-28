@@ -45,11 +45,11 @@ const Login = () => {
   return (
     <>
       <Toaster />
-      <div className="h-screen w-screen bg-white p-4 xl:py-[62px] xl:px-[70px]">
+      <div className="h-screen lg:h-auto w-full bg-white p-4 xl:py-[62px] xl:px-[70px]">
         <div className="w-full h-full rounded-[10px] shadow-lg shadow-primaryBlue bg-gradient-to-br from-primaryBlue to-white p-[3px]">
           <div className="relative w-full h-full rounded-[10px] px-[45px] lg:px-[30%] flex flex-col justify-center items-center bg-white">
             <Dot></Dot>
-            <h1 className="header1-mobile lg:header1 text-primaryText mb-[62px] text-center">
+            <h1 className="header1-mobile lg:header1 text-primaryText mb-[62px] mt-[50px] text-center">
               Log In
             </h1>
             <form
@@ -95,7 +95,7 @@ const Login = () => {
                 </button>
               </div>
             </form>
-            <p className="button-text-mobile lg:button-text text-primaryBlue text-center">
+            <p className="button-text-mobile lg:button-text text-primaryBlue text-center mb-[50px]">
               Don't have an account?{" "}
               <span>
                 <a href="/sign-up" className="text-primaryOrange">
