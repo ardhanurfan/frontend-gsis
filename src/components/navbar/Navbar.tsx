@@ -52,7 +52,6 @@ const Navbar = () => {
     if (cek) {
       setNavOpen(false);
     }
-    console.log("OKK");
   };
   useEventListener("click", onClick, documentRef);
 

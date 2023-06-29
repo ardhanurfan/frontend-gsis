@@ -20,8 +20,8 @@ export const postWithAuth = async (
 ): Promise<AxiosResponse<any, any>> => {
   return await axios.post(url + api, form, {
     headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
+      // Accept: "multipart/form-data",
+      "Content-Type": "multipart/form-data",
       Authorization: "Bearer " + token, //Add this line
     },
   });
