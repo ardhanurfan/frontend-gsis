@@ -1,5 +1,4 @@
 import "./style.css";
-import Toa from "../../../components/dashboard_admin/admin/Toa";
 import { useContext, useEffect, useState } from "react";
 import { AnnouncementContext } from "../announcement/announcementContext";
 import Announcement from "../announcement";
@@ -74,7 +73,6 @@ const DashboardGSIC = () => {
           
         </div>
         <div className="fixed bottom-16 right-6">
-          <Toa/>
         </div>
       </div>
       <Footer></Footer>

@@ -1,6 +1,5 @@
 import "./style.css";
 import BCCParticipantCard from "../../../components/dashboard_admin/admin/BCCParticipantCard";
-import Toa from "../../../components/dashboard_admin/admin/Toa";
 import { useContext, useEffect, useState } from "react";
 import { AnnouncementContext } from "../announcement/announcementContext";
 import Announcement from "../announcement";
@@ -15,7 +14,8 @@ const DashboardBCC = () => {
   const getData = async () => {
     try{
       const response = await get("bcc-user");
-      setData(response?.data);
+      console.log(response);
+      setData(response?.data?.data);
     }catch(error){
       console.log(error);
     }
@@ -36,20 +36,12 @@ const DashboardBCC = () => {
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-x-16 mb-10">
             {data.map((row:any)=>{
               return(
-                <BCCParticipantCard name={row.name} email={row.email} phone={row.phone} university={row.university} major={row.major} year={row.year} streams={row.stream}/>
+                <BCCParticipantCard row = {row}/>
               )
             })}
-            <BCCParticipantCard name="Ani" email="18221135@std.stei.itb.ac.id" phone="081320020190" university="ITB" major="STI" year="2021/2022" streams="Technology"/>
-            <BCCParticipantCard name="Ani" email="18221135@std.stei.itb.ac.id" phone="081320020190" university="ITB" major="STI" year="2021/2022" streams="Technology"/>
-            <BCCParticipantCard name="Ani" email="18221135@std.stei.itb.ac.id" phone="081320020190" university="ITB" major="STI" year="2021/2022" streams="Technology"/>
-            <BCCParticipantCard name="Ani" email="18221135@std.stei.itb.ac.id" phone="081320020190" university="ITB" major="STI" year="2021/2022" streams="Technology"/>
-            <BCCParticipantCard name="Ani" email="18221135@std.stei.itb.ac.id" phone="081320020190" university="ITB" major="STI" year="2021/2022" streams="Technology"/>
-            <BCCParticipantCard name="Ani" email="18221135@std.stei.itb.ac.id" phone="081320020190" university="ITB" major="STI" year="2021/2022" streams="Technology"/>
-            <BCCParticipantCard name="Ani" email="18221135@std.stei.itb.ac.id" phone="081320020190" university="ITB" major="STI" year="2021/2022" streams="Technology"/>
-          </div>
+           </div>
         </div>
         <div className="fixed bottom-16 right-6">
-          <Toa/>
         </div>
       </div>
       <Footer></Footer>

@@ -3,7 +3,6 @@ import CeremonyCard from "../../../components/dashboard_admin/admin/CeremonyCard
 import { useContext, useEffect, useState } from "react";
 import Announcement from "../announcement";
 import { AnnouncementContext } from "../announcement/announcementContext";
-import Toa from "../../../components/dashboard_admin/admin/Toa";
 import NavbarDashboard from "../../../components/navbarDashboard/NavbarDashboard";
 import Footer from "../../../components/footer";
 import { get } from "../../../API/api";
@@ -44,7 +43,6 @@ const DashboardCeremony = () => {
           </div>
         </div>
         <div className="fixed bottom-16 right-6">
-          <Toa/>
         </div>
       </div>
       <Footer></Footer>

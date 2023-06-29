@@ -14,9 +14,8 @@ const Announcement = () => {
   });
   const [description, setDescription] = useState(() => {
     if (announContext?.dataRow == null) {
-      return "";
+      return "" as string;
     }
-    console.log(announContext?.dataRow);
     return announContext?.dataRow.description;
   });
   const [type, setType] = useState(() => {

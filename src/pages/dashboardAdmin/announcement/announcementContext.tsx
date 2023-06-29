@@ -16,7 +16,7 @@ const AnnouncementContext = createContext<AnnounceContextType | null>(null);
 const AnnouncementProvider = ({ children } : {children:ReactNode}) => {
   const [isAnnounce, setAnnounce] = useState(false);
   const [isToa, setToa] = useState(true);
-  const [dataRow, setDataRow] = useState([]);
+  const [dataRow, setDataRow] = useState(null);
 
   return (
     <AnnouncementContext.Provider value={{ isAnnounce, setAnnounce,isToa,setToa,dataRow,setDataRow}}>
