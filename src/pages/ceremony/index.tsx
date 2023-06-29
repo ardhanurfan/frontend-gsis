@@ -15,7 +15,6 @@ import Footer from "../../components/footer";
 import { getWithAuth, postWithAuth } from "../../API/api";
 import { NotifyStatus } from "../../components/toast_pop_up/toast";
 import { Toaster } from "react-hot-toast";
-import { FileWithPath } from "react-dropzone";
 
 const Ceremony = () => {
   // const [sliderRef, setSliderRef] = useState(null)
@@ -258,7 +257,7 @@ const Ceremony = () => {
             <h1 className="header1-mobile lg:header1 pb-10 text-primaryBlue">
               Contact Person
             </h1>
-            <ContactList />
+            <ContactList line={"Comingsoon"} wa={"Comingsoon"} />
           </div>
         </div>
       </div>
