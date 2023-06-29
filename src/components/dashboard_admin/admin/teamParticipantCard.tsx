@@ -7,9 +7,11 @@ interface TeamParticipantCardProps {
     university:string;
     major:string;
     year:string;
+    url:string;
 }
 
-const TeamParticipantCard = ({name,email,phone,university,major,year}:TeamParticipantCardProps) => {
+const TeamParticipantCard = ({name,email,phone,university,major,year,url}:TeamParticipantCardProps) => {
+    console.log(url);
     return(
         <div className="border-2 border-[#005CBA] rounded-md h-[auto]">
                 <div className="m-2">
@@ -39,7 +41,7 @@ const TeamParticipantCard = ({name,email,phone,university,major,year}:TeamPartic
                 </div>
                 <div className="w-[240px] h-auto">
                     <div className="small text-[#015CBA] flex gap-1 mb-2">
-                        Student ID Card
+                        <a href={url} className="hover:underline">Student ID Card</a>
                         <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">

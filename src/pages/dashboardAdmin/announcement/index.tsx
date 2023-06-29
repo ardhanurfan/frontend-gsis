@@ -24,11 +24,6 @@ const Announcement = () => {
     }
     return announContext?.dataRow.type;
   });
-  // const handleChange = (e: {
-  //   target: { value: React.SetStateAction<string> };
-  // }) => {
-  //   setCharCount(e.target.value);
-  // };
 
   const postData = async (stat: string) => {
     if (announContext?.isToa) {
