@@ -1,34 +1,50 @@
 import { useDropzone, FileWithPath } from "react-dropzone";
 
 interface DropzoneProps {
-  size: string
+  childToParent: any;
+  type: string;
 }
 
-const UploadFile = ({size}: DropzoneProps) => {
+const UploadFile = ({ type, childToParent }: DropzoneProps) => {
+  let accept = {};
+  if (type == "image") {
+    accept = {
+      "image/*": [],
+    };
+  } else if (type == "video") {
+    accept = {
+      "video/*": [],
+    };
+  } else if (type == "file") {
+    accept = {
+      "application/*": [".pdf"],
+    };
+  }
+
   const { getRootProps, getInputProps, open, acceptedFiles } = useDropzone({
     maxFiles: 1,
-    accept: {
-      "image/*": [],
-      "video/*": [],
-    },
+    accept: accept,
     // Disable click and keydown behavior
     noClick: true,
     noKeyboard: true,
   });
 
-  const files = acceptedFiles.map((file: FileWithPath) => (
-    <li key={file.path}>
-      <div className="flex">
-        <img src="./src/assets/doc-upload-success.svg" alt="" />
-        <div className=" ml-1">
-          <p>
-            {file.path} - {file.size} bytes
-          </p>
-          <p className=" text-success font-[8px]">Successfully uploaded!</p>
+  const files = acceptedFiles.map((file: FileWithPath) => {
+    childToParent(acceptedFiles[0]);
+    return (
+      <li key={file.path}>
+        <div className="flex">
+          <img src="./src/assets/doc-upload-success.svg" alt="" />
+          <div className=" ml-1">
+            <p>
+              {file.path} - {file.size} bytes
+            </p>
+            <p className=" text-success font-[8px]">Successfully uploaded!</p>
+          </div>
         </div>
-      </div>
-    </li>
-  ));
+      </li>
+    );
+  });
 
   return (
     <div className="container">
@@ -36,10 +52,14 @@ const UploadFile = ({size}: DropzoneProps) => {
         <input {...getInputProps()} />
         <div className="wrapper w-full bg-slate-200 rounded-xl py-[5.34%] flex flex-col gap-2 items-center border-2 border-primaryBlue border-dashed">
           <img src="./src/assets/upload-file.svg" alt="" />
-          <p className={size === "lg" ? " text-primaryText text-center font-normal text-2xl font-monserrat" : " text-primaryText text-center font-normal text-xs font-monserrat"}>
+          <p
+            className={
+              " text-primaryText text-center font-normal text-xs font-monserrat"
+            }
+          >
             Drag and Drop Your Files Here
           </p>
-          <p className={size === "lg" ? " text-primaryText font-normal text-2xl font-monserrat" : " text-primaryText font-normal text-xs font-monserrat"}>
+          <p className={" text-primaryText font-normal text-xs font-monserrat"}>
             or
           </p>
           <button
