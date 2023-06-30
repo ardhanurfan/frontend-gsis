@@ -72,10 +72,10 @@ const CeremonyCard = ({id,name,email,phone,university,major,year,url,category}:C
                       <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                      <button onClick={() => postData("REJECTED")} className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B]">
+                      <button onClick={() => postData("REJECTED")} className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105">
                         <p className="small text-[#FCFCFC]">Decline</p>
                       </button>
-                      <button onClick={() =>postData("ACCEPTED")} className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27]">
+                      <button onClick={() =>postData("ACCEPTED")} className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105">
                         <p className="small text-[#FCFCFC]">Accept</p>
                       </button>
                     </div>
