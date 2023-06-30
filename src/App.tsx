@@ -6,7 +6,7 @@ import Login from "./pages/account/login";
 import SignUp from "./pages/account/signUp";
 import ForgotPassword from "./pages/account/forgot";
 import ForgotSent from "./pages/account/forgotSent";
-import AboutUs from "./pages/aboutUs";
+import AboutUs from "./pages/aboutus";
 import NotFound from "./pages/addingPages/notFound";
 import ComingSoon from "./pages/addingPages/comingSoon";
 import BCC from "./pages/bcc/landingpage";
