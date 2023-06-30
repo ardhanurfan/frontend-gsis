@@ -47,7 +47,7 @@ const EditSubmissionCer = () => {
           <h3 className="header2-mobile lg:header2 text-primaryText self-center mb-3">
             UPLOAD FILES
           </h3>
-          <UploadFile childToParent={(e:File) => setSSPoster(e)} type={"Image"}/>
+          <UploadFile childToParent={undefined} type={""} />
         </div>
         <div className="flex justify-center">
           <button
@@ -62,7 +62,7 @@ const EditSubmissionCer = () => {
           <h2 className="header2-mobile lg:header2 text-primaryText text-center mb-9">
             If you're having trouble, please contact
           </h2>
-          {/* <ContactList /> */}
+          <ContactList line={""} wa={""} />
         </div>
       </div>
       <Footer />

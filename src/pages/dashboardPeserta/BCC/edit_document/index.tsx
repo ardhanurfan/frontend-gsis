@@ -21,7 +21,7 @@ const EditDocumentBCC = () => {
               Student ID Card
             </label>
             <h3 className="header3 text-primaryText mb-3">UPLOAD FILES</h3>
-            <UploadFile size="" />
+            <UploadFile childToParent={undefined} type={""}  />
           </div>
           <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col items-center justify-center">
             <label
@@ -33,7 +33,7 @@ const EditDocumentBCC = () => {
             <h3 className="header3 text-primaryText mb-3 lg:mb-[5px]">
               UPLOAD FILES
             </h3>
-            <UploadFile size="" />
+            <UploadFile childToParent={undefined} type={""} />
           </div>
           <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col items-center justify-center">
             <label
@@ -43,7 +43,7 @@ const EditDocumentBCC = () => {
               Proof of Poster Upload
             </label>
             <h3 className="header3 text-primaryText mb-3">UPLOAD FILES</h3>
-            <UploadFile size="" />
+            <UploadFile childToParent={undefined} type={""} />
           </div>
           <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col items-center justify-center">
             <label
@@ -53,7 +53,7 @@ const EditDocumentBCC = () => {
               Proof of Payment
             </label>
             <h3 className="header3 text-primaryText mb-3">UPLOAD FILES</h3>
-            <UploadFile size="" />
+            <UploadFile childToParent={undefined} type={""} />
           </div>
         </div>
         <div className="flex justify-center">

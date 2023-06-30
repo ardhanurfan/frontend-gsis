@@ -1,6 +1,8 @@
 // import { useState } from "react";
+import { useState } from "react";
 import { post } from "../../../API/api";
 import up from "../../../assets/upload.svg";
+import Status from "../../dashboard_peserta/bcc/status";
 
 interface CeremonyCardProps {
     id:number,
@@ -12,8 +14,10 @@ interface CeremonyCardProps {
     year:string;
     url:string;
     category:string;
+    approve:string;
 }
-const CeremonyCard = ({id,name,email,phone,university,major,year,url,category}:CeremonyCardProps) =>{
+const CeremonyCard = ({id,name,email,phone,university,major,year,url,category,approve}:CeremonyCardProps) =>{
+  const[visible,setVisible] =useState(approve);
   const postData = async (approve:string) => {
       try{
         const response = await post("edit-ceremony-admin",{
@@ -25,6 +29,8 @@ const CeremonyCard = ({id,name,email,phone,university,major,year,url,category}:C
         console.log(error);
       }
     }
+
+    console.log(visible);
     return(
         <>
         <details className="w-[100%] md:w-[500px] lg:w-[510px] xl:w-[530px] hover:cursor-pointer rounded-xl">
@@ -72,12 +78,16 @@ const CeremonyCard = ({id,name,email,phone,university,major,year,url,category}:C
                       <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                      <button onClick={() => postData("REJECTED")} className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105">
-                        <p className="small text-[#FCFCFC]">Decline</p>
+                      {visible == "WAITING" ?
+                      <>
+                      <button onClick={() => {postData("REJECTED"); setVisible("REJECTED")}} className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105">
+                        <p className="button-text-mobile md:button-text text-[#FCFCFC]">Decline</p>
                       </button>
-                      <button onClick={() =>postData("ACCEPTED")} className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105">
-                        <p className="small text-[#FCFCFC]">Accept</p>
+                      <button onClick={() => {postData("ACCEPTED"); setVisible("ACCEPTED")}} className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105">
+                        <p className="button-text-mobile md:button-text text-[#FCFCFC]">Accept</p>
                       </button>
+                      </>
+                      : <Status status={visible}/>}
                     </div>
                   </div>
                 <p className="header3 text-[#015CBA] mb-3">Works</p>

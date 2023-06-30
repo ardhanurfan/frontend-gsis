@@ -111,9 +111,9 @@ const AboutUs = () => {
           <h2 className="text-center header3-mobile lg:header3 mt-[109px] text-primaryText">
             Our Mission
           </h2>
-          <div className="flex items-center justify-between w-[85vw] max-w-[1100px] h-[150px] lg:h-[200px] mt-[31px] mb-[20px] mx-auto">
+          <div className="relative flex items-center justify-between w-[85vw] max-w-[1100px] h-[200px] lg:h-[250px] mt-[31px] mb-[20px] mx-auto">
             <PrevArrow/>
-            <div className="w-[85vw] max-w-[945px] h-[150px] lg:h-[200px] rounded-xl shadow-md shadow-slate-500">
+            <div className="w-full max-w-[945px] h-auto rounded-xl shadow-md shadow-slate-500">
               <Slides className="rounded-xl" ref={setSliderRef} {...settings}>
                 <CarouselCard content="Provide informative sessions that allow students to learn and identify real problems around them"/>
                 <CarouselCard content="Providing competitions that allow students to apply their learning material to produce an output"/>

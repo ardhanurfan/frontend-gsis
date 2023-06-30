@@ -43,7 +43,7 @@ const CreateTeamBCC = () => {
               >
                 Invite Team Member
               </label>
-              <SelectComponent placeholder="Enter name" />
+              <SelectComponent placeholder="Enter name" type={""} value={undefined} />
             </form>
           </div>
           <div className="mt-[40px]">
@@ -53,7 +53,7 @@ const CreateTeamBCC = () => {
             <div className="mt-[38px] lg:mt-[58px] w-full">
               <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col items-center justify-center">
                 <h3 className="header3 text-primaryText mb-3">UPLOAD FILES</h3>
-                <UploadFile size="" />
+                <UploadFile childToParent={undefined} type={""} />
               </div>
             </div>
             <div className="flex mt-[61px] mb-[30px] justify-center w-full">
