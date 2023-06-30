@@ -67,10 +67,10 @@ const BCCParticipantCard = ({row}:BCCParticipantCardProps) => {
                       <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B]" onClick={() => postData({approve:"REJECTED",approve_name:"approve_ktm"})}>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => postData({approve:"REJECTED",approve_name:"approve_ktm"})}>
                         <p className="small text-[#FCFCFC]">Decline</p>
                       </button>
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27]" onClick={() => postData({approve:"ACCEPTED",approve_name:"approve_ktm"})}>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => postData({approve:"ACCEPTED",approve_name:"approve_ktm"})}>
                         <p className="small text-[#FCFCFC]">Accept</p>
                       </button>
                     </div>
@@ -81,10 +81,10 @@ const BCCParticipantCard = ({row}:BCCParticipantCardProps) => {
                       <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B]" onClick={() => postData({approve:"REJECTED",approve_name:"approve_follow"})}>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => postData({approve:"REJECTED",approve_name:"approve_follow"})}>
                         <p className="small text-[#FCFCFC]">Decline</p>
                       </button>
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27]" onClick={() => postData({approve:"ACCEPTED",approve_name:"approve_follow"})}>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => postData({approve:"ACCEPTED",approve_name:"approve_follow"})}>
                         <p className="small text-[#FCFCFC]">Accept</p>
                       </button>
                     </div>
@@ -95,10 +95,10 @@ const BCCParticipantCard = ({row}:BCCParticipantCardProps) => {
                       <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B]" onClick={() => postData({approve:"REJECTED",approve_name:"approve_poster"})}>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => postData({approve:"REJECTED",approve_name:"approve_poster"})}>
                         <p className="small text-[#FCFCFC]">Decline</p>
                       </button>
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27]" onClick={() => postData({approve:"ACCEPTED",approve_name:"approve_poster"})}>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => postData({approve:"ACCEPTED",approve_name:"approve_poster"})}>
                         <p className="small text-[#FCFCFC]">Accept</p>
                       </button>
                     </div>
@@ -109,10 +109,10 @@ const BCCParticipantCard = ({row}:BCCParticipantCardProps) => {
                       <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B]" onClick={() => postData({approve:"REJECTED",approve_name:"approve_payment"})}>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => postData({approve:"REJECTED",approve_name:"approve_payment"})}>
                         <p className="small text-[#FCFCFC]">Decline</p>
                       </button>
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27]" onClick={() => postData({approve:"ACCEPTED",approve_name:"approve_payment"})}>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => postData({approve:"ACCEPTED",approve_name:"approve_payment"})}>
                         <p className="small text-[#FCFCFC]">Accept</p>
                       </button>
                     </div>

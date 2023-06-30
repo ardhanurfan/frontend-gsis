@@ -1,6 +1,10 @@
+import { post } from "../../../API/api";
 import up from "../../../assets/upload.svg";
 
 interface TeamParticipantCardProps {
+    leader_id:number,
+    user_id_1:number,
+    user_id_2:number,
     name:string;
     email:string;
     phone:string;
@@ -8,10 +12,23 @@ interface TeamParticipantCardProps {
     major:string;
     year:string;
     url:string;
+    approve_idk:string;
 }
 
-const TeamParticipantCard = ({name,email,phone,university,major,year,url}:TeamParticipantCardProps) => {
-    console.log(url);
+const TeamParticipantCard = ({leader_id,user_id_1,user_id_2,name,email,phone,university,major,year,url,approve_idk}:TeamParticipantCardProps) => {
+    const postData = async (approve:string) => {
+        try{
+          const response = await post("edit-gsic-admin",{
+            leader_id:leader_id,
+            user_id_1:user_id_1,
+            user_id_2:user_id_2,
+            [approve_idk]:approve,
+          })
+          console.log(response);
+        }catch(error){
+          console.log(error);
+        }
+      }
     return(
         <div className="border-2 border-[#005CBA] rounded-md h-[auto]">
                 <div className="m-2">
@@ -45,10 +62,10 @@ const TeamParticipantCard = ({name,email,phone,university,major,year,url}:TeamPa
                         <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                        <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B]">
+                        <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => postData("REJECTED")}>
                             <p className="button-text-mobile md:button-text text-[#FCFCFC]">Decline</p>
                         </button>
-                    <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27]">
+                    <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => postData("ACCEPTED")}>
                         <p className="button-text-mobile md:button-text text-[#FCFCFC]">Accept</p>
                     </button>
                     </div>

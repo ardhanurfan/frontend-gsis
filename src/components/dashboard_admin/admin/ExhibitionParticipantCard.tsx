@@ -3,7 +3,6 @@ interface ExhibitionParticipantCardProps {
 }
 
 const ExhibitionParticipantCard = ({row}:ExhibitionParticipantCardProps) => {
-    console.log(row.documentation[0].user_id);
     return(
         <details className="px-5 xl:px-44  hover:cursor-pointer rounded-xl">
             <summary className="w-full h-[113px] text-lg bg-gradient-to-l from-[#060B81] to-[#005CBA] rounded-xl bg-white text-white px-5 sm:px-10 mx-auto flex items-center justify-between shadow-lg">
@@ -69,7 +68,7 @@ const ExhibitionParticipantCard = ({row}:ExhibitionParticipantCardProps) => {
                                 </div>
                             <div>
                                 <div className="flex flex-row gap-1 w-[150px]">
-                                        <a href={row.documentation[0].url} className="text-[#FCFCFC] button-text-mobile sm:button-text bg-success w-full rounded-xl hover:font-bold py-2 px-5">Photo/Video</a>
+                                        <a href={row.documentation[0].url} className="text-[#FCFCFC] button-text-mobile sm:button-text bg-success w-full rounded-xl hover:font-bold py-2 px-5 hover:scale-105">Photo/Video</a>
                                 </div>
                             </div>
                         </div>
