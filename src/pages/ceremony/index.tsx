@@ -199,9 +199,9 @@ const Ceremony = () => {
           <div className="mt-20">
             <TitleWebinarCard
               title="ABOUT SPEAKER,"
-              name="NAMA SPEAKER"
-              paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              foto="../src/assets/BillGates.svg"
+              name="Royyan Dzakiy"
+              paragraph=""
+              foto="../src/assets/RayyanDzakiy.png"
             />
           </div>
 
@@ -257,7 +257,7 @@ const Ceremony = () => {
             <h1 className="header1-mobile lg:header1 pb-10 text-primaryBlue">
               Contact Person
             </h1>
-            <ContactList line={"Comingsoon"} wa={"Comingsoon"} />
+            <ContactList line={"ditasyafa.n (Anin)"} wa={"087838280102 (Syafa)"} />
           </div>
         </div>
       </div>
