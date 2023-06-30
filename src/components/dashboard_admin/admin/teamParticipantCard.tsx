@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { post } from "../../../API/api";
 import up from "../../../assets/upload.svg";
 import Status from "../../dashboard_peserta/bcc/status";
@@ -14,12 +14,13 @@ interface TeamParticipantCardProps {
     university:string;
     major:string;
     year:string;
-    url:string;
-    approve:string;
+    approve:any;
 }
 
-const TeamParticipantCard = ({id,leader_id,user_id_1,user_id_2,name,email,phone,university,major,year,url,approve}:TeamParticipantCardProps) => {
-    const[visible,setVisible] =useState(approve);
+const TeamParticipantCard = ({id,leader_id,user_id_1,user_id_2,name,email,phone,university,major,year,approve}:TeamParticipantCardProps) => {
+    const [visible, setVisible] = useState("");
+    const [visible1, setVisible1] = useState("");
+    const [visible2, setVisible2] = useState("");
     const postData = async (approve:string, approve_idk:string) => {
         try{
           const response = await post("edit-gsic-admin",{
@@ -33,6 +34,11 @@ const TeamParticipantCard = ({id,leader_id,user_id_1,user_id_2,name,email,phone,
           console.log(error);
         }
       }
+      useEffect(() => {
+        setVisible(approve.approve_ktm);
+        setVisible1(approve.approve_follow);
+        setVisible2(approve.approve_poster);
+      });
     return(
         <div className="border-2 border-[#005CBA] rounded-md h-[auto]">
                 <div className="m-2">
@@ -62,44 +68,44 @@ const TeamParticipantCard = ({id,leader_id,user_id_1,user_id_2,name,email,phone,
                 </div>
                 <div className="w-[240px] h-auto mb-2">
                     <div className="small text-[#015CBA] flex gap-1 mb-1">
-                        <a href={url} className="hover:underline">Student ID Card</a>
+                        <a href={approve.ktm_url} className="hover:underline">Student ID Card</a>
                         <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
                         {visible == "WAITING" ? 
                         <>
-                            <button className="w-auto bg-error text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("REJECTED", "approve-ktm-"+id); setVisible("REJECTED")}}>Decline</button> 
-                            <button className="w-auto bg-success text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("ACCEPTED", "approve-ktm-"+id); setVisible("ACCEPTED")}}>Accept</button>
+                            <button className="w-auto bg-error text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("REJECTED", "approve_ktm_"+id); setVisible("REJECTED")}}>Decline</button> 
+                            <button className="w-auto bg-success text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("ACCEPTED", "approve_ktm_"+id); setVisible("ACCEPTED")}}>Accept</button>
                         </> 
                         : <Status status={visible}/> }
                     </div>
                 </div>
                 <div className="w-[240px] h-auto mb-2">
                     <div className="small text-[#015CBA] flex gap-1 mb-1">
-                        <a href={url} className="hover:underline">Proof of Following GSIS Instagram</a>
+                        <a href={approve.ss_follow_url} className="hover:underline">Proof of Following GSIS Instagram</a>
                         <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                        {visible == "WAITING" ? 
+                        {visible1 == "WAITING" ? 
                         <>
-                            <button className="w-auto bg-error text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("REJECTED", "approve-follow-"+id); setVisible("REJECTED")}}>Decline</button> 
-                            <button className="w-auto bg-success text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("ACCEPTED", "approve-follow-"+id); setVisible("ACCEPTED")}}>Accept</button>
+                            <button className="w-auto bg-error text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("REJECTED", "approve_follow_" + id); setVisible1("REJECTED")}}>Decline</button> 
+                            <button className="w-auto bg-success text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("ACCEPTED", "approve_follow_" + id); setVisible1("ACCEPTED")}}>Accept</button>
                         </> 
-                        : <Status status={visible}/> }
+                        : <Status status={visible1}/> }
                     </div>
                 </div>
                 <div className="w-[240px] h-auto mb-2">
                     <div className="small text-[#015CBA] flex gap-1 mb-1">
-                        <a href={url} className="hover:underline">Proof of Poster Upload</a>
+                        <a href={approve.ss_poster_url} className="hover:underline">Proof of Poster Upload</a>
                         <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                        {visible == "WAITING" ? 
+                        {visible2 == "WAITING" ? 
                         <>
-                            <button className="w-auto bg-error text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("REJECTED", "approve-poster-"+id); setVisible("REJECTED")}}>Decline</button> 
-                            <button className="w-auto bg-success text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("ACCEPTED", "approve-poster-"+id); setVisible("ACCEPTED")}}>Accept</button>
+                            <button className="w-auto bg-error text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("REJECTED", "approve_poster_" + id); setVisible2("REJECTED")}}>Decline</button> 
+                            <button className="w-auto bg-success text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("ACCEPTED", "approve_poster_" + id); setVisible2("ACCEPTED")}}>Accept</button>
                         </> 
-                        : <Status status={visible}/> }
+                        : <Status status={visible2}/> }
                     </div>
                 </div>
             </div>

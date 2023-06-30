@@ -8,12 +8,14 @@ import { useNavigate } from "react-router-dom";
 import SelectComponent from "../../../../components/SelectComponent";
 import { Toaster } from "react-hot-toast";
 import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
+import Nothing from "../../../addingPages/nothing";
 
 const EditSubmissionExhibition = () => {
   const[data,setData] = useState<any | null>(null);
   const [category, setCategory] = useState("INDIVIDU");
   const [description, setDescription] = useState("");
   const [year, setYear] = useState("");
+  const [size, setSize] = useState("");
   const [width, setWidth] = useState("");
   const [height, setHeight] = useState("");
   const [doc, setDoc] = useState<File | null>(null);
@@ -41,11 +43,13 @@ const EditSubmissionExhibition = () => {
               setDescription(response?.data?.data.description);
               setYear(response?.data?.data.year);
               setUrlDoc(response?.data?.data.documentation[0].url);
+              setSize(response?.data?.data.size);
               setInstagram(response?.data?.data.instagram);
               setYoutube(response?.data?.data.youtube);
               setTwitter(response?.data?.data.twitter);
-              console.log(response?.data?.data.category);
-              console.log(doc);
+              const splitSize = size.split(" ");
+              setWidth(splitSize[0]);
+              setHeight(splitSize[2]);
           } catch (error) {
               console.log(error);
             }
@@ -87,11 +91,12 @@ const EditSubmissionExhibition = () => {
       setLoading(false);
     }
   };
-  console.log(category);
+
+  console.log(width);
   
   return (
     <>
-      {data == null? null : <> 
+      {data == null? <Nothing/> : <> 
       <Toaster />
       <NavbarDashboard />
       <div className="mt-32 mb-10 px-2 md:px-10 xl:px-10 ">
@@ -215,10 +220,10 @@ const EditSubmissionExhibition = () => {
                         Width
                       </span>
                       <input
+                        value={width}
                         type="text"
                         id="text"
                         onChange={(e) => setWidth(e.target.value)}
-                        placeholder="1080"
                         className="w-full h-10 lg:h-[60px] block py-2 text-sm rounded-md bg-slate-100 focus:placeholder-[#4F9BFD] border-none placeholder:text-seccondaryBlue"
                       />
                     </label>
@@ -229,10 +234,10 @@ const EditSubmissionExhibition = () => {
                         Height
                       </span>
                       <input
+                        value={height}
                         type="text"
                         id="text"
                         onChange={(e) => setHeight(e.target.value)}
-                        placeholder="1920"
                         className="w-full h-10 lg:h-[60px] block py-2 text-sm rounded-md bg-slate-100 focus:placeholder-[#4F9BFD] border-none placeholder:text-seccondaryBlue"
                       />
                     </label>
