@@ -14,6 +14,7 @@ interface SelectComponentProps {
   type: string;
   onChange: any;
   value?: string;
+  multiple?: boolean;
 }
 
 const indicatorSeparatorStyle = {
@@ -42,6 +43,7 @@ const SelectComponent = ({
   type,
   value,
   onChange,
+  multiple,
 }: SelectComponentProps) => {
   // const options = [
   //   { value: "ITB", label: "Institut Teknologi Bandung" },
@@ -62,16 +64,34 @@ const SelectComponent = ({
     Array<{ value: string; label: string }>
   >([]);
 
+  const [selected, setSelected] = useState<
+    string[]>([]);
+
   const getUniversityData = async () => {
     try {
       const univ = await get("universities");
       const data = univ.data?.data;
-      console.log(data);
       const temp = [...options];
       data.forEach((element: any) => {
         temp.push({
           value: element.nama_universitas,
           label: element.nama_universitas,
+        });
+      });
+      setOptions(temp);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const getMemberAllData = async () => {
+    try {
+      const users = await get("get-all-users");
+      const data = users.data?.data;
+      const temp = [...options];
+      data.forEach((element: any) => {
+        temp.push({
+          value: element.email,
+          label: element.email,
         });
       });
       setOptions(temp);
@@ -89,6 +109,8 @@ const SelectComponent = ({
       setOptions(temp);
     } else if (type == "University") {
       getUniversityData();
+    } else if (type == "Member All") {
+      getMemberAllData()
     }
   }, []);
 
@@ -96,6 +118,8 @@ const SelectComponent = ({
     <>
       <div className="w-full remove-input-txt-border">
         <Select
+          isMulti = {multiple}
+          isOptionDisabled={() => selected.length >= 2}
           className="basic-single"
           classNamePrefix="text-color"
           components={{ DropdownIndicator, IndicatorSeparator }}
@@ -143,9 +167,9 @@ const SelectComponent = ({
           name={type}
           placeholder={placeholder}
           options={options}
-          onChange={(e: any) => onChange(e.value)}
+          onChange={(e: any) => {multiple ? onChange(e) : onChange(e.value); setSelected(e)}}
           // defaultInputValue={value}
-          defaultValue={{ value: value, label: value }}
+          defaultValue={value == null ? null : {value: value, label: value }}
         />
       </div>
     </>

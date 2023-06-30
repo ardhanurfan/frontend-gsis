@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer";
 import Slider from "react-slick";
 import "./style.css";
 import ContactList from "../../components/contact_list";
+import { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { getWithAuth } from "../../API/api";
 
 function HomePageGSIC() {
   const [sliderRef, setSliderRef] = useState(null);
@@ -46,9 +49,77 @@ function HomePageGSIC() {
     slidesToScroll: 1,
     arrows: false,
   };
+
+  const [isRegistered, setRegistered] = useState(false);
+  const [popUp, setPopUp] = useState(false);
+  const token = localStorage.getItem("access_token");
+  const navigator = useNavigate();
+
+  function goToRegistration() {
+    if (token) {
+      navigator("/gsic-register");
+    } else {
+      setPopUp(true);
+    }
+  }
+
+  const cekUser = async () => {
+    if (token) {
+      try {
+        const user = await getWithAuth("user", token);
+        const id = user.data?.data.id;
+        const cekRegister = await getWithAuth("bcc-user?user_id=" + id, token);
+        setRegistered(cekRegister.data.data != null);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+
+  useEffect(() => {
+    cekUser();
+  }, []);
+
   return (
-    <div className="bg-[url(./assets/Background_GSIC.svg)] bg-cover">
+    <>
+    <Toaster/>
       <Navbar />
+
+      <div
+        className={
+          popUp
+            ? " fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center"
+            : "hidden fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30"
+        }
+      >
+        <div className="z-60 w-[90%] lg:w-[45%] h-auto rounded-xl bg-white flex flex-col py-4 px-1 lg:py-5 lg:px-2 gap-5">
+          <div className="flex flex-col items-end pr-5 ">
+            <button
+              className="hover:bg-slate-200 rounded-full p-1"
+              onClick={() => setPopUp(false)}
+            >
+              ✖
+            </button>
+          </div>
+          <div className="flex flex-col items-center gap-5">
+            <img
+              src="../src/assets/orang.svg"
+              className="h-[30%] w-[30%] md:h-[20%] md:w-[20%]"
+              alt=""
+            />
+            <h2 className="text-primaryBlue text-center header2-mobile lg:header2">
+              You have not log in
+            </h2>
+            <a
+              href="/login"
+              className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[auto] button-text-mobile lg:button-text hover:bg-seccondaryBlue"
+            >
+              Log In
+            </a>
+          </div>
+        </div>
+      </div>
+    <div className="bg-[url(./assets/Background_GSIC.svg)] bg-cover overflow-auto">
       <h1 className="mt-[130px] max-w-[1160px] mx-auto text-center header1-mobile lg:header1 text-primaryBlue">
         Ganesha Social Impact Challenge (GSIC)
       </h1>
@@ -190,13 +261,22 @@ function HomePageGSIC() {
             </p>
           </div>
           <div className="flex justify-center items-center mt-10">
-            <a
-              href="/register-bcc"
-              type="button"
-              className="cursor-pointer button-text-mobile lg:button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
-            >
-              Register Here
-            </a>
+          {isRegistered ? (
+                  <button
+                    disabled
+                    className="button-text-mobile lg:button-text bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center"
+                  >
+                    Registered
+                  </button>
+                ) : (
+                  <button
+                    onClick={goToRegistration}
+                    type="button"
+                    className="cursor-pointer button-text-mobile lg:button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
+                  >
+                    Register Here
+                  </button>
+                )}
           </div>
         </div>
         <div className="hidden lg:block">
@@ -217,6 +297,7 @@ function HomePageGSIC() {
       </div>
       <Footer />
     </div>
+    </>
   );
 }
 
