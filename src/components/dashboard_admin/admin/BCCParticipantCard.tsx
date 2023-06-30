@@ -26,6 +26,7 @@ const BCCParticipantCard = ({row}:BCCParticipantCardProps) => {
       console.log(error);
     }
   }
+  console.log(visible1);
     return (
         <>
         <details className="w-auto md:w-[500px] lg:w-[510px] xl:w-[530px] hover:cursor-pointer rounded-xl">
