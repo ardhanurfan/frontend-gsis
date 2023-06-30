@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card-announcement {
+    background: linear-gradient(97.94deg, rgba(0, 92, 186, 0.8) 31.97%, rgba(0, 92, 186, 0) 84.81%),
+    linear-gradient(97.51deg, #FFFFFF 18.97%, rgba(255, 255, 255, 0.2) 83.94%);
+    box-shadow: 0px 10px 20px -7px rgba(0, 92, 186, 0.5);
+}

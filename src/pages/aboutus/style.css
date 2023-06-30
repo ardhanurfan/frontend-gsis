@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.inner-card{
+    background: linear-gradient(140.77deg, rgba(255, 255, 255, 0.6) 6.15%, rgba(255, 255, 255, 0.2) 88.95%);
+}
+
+.badge-name{
+    background: linear-gradient(96.9deg, rgba(255, 255, 255, 0.6) 27.43%, rgba(255, 255, 255, 0.2) 72.05%);
+}
+
+.slick-dots li button:before {
+    @apply text-seccondaryBlue opacity-50 text-xs 
+  }
+
+  .slick-dots li button:before:hover {
+    @apply text-primaryBlue
+  }
+
+  .slick-dots li.slick-active button:before  {
+    @apply text-primaryBlue opacity-100
+  }
+

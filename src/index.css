@@ -2,22 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-.header1 {
-  @apply font-monserrat font-extrabold tracking-[0.2] leading-none text-[64px];
+@responsive {
+  .header1 {
+    @apply font-montserrat font-bold tracking-[0.02em] leading-none text-[64px];
+  }
+
+  .header1-mobile {
+    @apply font-montserrat font-bold tracking-[0.02em] leading-none text-[28px];
+  }
+
+  .header2 {
+    @apply font-montserrat font-bold tracking-[0.02em] leading-none text-[36px];
+  }
+
+  .header2-mobile {
+    @apply font-montserrat font-bold tracking-[0.02em] leading-none text-[20px];
+  }
+
+  .header3 {
+    @apply font-montserrat font-bold tracking-[0.02em] leading-none text-[24px];
+  }
+
+  .header3-mobile {
+    @apply font-montserrat font-bold tracking-[0.02em] leading-none text-[16px];
+  }
+
+  .body-text {
+    @apply font-montserrat font-normal tracking-[0.01em] leading-[1.4] text-[16px];
+  }
+
+  .small {
+    @apply font-montserrat font-normal text-[12px];
+  }
+
+  .very-small {
+    @apply font-montserrat font-normal text-[8px];
+  }
+
+  .field-text {
+    @apply font-montserrat font-semibold text-[16px];
+  }
+
+  .field-text-mobile {
+    @apply font-montserrat font-semibold text-[12px];
+  }
+
+  .body-text-mobile {
+    @apply font-montserrat font-normal tracking-[0.01em] leading-[1.4] text-[10px];
+  }
+
+  .button-text {
+    @apply font-montserrat font-semibold text-[16px];
+  }
+
+  .button-text-mobile {
+    @apply font-montserrat font-semibold text-[12px];
+  }
+
+  .normal-button {
+    @apply max-w-[158px] h-[40px] py-[10px] px-[50px] text-center rounded-lg;
+  }
+
+  .small-button{
+    @apply max-w-[78px] h-[29px] py-[6px] px-[21px] text-center rounded-lg
+  }
+}
+.field-text {
+  @apply font-montserrat font-semibold text-[16px];
 }
 
-.header2 {
-  @apply font-monserrat font-bold tracking-[0.2] leading-none text-[36px];
+.mobile-header1 {
+  @apply font-montserrat font-bold tracking-[0.02em] leading-none text-[36px];
 }
 
-.header3 {
-  @apply font-monserrat font-bold tracking-[0.2] leading-none text-[24px];
-}
-
-.body {
-  @apply font-monserrat font-normal tracking-[0.1] leading-[1.4] text-[16px];
-}
-
-.button-text {
-  @apply font-monserrat font-semibold text-[16px];
+.mobile-header2 {
+  @apply font-montserrat font-bold tracking-[0.02em] leading-none text-[20px];
 }

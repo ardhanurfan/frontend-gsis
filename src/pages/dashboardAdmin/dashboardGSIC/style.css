@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+details > summary::after {
+    content: url(../../../assets/dropdown.svg);
+}
+
+details[open] > summary::after {
+    content: url(../../../assets/dropdown.svg);
+    @apply transform rotate-180 origin-center transition-all; 
+}
+
+details[open] > summary {
+    @apply rounded-t-xl rounded-b-none;
+}
+.box-shadow{
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.25);
+}
+
+.ds::after{
+    content: url(../../../assets/dropdown-sm.svg);
+    position: absolute;
+    right:1%;
+    top: 200%;
+    cursor: pointer;
+    pointer-events: none;
+    transition:.25s all ease;
+}
