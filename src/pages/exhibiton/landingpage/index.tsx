@@ -16,13 +16,17 @@ import { getWithAuth } from "../../../API/api";
 const Exhibition = () => {
   const navigate = useNavigate();
 
-  function goToRegistration() {
-    navigate("/register-exhibition");
-  }
-
   const [isRegistered, setRegistered] = useState(false);
-
+  const [popUp, setPopUp] = useState(false);
   const token = localStorage.getItem("access_token");
+
+  function goToRegistration() {
+    if (token) {
+      navigate("/register-exhibition");
+    } else {
+      setPopUp(true);
+    }
+  }
 
   const cekUser = async () => {
     if (token) {
@@ -48,6 +52,41 @@ const Exhibition = () => {
     <>
       <Toaster />
       <Navbar />
+      <div
+        className={
+          popUp
+            ? " fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30 flex items-center justify-center"
+            : "hidden fixed z-20  w-full h-screen bg-primaryBlue bg-opacity-30"
+        }
+      >
+        <div className="z-60 w-[90%] lg:w-[45%] h-auto rounded-xl bg-white flex flex-col py-4 px-1 lg:py-5 lg:px-2 gap-5">
+          <div className="flex flex-col items-end pr-5 ">
+            <button
+              className="hover:bg-slate-200 rounded-full p-1"
+              onClick={() => setPopUp(false)}
+            >
+              ✖
+            </button>
+          </div>
+          <div className="flex flex-col items-center gap-5">
+            <img
+              src="../src/assets/orang.svg"
+              className="h-[30%] w-[30%] md:h-[20%] md:w-[20%]"
+              alt=""
+            />
+            <h2 className="text-primaryBlue text-center header2-mobile lg:header2">
+              You have not log in
+            </h2>
+            <a
+              href="/login"
+              className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[auto] button-text-mobile lg:button-text hover:bg-seccondaryBlue"
+            >
+              Log In
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className="w-full h-auto bg-cover bg-[url(./assets/Background_Exhibition.svg)]">
         <div className="pt-[200px] text-center">
           <h1 className="w-auto header1-mobile lg:header1 text-primaryText text-center">
