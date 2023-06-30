@@ -39,7 +39,7 @@ const DashboardBCC = () => {
                 <BCCParticipantCard row = {row}/>
               )
             })}
-           </div>
+          </div>
         </div>
         <div className="fixed bottom-16 right-6">
         </div>

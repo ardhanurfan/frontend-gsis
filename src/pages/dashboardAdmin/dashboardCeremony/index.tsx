@@ -36,7 +36,7 @@ const DashboardCeremony = () => {
           <div className="w-auto grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-x-16 mb-10">
             {data.map((row:any)=>{
               return(
-                <CeremonyCard id={row.user.id} name={row.user.name} email={row.user.email} phone={row.user.phone} university={row.user.university} major={row.user.major} year={row.user.year} url = {row.ss_poster_url} category="masterpiece"/>
+                <CeremonyCard id={row.user.id} name={row.user.name} email={row.user.email} phone={row.user.phone} university={row.user.university} major={row.user.major} year={row.user.year} url = {row.ss_poster_url} category="masterpiece" approve={row.approve_poster}/>
               )
             })}
 

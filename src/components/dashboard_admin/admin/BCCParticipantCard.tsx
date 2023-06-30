@@ -3,12 +3,18 @@ import str from "../../../assets/tech.svg";
 import art from "../../../assets/art.svg";
 import bis from "../../../assets/business.svg";
 import { post } from "../../../API/api";
+import Status from "../../dashboard_peserta/bcc/status";
+import { useState } from "react";
 
 interface BCCParticipantCardProps {
     row:any;
 }
 
 const BCCParticipantCard = ({row}:BCCParticipantCardProps) => {
+  const[visible1,setVisible1] =useState(row.approve_ktm);
+  const[visible2,setVisible2] =useState(row.approve_follow);
+  const[visible3,setVisible3] =useState(row.approve_poster);
+  const[visible4,setVisible4] =useState(row.approve_payment);
   const postData = async ({approve,approve_name}:{approve:string,approve_name:string}) => {
     try{
       const response = await post("edit-bcc-user-from-admin",{
@@ -22,7 +28,7 @@ const BCCParticipantCard = ({row}:BCCParticipantCardProps) => {
   }
     return (
         <>
-         <details className="w-auto md:w-[500px] lg:w-[510px] xl:w-[530px] hover:cursor-pointer rounded-xl">
+        <details className="w-auto md:w-[500px] lg:w-[510px] xl:w-[530px] hover:cursor-pointer rounded-xl">
               <summary className="w-auto h-auto text-lg bg-gradient-to-l from-[#060B81] to-[#005CBA] rounded-xl text-white px-6 pt-4 pb-2 mx-auto flex items-center justify-between shadow-lg hover:">
                 <div className="w-auto h-auto flex flex-col items-center">
                   <h2 className="mobile-header2 lg:header2 lg:text-[36px] mb-2">Participant Name</h2>
@@ -67,12 +73,16 @@ const BCCParticipantCard = ({row}:BCCParticipantCardProps) => {
                       <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => postData({approve:"REJECTED",approve_name:"approve_ktm"})}>
-                        <p className="small text-[#FCFCFC]">Decline</p>
-                      </button>
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => postData({approve:"ACCEPTED",approve_name:"approve_ktm"})}>
-                        <p className="small text-[#FCFCFC]">Accept</p>
-                      </button>
+                      {visible1 == "WAITING" ?
+                      <>
+                        <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => {postData({approve:"REJECTED",approve_name:"approve_ktm"}); setVisible1("REJECTED")}}>
+                          <p className="button-text-mobile md:button-text text-[#FCFCFC]">Decline</p>
+                        </button>
+                        <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => {postData({approve:"ACCEPTED",approve_name:"approve_ktm"}); setVisible1("ACCEPTED")}}>
+                          <p className="button-text-mobile md:button-text text-[#FCFCFC]">Accept</p>
+                        </button>
+                      </>
+                      : <Status status={visible1}/>}
                     </div>
                   </div>
                   <div className="w-[240px] h-auto">
@@ -81,12 +91,16 @@ const BCCParticipantCard = ({row}:BCCParticipantCardProps) => {
                       <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => postData({approve:"REJECTED",approve_name:"approve_follow"})}>
-                        <p className="small text-[#FCFCFC]">Decline</p>
+                      {visible2 == "WAITING" ?
+                      <>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => {postData({approve:"REJECTED",approve_name:"approve_follow"}); setVisible2("REJECTED")}}>
+                        <p className="button-text-mobile md:button-text text-[#FCFCFC]">Decline</p>
                       </button>
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => postData({approve:"ACCEPTED",approve_name:"approve_follow"})}>
-                        <p className="small text-[#FCFCFC]">Accept</p>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => {postData({approve:"ACCEPTED",approve_name:"approve_follow"});setVisible2("ACCEPTED")}}>
+                        <p className="button-text-mobile md:button-text text-[#FCFCFC]">Accept</p>
                       </button>
+                      </>
+                      : <Status status={visible2}/> }
                     </div>
                   </div>
                   <div className="w-[240px] h-auto">
@@ -95,12 +109,16 @@ const BCCParticipantCard = ({row}:BCCParticipantCardProps) => {
                       <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => postData({approve:"REJECTED",approve_name:"approve_poster"})}>
-                        <p className="small text-[#FCFCFC]">Decline</p>
+                      {visible3 == "WAITING" ?
+                      <>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => {postData({approve:"REJECTED",approve_name:"approve_poster"}); setVisible3("REJECTED")}}>
+                        <p className="button-text-mobile md:button-text text-[#FCFCFC]">Decline</p>
                       </button>
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => postData({approve:"ACCEPTED",approve_name:"approve_poster"})}>
-                        <p className="small text-[#FCFCFC]">Accept</p>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => {postData({approve:"ACCEPTED",approve_name:"approve_poster"}); setVisible3("ACCEPTED")}}>
+                        <p className="button-text-mobile md:button-text text-[#FCFCFC]">Accept</p>
                       </button>
+                      </>
+                      : <Status status={visible3}/>}
                     </div>
                   </div>
                   <div className="w-[180px] h-auto">
@@ -109,12 +127,16 @@ const BCCParticipantCard = ({row}:BCCParticipantCardProps) => {
                       <img src={up} className="h-[14px]" />
                     </div>
                     <div className="flex gap-1">
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => postData({approve:"REJECTED",approve_name:"approve_payment"})}>
-                        <p className="small text-[#FCFCFC]">Decline</p>
+                      {visible4 == "WAITING" ?
+                      <>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => {postData({approve:"REJECTED",approve_name:"approve_payment"}); setVisible4("REJECTED")}}>
+                        <p className="button-text-mobile md:button-text text-[#FCFCFC]">Decline</p>
                       </button>
-                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => postData({approve:"ACCEPTED",approve_name:"approve_payment"})}>
-                        <p className="small text-[#FCFCFC]">Accept</p>
+                      <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => {postData({approve:"ACCEPTED",approve_name:"approve_payment"}); setVisible4("ACCEPTED")}}>
+                        <p className="button-text-mobile md:button-text text-[#FCFCFC]">Accept</p>
                       </button>
+                      </>
+                      : <Status status={visible4}/>}
                     </div>
                   </div>
                 </div>

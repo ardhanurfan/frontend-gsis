@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { post } from "../../../API/api";
 import up from "../../../assets/upload.svg";
+import Status from "../../dashboard_peserta/bcc/status";
 
 interface TeamLeaderCardProps {
     leader_id:number,
@@ -13,9 +15,11 @@ interface TeamLeaderCardProps {
     year:string;
     url:string;
     approve_idk:string;
+    approve:string;
 }
 
-const TeamLeaderCard = ({leader_id,user_id_1,user_id_2,name,email,phone,university,major,year,url,approve_idk}:TeamLeaderCardProps) => {
+const TeamLeaderCard = ({leader_id,user_id_1,user_id_2,name,email,phone,university,major,year,url,approve_idk,approve}:TeamLeaderCardProps) => {
+    const[visible,setVisible] =useState(approve);
     const postData = async (approve:string) => {
         try{
           const response = await post("edit-gsic-admin",{
@@ -68,13 +72,13 @@ const TeamLeaderCard = ({leader_id,user_id_1,user_id_2,name,email,phone,universi
                             <img src={up} className="h-[14px]" />
                         </div>
                         <div className="flex gap-1">
-                        <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#BD1B1B] hover:scale-105" onClick={() => postData("REJECTED")}>
-                            <p className="button-text-mobile md:button-text text-[#FCFCFC]">Decline</p>
-                        </button>
-                        <button className="w-20 h-7 rounded-lg flex items-center justify-center bg-[#1B8E27] hover:scale-105" onClick={() => postData("ACCEPTED")}>
-                            <p className="button-text-mobile md:button-text small text-[#FCFCFC]">Accept</p>
-                        </button>
-                        </div>
+                        {visible == "WAITING" ? 
+                        <>
+                            <button className="w-auto bg-error text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("REJECTED"); setVisible("REJECTED")}}>Decline</button> 
+                            <button className="w-auto bg-success text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("ACCEPTED"); setVisible("ACCEPTED")}}>Accept</button>
+                        </> 
+                        : <Status status={visible}/> }
+                    </div>
                     </div>
                 </div>
             </div>

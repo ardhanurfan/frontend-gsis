@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { post } from "../../../API/api";
 import TeamLeaderCard from "./teamLeaderCard"
 import TeamParticipantCard from "./teamParticipantCard"
+import Status from "../../dashboard_peserta/bcc/status";
 
 interface GSICParticipantCardProps{
     row:any;
 }
 const GSICParticipantCard = ({row}:GSICParticipantCardProps ) => {
+    const[visible,setVisible] =useState(row.approve_payment);
     const[idx1,setIdx1] = useState(0);
     const[idx2,setIdx2] = useState(0);
     const[idxLeader,setIdxLeader] = useState(0);
@@ -54,16 +56,23 @@ const GSICParticipantCard = ({row}:GSICParticipantCardProps ) => {
             </summary>
             <div className="flex flex-col p-2 bg-white shadow-2xl rounded-b-xl">
                 <div className="flex flex-col lg:grid lg:grid-cols-3 p-2 gap-3 ">
-                    <TeamLeaderCard leader_id = {row.users[idxLeader].user_id} user_id_1 = {row.users[idx1].user_id} user_id_2 = {row.users[idx2].user_id} name={row.users[idxLeader].user.name} email={row.users[idxLeader].user.email} phone={row.users[idxLeader].user.phone} university={row.users[idxLeader].user.university} major={row.users[idxLeader].user.major} year={row.users[idxLeader].user.year} url = {row.users[idxLeader].ktm_url} approve_idk="approve_ktm_leader"/>
-                    <TeamParticipantCard leader_id = {row.users[idxLeader].user_id} user_id_1 = {row.users[idx1].user_id} user_id_2 = {row.users[idx2].user_id} name={row.users[idx1].user.name} email={row.users[idx1].user.email} phone={row.users[idx1].user.phone} university={row.users[idx1].user.university} major={row.users[idx1].user.major} year={row.users[idx1].user.year} url = {row.users[idx1].ktm_url} approve_idk="approve_ktm_1"/>
-                    <TeamParticipantCard leader_id = {row.users[idxLeader].user_id} user_id_1 = {row.users[idx1].user_id} user_id_2 = {row.users[idx2].user_id} name={row.users[idx2].user.name} email={row.users[idx2].user.email} phone={row.users[idx2].user.phone} university={row.users[idx2].user.university} major={row.users[idx2].user.major} year={row.users[idx2].user.year} url = {row.users[idx2].ktm_url} approve_idk="approve_ktm_2"/>  
+                    <TeamLeaderCard leader_id = {row.users[idxLeader].user_id} user_id_1 = {row.users[idx1].user_id} user_id_2 = {row.users[idx2].user_id} name={row.users[idxLeader].user.name} email={row.users[idxLeader].user.email} phone={row.users[idxLeader].user.phone} university={row.users[idxLeader].user.university} major={row.users[idxLeader].user.major} year={row.users[idxLeader].user.year} url = {row.users[idxLeader].ktm_url} approve_idk="approve_ktm_leader" approve={row.users[idxLeader].approve_ktm}/>
+                    <TeamParticipantCard leader_id = {row.users[idxLeader].user_id} user_id_1 = {row.users[idx1].user_id} user_id_2 = {row.users[idx2].user_id} name={row.users[idx1].user.name} email={row.users[idx1].user.email} phone={row.users[idx1].user.phone} university={row.users[idx1].user.university} major={row.users[idx1].user.major} year={row.users[idx1].user.year} url = {row.users[idx1].ktm_url} approve_idk="approve_ktm_1" approve={row.users[idx1].approve_ktm}/>
+                    <TeamParticipantCard leader_id = {row.users[idxLeader].user_id} user_id_1 = {row.users[idx1].user_id} user_id_2 = {row.users[idx2].user_id} name={row.users[idx2].user.name} email={row.users[idx2].user.email} phone={row.users[idx2].user.phone} university={row.users[idx2].user.university} major={row.users[idx2].user.major} year={row.users[idx2].user.year} url = {row.users[idx2].ktm_url} approve_idk="approve_ktm_2" approve={row.users[idx2].approve_ktm}/>  
                 </div>
                 <div className="flex flex-row items-center gap-1 justify-between px-1">
                     <div className="flex flex-row items-center gap-1">
                         <a href={row.payment_url} className="box-shadow w-auto bg-white border-2 border-primaryBlue button-text-mobile md:button-text rounded-lg p-2 text-primaryBlue hover:scale-105">Payment Proof</a>
                         <div className="flex flex-col sm:flex-row gap-1">
-                            <button className="w-auto bg-error text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => postData("REJECTED")}>Decline</button>
+                            {visible == "WAITING" ? 
+                            <>
+                                <button className="w-auto bg-error text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("REJECTED"); setVisible("REJECTED")}}>Decline</button> 
+                                <button className="w-auto bg-success text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => {postData("ACCEPTED"); setVisible("ACCEPTED")}}>Accept</button>
+                            </> 
+                            : <Status status={visible}/> }
+                            {/* <button className="w-auto bg-error text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => postData("REJECTED")}>Decline</button>
                             <button className="w-auto bg-success text-white button-text-mobile md:button-text rounded-lg px-2 hover:scale-105" onClick={() => postData("ACCEPTED")}>Accept</button>
+                            {row.approve_payment != "WAITING" && <Status status={row.approve_payment as string}/>} */}
                         </div>
                     </div>
                     <a href={row.submissions[0].url} className="box-shadow w-auto bg-white border-2 border-primaryBlue button-text-mobile md:button-text rounded-lg p-2 text-primaryBlue hover:scale-105">Proposal Submission</a>
