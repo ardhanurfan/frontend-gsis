@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.carousel-item{
-    height: 200px;
-    width: 945px;
-}
 
 .inner-card{
     background: linear-gradient(140.77deg, rgba(255, 255, 255, 0.6) 6.15%, rgba(255, 255, 255, 0.2) 88.95%);

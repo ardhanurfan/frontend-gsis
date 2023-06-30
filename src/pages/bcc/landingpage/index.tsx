@@ -2,16 +2,11 @@ import "./style.css";
 import Slides from "react-slick";
 import Footer from "../../../components/footer";
 import Navbar from "../../../components/navbar/Navbar";
-import ModalNotLogin from "../../../components/modalNotLogin/modalNotLogin";
 import { useState } from "react";
-import PhaseCards from "../../../components/bcc/phase_card";
 import ContactList from "../../../components/contact_list";
 
 const BCC = () => {
   const [visible, setVisible] = useState(0);
-  function goToRegisPage() {
-    window.open("/register-bcc", "_blank");
-  };
 
   const [sliderRef, setSliderRef] = useState(null)
     
@@ -414,13 +409,13 @@ const BCC = () => {
                 </p>
               </div>
               <div className="flex justify-center items-center mt-10">
-                <button
+                <a
+                  href="/register-bcc"
                   type="button"
                   className="cursor-pointer button-text-mobile lg:button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
-                  onClick={goToRegisPage}
                 >
                   Register Here
-                </button>
+                </a>
               </div>
             </div>
             <div className="hidden lg:block">
@@ -436,7 +431,7 @@ const BCC = () => {
               <h1 className="header1-mobile lg:header1 text-primaryText text-center mb-9">
                 Contact Person
               </h1>
-              <ContactList />
+              <ContactList line={""} wa={""} />
             </div>
           </div>
         </div>
