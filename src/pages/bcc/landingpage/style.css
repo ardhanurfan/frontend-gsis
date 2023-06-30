@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-dots li button:before {
+    @apply text-seccondaryBlue opacity-50 text-xs 
+  }
+
+  .slick-dots li button:before:hover {
+    @apply text-primaryBlue
+  }
+
+  .slick-dots li.slick-active button:before  {
+    @apply text-primaryBlue opacity-100
+  }

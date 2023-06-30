@@ -11,7 +11,7 @@ function SlideItem({ className, type, active }: SlideItemProps) {
     <div className={clsx(className, "w-screen lg:w-[33vw] flex justify-center")}>
       <div
         className={clsx(
-          "relative w-80 h-80 rounded-full bg-white shadow-xl flex justify-center items-center duration-200",
+          "relative w-80 h-80 rounded-full bg-transparent shadow-xl flex justify-center items-center duration-200",
           !active && " shadow-slate-300",
           type === "text" && "shadow-primaryBlue",
           type === "tech" && "shadow-seccondaryGreen",
@@ -43,8 +43,8 @@ function SlideItem({ className, type, active }: SlideItemProps) {
 
 const text = (
   <svg
-    width="401"
-    height="401"
+    width="391"
+    height="391"
     viewBox="0 0 401 401"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -168,8 +168,8 @@ const text = (
 
 const tech = (
   <svg
-    width="403"
-    height="403"
+    width="393"
+    height="393"
     viewBox="0 0 403 403"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -249,8 +249,8 @@ const tech = (
 
 const buss = (
   <svg
-    width="400"
-    height="401"
+    width="390"
+    height="391"
     viewBox="0 0 400 401"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -330,8 +330,8 @@ const buss = (
 
 const art = (
   <svg
-    width="401"
-    height="401"
+    width="391"
+    height="391"
     viewBox="0 0 401 401"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -411,8 +411,8 @@ const art = (
 
 const collab = (
   <svg
-    width="401"
-    height="401"
+    width="391"
+    height="391"
     viewBox="0 0 401 401"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

@@ -31,6 +31,7 @@ import HomePageGSIC from "./pages/gsic/home";
 import RegisterGSIC from "./pages/gsic/register";
 import RegisterBCC from "./pages/bcc/registration";
 import ProtectedRoute from "./API/ProtectedRoute";
+import Ceremony from "./pages/ceremony";
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/forgot-sent" element={<ForgotSent />} />
+        {/* CEREMONY */}
+        <Route path="/ceremony" element={<Ceremony />} />
         {/* BCC */}
         <Route path="/bcc" element={<BCC />} />
         <Route path="/register-bcc" element={<RegisterBCC />} />

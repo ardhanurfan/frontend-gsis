@@ -23,7 +23,7 @@ const AboutUs = () => {
                 src="./src/assets/carousel_arrow.svg"
                 alt="prev"
                 className='hidden lg:block'
-                onClick={sliderRef?.slickPrev}
+                onClick={sliderRef?.slickNext}
             />
           </div>
           </>
@@ -62,50 +62,48 @@ const AboutUs = () => {
         <h1 className="w-auto mx-auto inline-block header1-mobile lg:header1 text-primaryText">
           About Us
         </h1>
-        <p className="mt-[75px] rounded-xl p-6 bg-slate-100 shadow-md backdrop-blur-sm shadow-slate-500 bg-opacity-30 lg:bg-transparent lg:shadow-none text-justify text-primaryText body-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
+        <p className="mt-[75px] rounded-xl p-6 bg-slate-100 shadow-md backdrop-blur-sm shadow-slate-500 bg-opacity-30 lg:bg-transparent lg:shadow-none text-justify text-primaryText small lg:body-text">
+          GSIS sendiri terinspirasi oleh HPAIR (Harvard Project for Asian and
+          International Relation) yang diselenggarakan oleh Harvard University untuk
+          mengatasi permasalahan di Asia dengan mendatangkan pembicara dari
+          berbagai bidang. GSIS menjadi acara pertama dan terbesar di Indonesia yang
+          mengusung tema kolaborasi antara bidang teknologi, seni, dan bisnis. Pada
+          tahun ini untuk ketiga kalinya GSIS akan diselenggarakan, dan untuk pertama
+          kalinya GSIS akan diselenggarakan secara luar jaringan (offline) di Kota
+          Bandung. <br />
+          <br />
+          GSIS 2023 akan membawa tema "Futurizing Sustainability: Collaborative
+          Revolution". Acara ini bertujuan untuk menguatkan peserta dalam melahirkan
+          inovasi yang berkelanjutan dan berorientasi pada kesejahteraan masyarakat
+          secara makro. Berfokus pada revolusi kolaborasi multidisiplin antara teknologi,
+          bisnis, dan seni sebagai upaya optimalisasi inovasi strategis dan berkelanjutan
+          melalui proses inovasi yang inklusif, iteratif, kreatif, dan advokatif. Acara ini juga
+          diharapkan dapat memberikan kontribusi nyata bagi masyarakat dalam
+          mencapai tujuan pembangunan berkelanjutan. <br />
+          <br />
+          Rangkaian acara yang dilaksanakan diharapkan dapat menjadi pemantik
+          bagi siswa dan mahasiswa di Indonesia untuk terus berkolaborasi dan berinovasi
+          untuk menciptakan dampak yang baik bagi Indonesia, bahkan dunia.
+          Pelaksanaan Ganesha Student Innovation Summit terdiri dari Innovation
+          Competition, Business Case Competition, Exhibition, dan Grand Summit sebagai
+          puncak acaranya. Pada GSIS 2023, kami berharap manfaat yang diberikan tidak
+          hanya dirasakan oleh para peserta saja, tetapi juga dirasakan oleh masyarakat
+          luas.
         </p>
       </div>
-      <BigCard name="Annisa Edi Setiyani" title="Warm Regards," paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum." jabatan="Executive Director of GSIS 2023" foto="../src/assets/warm_regards.png"/>
       <div className="w-auto h-auto">
-        <div className="mt-[156px] lg:mt-[296px]">
+        <div className="mt-[156px] lg:mt-[250px]">
           <h1 className="text-center header1-mobile lg:header1 text-primaryText">Goals</h1>
           <h2 className="text-center header3-mobile lg:header3 mt-[45px] text-primaryText">
             Our Vision
           </h2>
-          <div className="relative mt-[31px] w-[85vw] lg:w-[62vw] h-[200px] rounded-xl mx-auto bg-slate-100 shadow-md shadow-slate-500 bg-opacity-30">
-            <div className="h-auto w-[38px] flex justify-between float-left m-[4%] lg:m-[2%]">
+          <div className="relative mt-[31px] w-[85vw] max-w-[945px] h-[150px] lg:h-[200px] rounded-xl mx-auto bg-slate-100 shadow-md shadow-slate-500 bg-opacity-30">
+            <div className="h-auto w-[38px] flex justify-between absolute m-[4%] lg:m-[2%]">
               <div className="h-[10px] w-[10px] rounded-full bg-primaryGreen"></div>
               <div className="h-[10px] w-[10px] rounded-full bg-primaryYellow"></div>
               <div className="h-[10px] w-[10px] rounded-full bg-primaryOrange"></div>
             </div>
-            <p className="absolute text-primaryText body-text w-[52.5%] text-center lg:text-justify flex items-center h-full mx-auto top-0 bottom-0 left-0 right-0">
+            <p className="absolute text-primaryText small lg:body-text w-[52.5%] text-center lg:text-justify flex items-center h-full mx-auto top-0 bottom-0 left-0 right-0">
               Fastering an environtment when student can spark innovation to
               solve the problem around them
             </p>
@@ -113,9 +111,9 @@ const AboutUs = () => {
           <h2 className="text-center header3-mobile lg:header3 mt-[109px] text-primaryText">
             Our Mission
           </h2>
-          <div className="flex items-center justify-between w-[85vw] lg:w-[73vw] h-[200px] mt-[31px] mb-[20px] mx-auto">
+          <div className="flex items-center justify-between w-[85vw] max-w-[1100px] h-[150px] lg:h-[200px] mt-[31px] mb-[20px] mx-auto">
             <PrevArrow/>
-            <div className="w-[85vw] lg:w-[62vw] h-[200px] rounded-xl shadow-md shadow-slate-500">
+            <div className="w-[85vw] max-w-[945px] h-[150px] lg:h-[200px] rounded-xl shadow-md shadow-slate-500">
               <Slides className="rounded-xl" ref={setSliderRef} {...settings}>
                 <CarouselCard content="Provide informative sessions that allow students to learn and identify real problems around them"/>
                 <CarouselCard content="Providing competitions that allow students to apply their learning material to produce an output"/>
