@@ -1,20 +1,22 @@
 import { Toaster } from "react-hot-toast";
 import UploadFile from "../../../../components/upload-file/upload-file";
-import Navbar from "../../../../components/navbar/Navbar";
 import Footer from "../../../../components/footer";
 import ContactList from "../../../../components/contact_list";
 import { NotifyStatus } from "../../../../components/toast_pop_up/toast";
 import { useState } from "react";
 import { postWithAuth } from "../../../../API/api";
 import { useNavigate } from "react-router-dom";
+import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
 
 const EditSubmissionCer = () => {
   const [ssPoster,setSSPoster] = useState<File | null>(null);
+  const [loading,setLoading] = useState(false);
   const navigate = useNavigate();
 
   const token = localStorage.getItem("access_token");
 
   const editData = async () => {
+    setLoading(true);
     if(token){
       try {
         console.log(ssPoster);
@@ -31,6 +33,8 @@ const EditSubmissionCer = () => {
       } catch (error) {
         const mess = error as any;
         NotifyStatus(mess.response.data.data.error, false);
+      }finally{
+        setLoading(false);
       }
     }
   };
@@ -38,7 +42,7 @@ const EditSubmissionCer = () => {
   return (
     <>
       <Toaster/>
-      <Navbar />
+      <NavbarDashboard />
       <div className="w-full px-[5.3472%] lg:px-[70px] pt-[130px] pb-[100px]">
         <h1 className="header1-mobile lg:header1 text-center text-primaryText mb-7">
           Edit Poster
@@ -47,16 +51,26 @@ const EditSubmissionCer = () => {
           <h3 className="header2-mobile lg:header2 text-primaryText self-center mb-3">
             UPLOAD FILES
           </h3>
-          <UploadFile childToParent={undefined} type={""} />
+          <UploadFile childToParent={(e:File) => {setSSPoster(e)}} type={"image"} />
         </div>
         <div className="flex justify-center">
-          <button
-            onClick={() => {editData();NotifyStatus("Succesfully Submitted", true)}}
-            className="button-text mx-auto cursor-pointer bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] mt-10"
-          >
-            Submit
-          </button>
-          <Toaster />
+        <button
+              disabled={loading}
+              onClick={editData}
+              className="mb-[16px] py-[10px] px-[50px] rounded-[10px] text-button text-white bg-primaryBlue transition duration-500 ease-in-out hover:bg-seccondaryBlue shadow-lg shadow-primaryBlue"
+            >
+              {loading && (
+                <div className="flex justify-center items-center">
+                  <img
+                    className="mr-2"
+                    src="../src/assets/Loading.svg"
+                    alt="spinner"
+                  />
+                  Loading
+                </div>
+              )}
+              {!loading && "Submit"}
+            </button>
         </div>
         <div className="flex flex-col items-center mt-14 mb-[30px]">
           <h2 className="header2-mobile lg:header2 text-primaryText text-center mb-9">

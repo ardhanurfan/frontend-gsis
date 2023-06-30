@@ -7,16 +7,19 @@ interface ParticipantCardProps {
     university: string
     major: string
     year: string
-    status: boolean
+    statusktm: string
+    statusposter: string
+    statusfollow: string
     hidden: boolean
+    leader:boolean
 }
 
-const ParticipantCard = ({name, email, phone, university, major, year, status, hidden}: ParticipantCardProps) => {
+const ParticipantCard = ({name, email, phone, university, major, year, statusktm, statusposter, statusfollow,hidden,leader}: ParticipantCardProps) => {
     return(
         <div className="border-2 border-primaryBlue rounded-md h-[auto] p-2 ">
             <div className="flex flex-row justify-between">
                 <p className="text-primaryText body-text">Name</p> 
-                <div className={status ? "w-32 h-4 mr-1 rounded-2xl flex items-center justify-center bg-[#4B3979]" : "hidden"}>
+                <div className={leader ? "w-32 h-4 mr-1 rounded-2xl flex items-center justify-center bg-[#4B3979]" : "hidden"}>
                     <p className="small text-white">Team Leader</p>
                 </div>
             </div>
@@ -42,7 +45,11 @@ const ParticipantCard = ({name, email, phone, university, major, year, status, h
             <div className={hidden ? "hidden" : "flex flex-col gap-1"}>
                 <p className="text-primaryBlue body-text">Status</p>
                 <p className="text-seccondaryBlue small">Student ID Card</p>
-                <Status status="accepted"/>
+                <Status status={statusktm}/>
+                <p className="text-seccondaryBlue small">Approve of Poster Upload</p>
+                <Status status={statusposter}/>
+                <p className="text-seccondaryBlue small">Approve of Following GSIS Instagram</p>
+                <Status status={statusfollow}/>
             </div>
         </div>
     )

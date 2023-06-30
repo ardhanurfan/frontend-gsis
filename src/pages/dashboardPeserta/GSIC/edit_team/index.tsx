@@ -23,7 +23,7 @@ const EditTeamGSIC = () => {
               <h3 className="header3 text-primaryText self-center mb-3">
                 UPLOAD FILES
               </h3>
-              <UploadFile size="" />
+              <UploadFile childToParent={undefined} type={""}/>
             </div>
             <div className="w-96 mx-auto pt-[14px] flex flex-col justify-center">
               <label
@@ -35,7 +35,7 @@ const EditTeamGSIC = () => {
               <h3 className="header3 text-primaryText self-center mb-3">
                 UPLOAD FILES
               </h3>
-              <UploadFile size="" />
+              <UploadFile childToParent={undefined} type={""}/>
             </div>
             <div className="w-96 mx-auto pt-[14px] flex flex-col justify-center">
               <label
@@ -47,7 +47,7 @@ const EditTeamGSIC = () => {
               <h3 className="header3 text-primaryText self-center mb-3">
                 UPLOAD FILES
               </h3>
-              <UploadFile size="" />
+              <UploadFile childToParent={undefined} type={""}/>
             </div>
           </div>
           <div className="flex gap-12 ">
@@ -63,7 +63,7 @@ const EditTeamGSIC = () => {
                 <h3 className="header3 text-primaryText self-center mb-3">
                   UPLOAD FILES
                 </h3>
-                <UploadFile size="" />
+                <UploadFile childToParent={undefined} type={""}/>
               </div>
               <div className="w-96 mx-auto pt-[14px] flex flex-col justify-center">
                 <label
@@ -75,7 +75,7 @@ const EditTeamGSIC = () => {
                 <h3 className="header3 text-primaryText self-center mb-3">
                   UPLOAD FILES
                 </h3>
-                <UploadFile size="" />
+                <UploadFile childToParent={undefined} type={""}/>
               </div>
               <div className="w-96 mx-auto pt-[14px] flex flex-col justify-center">
                 <label
@@ -87,7 +87,7 @@ const EditTeamGSIC = () => {
                 <h3 className="header3 text-primaryText self-center mb-3">
                   UPLOAD FILES
                 </h3>
-                <UploadFile size="" />
+                <UploadFile childToParent={undefined} type={""}/>
               </div>
             </div>
             <div className="flex flex-col mx-auto">
@@ -102,7 +102,7 @@ const EditTeamGSIC = () => {
                 <h3 className="header3 text-primaryText self-center mb-3">
                   UPLOAD FILES
                 </h3>
-                <UploadFile size="" />
+                <UploadFile childToParent={undefined} type={""}/>
               </div>
               <div className="w-96 mx-auto pt-[14px] flex flex-col justify-center">
                 <label
@@ -114,7 +114,7 @@ const EditTeamGSIC = () => {
                 <h3 className="header3 text-primaryText self-center mb-3">
                   UPLOAD FILES
                 </h3>
-                <UploadFile size="" />
+                <UploadFile childToParent={undefined} type={""}/>
               </div>
               <div className="w-96 mx-auto pt-[14px] flex flex-col justify-center">
                 <label
@@ -126,7 +126,7 @@ const EditTeamGSIC = () => {
                 <h3 className="header3 text-primaryText self-center mb-3">
                   UPLOAD FILES
                 </h3>
-                <UploadFile size="" />
+                <UploadFile childToParent={undefined} type={""}/>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ const EditTeamGSIC = () => {
             <h3 className="header3 text-primaryText self-center mb-3">
               UPLOAD FILES
             </h3>
-            <UploadFile size="" />
+            <UploadFile childToParent={undefined} type={""}/>
           </div>
         </div>
         <div className="flex justify-center">
