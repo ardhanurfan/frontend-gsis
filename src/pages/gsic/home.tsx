@@ -1,96 +1,223 @@
-import React from 'react'
-import Navbar from '../../components/navbar/Navbar'
-import Footer from '../../components/footer'
-import CarouselElement from '../../components/gsic/Carousel'
-import TimelineItem from '../../components/gsic/TimelineItem'
-import ContactItem from '../../components/gsic/ContactItem'
-import Slides from '../../components/gsic/Slides'
-import AnimatedElement from '../../components/gsic/Test'
+import { useState } from "react";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer";
+import Slider from "react-slick";
+import "./style.css";
+import ContactList from "../../components/contact_list";
 
 function HomePageGSIC() {
+  const [sliderRef, setSliderRef] = useState(null);
+  const NextArrow = () => {
     return (
-        <div className='bg-[url(./assets/Background_GSIC.svg)] bg-cover'>
-            <Navbar />
-            <h1 className="mt-36 px-56 text-center font-bold  text-6xl text-primaryBlue">
-                Ganesha Social Impact Challenge (GSIC)
-            </h1>
-            <div className="mt-12 mx-16 bg-slate-100 bg-opacity-30 rounded-xl shadow-lg shadow-slate-500 flex overflow-hidden">
-                <div className='w-1/3 py-12 flex justify-end items-center'>
-                    <div className='w-80 h-96'>
-                        <CarouselElement 
-                            className='' 
-                            images={[
-                                "https://images.unsplash.com/photo-1687204388066-702f259abdad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
-                                "https://plus.unsplash.com/premium_photo-1666899940579-6c931e34d52c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=327&q=80",
-                                "https://images.unsplash.com/photo-1687463221020-b8769b32c622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
-                            ]} 
-                        />
-                    </div>
+      <>
+        <div className="h-10 w-10 rounded-full hover:bg-slate-400 hover:bg-opacity-25 hidden lg:flex justify-center items-center">
+          <img
+            src="./src/assets/event_right.svg"
+            alt="prev"
+            className="hidden lg:block"
+            onClick={sliderRef?.slickNext}
+          />
+        </div>
+      </>
+    );
+  };
+
+  const PrevArrow = () => {
+    return (
+      <>
+        <div className="h-10 w-10 rounded-full hover:bg-slate-400 hover:bg-opacity-25 hidden lg:flex justify-center items-center">
+          <img
+            src="./src/assets/event_right.svg"
+            alt="prev"
+            style={{ transform: "rotate(180deg)" }}
+            className="hidden lg:block"
+            onClick={sliderRef?.slickPrev}
+          />
+        </div>
+      </>
+    );
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+  return (
+    <div className="bg-[url(./assets/Background_GSIC.svg)] bg-cover">
+      <Navbar />
+      <h1 className="mt-[130px] max-w-[1160px] mx-auto text-center header1-mobile lg:header1 text-primaryBlue">
+        Ganesha Social Impact Challenge (GSIC)
+      </h1>
+      <div className="mt-12 h-auto lg:h-[500px] w-[90vw] max-w-[1246px] mx-auto bg-slate-100 bg-opacity-30 rounded-xl shadow-lg shadow-slate-500 flex overflow-auto">
+        <div className="h-auto w-[38px] flex justify-between absolute self-start m-[4%] lg:m-[2%]">
+          <div className="h-[10px] w-[10px] rounded-full bg-primaryGreen"></div>
+          <div className="h-[10px] w-[10px] rounded-full bg-primaryYellow"></div>
+          <div className="h-[10px] w-[10px] rounded-full bg-primaryOrange"></div>
+        </div>
+        <div className="w-full h-auto flex flex-col lg:flex-row">
+          <div className="relative w-auto mt-16 mx-8 lg:mt-0 lg:ml-8 lg:mr-0 flex justify-center items-center gap-4">
+            <PrevArrow />
+            <div className="w-full max-w-[400px] h-auto rounded-lg">
+              <Slider className="rounded-lg" ref={setSliderRef} {...settings}>
+                <div className="object-cover w-full max-w-[400px] h-auto rounded-lg">
+                  <img
+                    className="object-cover w-full max-w-[400px] h-auto rounded-lg"
+                    src="../src/assets/gsic_web_icon_3d.png"
+                    alt="Business"
+                  />
                 </div>
-                <div className="w-2/3 pl-8 flex items-center">
-                    <p className='text-primaryText'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consectetur ducimus quos! Fugiat inventore ut doloribus sed soluta architecto, quia quibusdam itaque repudiandae odit sit quo fugit nisi quaerat ea.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolorem dolor, tempore delectus, veniam, atque iure aliquid iste alias error exercitationem odio quod. Corrupti ex dicta provident possimus earum doloribus!
-                    </p>
+                <div className="object-cover w-full max-w-[400px] h-auto rounded-lg">
+                  <img
+                    className="object-cover w-full max-w-[400px] h-auto rounded-lg"
+                    src="../src/assets/gsic_web_icon_flat.png"
+                    alt="Business"
+                  />
                 </div>
+              </Slider>
             </div>
-            <h1 className="mx-auto mt-24 text-center header1 text-primaryText">
-                Timeline
+            <NextArrow />
+          </div>
+          <div className="flex items-center m-[33px] lg:mr-[48px] text-justify body-text text-primaryText">
+            <p>
+              Ganesha Social Impact Challenge is a platform for various teams to
+              showcase their creative ideas or solutions to a specific problem
+              or challenge. The main objective of the innovation competition is
+              to encourage individuals or teams to think creatively and come up
+              with innovative solutions to complex problems.
+            </p>
+          </div>
+        </div>
+      </div>
+      <h1 className="mx-auto mt-24 text-center header1 text-primaryText">
+        Timeline
+      </h1>
+      <div className="overflow-auto w-full mx-auto pb-[22px]">
+        <div className="relative w-[355px] md:w-[760px] lg:w-[975px] 2xl:w-[1300px] h-auto mt-[45px] bg-slate-100 mx-auto rounded-xl shadow-lg shadow-slate-500 bg-opacity-30 overflow-auto">
+          <div className="h-auto w-[38px] flex justify-between absolute m-[4%] lg:m-[2%]">
+            <div className="h-[10px] w-[10px] rounded-full bg-primaryGreen"></div>
+            <div className="h-[10px] w-[10px] rounded-full bg-primaryYellow"></div>
+            <div className="h-[10px] w-[10px] rounded-full bg-primaryOrange"></div>
+          </div>
+          <div className="relative">
+            <div className="pt-[25%] md:pt-[15.25%] lg:pt-[10.25%] relative">
+              <div className="absolute flex flex-col items-center justify-center ml-[11.25%] md:ml-[32%] lg:ml-[36%] 2xl:ml-[36%] mt-[9%] md:mt-[4.5%] lg:mt-[3.5%] 2xl:mt-[3.5%]">
+                <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
+                  14-20
+                </span>
+                <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
+                  August, 2023
+                </span>
+              </div>
+              <img
+                className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] float-left"
+                src="../src/assets/Timeline1.svg"
+                alt="p"
+              />
+              <h3 className="pt-[19.5%] md:pt-[9%] lg:pt-[7%] 2xl:pt-[7%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue">
+                EVENT
+              </h3>
+              <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue ">
+                EARLY <br className="md:hidden" /> BIRD <br /> REGISTRATION
+              </h3>
+            </div>
+            <div className="pt-[1.25%] relative">
+              <div className="absolute flex flex-col items-center justify-center right-0 mr-[11.5%] md:mr-[32%] lg:mr-[36%] 2xl:mr-[36%] mt-[14%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
+                <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
+                  21-27
+                </span>
+                <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
+                  August, 2023
+                </span>
+              </div>
+              <img
+                className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
+                src="../src/assets/Timeline2.svg"
+                alt="p"
+              />
+              <h3 className="pt-[23.75%] md:pt-[12.75%] lg:pt-[9.75%] 2xl:pt-[10.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
+                EVENT
+              </h3>
+              <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen  text-right">
+                NORMAL <br className="md:hidden" /> REGISTRATION
+              </h3>
+            </div>
+            <div className="pt-[1.25%] relative">
+              <div className="absolute flex flex-col items-center justify-center ml-[10.25%] md:ml-[31.5%] lg:ml-[35.6%] 2xl:ml-[36%] mt-[18.5%] md:mt-[11%] lg:mt-[8%] 2xl:mt-[9%]">
+                <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
+                  28-03
+                </span>
+                <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
+                  Ags-Sept 2023
+                </span>
+              </div>
+              <img
+                className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] -mt-[35px] float-left"
+                src="../src/assets/Timeline3.svg"
+                alt="p"
+              />
+              <h3 className="pt-[28%] md:pt-[15%] lg:pt-[11.5%] 2xl:pt-[13%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange">
+                EVENT
+              </h3>
+              <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange ">
+                LATE <br className="md:hidden" /> REGISTRATION
+              </h3>
+            </div>
+            <h1 className="text-primaryYellow header1-mobile lg:header1 mb-36 mt-48 text-center">
+              TO BE ANNOUNCED
             </h1>
-            <div className="mx-16 mt-10 bg-slate-100 py-20 rounded-xl shadow-lg shadow-slate-500 bg-opacity-30">
-                <TimelineItem
-                    orientation='left'
-                    date='XX-XX'
-                    dateDetail='Jan - Mar, 2023'
-                    eventName='Apa Hayo'
-                    eventDesc='ffiuerwhf woeifj oweifhw efiwefoi'
-                />
-                <TimelineItem
-                    orientation='right'
-                    date='XX-XX'
-                    dateDetail='Jan - Mar, 2023'
-                    eventName='Apa Hayo'
-                    eventDesc='ffiuerwhf woeifj oweifhw efiwefoi'
-                    className='mt-[-70px]'
-                />
-                <TimelineItem
-                    orientation='left'
-                    date='XX-XX'
-                    dateDetail='Jan - Mar, 2023'
-                    eventName='Apa Hayo'
-                    eventDesc='ffiuerwhf woeifj oweifhw efiwefoi'
-                    className='mt-[-70px]'
-                />
-                <TimelineItem
-                    orientation='right'
-                    date='XX-XX'
-                    dateDetail='Jan - Mar, 2023'
-                    eventName='Apa Hayo'
-                    eventDesc='ffiuerwhf woeifj oweifhw efiwefoi'
-                    className='mt-[-70px]'
-                />
-            </div>
-            <Slides className='mt-48'/>
-            <h1 className="mt-12 px-64 text-center font-bold  text-6xl text-primaryBlue">
-                Submit Here
+          </div>
+        </div>
+      </div>
+      <div className="w-auto h-auto mt-20 items-center justify-center flex">
+        <div className="hidden lg:block">
+          <img
+            className=""
+            src="../src/assets/bcc_arrow_left.svg"
+            alt="Arrow"
+          />
+        </div>
+        <div>
+          <div className="mx-auto text-center w-[80%] max-w-[714px]">
+            <h1 className="w-auto header1-mobile lg:header1 text-primaryText">
+              Are You Ready To Be The Next Winner?
             </h1>
-            <div className='w-full mt-4 flex justify-center'>
-                <a href='/gsic/register'>
-                    <button className='bg-primaryBlue px-8 py-1 text-white font-semibold rounded-lg shadow-lg shadow-slate-400 hover:shadow-none duration-100'>
-                        Submit
-                    </button>
-                </a>
-            </div>
-            <h1 className="mt-48 px-64 text-center font-bold  text-6xl text-primaryBlue">
-                Contact Person
-            </h1>
-            <div className='w-min flex my-10 mx-auto'>
-                <ContactItem type="line" desc="ganeshaaaaa"/>
-                <ContactItem type="whatsapp" desc="082376543274532"/>
-            </div>
-            <Footer />
-        </div >
-    )
+            <p className="body-text-mobile lg:body-text text-error">
+              *To particiapte in any event, first you must create an account
+            </p>
+          </div>
+          <div className="flex justify-center items-center mt-10">
+            <a
+              href="/register-bcc"
+              type="button"
+              className="cursor-pointer button-text-mobile lg:button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
+            >
+              Register Here
+            </a>
+          </div>
+        </div>
+        <div className="hidden lg:block">
+          <img
+            className=""
+            src="../src/assets/bcc_arrow_right.svg"
+            alt="Arrow"
+          />
+        </div>
+      </div>
+      <div className="w-auto h-auto mt-20">
+        <div className="flex flex-col items-center mt-14 pb-14">
+          <h1 className="header1-mobile lg:header1 text-primaryText text-center mb-9">
+            Contact Person
+          </h1>
+          <ContactList line={""} wa={""} />
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
-export default HomePageGSIC
+export default HomePageGSIC;

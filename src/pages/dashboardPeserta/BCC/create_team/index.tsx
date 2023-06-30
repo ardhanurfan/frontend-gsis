@@ -43,7 +43,7 @@ const CreateTeamBCC = () => {
               >
                 Invite Team Member
               </label>
-              <SelectComponent placeholder="Enter name" type={""} value={undefined} />
+              <SelectComponent placeholder="Enter name" type={""} value={undefined} onChange={undefined} />
             </form>
           </div>
           <div className="mt-[40px]">
