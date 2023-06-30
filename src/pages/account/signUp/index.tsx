@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { post } from "../../../API/api";
 import toast, { Toast, Toaster } from "react-hot-toast";
 import { NotifyStatus } from "../../../components/toast_pop_up/toast";
+import SelectComponent from "../../../components/SelectComponent";
 
 const SignUp = () => {
   const [loading, setLoading] = useState(false);
@@ -130,75 +131,34 @@ const SignUp = () => {
                 <label htmlFor="university" className="text-primaryText mb-2">
                   University/Institution
                 </label>
-                <div className="select overflow-hidden text-ellipsis relative py-4 flex w-full bg-primaryBlue rounded-lg">
-                  <select
-                    defaultValue={""}
-                    onChange={(val) => setUniversity(val.target.value)}
-                    className="body-text-mobile lg:body-text bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 flex-1 rounded-lg"
-                    name="select"
-                    id="university"
-                    required
-                  >
-                    <option className="text-seccondaryBlue" value={""} disabled>
-                      Choose a university
-                    </option>
-                    <option value="Institut Teknologi Bandung">
-                      Institut Teknologi Bandung
-                    </option>
-                    <option value="Universitas Gadjah Mada">
-                      Universitas Gadjah Mada
-                    </option>
-                    <option value="Universitas Indonesia">
-                      Universitas Indonesia
-                    </option>
-                  </select>
-                </div>
+                <SelectComponent
+                  placeholder="Select your university"
+                  type={"University"}
+                  onChange={(e: string) => setUniversity(e)}
+                />
               </div>
               <div className="flex flex-col mb-[38px]">
-                <label htmlFor="major" className="text-primaryText mb-2">
+                <label htmlFor="major" className="text-primaryText  mb-2">
                   Major
                 </label>
-                <div className="select overflow-hidden text-ellipsis relative py-4 flex w-full bg-primaryBlue rounded-lg">
-                  <select
-                    defaultValue={""}
-                    onChange={(val) => setMajor(val.target.value)}
-                    className="body-text-mobile lg:body-text bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 flex-1 rounded-lg"
-                    name="select"
-                    id="major"
-                    required
-                  >
-                    <option className="text-seccondaryBlue" value={""} disabled>
-                      Choose a major
-                    </option>
-                    <option value="Information System and Technology">
-                      Information System and Technology
-                    </option>
-                    <option value="Informatics">Informatics</option>
-                    <option value="Jogja Solo">Jogja Solo</option>
-                  </select>
-                </div>
+                <input
+                  type="text"
+                  id="major"
+                  value={major}
+                  onChange={(e) => setMajor(e.target.value)}
+                  placeholder="Enter your major"
+                  className="body-text text-primaryBlue bg-slate-200 border-none placeholder:text-primaryBlue rounded-lg h-[60px] w-full"
+                />
               </div>
               <div className="flex flex-col mb-[60px]">
                 <label htmlFor="year" className="text-primaryText mb-2">
                   Year
                 </label>
-                <div className="select overflow-hidden text-ellipsis relative py-4 flex w-full bg-primaryBlue rounded-lg">
-                  <select
-                    defaultValue={""}
-                    onChange={(val) => setYear(val.target.value)}
-                    className="body-text-mobile lg:body-text bg-primaryBlue text-white cursor-pointer outline-none shadow-none border-0 flex-1 rounded-lg"
-                    name="select"
-                    id="year"
-                    required
-                  >
-                    <option className="text-seccondaryBlue" value={""} disabled>
-                      Choose a year
-                    </option>
-                    <option value="2003">2003</option>
-                    <option value="2004">2004</option>
-                    <option value="2005">2005</option>
-                  </select>
-                </div>
+                <SelectComponent
+                  placeholder="Select year"
+                  type={"Year"}
+                  onChange={(e: string) => setYear(e)}
+                />
               </div>
               <div className="flex justify-center">
                 <button

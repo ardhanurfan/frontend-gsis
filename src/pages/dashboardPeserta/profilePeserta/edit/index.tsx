@@ -171,22 +171,20 @@ const EditProfile = () => {
               </div>
               <div className="flex flex-col gap-[5px]">
                 <div className="relative h-auto w-[100%] lg:w-1/2 rounded-lg">
-                  <form action="">
-                    <label
-                      htmlFor="major"
-                      className="header3 text-primaryBlue block mb-[5px]"
-                    >
-                      Major
-                    </label>
-                    <input
-                      type="text"
-                      id="major"
-                      value={major}
-                      onChange={(e) => setMajor(e.target.value)}
-                      placeholder="Enter your major"
-                      className="body-text text-primaryBlue bg-slate-200 border-none placeholder:text-primaryBlue rounded-lg h-[60px] w-full"
-                    />
-                  </form>
+                  <label
+                    htmlFor="major"
+                    className="header3 text-primaryBlue block mb-[5px]"
+                  >
+                    Major
+                  </label>
+                  <input
+                    type="text"
+                    id="major"
+                    value={major}
+                    onChange={(e) => setMajor(e.target.value)}
+                    placeholder="Enter your major"
+                    className="body-text text-primaryBlue bg-slate-200 border-none placeholder:text-primaryBlue rounded-lg h-[60px] w-full"
+                  />
                 </div>
               </div>
               <div className="flex flex-col gap-[5px]">

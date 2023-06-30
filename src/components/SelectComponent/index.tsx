@@ -45,27 +45,11 @@ const SelectComponent = ({
   onChange,
   multiple,
 }: SelectComponentProps) => {
-  // const options = [
-  //   { value: "ITB", label: "Institut Teknologi Bandung" },
-  //   { value: "UI", label: "Universitas Indonesia" },
-  //   { value: "UGM", label: "Universitas Gadjah Mada" },
-  //   { value: "Undip", label: "Universitas Dipenogoro" },
-  //   { value: "ITB", label: "Institut Teknologi Bandung" },
-  //   { value: "UI", label: "Universitas Indonesia" },
-  //   { value: "UGM", label: "Universitas Gadjah Mada" },
-  //   { value: "Undip", label: "Universitas Dipenogoro" },
-  //   { value: "ITB", label: "Institut Teknologi Bandung" },
-  //   { value: "UI", label: "Universitas Indonesia" },
-  //   { value: "UGM", label: "Universitas Gadjah Mada" },
-  //   { value: "Undip", label: "Universitas Dipenogoro" },
-  // ];
-
   const [options, setOptions] = useState<
     Array<{ value: string; label: string }>
   >([]);
 
-  const [selected, setSelected] = useState<
-    string[]>([]);
+  const [selected, setSelected] = useState<string[]>([]);
 
   const getUniversityData = async () => {
     try {
@@ -85,7 +69,7 @@ const SelectComponent = ({
   };
   const getMemberAllData = async () => {
     try {
-      const users = await get("get-all-users");
+      const users = await get("get-gsic-invite");
       const data = users.data?.data;
       const temp = [...options];
       data.forEach((element: any) => {
@@ -109,8 +93,8 @@ const SelectComponent = ({
       setOptions(temp);
     } else if (type == "University") {
       getUniversityData();
-    } else if (type == "Member All") {
-      getMemberAllData()
+    } else if (type == "Member Gsic") {
+      getMemberAllData();
     }
   }, []);
 
@@ -118,7 +102,7 @@ const SelectComponent = ({
     <>
       <div className="w-full remove-input-txt-border">
         <Select
-          isMulti = {multiple}
+          isMulti={multiple}
           isOptionDisabled={() => selected.length >= 2}
           className="basic-single"
           classNamePrefix="text-color"
@@ -167,9 +151,12 @@ const SelectComponent = ({
           name={type}
           placeholder={placeholder}
           options={options}
-          onChange={(e: any) => {multiple ? onChange(e) : onChange(e.value); setSelected(e)}}
+          onChange={(e: any) => {
+            multiple ? onChange(e) : onChange(e.value);
+            setSelected(e);
+          }}
           // defaultInputValue={value}
-          defaultValue={value == null ? null : {value: value, label: value }}
+          defaultValue={value == null ? null : { value: value, label: value }}
         />
       </div>
     </>
