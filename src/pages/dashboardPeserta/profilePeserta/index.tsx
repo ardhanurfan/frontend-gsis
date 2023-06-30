@@ -24,8 +24,10 @@ const ProfilePeserta = () => {
           token
         );
         const cekCeremony = await getWithAuth("ceremony?user_id=" + id, token);
+        const cekBcc = await getWithAuth("bcc-user?user_id=" + id, token);
         setExhibition(cekExhibition.data.data != null);
         setCeremony(cekCeremony.data.data != null);
+        setBcc(cekBcc.data.data != null);
       } catch (error) {
         console.log(error);
       }

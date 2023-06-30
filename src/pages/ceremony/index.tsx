@@ -53,10 +53,12 @@ const Ceremony = () => {
   const [popUp, setPopUp] = useState(false);
   const [ssPoster, setSSPoster] = useState<File | null>(null);
   const [isRegistered, setRegistered] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const token = localStorage.getItem("access_token");
 
   const handleSubmit = async () => {
+    setLoading(true);
     try {
       console.log(ssPoster);
       await postWithAuth(
@@ -72,6 +74,8 @@ const Ceremony = () => {
     } catch (error) {
       const mess = error as any;
       NotifyStatus(mess.response.data.data.error, false);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -129,7 +133,7 @@ const Ceremony = () => {
               </h2>
               <a
                 href="/login"
-                className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[auto] button-text-mobile lg:button-text hover:bg-seccondaryBlue"
+                className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[auto] button-text-mobile lg:button-text hover:bg-seccondaryBlue shadow-lg shadow-primaryBlue"
               >
                 Log In
               </a>
@@ -164,10 +168,21 @@ const Ceremony = () => {
                 <UploadFile childToParent={childToParent} type={"image"} />
               </div>
               <button
+                disabled={loading}
                 onClick={handleSubmit}
-                className="bg-primaryBlue rounded-lg px-5 py-1 text-white w-[auto] button-text-mobile lg:button-text"
+                className="mb-[16px] py-[10px] px-[50px] rounded-[10px] text-button text-white bg-primaryBlue transition duration-500 ease-in-out hover:bg-seccondaryBlue shadow-lg shadow-primaryBlue"
               >
-                Submit
+                {loading && (
+                  <div className="flex justify-center items-center">
+                    <img
+                      className="mr-2"
+                      src="../src/assets/Loading.svg"
+                      alt="spinner"
+                    />
+                    Loading
+                  </div>
+                )}
+                {!loading && "Submit"}
               </button>
             </div>
           </div>
@@ -243,7 +258,7 @@ const Ceremony = () => {
                 </button>
               ) : (
                 <button
-                  className="bg-primaryBlue w-auto p-5 py-2 button-text-mobile lg:button-text rounded-xl text-white"
+                  className="bg-primaryBlue w-auto p-5 py-2 button-text-mobile lg:button-text rounded-xl text-white hover:bg-seccondaryBlue"
                   onClick={() => setPopUp(true)}
                 >
                   Register Here

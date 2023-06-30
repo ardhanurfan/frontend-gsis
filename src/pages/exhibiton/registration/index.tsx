@@ -223,7 +223,7 @@ const RegistrationExhibition = () => {
             <button
               disabled={loading}
               onClick={handleSubmit}
-              className="mb-[16px] py-[10px] px-[50px] rounded-[10px] text-button text-white bg-primaryBlue transition duration-500 ease-in-out hover:bg-seccondaryBlue"
+              className="mb-[16px] py-[10px] px-[50px] rounded-[10px] text-button text-white bg-primaryBlue transition duration-500 ease-in-out hover:bg-seccondaryBlue shadow-lg shadow-primaryBlue"
             >
               {loading && (
                 <div className="flex justify-center items-center">
