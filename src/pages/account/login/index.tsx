@@ -1,9 +1,9 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Dot from "../../../components/account/dot";
 import TextField from "../../../components/account/text-field";
 import { useNavigate } from "react-router-dom";
 import { post } from "../../../API/api";
-import toast, { Toast, Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import { NotifyStatus } from "../../../components/toast_pop_up/toast";
 
 const Login = () => {

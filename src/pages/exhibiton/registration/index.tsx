@@ -1,6 +1,6 @@
 import Footer from "../../../components/footer/index";
 import Navbar from "../../../components/navbar/Navbar";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import UploadFile from "../../../components/upload-file/upload-file";
 import "./style.css";
 import { postWithAuth } from "../../../API/api";

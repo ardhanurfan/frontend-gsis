@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const BCC = () => {
   const [visible, setVisible] = useState(0);
 
-  const [sliderRef, setSliderRef] = useState(null);
+  const [sliderRef, setSliderRef] = useState<any>(null);
 
   const NextArrow = () => {
     return (
