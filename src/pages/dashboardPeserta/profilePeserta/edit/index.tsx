@@ -1,12 +1,11 @@
 //EDIT PROFILE
-import SelectComponent from "../../../../components/dashboard_peserta/profile";
+import SelectComponent from "../../../../components/SelectComponent";
 import Footer from "../../../../components/footer";
 import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
 
 const EditProfile = () => {
   return (
     <>
-      
       <NavbarDashboard></NavbarDashboard>
       <div className="w-full h-auto overflow-hidden">
         <div className="pt-[195px] w-[85vw] mx-auto">
@@ -26,9 +25,9 @@ const EditProfile = () => {
               </a>
             </div>
             <div className="flex justify-end w-[80vw] lg:hidden mx-auto mt-[15px] lg:mt-0">
-                <button className="button-text-mobile small-button text-white bg-primaryBlue hover:bg-seccondaryBlue">
-                    Save
-                </button>
+              <button className="button-text-mobile small-button text-white bg-primaryBlue hover:bg-seccondaryBlue">
+                Save
+              </button>
             </div>
             <div className="h-[561px] lg:w-[908px] w-[80vw] bg-slate-100 bg-opacity-30 shadow-sm rounded-lg border-primaryBlue border-2 shadow-slate-700 flex flex-col gap-3 pt-[19px] px-[1.32%]">
               <div>
@@ -66,7 +65,11 @@ const EditProfile = () => {
               <div className="flex flex-col gap-[5px]">
                 <h3 className="header3 text-primaryBlue">University</h3>
                 <div className="relative h-auto w-[100%] lg:w-1/2 rounded-lg">
-                  <SelectComponent placeholder="Select your university"/>
+                  <SelectComponent
+                    placeholder="Select your university"
+                    type={"University"}
+                    value={undefined}
+                  />
                 </div>
               </div>
               <div className="flex flex-col gap-[5px]">
@@ -90,7 +93,11 @@ const EditProfile = () => {
               <div className="flex flex-col gap-[5px]">
                 <h3 className="header3 text-primaryBlue">Year</h3>
                 <div className="relative h-auto w-[75%] lg:w-[37.5%] rounded-lg">
-                  <SelectComponent placeholder="Select year"/>
+                  <SelectComponent
+                    placeholder="Select year"
+                    type={"Year"}
+                    value={undefined}
+                  />
                 </div>
               </div>
             </div>

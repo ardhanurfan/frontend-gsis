@@ -19,6 +19,11 @@ const UploadFile = ({ type, childToParent }: DropzoneProps) => {
     accept = {
       "application/*": [".pdf"],
     };
+  } else {
+    accept = {
+      "video/*": [],
+      "image/*": [],
+    };
   }
 
   const { getRootProps, getInputProps, open, acceptedFiles } = useDropzone({

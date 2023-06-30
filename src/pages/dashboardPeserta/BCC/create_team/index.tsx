@@ -4,7 +4,7 @@ import Navbar from "../../../../components/navbar/Navbar";
 import UploadFile from "../../../../components/upload-file/upload-file";
 import { Toaster } from "react-hot-toast";
 import { NotifyStatus } from "../../../../components/toast_pop_up/toast";
-import SelectComponent from "../../../../components/dashboard_peserta/profile";
+import SelectComponent from "../../../../components/SelectComponent";
 
 const CreateTeamBCC = () => {
   return (

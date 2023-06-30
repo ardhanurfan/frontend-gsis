@@ -2,37 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-select{
-    list-style: none;
+select {
+  list-style: none;
 }
 
-select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    /* outline: 0;
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  /* outline: 0;
     box-shadow: none;
     border: 0!important;
     background-image: none; */
-    /* flex: 1; */
+  /* flex: 1; */
 }
 
-select::-ms-expand{
-    display: none;
+select::-ms-expand {
+  display: none;
 }
-.kicik::after{
-    content: url(../../../assets/dropdown-sm.svg);
+.kicik::after {
+  content: url(../../../assets/dropdown-sm.svg);
+  position: absolute;
+  right: 9px;
+  top: 45%;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+
+@media (min-width: 1024px) {
+  .kicik::after {
+    content: url(../../../assets/dropdown.svg);
     position: absolute;
-    right:4%;
-    top: 18%;
+    right: 8px;
+    top: 50%;
     cursor: pointer;
     pointer-events: none;
-    transition:.25s all ease;
+    transition: 0.25s all ease;
+  }
 }
 
-.kelas-bayangan{
-    border-radius: 10px;
-    background: var(--gradient-white, linear-gradient(143deg, rgba(255, 255, 255, 0.60) 30.73%, rgba(255, 255, 255, 0.20) 100%));
-    box-shadow: 0px 15px 30px -9px #005CBA;
+.kelas-bayangan {
+  border-radius: 10px;
+  background: var(
+    --gradient-white,
+    linear-gradient(
+      143deg,
+      rgba(255, 255, 255, 0.6) 30.73%,
+      rgba(255, 255, 255, 0.2) 100%
+    )
+  );
+  box-shadow: 0px 15px 30px -9px #005cba;
 }

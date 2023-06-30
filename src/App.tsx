@@ -6,7 +6,7 @@ import Login from "./pages/account/login";
 import SignUp from "./pages/account/signUp";
 import ForgotPassword from "./pages/account/forgot";
 import ForgotSent from "./pages/account/forgotSent";
-import AboutUs from "./pages/aboutus";
+import AboutUs from "./pages/aboutUs";
 import NotFound from "./pages/addingPages/notFount";
 import ComingSoon from "./pages/addingPages/comingSoon";
 import BCC from "./pages/bcc/landingpage";
@@ -101,17 +101,19 @@ function App() {
           }
         />
         {/* BCC */}
-        <Route path="/participant-bcc" element={<ParticipantBCC />}/>
-        <Route path="/submission-bcc" element={<EditSubmissionBCC />}/>
-        <Route path="/createteam-bcc" element={<CreateTeamBCC />}/>
+        <Route path="/participant-bcc" element={<ParticipantBCC />} />
+        <Route path="/submission-bcc" element={<EditSubmissionBCC />} />
+        <Route path="/createteam-bcc" element={<CreateTeamBCC />} />
         {/* Ceremony */}
         <Route path="/submission-ceremony" element={<EditSubmissionCer />} />
         <Route path="/participant-ceremony" element={<ParticipantCer />} />
 
-
         {/* Dashboard Admin */}
         <Route path="/dashboard-admin" element={<Overview />} />
-        <Route path="/dashboard-ceremony-admin" element={<DashboardCeremony />}/>
+        <Route
+          path="/dashboard-ceremony-admin"
+          element={<DashboardCeremony />}
+        />
         <Route path="/dashboard-exhibition-admin" element={<DashboardEx />} />
         <Route path="/dashboard-bcc-admin" element={<DashboardBCC />} />
         <Route path="/dashboard-gsic-admin" element={<DashboardGSIC />} />
