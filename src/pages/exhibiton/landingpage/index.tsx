@@ -189,7 +189,6 @@ const Exhibition = () => {
           <ContactList line="felizhabalqis_" wa="081223216737" />
         </div>
       </div>
-
       <Footer />
     </>
   );
