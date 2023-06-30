@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { getWithAuth } from "../../API/api";
 
 function HomePageGSIC() {
-  const [sliderRef, setSliderRef] = useState(null);
+  const [sliderRef, setSliderRef] = useState<any>(null);
   const NextArrow = () => {
     return (
       <>

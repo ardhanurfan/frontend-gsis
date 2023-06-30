@@ -8,7 +8,7 @@ import bc from "../../../assets/bcc_web_icon_3d.png";
 import si from "../../../assets/gsic_web_icon_3d.png";
 import gs from "../../../assets/bintang.png";
 const Event = () => {
-  const [sliderRef, setSliderRef] = useState(null);
+  const [sliderRef, setSliderRef] = useState<any>(null);
   const [slidesToShow, setSlidesToShow] = useState(3);
 
   const NextArrow = () => {
