@@ -37,7 +37,7 @@ const Exhibition = () => {
                 Timeline
               </h1>
               <div className="overflow-auto w-full mx-auto pb-[22px]">
-                <div className="relative w-[355px] md:w-[760px] lg:w-[975px] 2xl:w-[1300px] h-[1605px] 2xl:h-[1000px] mt-[45px] bg-slate-100 mx-auto rounded-xl shadow-lg shadow-slate-500 bg-opacity-30">
+                <div className="relative w-[355px] md:w-[760px] lg:w-[975px] 2xl:w-[1300px] h-[750px] 2xl:h-[1100px] mt-[45px] bg-slate-100 mx-auto rounded-xl shadow-lg shadow-slate-500 bg-opacity-30">
                   <div className="h-auto w-[38px] flex justify-between absolute m-[4%] lg:m-[2%]">
                     <div className="h-[10px] w-[10px] rounded-full bg-primaryGreen"></div>
                     <div className="h-[10px] w-[10px] rounded-full bg-primaryYellow"></div>
@@ -45,7 +45,7 @@ const Exhibition = () => {
                   </div>
                   <div className="relative">
                     <div className="pt-[25%] md:pt-[15.25%] lg:pt-[10.25%] relative">
-                      <div className="absolute flex flex-col items-center text-primaryBlue justify-center ml-[10.25%] md:ml-[31.5%] lg:ml-[35.6%] 2xl:ml-[37%] mt-[9%] md:mt-[5%] lg:mt-[3.5%] 2xl:mt-[3%]">
+                      <div className="absolute flex flex-col items-center text-primaryBlue justify-center ml-[15%] md:ml-[33.5%] lg:ml-[37%] 2xl:ml-[37%] mt-[9%] md:mt-[4.5%] lg:mt-[3.5%] 2xl:mt-[3%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">15-31</span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">July, 2023</span>
                       </div>
@@ -54,7 +54,7 @@ const Exhibition = () => {
                         src="../src/assets/Timeline1.svg"
                         alt="p"
                       />
-                      <h3 className="pt-[19.5%] md:pt-[9%] lg:pt-[7%] 2xl:pt-[7%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryBlue">
+                      <h3 className="pt-[18.5%] md:pt-[8.75%] lg:pt-[7%] 2xl:pt-[7%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryBlue">
                         Open <br />Registrasi <br /> Karya
                       </h3>
                       {/* <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryBlue 2xl:mr-[9.923%]">
@@ -62,7 +62,7 @@ const Exhibition = () => {
                       </h3> */}
                     </div>
                     <div className="pt-[1.25%] relative">
-                      <div className="absolute flex flex-col items-center text-primaryBlue justify-center right-0 mr-[10.25%] md:mr-[31.5%] lg:mr-[35.6%] 2xl:mr-[35%] mt-[14%] md:mt-[9%] lg:mt-[6.5%] 2xl:mt-[7.5%]">
+                      <div className="absolute flex flex-col items-center text-primaryBlue justify-center right-0 mr-[8.7%] md:mr-[30.5%] lg:mr-[35%] 2xl:mr-[35%] mt-[20%] md:mt-[9%] lg:mt-[7%] 2xl:mt-[7.5%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">1</span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">September, 2023</span>
                       </div>
@@ -71,7 +71,7 @@ const Exhibition = () => {
                         src="../src/assets/Timeline2.svg"
                         alt="p"
                       />
-                      <h3 className="pt-[23.75%] md:pt-[12.75%] lg:pt-[9.75%] 2xl:pt-[11.5%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
+                      <h3 className="pt-[32%] md:pt-[14%] lg:pt-[10.5%] 2xl:pt-[11.5%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
                         Pengumuman<br />Pemilihan<br />Karya
                       </h3>
                       {/* <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryGreen 2xl:ml-[9.923%] text-right">
@@ -79,7 +79,7 @@ const Exhibition = () => {
                       </h3> */}
                     </div>
                     <div className="pt-[1.25%] relative">
-                      <div className="absolute flex flex-col items-center text-primaryBlue justify-center ml-[10.25%] md:ml-[31.5%] lg:ml-[35.6%] 2xl:ml-[35%] mt-[13%] md:mt-[9%] lg:mt-[6.56%] 2xl:mt-[8%]">
+                      <div className="absolute flex flex-col items-center text-primaryBlue justify-center ml-[8.75%] md:ml-[30.6%] lg:ml-[35%] 2xl:ml-[35%] mt-[22%] md:mt-[9.3%] lg:mt-[7.7%] 2xl:mt-[8%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">28-30</span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">September, 2023</span>
                       </div>
@@ -88,7 +88,7 @@ const Exhibition = () => {
                         src="../src/assets/Timeline3.svg"
                         alt="p"
                       />
-                      <h3 className="pt-[23.85%] md:pt-[12.5%] lg:pt-[9.85%] 2xl:pt-[11.25%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryOrange">
+                      <h3 className="pt-[33%] md:pt-[14.75%] lg:pt-[11.5%] 2xl:pt-[12%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryOrange">
                         D-Day<br />Exhibition
                       </h3>
                       {/* <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryOrange 2xl:mr-[9.923%]">

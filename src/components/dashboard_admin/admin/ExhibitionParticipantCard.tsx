@@ -51,7 +51,7 @@ const ExhibitionParticipantCard = ({row}:ExhibitionParticipantCardProps) => {
                     </div>
                 </div>
                 <div className="col-span-2 rounded-md h-[auto]">
-                    <div className="pb-5 xl:py-5 pl-5">
+                    <div className="pb-5 xl:py-5 px-5">
                         <h3 className="header3 text-[#015CBA]">Work</h3>
                         <div className="flex flex-col gap-2 sm:flex-row sm:gap-8 my-5">
                                 <div className="flex flex-col w-auto">
