@@ -1,10 +1,10 @@
-import Navbar from "../../../../components/navbar/Navbar";
 import ContactList from "../../../../components/contact_list";
 import {useState} from "react"
 import "./style.css";
 import Status from "../../../../components/dashboard_peserta/bcc/status";
 import Footer from "../../../../components/footer";
 import TeamCard from "../../../../components/dashboard_peserta/bcc/team_card";
+import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
 
 const ParticipantBCC = () => {
   
@@ -12,7 +12,7 @@ const ParticipantBCC = () => {
   
   return (
     <>
-      <Navbar />
+      <NavbarDashboard />
       <div className="w-full h-auto overflow-auto">
         <h1 className="header1-mobile lg:header1 w-[89.744%] max-w-[1204px] mx-auto text-center lg:text-start text-primaryText mt-[130px] lg:mt-[182px]">Participant Information</h1>
         <div className="mt-[30px] mx-auto w-[89.744%] max-w-[1204px] border-2 border-primaryBlue rounded-lg p-5 flex flex-col gap-[5px]">
@@ -83,7 +83,7 @@ const ParticipantBCC = () => {
           <h2 className="header2-mobile lg:header2 text-primaryText text-center mb-9">
             If you're having trouble, please contact
           </h2>
-          <ContactList />
+          {/* <ContactList /> */}
         </div>
       </div>
       <Footer />

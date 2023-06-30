@@ -8,7 +8,7 @@ const AnnouncementCard = ({ title, date, content }: AnnouncementCardProps) => {
   return (
     <>
       <div className="card-announcement rounded-[10px] p-[1px] mb-[26px]">
-        <div className="py-[40px] px-[40px] lg:pl-[40px] lg:pr-[98px] rounded-[10px] h-full w-full bg-white">
+        <div className="py-[30px] px-[40px] lg:pl-[40px] lg:pr-[98px] rounded-[10px] h-full w-full bg-white">
           <h2 className="header2-mobile lg:header2 text-primaryText">{title}</h2>
           <h3 className=" font-monserrat font-normal text-xs text-seccondaryBlue">
             Created at {date}

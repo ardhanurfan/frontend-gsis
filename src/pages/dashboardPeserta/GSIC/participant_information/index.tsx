@@ -1,14 +1,14 @@
-import Navbar from "../../../../components/navbar/Navbar";
 import ContactList from "../../../../components/contact_list";
 import Footer from "../../../../components/footer";
 import ParticipantCard from "../../../../components/dashboard_peserta/bcc/participant_card";
 import Status from "../../../../components/dashboard_peserta/bcc/status";
 import TeamCard from "../../../../components/dashboard_peserta/bcc/team_card";
+import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
 
 const ParticipantGSIC = () => {
     return(
         <>
-        <Navbar/>
+        <NavbarDashboard/>
             <div className="pt-[130px] lg:pt-[171px] w-full h-auto mx-auto">
                 <div className="header1-mobile lg:header1 text-center lg:text-start w-[89.744%] max-w-[1204px] mx-auto text-primaryBlue">
                     Team Information

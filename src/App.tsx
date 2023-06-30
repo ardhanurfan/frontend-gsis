@@ -32,6 +32,7 @@ import RegisterGSIC from "./pages/gsic/register";
 import RegisterBCC from "./pages/bcc/registration";
 import ProtectedRoute from "./API/ProtectedRoute";
 import Ceremony from "./pages/ceremony";
+import ParticipantGSIC from "./pages/dashboardPeserta/GSIC/participant_information";
 
 function App() {
   return (
@@ -104,12 +105,12 @@ function App() {
           }
         />
         {/* BCC */}
-        <Route path="/participant-bcc" element={<ParticipantBCC />} />
+        <Route path="/dashboard-bcc" element={<ParticipantBCC />} />
         <Route path="/submission-bcc" element={<EditSubmissionBCC />} />
         <Route path="/createteam-bcc" element={<CreateTeamBCC />} />
         {/* Ceremony */}
         <Route path="/submission-ceremony" element={<EditSubmissionCer />} />
-        <Route path="/participant-ceremony" element={<ParticipantCer />} />
+        <Route path="/dashboard-ceremony" element={<ParticipantCer />} />
 
         {/* Dashboard Admin */}
         <Route path="/dashboard-admin" element={<Overview />} />
@@ -166,7 +167,7 @@ function App() {
         {/* Adding */}
         <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/dashboard-gsic" element={<DashboardGSIC />} />
+        <Route path="/dashboard-gsic" element={<ParticipantGSIC />} />
       </Routes>
     </BrowserRouter>
   );

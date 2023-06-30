@@ -3,9 +3,10 @@ import { useDropzone, FileWithPath } from "react-dropzone";
 interface DropzoneProps {
   childToParent: any;
   type: string;
+  value? : string;
 }
 
-const UploadFile = ({ type, childToParent }: DropzoneProps) => {
+const UploadFile = ({ type, childToParent, value }: DropzoneProps) => {
   let accept = {};
   if (type == "image") {
     accept = {
@@ -38,7 +39,7 @@ const UploadFile = ({ type, childToParent }: DropzoneProps) => {
     childToParent(acceptedFiles[0]);
     return (
       <li key={file.path}>
-        <div className="flex">
+        {(acceptedFiles[0] != null) ? <div className="flex">
           <img src="./src/assets/doc-upload-success.svg" alt="" />
           <div className=" ml-1">
             <p>
@@ -46,7 +47,15 @@ const UploadFile = ({ type, childToParent }: DropzoneProps) => {
             </p>
             <p className=" text-success font-[8px]">Successfully uploaded!</p>
           </div>
-        </div>
+        </div> : (value!=null && value != "") ? <a href={value} className="flex">
+          <img src="./src/assets/doc-upload-success.svg" alt="" />
+          <div className=" ml-1">
+            <p>
+              {value}
+            </p>
+            <p className=" text-success font-[8px]">Successfully uploaded!</p>
+          </div>
+        </a> : null}
       </li>
     );
   });
