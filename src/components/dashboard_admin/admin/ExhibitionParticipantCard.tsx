@@ -68,7 +68,7 @@ const ExhibitionParticipantCard = ({row}:ExhibitionParticipantCardProps) => {
                                 </div>
                             <div>
                                 <div className="flex flex-row gap-1 w-[150px]">
-                                        <a href={row.documentation[0].url} className="text-[#FCFCFC] button-text-mobile sm:button-text bg-success w-full rounded-xl hover:font-bold py-2 px-5 hover:scale-105">Photo/Video</a>
+                                        <a href={row.documentation[row.documentation.length - 1].url} className="text-[#FCFCFC] button-text-mobile sm:button-text bg-success w-full rounded-xl hover:font-bold py-2 px-5 hover:scale-105">Photo/Video</a>
                                 </div>
                             </div>
                         </div>

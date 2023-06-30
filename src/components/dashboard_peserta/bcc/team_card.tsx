@@ -92,7 +92,7 @@ const TeamCard = ({status, hidden, state, link,row}: TeamCardProps) => {
                     <Status status={row.approve_payment}/>
                 </div>
                 <a href={link} className="bg-primaryBlue hover:bg-seccondaryBlue flex justify-center items-center w-auto px-10 h-[25px] lg:h-[40px] button-text-mobile lg:button-text text-white rounded-lg">
-                   {row.submissions == null? "Submit Proposal" : "Edit Proposal"}
+                   {row.submissions.length == 0? "Submit Proposal" : "Edit Proposal"}
                 </a>
             </div>
         </div>

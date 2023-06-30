@@ -104,7 +104,7 @@ const EditDocumentGSIC = () => {
             <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
               <h3 className="header3 text-primaryBlue">Team Leader</h3>
               <label
-                className="button-text mb-[21px] text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
+                className="button-text mb-[21px] text-primaryBlue"
                 htmlFor=""
               >
                 Student ID Card
@@ -116,7 +116,7 @@ const EditDocumentGSIC = () => {
             </div>
             <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
               <label
-                className="button-text mb-[21px] text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
+                className="button-text mb-[21px] text-primaryBlue"
                 htmlFor=""
               >
                 Poster Upload
@@ -128,7 +128,7 @@ const EditDocumentGSIC = () => {
             </div>
             <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
               <label
-                className="button-text mb-[21px] text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
+                className="button-text mb-[21px] text-primaryBlue"
                 htmlFor=""
               >
                 Proof of Following Instagram
@@ -144,7 +144,7 @@ const EditDocumentGSIC = () => {
               <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
                 <h3 className="header3 text-primaryBlue">First Member</h3>
                 <label
-                  className="button-text mb-[21px] text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
+                  className="button-text mb-[21px] text-primaryBlue"
                   htmlFor=""
                 >
                   Student ID Card
@@ -156,7 +156,7 @@ const EditDocumentGSIC = () => {
               </div>
               <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
                 <label
-                  className="button-text mb-[21px] text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
+                  className="button-text mb-[21px] text-primaryBlue"
                   htmlFor=""
                 >
                   Poster Upload
@@ -168,7 +168,7 @@ const EditDocumentGSIC = () => {
               </div>
               <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
                 <label
-                  className="button-text mb-[21px] text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
+                  className="button-text mb-[21px] text-primaryBlue"
                   htmlFor=""
                 >
                   Proof of Following Instagram
@@ -183,7 +183,7 @@ const EditDocumentGSIC = () => {
               <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
                 <h3 className="header3 text-primaryBlue">Second Member</h3>
                 <label
-                  className="button-text mb-[21px] text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
+                  className="button-text mb-[21px] text-primaryBlue"
                   htmlFor=""
                 >
                   Student ID Card
@@ -195,7 +195,7 @@ const EditDocumentGSIC = () => {
               </div>
               <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
                 <label
-                  className="button-text mb-[21px] text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
+                  className="button-text mb-[21px] text-primaryBlue"
                   htmlFor=""
                 >
                   Poster Upload
@@ -207,7 +207,7 @@ const EditDocumentGSIC = () => {
               </div>
               <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
                 <label
-                  className="button-text mb-[21px] text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
+                  className="button-text mb-[21px] text-primaryBlue"
                   htmlFor=""
                 >
                   Proof of Following Instagram

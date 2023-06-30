@@ -75,7 +75,7 @@ const GSICParticipantCard = ({row}:GSICParticipantCardProps ) => {
                             {row.approve_payment != "WAITING" && <Status status={row.approve_payment as string}/>} */}
                         </div>
                     </div>
-                    <a href={row.submissions[0].url} className="box-shadow w-auto bg-white border-2 border-primaryBlue button-text-mobile md:button-text rounded-lg p-2 text-primaryBlue hover:scale-105">Proposal Submission</a>
+                    <a href={row.submissions.length == null? "/notfound" : row.submissions[row.submissions.length - 1].url} className="box-shadow w-auto bg-white border-2 border-primaryBlue button-text-mobile md:button-text rounded-lg p-2 text-primaryBlue hover:scale-105">Proposal Submission</a>
                 </div>
             </div>
         </details>

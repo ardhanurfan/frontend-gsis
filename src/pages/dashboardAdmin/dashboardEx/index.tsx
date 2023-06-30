@@ -46,8 +46,8 @@ const DashboardEx = () => {
     {announContext?.isAnnounce? <Announcement/> : ""} 
     <NavbarDashboard/>
       <div className="flex flex-col justify-center py-4 bg-white">
-        <div className="w-full flex items-center justify-between pt-[100px] px-40">
-          <h1 className="text-7xl font-bold text-left text-[#005CBA] title mb-10">
+        <div className="w-full flex items-center justify-between pt-[100px] px-20">
+          <h1 className="header1-mobile lg:header1 font-bold text-left text-[#005CBA] title">
             Exhibition Participant
           </h1>
           <div className="kecil relative">

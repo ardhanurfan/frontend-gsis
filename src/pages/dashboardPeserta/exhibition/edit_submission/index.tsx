@@ -111,7 +111,7 @@ const EditSubmissionExhibition = () => {
                   htmlFor="cat"
                   className="body-text text-primaryText block text-left"
                 >
-                  Category <span className="text-red-600">*</span>
+                  Category
                 </label>
                 <select
                   value={category}
@@ -129,7 +129,7 @@ const EditSubmissionExhibition = () => {
                   htmlFor="desc"
                   className="body-text text-primaryText text-left"
                 >
-                  Description<span className=" text-error"> *</span>
+                  Description
                 </label>
                 <textarea
                   onChange={(e) => setDescription(e.target.value)}
@@ -212,7 +212,7 @@ const EditSubmissionExhibition = () => {
                   <form action="" className="">
                     <label className="title">
                       <span className="body-text text-primaryText block text-left">
-                        Width <span className="text-red-600">*</span>
+                        Width
                       </span>
                       <input
                         type="text"
@@ -226,7 +226,7 @@ const EditSubmissionExhibition = () => {
                   <form action="" className="">
                     <label className="title">
                       <span className="body-text text-primaryText block text-left">
-                        Height <span className="text-red-600">*</span>
+                        Height
                       </span>
                       <input
                         type="text"
@@ -242,7 +242,7 @@ const EditSubmissionExhibition = () => {
 
               <div className="mx-auto w-[70%]">
                 <span className="body-text text-primaryText block text-left">
-                  Photo / Video <span className="text-red-600">*</span>
+                  Photo / Video
                 </span>
                 <div className="flex flex-col items-center">
                   <h3 className="py-2 text-primaryBlue text-center header3-mobile lg:header3">

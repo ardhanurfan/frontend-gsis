@@ -14,6 +14,7 @@ const DashboardGSIC = () => {
   const getData = async () => {
     try{
       const response = await get("gsic");
+      console.log(response);
       setData(response?.data?.data);
     }catch(error){
       console.log(error);
