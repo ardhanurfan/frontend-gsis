@@ -7,11 +7,13 @@ import dropdownarrow from "../../assets/dropdown.svg";
 import dropdownarrowsm from "../../assets/dropdown-sm.svg";
 import "./style.css";
 import { useEffect, useState } from "react";
+import { get } from "../../API/api";
 
 interface SelectComponentProps {
   placeholder: string;
   type: string;
-  value: any;
+  onChange: any;
+  value?: string;
 }
 
 const indicatorSeparatorStyle = {
@@ -39,6 +41,7 @@ const SelectComponent = ({
   placeholder,
   type,
   value,
+  onChange,
 }: SelectComponentProps) => {
   // const options = [
   //   { value: "ITB", label: "Institut Teknologi Bandung" },
@@ -55,17 +58,38 @@ const SelectComponent = ({
   //   { value: "Undip", label: "Universitas Dipenogoro" },
   // ];
 
-  const [dat, setDat] = useState("");
   const [options, setOptions] = useState<
     Array<{ value: string; label: string }>
   >([]);
 
-  useEffect(() => {
-    const temp = [...options];
-    for (let index = 2023; index >= 2000; index--) {
-      temp.push({ value: index.toString(), label: index.toString() });
+  const getUniversityData = async () => {
+    try {
+      const univ = await get("universities");
+      const data = univ.data?.data;
+      console.log(data);
+      const temp = [...options];
+      data.forEach((element: any) => {
+        temp.push({
+          value: element.nama_universitas,
+          label: element.nama_universitas,
+        });
+      });
+      setOptions(temp);
+    } catch (error) {
+      console.log(error);
     }
-    setOptions(temp);
+  };
+
+  useEffect(() => {
+    if (type == "Year") {
+      const temp = [...options];
+      for (let index = 2023; index >= 2000; index--) {
+        temp.push({ value: index.toString(), label: index.toString() });
+      }
+      setOptions(temp);
+    } else if (type == "University") {
+      getUniversityData();
+    }
   }, []);
 
   return (
@@ -113,12 +137,15 @@ const SelectComponent = ({
               fontWeight: 400,
             }),
           }}
+          maxMenuHeight={200}
           isClearable={true}
           isSearchable={true}
           name={type}
           placeholder={placeholder}
           options={options}
-          onChange={(e: any) => value(e.value)}
+          onChange={(e: any) => onChange(e.value)}
+          // defaultInputValue={value}
+          defaultValue={{ value: value, label: value }}
         />
       </div>
     </>

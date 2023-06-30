@@ -239,7 +239,7 @@ const Ceremony = () => {
                   disabled
                   className="bg-seccondaryBlue w-auto p-5 py-2 button-text-mobile lg:button-text rounded-xl text-white"
                 >
-                  You Registered
+                  Registered
                 </button>
               ) : (
                 <button

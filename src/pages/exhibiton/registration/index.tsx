@@ -165,7 +165,7 @@ const RegistrationExhibition = () => {
                     <SelectComponent
                       placeholder={"Select year created"}
                       type={"Year"}
-                      value={(e: string) => setYear(e)}
+                      onChange={(e: string) => setYear(e)}
                     />
                   </div>
                 </div>

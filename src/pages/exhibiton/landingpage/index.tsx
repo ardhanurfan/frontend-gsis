@@ -169,7 +169,7 @@ const Exhibition = () => {
                 disabled
                 className="button-text-mobile lg:button-text bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center"
               >
-                You Registered
+                Registered
               </button>
             ) : (
               <button
