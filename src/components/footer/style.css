@@ -1,7 +1,7 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-.custom-shadow{
-    box-shadow: 0px -5px 15px 5px rgba(0, 92, 186, 0.25);
+.custom-shadow {
+  box-shadow: 0px -5px 15px 5px rgba(0, 92, 186, 0.25);
 }

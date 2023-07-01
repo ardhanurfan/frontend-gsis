@@ -189,7 +189,7 @@ const Ceremony = () => {
         </div>
       )}
 
-      <div className="w-full h-[auto] bg-[url(./src/assets/Background_Ceremony.svg)] bg-cover">
+      <div className="w-full h-[auto] bg-[url(./assets/Background_Ceremony.svg)] bg-cover">
         <div className="pt-[150px] w-full mx-auto text-center">
           {/* Judul Webinar */}
           <h1 className="w-[70vw] header1-mobile lg:header1 mx-auto inline-block text-primaryBlue pb-5">
@@ -272,7 +272,10 @@ const Ceremony = () => {
             <h1 className="header1-mobile lg:header1 pb-10 text-primaryBlue">
               Contact Person
             </h1>
-            <ContactList line={"ditasyafa.n (Anin)"} wa={"087838280102 (Syafa)"} />
+            <ContactList
+              line={"ditasyafa.n (Anin)"}
+              wa={"087838280102 (Syafa)"}
+            />
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import "./style.css";
 import Navbar from "../../../components/navbar/Navbar";
 // import ModalNotLogin from "../../../components/modalNotLogin/modalNotLogin";
 import Footer from "../../../components/footer";

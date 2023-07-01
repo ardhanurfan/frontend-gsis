@@ -1,18 +1,18 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-.event-card{
-    background: linear-gradient(282.07deg, #005CBA 16.61%, #4F9BFD 90.56%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+.event-card {
+  background: linear-gradient(282.07deg, #005cba 16.61%, #4f9bfd 90.56%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 
 .custom-next-arrow {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    cursor: pointer;
-    /* Add more styles as needed */
-  }
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  /* Add more styles as needed */
+}

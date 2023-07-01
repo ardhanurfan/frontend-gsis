@@ -6,7 +6,7 @@ const FAQ = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full h-auto bg-[url(./src/assets/Background_FAQ.svg)] bg-cover">
+      <div className="w-full h-auto bg-[url(./assets/Background_FAQ.svg)] bg-cover">
         <div className="flex flex-col justify-center py-4">
           <h1 className="pt-[150px] text-7xl font-bold text-center text-[#005CBA] title mb-16">
             FAQ
