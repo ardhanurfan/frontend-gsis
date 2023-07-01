@@ -1,21 +1,21 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    /* outline: 0;
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  /* outline: 0;
     box-shadow: none;
     border: 0!important;
     background-image: none; */
-    /* flex: 1; */
+  /* flex: 1; */
 }
 
-select::-ms-expand{
-    display: none;
+select::-ms-expand {
+  display: none;
 }
 
 /* .select{
@@ -25,12 +25,12 @@ select::-ms-expand{
     overflow: hidden;
 } */
 
-.select::after{
-    content: url(../../../assets/dropdown-sm.svg);
-    position: absolute;
-    right:5%;
-    top: 20%;
-    cursor: pointer;
-    pointer-events: none;
-    transition:.25s all ease;
+.select::after {
+  content: url(../../../assets/dropdown-sm.svg);
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
 }

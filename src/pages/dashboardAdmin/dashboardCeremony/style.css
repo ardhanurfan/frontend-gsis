@@ -1,53 +1,52 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 details > summary {
-    list-style: none;
+  list-style: none;
 }
 details > summary::-webkit-details-marker {
-    display: none;
+  display: none;
 }
 details > summary::after {
-    content: url(../../../assets/dropdown.svg);
+  content: url(../../../assets/dropdown.svg);
 }
 
 details[open] > summary::after {
-    content: url(../../../assets/dropdown.svg);
-    @apply transform rotate-180 origin-center transition-all; 
+  content: url(../../../assets/dropdown.svg);
+  @apply transform rotate-180 origin-center transition-all;
 }
 
 details[open] > summary {
-    @apply rounded-t-xl rounded-b-none;
+  @apply rounded-t-xl rounded-b-none;
 }
 
-select{
-    list-style: none;
+select {
+  list-style: none;
 }
 
-select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    /* outline: 0;
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  /* outline: 0;
     box-shadow: none;
     border: 0!important;
     background-image: none; */
-    /* flex: 1; */
+  /* flex: 1; */
 }
 
-select::-ms-expand{
-    display: none;
+select::-ms-expand {
+  display: none;
 }
 
-.kecil::after{
-    content: url(../../../assets/dropdown-sm.svg);
-    position: absolute;
-    right:8%;
-    top: 10%;
-    cursor: pointer;
-    pointer-events: none;
-    transition:.25s all ease;
+.kecil::after {
+  content: url(../../../assets/dropdown-sm.svg);
+  position: absolute;
+  right: 8%;
+  top: 10%;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
 }
-

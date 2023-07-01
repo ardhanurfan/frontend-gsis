@@ -1,32 +1,32 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
 }
 
-select::-ms-expand{
-    display: none;
+select::-ms-expand {
+  display: none;
 }
 
-.select::after{
-    content: url(../../../../assets/dropdown-sm.svg);
-    top: 2px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right:13px;
-    height: 100%;
-    cursor: pointer;
-    pointer-events: none;
-    transition:.25s all ease;
+.select::after {
+  content: url(../../../../assets/dropdown-sm.svg);
+  top: 2px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 13px;
+  height: 100%;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
 }
 
-.text-area::after{
-    content: counter(name);
+.text-area::after {
+  content: counter(name);
 }
