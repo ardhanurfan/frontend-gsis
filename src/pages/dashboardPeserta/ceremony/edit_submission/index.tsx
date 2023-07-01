@@ -1,7 +1,6 @@
 import { Toaster } from "react-hot-toast";
 import UploadFile from "../../../../components/upload-file/upload-file";
 import Footer from "../../../../components/footer";
-import ContactList from "../../../../components/contact_list";
 import { NotifyStatus } from "../../../../components/toast_pop_up/toast";
 import { useState } from "react";
 import { postWithAuth } from "../../../../API/api";
