@@ -3,7 +3,7 @@ import { useDropzone, FileWithPath } from "react-dropzone";
 interface DropzoneProps {
   childToParent: any;
   type: string;
-  value? : string;
+  value?: string;
 }
 
 const UploadFile = ({ type, childToParent, value }: DropzoneProps) => {
@@ -39,23 +39,25 @@ const UploadFile = ({ type, childToParent, value }: DropzoneProps) => {
     childToParent(acceptedFiles[0]);
     return (
       <li key={file.path}>
-        {(acceptedFiles[0] != null) ? <div className="flex">
-          <img src="./src/assets/doc-upload-success.svg" alt="" />
-          <div className=" ml-1">
-            <p>
-              {file.path} - {file.size} bytes
-            </p>
-            <p className=" text-success font-[8px]">Successfully uploaded!</p>
+        {acceptedFiles[0] != null ? (
+          <div className="flex">
+            <img src="assets/doc-upload-success.svg" alt="" />
+            <div className=" ml-1">
+              <p>
+                {file.path} - {file.size} bytes
+              </p>
+              <p className=" text-success font-[8px]">Successfully uploaded!</p>
+            </div>
           </div>
-        </div> : (value!=null && value != "") ? <a href={value} className="flex">
-          <img src="./src/assets/doc-upload-success.svg" alt="" />
-          <div className=" ml-1">
-            <p>
-              {value}
-            </p>
-            <p className=" text-success font-[8px]">Successfully uploaded!</p>
-          </div>
-        </a> : null}
+        ) : value != null && value != "" ? (
+          <a href={value} className="flex">
+            <img src="assets/doc-upload-success.svg" alt="" />
+            <div className=" ml-1">
+              <p>{value}</p>
+              <p className=" text-success font-[8px]">Successfully uploaded!</p>
+            </div>
+          </a>
+        ) : null}
       </li>
     );
   });
@@ -65,7 +67,7 @@ const UploadFile = ({ type, childToParent, value }: DropzoneProps) => {
       <div {...getRootProps({ className: "dropzone" })}>
         <input {...getInputProps()} />
         <div className="wrapper w-full bg-slate-200 rounded-xl py-[5.34%] flex flex-col gap-2 items-center border-2 border-primaryBlue border-dashed">
-          <img src="./src/assets/upload-file.svg" alt="" />
+          <img src="assets/upload-file.svg" alt="" />
           <p
             className={
               " text-primaryText text-center font-normal text-xs font-monserrat"

@@ -67,7 +67,7 @@ const NavbarDashboard = () => {
               : "px-[8px] lg:px-[35px] rounded-full fixed flex justify-between items-center w-full max-w-[1300px] h-[60px] bg-slate-100 bg-opacity-30 backdrop-blur-sm mx-auto top-[40px] border-2 border-white border-opacity-20 shadow-md"
           }
         >
-          <img src="./src/assets/logo_gsis.svg" alt="" />
+          <img src="assets/logo_gsis.svg" alt="" />
           <div className="hidden lg:flex gap-[40px] xl:gap-[50px] button-text text-primaryBlue lg:items-center">
             <a
               className="cursor-pointer hover:text-seccondaryBlue"
@@ -154,7 +154,7 @@ const NavbarDashboard = () => {
                     className="w-full flex justify-evenly items-center"
                   >
                     <img
-                      src="../src/assets/VectorAdminProfile.svg"
+                      src="assets/VectorAdminProfile.svg"
                       className="w-[23px] h-[26px] p-1"
                       alt=""
                     />
@@ -162,7 +162,7 @@ const NavbarDashboard = () => {
                       {user?.username}
                     </p>
                     <img
-                      src="../src/assets/dropdown.svg"
+                      src="assets/dropdown.svg"
                       className={
                         (isOpenAccount ? "origin-center rotate-180" : "") +
                         " w-[23px] h-[26px] p-1"
@@ -323,7 +323,7 @@ const NavbarDashboard = () => {
                     className="hamburger bg-primaryBlue text-white rounded-lg w-[120px] h-[40px] flex justify-around items-center"
                   >
                     <img
-                      src="../src/assets/VectorAdminProfile.svg"
+                      src="assets/VectorAdminProfile.svg"
                       className="hamburger w-[23px] h-[26px] p-1"
                       alt=""
                     />
@@ -331,7 +331,7 @@ const NavbarDashboard = () => {
                       {user?.username}
                     </p>
                     <img
-                      src="../src/assets/dropdown.svg"
+                      src="assets/dropdown.svg"
                       className={
                         (isOpenAccount ? "origin-center rotate-180" : "") +
                         " hamburger w-[23px] h-[26px] p-1"

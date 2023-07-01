@@ -86,7 +86,7 @@ const Login = () => {
                     <div className="flex justify-center items-center">
                       <img
                         className="mr-2"
-                        src="../src/assets/Loading.svg"
+                        src="assets/Loading.svg"
                         alt="spinner"
                       />
                       Loading

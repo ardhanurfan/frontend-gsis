@@ -8,11 +8,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const EditDocumentBCC = () => {
-  const[ktm,setKtm] = useState<File | null>(null);
-  const[follow,setFollow] = useState<File | null>(null);
-  const[poster,setPoster] = useState<File | null>(null);
-  const[payment,setPayment] = useState<File | null>(null);
-  const[loading, setLoading] = useState(false);
+  const [ktm, setKtm] = useState<File | null>(null);
+  const [follow, setFollow] = useState<File | null>(null);
+  const [poster, setPoster] = useState<File | null>(null);
+  const [payment, setPayment] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -20,32 +20,32 @@ const EditDocumentBCC = () => {
 
   const editData = async () => {
     setLoading(true);
-    if(token){
+    if (token) {
       try {
         const response = await postWithAuth(
           "edit-bcc-user",
           {
             ktm_url: ktm,
-            ss_follow_url:follow,
-            ss_poster_url:poster,
-            payment_url:payment,
+            ss_follow_url: follow,
+            ss_poster_url: poster,
+            payment_url: payment,
           },
           token
-          );
-          console.log(response);
-          navigate("/dashboard-bcc");
-          NotifyStatus("Edit Successfully!", true);
-        } catch (error) {
-          const mess = error as any;
-          NotifyStatus(mess.response.data.data.error, false);
-        }finally{
-          setLoading(false);
-        }
+        );
+        console.log(response);
+        navigate("/dashboard-bcc");
+        NotifyStatus("Edit Successfully!", true);
+      } catch (error) {
+        const mess = error as any;
+        NotifyStatus(mess.response.data.data.error, false);
+      } finally {
+        setLoading(false);
       }
-    };
+    }
+  };
   return (
     <>
-      <Toaster/>
+      <Toaster />
       <NavbarDashboard />
       <div className="w-full px-[5.3472%] lg:px-[130px] pt-[130px] pb-[100px]">
         <h1 className="header1-mobile lg:header1 text-primaryText mb-7">
@@ -60,7 +60,12 @@ const EditDocumentBCC = () => {
               Student ID Card
             </label>
             <h3 className="header3 text-primaryText mb-3">UPLOAD FILES</h3>
-            <UploadFile childToParent={(e:File) => {setKtm(e)}} type={""}  />
+            <UploadFile
+              childToParent={(e: File) => {
+                setKtm(e);
+              }}
+              type={""}
+            />
           </div>
           <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col items-center justify-center">
             <label
@@ -72,7 +77,12 @@ const EditDocumentBCC = () => {
             <h3 className="header3 text-primaryText mb-3 lg:mb-[5px]">
               UPLOAD FILES
             </h3>
-            <UploadFile childToParent={(e:File) => {setFollow(e)}} type={""} />
+            <UploadFile
+              childToParent={(e: File) => {
+                setFollow(e);
+              }}
+              type={""}
+            />
           </div>
           <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col items-center justify-center">
             <label
@@ -82,7 +92,12 @@ const EditDocumentBCC = () => {
               Proof of Poster Upload
             </label>
             <h3 className="header3 text-primaryText mb-3">UPLOAD FILES</h3>
-            <UploadFile childToParent={(e:File) => {setPoster(e)}} type={""} />
+            <UploadFile
+              childToParent={(e: File) => {
+                setPoster(e);
+              }}
+              type={""}
+            />
           </div>
           <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col items-center justify-center">
             <label
@@ -92,27 +107,28 @@ const EditDocumentBCC = () => {
               Proof of Payment
             </label>
             <h3 className="header3 text-primaryText mb-3">UPLOAD FILES</h3>
-            <UploadFile childToParent={(e:File) => {setPayment(e)}} type={""} />
+            <UploadFile
+              childToParent={(e: File) => {
+                setPayment(e);
+              }}
+              type={""}
+            />
           </div>
         </div>
         <div className="flex justify-center">
           <button
-              disabled={loading}
-              onClick={editData}
-              className="mt-5 mb-[16px] py-[10px] px-[50px] rounded-[10px] text-button text-white bg-primaryBlue transition duration-500 ease-in-out hover:bg-seccondaryBlue shadow-lg shadow-primaryBlue"
-            >
-              {loading && (
-                <div className="flex justify-center items-center">
-                  <img
-                    className="mr-2"
-                    src="../src/assets/Loading.svg"
-                    alt="spinner"
-                  />
-                  Loading
-                </div>
-              )}
-              {!loading && "Submit"}
-            </button>
+            disabled={loading}
+            onClick={editData}
+            className="mt-5 mb-[16px] py-[10px] px-[50px] rounded-[10px] text-button text-white bg-primaryBlue transition duration-500 ease-in-out hover:bg-seccondaryBlue shadow-lg shadow-primaryBlue"
+          >
+            {loading && (
+              <div className="flex justify-center items-center">
+                <img className="mr-2" src="assets/Loading.svg" alt="spinner" />
+                Loading
+              </div>
+            )}
+            {!loading && "Submit"}
+          </button>
         </div>
       </div>
       <Footer />

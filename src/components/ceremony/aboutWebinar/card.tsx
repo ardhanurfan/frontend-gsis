@@ -18,7 +18,7 @@ const AboutWebinarCard = ({
           {/* description */}
           <div className="flex flex-row items-center justify-between gap-10">
             <img
-              src="AboutWebinarDescription.svg"
+              src="assets/AboutWebinarDescription.svg"
               className="w-10 lg:w-20 h-10 lg:h-20 xl:h-40 xl:w-40"
               alt=""
             />
@@ -42,7 +42,7 @@ const AboutWebinarCard = ({
           {/* date */}
           <div className="flex flex-row justify-between items-center gap-10">
             <img
-              src="../src/assets/AboutWebinarDate.svg"
+              src="assets/AboutWebinarDate.svg"
               className="w-10 lg:w-20 h-10 lg:h-20 xl:h-40 xl:w-40"
               alt=""
             />
@@ -57,7 +57,7 @@ const AboutWebinarCard = ({
           {/* place */}
           <div className="flex flex-row justify-between items-center gap-10">
             <img
-              src="../src/assets/AboutWebinarPlace.svg"
+              src="assets/AboutWebinarPlace.svg"
               className="w-10 lg:w-20 h-10 lg:h-20 xl:h-40 xl:w-40"
               alt=""
             />
