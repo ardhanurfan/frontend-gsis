@@ -1,7 +1,7 @@
 import "./App.css";
 import FAQ from "./pages/faq";
 import Homepage from "./pages/homepage";
-import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Login from "./pages/account/login";
 import SignUp from "./pages/account/signUp";
 import ForgotPassword from "./pages/account/forgot";
