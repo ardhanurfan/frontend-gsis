@@ -32,7 +32,7 @@ const Intro = () => {
       <h1 className="text-center header3-mobile lg:header2 text-primaryBlue py-6 lg:py-12">
         'Futurizing' Sustainability : <br /> Collaborative Revolution
       </h1>
-      <img src="theme.svg" alt="" className="relative px-4 lg:mx-auto" />
+      <img src="assets/theme.svg" alt="" className="relative px-4 lg:mx-auto" />
     </Fragment>
   );
 };
