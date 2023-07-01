@@ -6,5 +6,13 @@ export default defineConfig({
   plugins: [react()],
   build: {
     chunkSizeWarningLimit: 1600,
+    rollupOptions: {
+      external: ["react", "react-router", "react-router-dom", "react-redux"],
+      output: {
+        globals: {
+          react: "React",
+        },
+      },
+    },
   },
 });
