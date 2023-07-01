@@ -60,33 +60,32 @@ const AboutUs = () => {
             About Us
           </h1>
           <p className="mt-[75px] rounded-xl p-6 bg-slate-100 shadow-md backdrop-blur-sm shadow-slate-500 bg-opacity-30 lg:bg-transparent lg:shadow-none text-justify text-primaryText small lg:body-text">
-            GSIS sendiri terinspirasi oleh HPAIR (Harvard Project for Asian and
-            International Relation) yang diselenggarakan oleh Harvard University
-            untuk mengatasi permasalahan di Asia dengan mendatangkan pembicara
-            dari berbagai bidang. GSIS menjadi acara pertama dan terbesar di
-            Indonesia yang mengusung tema kolaborasi antara bidang teknologi,
-            seni, dan bisnis. Pada tahun ini untuk ketiga kalinya GSIS akan
-            diselenggarakan, dan untuk pertama kalinya GSIS akan diselenggarakan
-            secara luar jaringan (offline) di Kota Bandung. <br />
+            GSIS itself is inspired by HPAIR (Harvard Project for Asian and
+            International Relations) organized by Harvard University to address
+            issues in Asia by bringing speakers from various fields. GSIS is the
+            first and largest event in Indonesia that promotes collaboration
+            between the fields of technology, arts, and business. This year, for
+            the third time, GSIS will be held, and for the first time, GSIS will
+            be conducted offline in the city of Bandung. <br />
             <br />
-            GSIS 2023 akan membawa tema "Futurizing Sustainability:
-            Collaborative Revolution". Acara ini bertujuan untuk menguatkan
-            peserta dalam melahirkan inovasi yang berkelanjutan dan berorientasi
-            pada kesejahteraan masyarakat secara makro. Berfokus pada revolusi
-            kolaborasi multidisiplin antara teknologi, bisnis, dan seni sebagai
-            upaya optimalisasi inovasi strategis dan berkelanjutan melalui
-            proses inovasi yang inklusif, iteratif, kreatif, dan advokatif.
-            Acara ini juga diharapkan dapat memberikan kontribusi nyata bagi
-            masyarakat dalam mencapai tujuan pembangunan berkelanjutan. <br />
+            GSIS 2023 will carry the theme "Futurizing Sustainability:
+            Collaborative Revolution." The event aims to empower participants in
+            generating sustainable and community-oriented innovations on a macro
+            level. It focuses on the multidisciplinary collaborative revolution
+            between technology, business, and art as an effort to optimize
+            strategic and sustainable innovation through an inclusive,
+            iterative, creative, and advocacy-driven innovation process. The
+            event is also expected to make a tangible contribution to society in
+            achieving sustainable development goals. <br />
             <br />
-            Rangkaian acara yang dilaksanakan diharapkan dapat menjadi pemantik
-            bagi siswa dan mahasiswa di Indonesia untuk terus berkolaborasi dan
-            berinovasi untuk menciptakan dampak yang baik bagi Indonesia, bahkan
-            dunia. Pelaksanaan Ganesha Student Innovation Summit terdiri dari
-            Innovation Competition, Business Case Competition, Exhibition, dan
-            Grand Summit sebagai puncak acaranya. Pada GSIS 2023, kami berharap
-            manfaat yang diberikan tidak hanya dirasakan oleh para peserta saja,
-            tetapi juga dirasakan oleh masyarakat luas.
+            The series of events conducted is expected to serve as a catalyst
+            for students and students in Indonesia to continue collaborating and
+            innovating to create positive impacts for Indonesia and even the
+            world. The implementation of the Ganesha Student Innovation Summit
+            consists of the Innovation Competition, Business Case Competition,
+            Exhibition, and the Grand Summit as the pinnacle of the event. In
+            GSIS 2023, we hope that the benefits provided will not only be felt
+            by the participants themselves but also by the wider community.
           </p>
         </div>
         <div className="w-auto h-auto">

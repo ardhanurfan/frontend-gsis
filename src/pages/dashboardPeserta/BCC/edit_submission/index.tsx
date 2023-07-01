@@ -2,7 +2,6 @@ import { Toaster } from "react-hot-toast";
 import UploadFile from "../../../../components/upload-file/upload-file";
 import Footer from "../../../../components/footer";
 import { NotifyStatus } from "../../../../components/toast_pop_up/toast";
-import ContactList from "../../../../components/contact_list";
 import { useState } from "react";
 import { postWithAuth } from "../../../../API/api";
 import { useNavigate } from "react-router-dom";
