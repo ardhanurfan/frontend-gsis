@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import EventCard from "./card";
-import ex from "../../../../public/assets/exhibition_web_icon_3d.png";
-import bc from "../../../../public/assets/bcc_web_icon_3d.png";
-import si from "../../../../public/assets/gsic_web_icon_3d.png";
-import gs from "../../../../public/assets/bintang.png";
+import ex from "../../../../src/assets/exhibition_web_icon_3d.png";
+import bc from "../../../../src/assets/bcc_web_icon_3d.png";
+import si from "../../../../src/assets/gsic_web_icon_3d.png";
+import gs from "../../../../src/assets/bintang.png";
 const Event = () => {
   const [sliderRef, setSliderRef] = useState<any>(null);
   const [slidesToShow, setSlidesToShow] = useState(3);

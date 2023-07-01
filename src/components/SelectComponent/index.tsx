@@ -8,6 +8,7 @@ import dropdownarrowsm from "../../assets/dropdown-sm.svg";
 import "./style.css";
 import { useEffect, useState } from "react";
 import { get } from "../../API/api";
+import Creatable from "react-select/creatable";
 
 interface SelectComponentProps {
   placeholder: string;
@@ -101,63 +102,116 @@ const SelectComponent = ({
   return (
     <>
       <div className="w-full remove-input-txt-border">
-        <Select
-          isMulti={multiple}
-          isOptionDisabled={() => selected.length >= 2}
-          className="basic-single"
-          classNamePrefix="text-color"
-          components={{ DropdownIndicator, IndicatorSeparator }}
-          styles={{
-            clearIndicator: (base, state) => ({
-              ...base,
-              color: state.isFocused ? "white" : "white",
-              "&:hover": {
-                color: "grey",
-              },
-            }),
-            control: (baseStyles) => ({
-              ...baseStyles,
-              backgroundColor: "#005CBA",
-              overflow: "hidden",
-              border: "none",
-              paddingTop: "8px",
-              paddingBottom: "8px",
-              borderRadius: "8px",
-            }),
-            singleValue: (base) => ({
-              ...base,
-              color: "white",
-            }),
-            valueContainer: (base) => ({
-              ...base,
-              color: "white",
-            }),
-            placeholder: (base) => ({
-              ...base,
-              fontSize: "1em",
-              color: "white",
-              fontWeight: 400,
-            }),
-            input: (base) => ({
-              ...base,
-              fontSize: "1em",
-              color: "white",
-              fontWeight: 400,
-            }),
-          }}
-          maxMenuHeight={200}
-          isClearable={true}
-          isSearchable={true}
-          name={type}
-          placeholder={placeholder}
-          options={options}
-          onChange={(e: any) => {
-            multiple ? onChange(e) : onChange(e.value);
-            setSelected(e);
-          }}
-          // defaultInputValue={value}
-          defaultValue={value == null ? null : { value: value, label: value }}
-        />
+        {type != "University" ? (
+          <Select
+            isMulti={multiple}
+            isOptionDisabled={() => selected.length >= 2}
+            className="basic-single"
+            classNamePrefix="text-color"
+            components={{ DropdownIndicator, IndicatorSeparator }}
+            styles={{
+              clearIndicator: (base, state) => ({
+                ...base,
+                color: state.isFocused ? "white" : "white",
+                "&:hover": {
+                  color: "grey",
+                },
+              }),
+              control: (baseStyles) => ({
+                ...baseStyles,
+                backgroundColor: "#005CBA",
+                overflow: "hidden",
+                border: "none",
+                paddingTop: "8px",
+                paddingBottom: "8px",
+                borderRadius: "8px",
+              }),
+              singleValue: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              valueContainer: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              placeholder: (base) => ({
+                ...base,
+                fontSize: "1em",
+                color: "white",
+                fontWeight: 400,
+              }),
+              input: (base) => ({
+                ...base,
+                fontSize: "1em",
+                color: "white",
+                fontWeight: 400,
+              }),
+            }}
+            maxMenuHeight={200}
+            isSearchable={true}
+            name={type}
+            placeholder={placeholder}
+            options={options}
+            onChange={(e: any) => {
+              multiple ? onChange(e) : onChange(e.value);
+              setSelected(e);
+            }}
+            defaultValue={value == null ? null : { value: value, label: value }}
+          />
+        ) : (
+          <Creatable
+            className="basic-single"
+            classNamePrefix="text-color"
+            components={{ DropdownIndicator, IndicatorSeparator }}
+            styles={{
+              clearIndicator: (base, state) => ({
+                ...base,
+                color: state.isFocused ? "white" : "white",
+                "&:hover": {
+                  color: "grey",
+                },
+              }),
+              control: (baseStyles) => ({
+                ...baseStyles,
+                backgroundColor: "#005CBA",
+                overflow: "hidden",
+                border: "none",
+                paddingTop: "8px",
+                paddingBottom: "8px",
+                borderRadius: "8px",
+              }),
+              singleValue: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              valueContainer: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              placeholder: (base) => ({
+                ...base,
+                fontSize: "1em",
+                color: "white",
+                fontWeight: 400,
+              }),
+              input: (base) => ({
+                ...base,
+                fontSize: "1em",
+                color: "white",
+                fontWeight: 400,
+              }),
+            }}
+            maxMenuHeight={200}
+            isSearchable={true}
+            name={type}
+            placeholder={placeholder}
+            options={options}
+            onChange={(e: any) => {
+              onChange(e.value);
+            }}
+            defaultValue={value == null ? null : { value: value, label: value }}
+          />
+        )}
       </div>
     </>
   );
