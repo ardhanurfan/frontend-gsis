@@ -122,7 +122,7 @@ const BCC = () => {
         </div>
       </div>
       <div className="w-full h-auto bg-cover bg-[url(./assets/Background_BCC.svg)]">
-        <div className="w-[90%] max-w-[1159px] pt-[200px] mx-auto text-center">
+        <div className="w-[90%] max-w-[1159px] pt-[150px] lg:pt-[200px] mx-auto text-center">
           <h1 className="header1-mobile lg:header1 text-primaryText">
             Ganesha International Bussiness Case Competition (GIBCC)
           </h1>
@@ -146,7 +146,7 @@ const BCC = () => {
                     <div className="object-cover w-full max-w-[400px] h-auto rounded-lg">
                       <img
                         className="object-cover w-full max-w-[400px] h-auto rounded-lg"
-                        src="assets/bcc_web_icon_3d.png"
+                        src="assets/bcc_web_icon_lines.png"
                         alt="Business"
                       />
                     </div>
@@ -234,11 +234,11 @@ const BCC = () => {
               <div
                 onMouseEnter={() => setVisible(1)}
                 onMouseLeave={() => setVisible(0)}
-                className="relative"
+                className="relative group"
               >
                 {visible == 1 && (
-                  <div className="absolute z-10 left-0 lg:-translate-x-[225px] translate-x-0 mt-48 lg:w-[600px] h-auto flex justify-center items-center flex-col gap-5 rounded-xl border-primaryBlue border-2 bg-white bg-opacity-50 backdrop-blur-lg p-5">
-                    <div className="text-primaryText">
+                  <div className="absolute z-10 left-0 lg:-translate-x-[225px] translate-x-0 mt-48 lg:w-[600px] h-auto flex justify-center items-center flex-col gap-5 rounded-xl border-primaryOrange border-2 bg-white bg-opacity-50 backdrop-blur-lg p-5">
+                    <div className="text-primaryOrange">
                       <p className="header3-mobile mb-1 text-center">
                         Description
                       </p>
@@ -248,7 +248,7 @@ const BCC = () => {
                         participants must complete the case study.
                       </p>
                     </div>
-                    <div className="text-primaryText">
+                    <div className="text-primaryOrange">
                       <p className="header3-mobile mb-1 text-center">Output</p>
                       <p className="small text-center">
                         - Proposal <br />- Pitch Deck
@@ -256,14 +256,14 @@ const BCC = () => {
                     </div>
                   </div>
                 )}
-                <div className="flex justify-center">
+                <div className="flex justify-center group-hover:scale-125 transition-transform">
                   <img
                     src="assets/bcc_stages_orange.svg"
                     alt="Business Stream"
                   />
                 </div>
                 <div>
-                  <h3 className="text-center text-primaryBlue header3-mobile lg:header3 mt-2">
+                  <h3 className="text-center text-primaryOrange header3-mobile lg:header3 mt-2">
                     Phase 1
                   </h3>
                 </div>
@@ -279,7 +279,7 @@ const BCC = () => {
               <div
                 onMouseEnter={() => setVisible(2)}
                 onMouseLeave={() => setVisible(0)}
-                className="relative"
+                className="relative group"
               >
                 {visible == 2 && (
                   <div className="absolute z-10 left-0 lg:-translate-x-[225px] translate-x-0 mt-48 lg:w-[600px] h-auto flex justify-center items-center flex-col gap-5 rounded-xl border-primaryBlue border-2 bg-white bg-opacity-50 backdrop-blur-lg p-5">
@@ -299,16 +299,16 @@ const BCC = () => {
                     </div>
                   </div>
                 )}
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center group-hover:scale-125 transition-transform">
                   <img
                     className=""
-                    src="assets/bcc_stages_green.svg"
+                    src="assets/bcc_stages_blue.svg"
                     alt="Business Stream"
                   />
                 </div>
                 <div>
                   <h3 className="text-center text-primaryBlue header3-mobile lg:header3">
-                    Phase 1
+                    Phase 2
                   </h3>
                 </div>
               </div>
@@ -529,10 +529,11 @@ const BCC = () => {
                 ) : (
                   <button
                     onClick={goToRegistration}
+                    disabled
                     type="button"
                     className="cursor-pointer button-text-mobile lg:button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
                   >
-                    Register Here
+                    Coming Soon
                   </button>
                 )}
               </div>

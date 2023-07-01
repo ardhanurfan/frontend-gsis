@@ -6,7 +6,9 @@ const Footer = () => {
   return (
     <div className="relative bottom-0 clear-both">
       <div className="custom-shadow px-[5px] lg:px-[35px] flex justify-between items-center w-full h-[50px] bg-slate-100 bg-opacity-30 backdrop-blur-sm mx-auto overflow-hidden border-2 border-white border-opacity-20">
-        <img src={logo} alt="" />
+        <a href="/">
+          <img src={logo} alt="" />
+        </a>
         <div className="flex justify-between lg:justify-center gap-[5px] items-center">
           <svg
             width="15"

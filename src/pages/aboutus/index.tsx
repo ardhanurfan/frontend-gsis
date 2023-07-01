@@ -55,7 +55,7 @@ const AboutUs = () => {
     <>
       <Navbar />
       <div className="w-full h-auto bg-cover bg-[url(../src/assets/Background_AboutUS.svg)]">
-        <div className="pt-[150px] lg:pt-[285px] w-[90vw] max-w-[928px] mx-auto text-center">
+        <div className="pt-[150px] lg:pt-[200px] w-[90vw] max-w-[928px] mx-auto text-center">
           <h1 className="w-auto mx-auto inline-block header1-mobile lg:header1 text-primaryText">
             About Us
           </h1>

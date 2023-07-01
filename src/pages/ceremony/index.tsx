@@ -190,7 +190,7 @@ const Ceremony = () => {
       )}
 
       <div className="w-full h-[auto] bg-[url(./assets/Background_Ceremony.svg)] bg-cover">
-        <div className="pt-[150px] w-full mx-auto text-center">
+        <div className="pt-[150px] lg:pt-[200px] w-full mx-auto text-center">
           {/* Judul Webinar */}
           <h1 className="w-[70vw] header1-mobile lg:header1 mx-auto inline-block text-primaryBlue pb-5">
             Opening Ceremony
@@ -211,7 +211,7 @@ const Ceremony = () => {
                     </div>
                     <NextArrow/>
                 </div> */}
-          <div className="mt-20">
+          <div className="">
             <TitleWebinarCard
               title="ABOUT SPEAKER,"
               name="Royyan Dzakiy"

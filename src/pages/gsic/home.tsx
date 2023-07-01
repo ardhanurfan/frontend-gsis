@@ -120,7 +120,7 @@ function HomePageGSIC() {
         </div>
       </div>
       <div className="bg-[url(./assets/Background_GSIC.svg)] bg-cover overflow-auto">
-        <h1 className="mt-[130px] max-w-[1160px] mx-auto text-center header1-mobile lg:header1 text-primaryBlue">
+        <h1 className="mt-[150px] lg:mt-[200px] max-w-[1160px] mx-auto text-center header1-mobile lg:header1 text-primaryBlue">
           Ganesha Social Impact Challenge (GSIC)
         </h1>
         <div className="mt-12 h-auto lg:h-[500px] w-[90vw] max-w-[1246px] mx-auto bg-slate-100 bg-opacity-30 rounded-xl shadow-lg shadow-slate-500 flex overflow-auto">
@@ -137,7 +137,7 @@ function HomePageGSIC() {
                   <div className="object-cover w-full max-w-[400px] h-auto rounded-lg">
                     <img
                       className="object-cover w-full max-w-[400px] h-auto rounded-lg"
-                      src="assets/gsic_web_icon_3d.png"
+                      src="assets/gsic_web_icon_lines.png"
                       alt="Business"
                     />
                   </div>
@@ -268,10 +268,11 @@ function HomePageGSIC() {
               ) : (
                 <button
                   onClick={goToRegistration}
+                  disabled
                   type="button"
                   className="cursor-pointer button-text-mobile lg:button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
                 >
-                  Register Here
+                  Coming Soon
                 </button>
               )}
             </div>

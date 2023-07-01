@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import EventCard from "./card";
-import ex from "../../../assets/exhibition.png";
-import bc from "../../../assets/bcc_web_icon_3d.png";
-import si from "../../../assets/gsic_web_icon_3d.png";
-import gs from "../../../assets/bintang.png";
+import ex from "../../../../public/assets/exhibition_web_icon_3d.png";
+import bc from "../../../../public/assets/bcc_web_icon_3d.png";
+import si from "../../../../public/assets/gsic_web_icon_3d.png";
+import gs from "../../../../public/assets/bintang.png";
 const Event = () => {
   const [sliderRef, setSliderRef] = useState<any>(null);
   const [slidesToShow, setSlidesToShow] = useState(3);
@@ -69,7 +69,7 @@ const Event = () => {
         <div className="w-[171px] h-[220px] xl:w-[1111px] xl:h-[450px] mx-auto ">
           <Slider ref={setSliderRef} {...settings}>
             <EventCard image={ex} label="EXHIBITION" />
-            <EventCard image={bc} label="BUSSINESS CASE" />
+            <EventCard image={bc} label="BUSINESS CASE" />
             <EventCard image={si} label="SOCIAL IMPACT" />
             <EventCard image={gs} label="GRAND SUMMIT" />
           </Slider>
