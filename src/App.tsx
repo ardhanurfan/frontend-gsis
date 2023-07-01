@@ -1,7 +1,7 @@
 import "./App.css";
 import FAQ from "./pages/faq";
 import Homepage from "./pages/homepage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Login from "./pages/account/login";
 import SignUp from "./pages/account/signUp";
 import ForgotPassword from "./pages/account/forgot";
@@ -39,7 +39,7 @@ import EditDocumentGSIC from "./pages/dashboardPeserta/GSIC/edit_document";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         {/* Main Page */}
         <Route path="/" element={<Homepage />} />
@@ -247,7 +247,7 @@ function App() {
         <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
