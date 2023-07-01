@@ -11,7 +11,7 @@ const FAQ = () => {
           <h1 className="pt-[150px] text-7xl font-bold text-center text-[#005CBA] title mb-16">
             FAQ
           </h1>
-          <div className="mt-9.5 space-y-4">
+          <div className="mt-9.5 space-y-4 mb-16">
             <details className="px-5 lg:px-52 pb-5 hover:cursor-pointer rounded-xl">
               <summary className="w-full h-auto lg:h-[70px] py-2 lg:py-0 text-lg bg-gradient-to-l from-[#060B81] to-[#005CBA] rounded-xl text-white px-[5%] mx-auto flex items-center justify-between shadow-lg hover:">
                 How do I join the program?
