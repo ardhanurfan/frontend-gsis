@@ -24,11 +24,7 @@ const Intro = () => {
           </p>
         </div>
         <div className="hidden lg:block pt-[150px] sm:pt-[140px] lg:pt-[130px] w-2/6 2xl:w-fit ">
-          <img
-            src="./src/assets/title_ilustration.svg"
-            alt=""
-            className="relative"
-          />
+          <img src="assets/title_ilustration.svg" alt="" className="relative" />
         </div>
       </div>
       <h1 className="text-center header3 lg:header1 text-primaryBlue mt-20">

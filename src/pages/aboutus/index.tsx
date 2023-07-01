@@ -17,7 +17,7 @@ const AboutUs = () => {
       <>
         <div className="h-10 w-10 rounded-full hover:bg-slate-400 hover:bg-opacity-25 hidden lg:flex justify-center items-center">
           <img
-            src="./src/assets/carousel_arrow.svg"
+            src="assets/carousel_arrow.svg"
             alt="prev"
             className="hidden lg:block"
             onClick={sliderRef?.slickNext}
@@ -32,7 +32,7 @@ const AboutUs = () => {
       <>
         <div className="h-10 w-10 rounded-full hover:bg-slate-400 hover:bg-opacity-25 hidden lg:flex justify-center items-center">
           <img
-            src="./src/assets/carousel_arrow.svg"
+            src="assets/carousel_arrow.svg"
             alt="prev"
             style={{ transform: "rotate(180deg)" }}
             className="hidden lg:block"
@@ -148,7 +148,7 @@ const AboutUs = () => {
                     </div>
                     <img
                       className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] float-left"
-                      src="../src/assets/Timeline1.svg"
+                      src="assets/Timeline1.svg"
                       alt="p"
                     />
                     <h3 className="pt-[19.5%] md:pt-[9%] lg:pt-[7%] 2xl:pt-[7%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryBlue">
@@ -170,7 +170,7 @@ const AboutUs = () => {
                     </div>
                     <img
                       className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
-                      src="../src/assets/Timeline2.svg"
+                      src="assets/Timeline2.svg"
                       alt="p"
                     />
                     <h3 className="pt-[23.75%] md:pt-[12.75%] lg:pt-[9.75%] 2xl:pt-[10.75%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
@@ -214,7 +214,7 @@ const AboutUs = () => {
                     </div>
                     <img
                       className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
-                      src="../src/assets/Timeline4.svg"
+                      src="assets/Timeline4.svg"
                       alt="p"
                     />
                     <h3 className="pt-[23.85%] md:pt-[13%] lg:pt-[9.5%] 2xl:pt-[10.5%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
@@ -235,7 +235,7 @@ const AboutUs = () => {
                     </div>
                     <img
                       className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] -mt-[35px] float-left"
-                      src="../src/assets/Timeline1.svg"
+                      src="assets/Timeline1.svg"
                       alt="p"
                     />
                     <h3 className="pt-[23.85%] md:pt-[12.75%] lg:pt-[9.85%] 2xl:pt-[11%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryBlue">
@@ -256,7 +256,7 @@ const AboutUs = () => {
                     </div>
                     <img
                       className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
-                      src="../src/assets/Timeline2.svg"
+                      src="assets/Timeline2.svg"
                       alt="p"
                     />
                     <h3 className="pt-[28.55%] md:pt-[15.25%] lg:pt-[11.55%] 2xl:pt-[12.75%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
@@ -279,7 +279,7 @@ const AboutUs = () => {
                     </div>
                     <img
                       className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] -mt-[35px] float-left"
-                      src="../src/assets/Timeline3.svg"
+                      src="assets/Timeline3.svg"
                       alt="p"
                     />
                     <h3 className="pt-[18.85%] md:pt-[12.85%] lg:pt-[9.85%] 2xl:pt-[11%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryOrange">
@@ -300,7 +300,7 @@ const AboutUs = () => {
                     </div>
                     <img
                       className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
-                      src="../src/assets/Timeline4.svg"
+                      src="assets/Timeline4.svg"
                       alt="p"
                     />
                     <h3 className="pt-[33.25%] md:pt-[15.25%] lg:pt-[11.25%] 2xl:pt-[12.75%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryYellow text-right">

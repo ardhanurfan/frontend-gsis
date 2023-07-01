@@ -8,7 +8,7 @@ const ForgotSent = () => {
           <div className="relative w-full h-full rounded-[10px] flex flex-col justify-center items-center bg-white xl:px-[296px]">
             <Dot></Dot>
             <img
-              src="../src/assets/check.svg"
+              src="assets/check.svg"
               className="h-[128px] xl:h-[224px] w-auto"
               alt="Sent Success"
             />

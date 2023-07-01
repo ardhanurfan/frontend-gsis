@@ -1,7 +1,7 @@
 const NotFound = () => {
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center">
-      <img src="../src/assets/404.svg" alt="404" />
+      <img src="assets/404.svg" alt="404" />
       <h1 className="header2-mobile lg:header2 text-primaryText">
         Page Not Found...
       </h1>

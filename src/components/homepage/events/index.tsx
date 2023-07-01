@@ -14,7 +14,7 @@ const Event = () => {
   const NextArrow = () => {
     return (
       <img
-        src="./src/assets/event_right.svg"
+        src="assets/event_right.svg"
         alt="next"
         className="ml-[15px] cursor-pointer"
         onClick={sliderRef?.slickNext}
@@ -25,7 +25,7 @@ const Event = () => {
   const PrevArrow = () => {
     return (
       <img
-        src="./src/assets/event_right.svg"
+        src="assets/event_right.svg"
         alt="prev"
         style={{ transform: "rotate(180deg)" }}
         className="mr-[30px] cursor-pointer"

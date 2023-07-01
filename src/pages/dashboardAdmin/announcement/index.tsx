@@ -64,7 +64,7 @@ const Announcement = () => {
 
   return (
     <>
-      <Toaster/>
+      <Toaster />
       <div className="fixed bg-primaryBlue bg-opacity-30 w-screen h-screen z-50 flex items-center justify-center">
         <div className="fixed bg-white w-[70%] mx-auto h-auto rounded-2xl z-70 text-center">
           <h1 className="text-[#015CBA] header1-mobile xl:header1 w-auto pt-5">
@@ -167,22 +167,25 @@ const Announcement = () => {
                   <div className="">
                     <button
                       disabled={loading}
-                      className={`${loading? "bg-primaryBlue text-white":"bg-white hover:bg-slate-300"} w-auto h-auto rounded-lg border-2 border-[#005CBA] text-[#005CBA] shadow-lg `}
+                      className={`${
+                        loading
+                          ? "bg-primaryBlue text-white"
+                          : "bg-white hover:bg-slate-300"
+                      } w-auto h-auto rounded-lg border-2 border-[#005CBA] text-[#005CBA] shadow-lg `}
                       onClick={() => postData("SENT")}
                     >
-
-                    <div className="button-text-mobile lg:button-text p-2">
-                      {loading && (
-                        <div className="flex justify-center items-center">
-                          <img
-                            className="mr-2"
-                            src="../src/assets/Loading.svg"
-                            alt="spinner"
-                          />
-                          Loading
-                        </div>
-                      )}
-                      {!loading && "Announce Now"}
+                      <div className="button-text-mobile lg:button-text p-2">
+                        {loading && (
+                          <div className="flex justify-center items-center">
+                            <img
+                              className="mr-2"
+                              src="assets/Loading.svg"
+                              alt="spinner"
+                            />
+                            Loading
+                          </div>
+                        )}
+                        {!loading && "Announce Now"}
                       </div>
                     </button>
                   </div>

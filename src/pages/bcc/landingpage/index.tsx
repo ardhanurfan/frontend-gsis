@@ -18,7 +18,7 @@ const BCC = () => {
       <>
         <div className="h-10 w-10 rounded-full hover:bg-slate-400 hover:bg-opacity-25 hidden lg:flex justify-center items-center">
           <img
-            src="./src/assets/event_right.svg"
+            src="assets/event_right.svg"
             alt="prev"
             className="hidden lg:block"
             onClick={sliderRef?.slickNext}
@@ -33,7 +33,7 @@ const BCC = () => {
       <>
         <div className="h-10 w-10 rounded-full hover:bg-slate-400 hover:bg-opacity-25 hidden lg:flex justify-center items-center">
           <img
-            src="./src/assets/event_right.svg"
+            src="assets/event_right.svg"
             alt="prev"
             style={{ transform: "rotate(180deg)" }}
             className="hidden lg:block"
@@ -105,7 +105,7 @@ const BCC = () => {
           </div>
           <div className="flex flex-col items-center gap-5">
             <img
-              src="../src/assets/orang.svg"
+              src="assets/orang.svg"
               className="h-[30%] w-[30%] md:h-[20%] md:w-[20%]"
               alt=""
             />
@@ -146,14 +146,14 @@ const BCC = () => {
                     <div className="object-cover w-full max-w-[400px] h-auto rounded-lg">
                       <img
                         className="object-cover w-full max-w-[400px] h-auto rounded-lg"
-                        src="../src/assets/bcc_web_icon_3d.png"
+                        src="assets/bcc_web_icon_3d.png"
                         alt="Business"
                       />
                     </div>
                     <div className="object-cover w-full max-w-[400px] h-auto rounded-lg">
                       <img
                         className="object-cover w-full max-w-[400px] h-auto rounded-lg"
-                        src="../src/assets/bcc_web_icon_flat.png"
+                        src="assets/bcc_web_icon_flat.png"
                         alt="Business"
                       />
                     </div>
@@ -183,7 +183,7 @@ const BCC = () => {
                   <div className="flex items-center justify-center">
                     <img
                       className=""
-                      src="../src/assets/bcc_stream_technology.svg"
+                      src="assets/bcc_stream_technology.svg"
                       alt="Technology"
                     />
                   </div>
@@ -197,7 +197,7 @@ const BCC = () => {
                   <div className="flex items-center justify-center">
                     <img
                       className=""
-                      src="../src/assets/bcc_stream_business.svg"
+                      src="assets/bcc_stream_business.svg"
                       alt="Business"
                     />
                   </div>
@@ -211,7 +211,7 @@ const BCC = () => {
                   <div className="flex items-center justify-center">
                     <img
                       className=""
-                      src="../src/assets/bcc_stream_art.svg"
+                      src="assets/bcc_stream_art.svg"
                       alt="Art"
                     />
                   </div>
@@ -258,7 +258,7 @@ const BCC = () => {
                 )}
                 <div className="flex justify-center">
                   <img
-                    src="../src/assets/bcc_stages_orange.svg"
+                    src="assets/bcc_stages_orange.svg"
                     alt="Business Stream"
                   />
                 </div>
@@ -271,7 +271,7 @@ const BCC = () => {
               <div className="flex w-[100px] h-[120px] items-center justify-center">
                 <img
                   className=""
-                  src="../src/assets/bcc_stages_separator.svg"
+                  src="assets/bcc_stages_separator.svg"
                   alt="Business Stream"
                 />
               </div>
@@ -302,7 +302,7 @@ const BCC = () => {
                 <div className="flex items-center justify-center">
                   <img
                     className=""
-                    src="../src/assets/bcc_stages_green.svg"
+                    src="assets/bcc_stages_green.svg"
                     alt="Business Stream"
                   />
                 </div>
@@ -338,7 +338,7 @@ const BCC = () => {
                       </div>
                       <img
                         className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] float-left"
-                        src="../src/assets/Timeline1.svg"
+                        src="assets/Timeline1.svg"
                         alt="p"
                       />
                       <h3 className="pt-[19.5%] md:pt-[9%] lg:pt-[7%] 2xl:pt-[7%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue">
@@ -360,7 +360,7 @@ const BCC = () => {
                       </div>
                       <img
                         className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
-                        src="../src/assets/Timeline2.svg"
+                        src="assets/Timeline2.svg"
                         alt="p"
                       />
                       <h3 className="pt-[23.75%] md:pt-[12.75%] lg:pt-[9.75%] 2xl:pt-[10.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
@@ -381,7 +381,7 @@ const BCC = () => {
                       </div>
                       <img
                         className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] -mt-[35px] float-left"
-                        src="../src/assets/Timeline3.svg"
+                        src="assets/Timeline3.svg"
                         alt="p"
                       />
                       <h3 className="pt-[28%] md:pt-[15%] lg:pt-[11.5%] 2xl:pt-[13%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange">
@@ -402,7 +402,7 @@ const BCC = () => {
                       </div>
                       <img
                         className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
-                        src="../src/assets/Timeline4.svg"
+                        src="assets/Timeline4.svg"
                         alt="p"
                       />
                       <h3 className="pt-[29%] md:pt-[15.25%] lg:pt-[11.5%] 2xl:pt-[12.5%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
@@ -424,7 +424,7 @@ const BCC = () => {
                       </div>
                       <img
                         className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] -mt-[35px] float-left"
-                        src="../src/assets/Timeline1.svg"
+                        src="assets/Timeline1.svg"
                         alt="p"
                       />
                       <h3 className="pt-[23.85%] md:pt-[12.75%] lg:pt-[9.85%] 2xl:pt-[11%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue">
@@ -446,7 +446,7 @@ const BCC = () => {
                       </div>
                       <img
                         className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
-                        src="../src/assets/Timeline2.svg"
+                        src="assets/Timeline2.svg"
                         alt="p"
                       />
                       <h3 className="pt-[23.85%] md:pt-[12.85%] lg:pt-[11.55%] 2xl:pt-[11%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
@@ -467,7 +467,7 @@ const BCC = () => {
                       </div>
                       <img
                         className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] -mt-[35px] float-left"
-                        src="../src/assets/Timeline3.svg"
+                        src="assets/Timeline3.svg"
                         alt="p"
                       />
                       <h3 className="pt-[29%] md:pt-[15.25%] lg:pt-[9.85%] 2xl:pt-[12.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange">
@@ -489,7 +489,7 @@ const BCC = () => {
                       </div>
                       <img
                         className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
-                        src="../src/assets/Timeline4.svg"
+                        src="assets/Timeline4.svg"
                         alt="p"
                       />
                       <h3 className="pt-[23.25%] md:pt-[12.75%] lg:pt-[9.25%] 2xl:pt-[10.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
@@ -507,11 +507,7 @@ const BCC = () => {
           </div>
           <div className="w-auto h-auto mt-20 items-center justify-center flex">
             <div className="hidden lg:block">
-              <img
-                className=""
-                src="../src/assets/bcc_arrow_left.svg"
-                alt="Arrow"
-              />
+              <img className="" src="assets/bcc_arrow_left.svg" alt="Arrow" />
             </div>
             <div>
               <div className="mx-auto text-center w-[80%] max-w-[714px]">
@@ -542,11 +538,7 @@ const BCC = () => {
               </div>
             </div>
             <div className="hidden lg:block">
-              <img
-                className=""
-                src="../src/assets/bcc_arrow_right.svg"
-                alt="Arrow"
-              />
+              <img className="" src="assets/bcc_arrow_right.svg" alt="Arrow" />
             </div>
           </div>
           <div className="w-auto h-auto mt-20">
