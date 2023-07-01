@@ -92,7 +92,10 @@ const ParticipantCer = () => {
               <h2 className="header2-mobile lg:header2 text-primaryText text-center mb-[34px]">
                 If you’re having trouble, please contact
               </h2>
-              <ContactList line="" wa="" />
+              <ContactList
+                line={"ditasyafa.n (Anin)"}
+                wa={"087838280102 (Syafa)"}
+              />
             </div>
           </div>
         </>
