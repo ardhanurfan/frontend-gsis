@@ -46,7 +46,7 @@ const DashboardExhibition = () => {
             <h2 className="header2 text-primaryText mb-[34px]">
               If you're having trouble, please contact
             </h2>
-            <ContactList line={""} wa={""} />
+            <ContactList line="felizhabalqis_" wa="081223216737" />
           </div>
         </>
       )}

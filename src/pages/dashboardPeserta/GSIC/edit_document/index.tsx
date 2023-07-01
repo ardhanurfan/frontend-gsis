@@ -269,12 +269,6 @@ const EditDocumentGSIC = () => {
             {!loading && "Submit"}
           </button>
         </div>
-        <div className="flex flex-col items-center mt-14 mb-[30px]">
-          <h2 className="header2-mobile lg:header2 text-primaryText text-center mb-9">
-            If you're having trouble, please contact
-          </h2>
-          <ContactList line={""} wa={""} />
-        </div>
       </div>
       <Footer />
     </>
