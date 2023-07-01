@@ -41,18 +41,6 @@ const FAQ = () => {
                 Yes, of course
               </p>
             </details>
-
-            <details className="px-5 lg:px-52 pb-5 hover:cursor-pointer rounded-xl">
-              <summary className="w-full h-auto lg:h-[70px] py-2 lg:py-0 text-lg bg-gradient-to-l from-[#060B81] to-[#005CBA] rounded-xl text-white px-[5%] mx-auto flex items-center justify-between shadow-lg">
-                Lorem ipsum dolor sit amet.
-              </summary>
-              <p className="w-auto h-auto bg-white rounded-b-xl flex items-center justify-between shadow-lg px-[5%] py-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-                illum. Enim quidem necessitatibus officiis ducimus? Ex, alias,
-                aliquam optio rerum, architecto perspiciatis aspernatur libero
-                placeat delectus cumque quibusdam temporibus pariatur?
-              </p>
-            </details>
           </div>
         </div>
       </div>

@@ -216,7 +216,7 @@ const Ceremony = () => {
               title="ABOUT SPEAKER,"
               name="Royyan Dzakiy"
               paragraph=""
-              foto="../src/assets/RayyanDzakiy.png"
+              foto="assets/RayyanDzakiy.png"
             />
           </div>
 

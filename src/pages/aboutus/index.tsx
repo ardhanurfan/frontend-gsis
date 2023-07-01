@@ -192,7 +192,7 @@ const AboutUs = () => {
                     </div>
                     <img
                       className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] -mt-[35px] float-left"
-                      src="../src/assets/Timeline3.svg"
+                      src="assets/Timeline3.svg"
                       alt="p"
                     />
                     <h3 className="pt-[23.85%] md:pt-[12.5%] lg:pt-[9.85%] 2xl:pt-[11.25%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryOrange">
