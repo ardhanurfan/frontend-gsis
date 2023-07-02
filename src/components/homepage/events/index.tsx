@@ -7,6 +7,8 @@ import ex from "../../../../src/assets/exhibition_web_icon_3d.png";
 import bc from "../../../../src/assets/bcc_web_icon_3d.png";
 import si from "../../../../src/assets/gsic_web_icon_3d.png";
 import gs from "../../../../src/assets/bintang.png";
+import cr from "../../../../src/assets/ceremony.png";
+
 const Event = () => {
   const [sliderRef, setSliderRef] = useState<any>(null);
   const [slidesToShow, setSlidesToShow] = useState(3);
@@ -39,6 +41,8 @@ const Event = () => {
     slidesToShow: slidesToShow,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
 
   useEffect(() => {
@@ -68,6 +72,7 @@ const Event = () => {
         <PrevArrow />
         <div className="w-[171px] h-[220px] xl:w-[1111px] xl:h-[450px] mx-auto ">
           <Slider ref={setSliderRef} {...settings}>
+            <EventCard image={cr} label="CEREMONY" />
             <EventCard image={ex} label="EXHIBITION" />
             <EventCard image={bc} label="BUSINESS CASE" />
             <EventCard image={si} label="SOCIAL IMPACT" />

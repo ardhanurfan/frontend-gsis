@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import { getWithAuth } from "../../../API/api";
-import "./style.css"
+import "./style.css";
 // import TimelineItem from "../../../components/gsic/TimelineItem";
 // import CarouselElement from "../../../components/gsic/Carousel";
 // import as from '../../../assets/BillGates.svg'
@@ -88,6 +88,8 @@ const Exhibition = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
   return (
@@ -166,11 +168,12 @@ const Exhibition = () => {
             </div>
             <div className="w-full p-[33px] lg:pr-[48px] flex items-center">
               <p className="small lg:body-text text-primaryText text-justify">
-                This exhibition is a platform for students and the general public
-                to showcase their work and demonstrate their skills and talents in
-                the fields of art, technology, and business. The purpose of this
-                exhibition is to give visitors the opportunity to gain exposure
-                and also appreciate the works of industry players in these fields.
+                This exhibition is a platform for students and the general
+                public to showcase their work and demonstrate their skills and
+                talents in the fields of art, technology, and business. The
+                purpose of this exhibition is to give visitors the opportunity
+                to gain exposure and also appreciate the works of industry
+                players in these fields.
               </p>
             </div>
           </div>
@@ -189,7 +192,7 @@ const Exhibition = () => {
                   <div className="h-[10px] w-[10px] rounded-full bg-primaryOrange"></div>
                 </div>
                 <div className="relative">
-                <div className="pt-[25%] md:pt-[15.25%] lg:pt-[10.25%] relative">
+                  <div className="pt-[25%] md:pt-[15.25%] lg:pt-[10.25%] relative">
                     <div className="absolute flex flex-col items-center text-primaryBlue justify-center ml-[14.75%] md:ml-[33.5%] lg:ml-[37%] 2xl:ml-[37%] mt-[9%] md:mt-[5%] lg:mt-[3.5%] 2xl:mt-[3.5%]">
                       <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
                         15-31
@@ -207,8 +210,7 @@ const Exhibition = () => {
                       EVENT
                     </h3>
                     <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue 2xl:mr-[9.923%]">
-                      OPEN <br className="md:hidden" /> REGISTRASI <br />{" "}
-                      KARYA
+                      OPEN <br className="md:hidden" /> REGISTRASI <br /> KARYA
                     </h3>
                   </div>
                   <div className="pt-[1.25%] relative">

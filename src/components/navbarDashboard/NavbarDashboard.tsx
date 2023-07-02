@@ -23,6 +23,7 @@ const NavbarDashboard = () => {
         setUser(data);
       } catch (error) {
         console.log(error);
+        localStorage.removeItem("access_token");
       }
     }
   };

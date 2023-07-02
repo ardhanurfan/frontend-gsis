@@ -36,6 +36,7 @@ import ParticipantGSIC from "./pages/dashboardPeserta/GSIC/participant_informati
 import EditDocumentBCC from "./pages/dashboardPeserta/BCC/edit_document";
 import EditSubmissionGSIC from "./pages/dashboardPeserta/GSIC/edit_submission";
 import EditDocumentGSIC from "./pages/dashboardPeserta/GSIC/edit_document";
+import ChangePassword from "./pages/dashboardPeserta/profilePeserta/change_password";
 
 function App() {
   return (
@@ -105,6 +106,14 @@ function App() {
           element={
             <ProtectedRoute>
               <EditProfile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/change-password"
+          element={
+            <ProtectedRoute>
+              <ChangePassword />
             </ProtectedRoute>
           }
         />

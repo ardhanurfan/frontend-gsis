@@ -34,6 +34,7 @@ const Navbar = () => {
         setUser(data);
       } catch (error) {
         console.log(error);
+        localStorage.removeItem("access_token");
       }
     }
   };
@@ -79,7 +80,7 @@ const Navbar = () => {
           }
         >
           <a href="/">
-            <img src="assets/logo_gsis.svg" alt=""/>
+            <img src="assets/logo_gsis.svg" alt="" />
           </a>
           <div className="hidden lg:flex gap-[40px] xl:gap-[50px] button-text text-primaryBlue lg:items-center">
             <a className="cursor-pointer hover:text-seccondaryBlue" href="/">

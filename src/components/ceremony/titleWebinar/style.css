@@ -1,0 +1,13 @@
+.attribute {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 30px !important;
+}
+
+@media (min-width: 1024px) {
+  .attribute {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 65px !important;
+  }
+}

@@ -211,13 +211,8 @@ const Ceremony = () => {
                     </div>
                     <NextArrow/>
                 </div> */}
-          <div className="">
-            <TitleWebinarCard
-              title="ABOUT SPEAKER,"
-              name="Royyan Dzakiy"
-              paragraph=""
-              foto="assets/RayyanDzakiy.png"
-            />
+          <div className="flex lg:px-2 xl:px-6">
+            <TitleWebinarCard />
           </div>
 
           {/* About Webinar */}
@@ -258,7 +253,7 @@ const Ceremony = () => {
                 </button>
               ) : (
                 <button
-                  className="bg-primaryBlue w-auto p-5 py-2 button-text-mobile lg:button-text rounded-xl text-white hover:bg-seccondaryBlue"
+                  className="bg-primaryBlue w-auto p-5 py-2 button-text-mobile lg:button-text rounded-xl text-white hover:bg-seccondaryBlue shadow-lg shadow-blue-500"
                   onClick={() => setPopUp(true)}
                 >
                   Register Here

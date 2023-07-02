@@ -51,6 +51,8 @@ const BCC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
   const [isRegistered, setRegistered] = useState(false);
