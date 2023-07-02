@@ -2,7 +2,11 @@ import { useState } from "react";
 import Dot from "../../../../components/account/dot";
 import TextField from "../../../../components/account/text-field";
 import { useNavigate } from "react-router-dom";
-import { post } from "../../../../API/api";
+import { postWithAuth } from "../../../../API/api";
+import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
+import Footer from "../../../../components/footer";
+import { Toaster } from "react-hot-toast";
+import { NotifyStatus } from "../../../../components/toast_pop_up/toast";
 
 const ChangePassword = () => {
   const [loading, setLoading] = useState(false);
@@ -10,22 +14,30 @@ const ChangePassword = () => {
   const [reenterPassword, setReenterPassword] = useState("");
   const navigate = useNavigate();
 
+  const token = localStorage.getItem("access_token");
+
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const response = await post("login", {
-        newPassword: newPassword,
-        reenterPassword: reenterPassword,
-      });
+      const response = await postWithAuth(
+        "change-password",
+        {
+          password: newPassword,
+          confirmPassword: reenterPassword,
+        },
+        token ?? ""
+      );
       const access_token = response?.data?.data?.acess_token;
       localStorage.setItem("access_token", access_token);
       setNewPassword("");
       setReenterPassword("");
-      navigate("/");
+      navigate("/profile");
+      NotifyStatus("Change Password Successfully!", true);
     } catch (error) {
-      console.log(error);
+      const mess = error as any;
+      NotifyStatus(mess.response.data.data.error, false);
     } finally {
       setLoading(false);
     }
@@ -33,7 +45,9 @@ const ChangePassword = () => {
 
   return (
     <>
-      <div className="h-screen w-screen bg-white p-4 xl:py-[62px] xl:px-[70px]">
+      <Toaster />
+      <NavbarDashboard />
+      <div className="h-screen w-screen bg-white px-4 xl:px-[70px] mt-[130px] mb-[50px]">
         <div className="w-full h-full rounded-[10px] shadow-lg shadow-primaryBlue bg-gradient-to-br from-primaryBlue to-white p-[3px]">
           <div className="relative w-full h-full rounded-[10px] px-[45px] lg:px-[30%] flex flex-col justify-center items-center bg-white">
             <Dot></Dot>
@@ -76,21 +90,14 @@ const ChangePassword = () => {
                       Loading
                     </div>
                   )}
-                  {!loading && "Login"}
+                  {!loading && "Change Password"}
                 </button>
               </div>
             </form>
-            <p className="button-text-mobile lg:button-text text-primaryBlue text-center">
-              Don't have an account?{" "}
-              <span>
-                <a href="/sign-up" className="text-primaryOrange">
-                  Register now!
-                </a>
-              </span>
-            </p>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

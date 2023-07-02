@@ -34,6 +34,7 @@ const Navbar = () => {
         setUser(data);
       } catch (error) {
         console.log(error);
+        localStorage.removeItem("access_token");
       }
     }
   };
@@ -78,7 +79,9 @@ const Navbar = () => {
               : "px-[8px] lg:px-[35px] rounded-full fixed flex justify-between items-center w-full max-w-[1300px] h-[60px] bg-slate-100 bg-opacity-30 backdrop-blur-sm mx-auto top-[40px] border-2 border-white border-opacity-20 shadow-md"
           }
         >
-          <img src="assets/logo_gsis.svg" alt="" />
+          <a href="/">
+            <img src="assets/logo_gsis.svg" alt="" />
+          </a>
           <div className="hidden lg:flex gap-[40px] xl:gap-[50px] button-text text-primaryBlue lg:items-center">
             <a className="cursor-pointer hover:text-seccondaryBlue" href="/">
               Home

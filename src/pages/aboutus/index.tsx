@@ -15,12 +15,14 @@ const AboutUs = () => {
   const NextArrow = () => {
     return (
       <>
-        <div className="h-10 w-10 rounded-full hover:bg-slate-400 hover:bg-opacity-25 hidden lg:flex justify-center items-center">
+        <div
+          onClick={sliderRef?.slickNext}
+          className="h-10 w-10 rounded-full hover:bg-slate-400 hover:bg-opacity-25 hidden lg:flex justify-center items-center"
+        >
           <img
             src="assets/carousel_arrow.svg"
             alt="prev"
             className="hidden lg:block"
-            onClick={sliderRef?.slickNext}
           />
         </div>
       </>
@@ -30,13 +32,15 @@ const AboutUs = () => {
   const PrevArrow = () => {
     return (
       <>
-        <div className="h-10 w-10 rounded-full hover:bg-slate-400 hover:bg-opacity-25 hidden lg:flex justify-center items-center">
+        <div
+          onClick={sliderRef?.slickPrev}
+          className="h-10 w-10 rounded-full hover:bg-slate-400 hover:bg-opacity-25 hidden lg:flex justify-center items-center"
+        >
           <img
             src="assets/carousel_arrow.svg"
             alt="prev"
             style={{ transform: "rotate(180deg)" }}
             className="hidden lg:block"
-            onClick={sliderRef?.slickPrev}
           />
         </div>
       </>
@@ -50,12 +54,14 @@ const AboutUs = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
   return (
     <>
       <Navbar />
       <div className="w-full h-auto bg-cover bg-[url(../src/assets/Background_AboutUS.svg)]">
-        <div className="pt-[150px] lg:pt-[285px] w-[90vw] max-w-[928px] mx-auto text-center">
+        <div className="pt-[150px] lg:pt-[200px] w-[90vw] max-w-[928px] mx-auto text-center">
           <h1 className="w-auto mx-auto inline-block header1-mobile lg:header1 text-primaryText">
             About Us
           </h1>

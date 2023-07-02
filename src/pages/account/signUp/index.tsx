@@ -146,7 +146,7 @@ const SignUp = () => {
                   id="major"
                   value={major}
                   onChange={(e) => setMajor(e.target.value)}
-                  placeholder="Enter your major"
+                  placeholder="Enter your major (english)"
                   className="body-text text-primaryBlue bg-slate-200 border-none placeholder:text-primaryBlue rounded-lg h-[60px] w-full"
                 />
               </div>

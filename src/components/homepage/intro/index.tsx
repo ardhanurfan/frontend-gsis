@@ -5,7 +5,7 @@ const Intro = () => {
     <Fragment>
       <div className="flex justify-center lg:justify-between items-center">
         <div className="font-montserrat pt-[150px] lg:pt-[130px] w-[80%] lg:w-[47%] lg:ml-24">
-          <h1 className="header3 lg:header1 text-primaryBlue lg:pt-16 text-center">
+          <h1 className="header1-mobile md:header2 lg:header1 text-primaryBlue lg:pt-16 text-center">
             Ganesha Student Innovation Summit
           </h1>
           <p className="mt-[15px] text-justify text-primaryBlue body-text-mobile rounded-xl p-6 bg-slate-100 shadow-lg backdrop-blur-sm shadow-slate-500 bg-opacity-30 lg:body-text lg:shadow-none lg:bg-transparent">
