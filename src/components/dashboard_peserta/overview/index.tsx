@@ -34,6 +34,7 @@ const Overview = () => {
             title={row.title}
             date="12/12/22 10:12:02"
             content={row.description}
+            link={row.link}
           />
           )
         })}
