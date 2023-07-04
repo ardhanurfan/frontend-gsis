@@ -6,6 +6,7 @@ import GSICParticipantCard from "../../../components/dashboard_admin/admin/GSICP
 import NavbarDashboard from "../../../components/navbarDashboard/NavbarDashboard";
 import Footer from "../../../components/footer";
 import { get } from "../../../API/api";
+import Nothing from "../../addingPages/nothing";
 
 const DashboardGSIC = () => {
   const announContext = useContext(AnnouncementContext);
@@ -26,19 +27,25 @@ const DashboardGSIC = () => {
   }, []);
   return (
     <>
-      {announContext?.isAnnounce ? <Announcement /> : ""}
       <NavbarDashboard></NavbarDashboard>
-      <div className="h-auto flex flex-col bg-[#FCFCFC]">
-        <h1 className="mt-32 header1-mobile md:header1 text-left text-[#005CBA] title mb-5 md:mb-10 pl-5 lg:pl-40">
-          GSIC Participant
-        </h1>
-        <div className="mt-2 pb-5 space-y-4">
-          {data.map((row: any) => {
-            return <GSICParticipantCard row={row} />;
-          })}
-        </div>
-        <div className="fixed bottom-16 right-6"></div>
-      </div>
+      {data.length == 0 ? (
+        <Nothing />
+      ) : (
+        <>
+          {announContext?.isAnnounce ? <Announcement /> : ""}
+          <div className="h-auto flex flex-col bg-[#FCFCFC]">
+            <h1 className="mt-32 header1-mobile md:header1 text-left text-[#005CBA] title mb-5 md:mb-10 pl-5 lg:pl-40">
+              GSIC Participant
+            </h1>
+            <div className="mt-2 pb-5 space-y-4">
+              {data.map((row: any) => {
+                return <GSICParticipantCard row={row} />;
+              })}
+            </div>
+            <div className="fixed bottom-16 right-6"></div>
+          </div>
+        </>
+      )}
       <Footer></Footer>
     </>
   );

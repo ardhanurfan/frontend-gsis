@@ -11,7 +11,7 @@ const Intro = () => {
           <p className="mt-[15px] text-justify text-primaryBlue body-text-mobile rounded-xl p-6 bg-slate-100 shadow-lg backdrop-blur-sm shadow-slate-500 bg-opacity-30 lg:body-text lg:shadow-none lg:bg-transparent">
             Ganesha Student Innovation Summit (GSIS) is an annual event
             organized by Keluarga Mahasiswa Institut Teknologi Bandung (KM ITB)
-            to facilitate students and students from various schools and
+            to facilitate students from various schools and
             universities in Indonesia to develop creative and innovative ideas
             in various fields, related to technology, science, social, arts, and
             culture. The event aims to encourage participants to develop their

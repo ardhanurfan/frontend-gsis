@@ -13,10 +13,9 @@ interface CeremonyCardProps {
     major:string;
     year:string;
     url:string;
-    category:string;
     approve:string;
 }
-const CeremonyCard = ({id,name,email,phone,university,major,year,url,category,approve}:CeremonyCardProps) =>{
+const CeremonyCard = ({id,name,email,phone,university,major,year,url,approve}:CeremonyCardProps) =>{
   const[visible,setVisible] =useState(approve);
   const postData = async (approve:string) => {
       try{
@@ -73,7 +72,7 @@ const CeremonyCard = ({id,name,email,phone,university,major,year,url,category,ap
                   </div>
                   </div>
                   <div className="w-[240px] h-auto mb-6">
-                    <div className="small text-[#015CBA] flex gap-1 mb-2">
+                    <div className="small text-[#015CBA] flex gap-1 mb-2 hover:underline">
                       <a href={url} className="">Proof of Poster Upload</a>
                       <img src={up} className="h-[14px]" />
                     </div>
@@ -90,9 +89,6 @@ const CeremonyCard = ({id,name,email,phone,university,major,year,url,category,ap
                       : <Status status={visible}/>}
                     </div>
                   </div>
-                <p className="header3 text-[#015CBA] mb-3">Works</p>
-                <p className="text-[#015CBA] body-text">Category</p>
-                <p className="text-[#4F9BFD] small">{category}</p>
               </div>
             </details>
         </>

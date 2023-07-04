@@ -185,7 +185,7 @@ const Exhibition = () => {
               Timeline
             </h1>
             <div className="overflow-auto w-full mx-auto pb-[22px]">
-              <div className="relative w-[355px] md:w-[760px] lg:w-[975px] 2xl:w-[1300px] h-auto mt-[45px] bg-slate-100 mx-auto rounded-xl shadow-lg shadow-slate-500 bg-opacity-30 overflow-auto">
+              <div className="relative w-[355px] md:w-[760px] lg:w-[975px] 2xl:w-[1300px] h-[750px] 2xl:h-[1040px] mt-[45px] bg-slate-100 mx-auto rounded-xl shadow-lg shadow-slate-500 bg-opacity-30 ">
                 <div className="h-auto w-[38px] flex justify-between absolute m-[4%] lg:m-[2%]">
                   <div className="h-[10px] w-[10px] rounded-full bg-primaryGreen"></div>
                   <div className="h-[10px] w-[10px] rounded-full bg-primaryYellow"></div>

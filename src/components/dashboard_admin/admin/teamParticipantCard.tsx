@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { post } from "../../../API/api";
 import up from "../../../assets/upload.svg";
 import Status from "../../dashboard_peserta/bcc/status";
@@ -17,10 +17,10 @@ interface TeamParticipantCardProps {
     approve:any;
 }
 
-const TeamParticipantCard = ({id,leader_id,user_id_1,user_id_2,name,email,phone,university,major,year,approve}:TeamParticipantCardProps) => {
-    const [visible, setVisible] = useState("");
-    const [visible1, setVisible1] = useState("");
-    const [visible2, setVisible2] = useState("");
+const TeamParticipantCard = ({id, leader_id,user_id_1,user_id_2,name,email,phone,university,major,year,approve}:TeamParticipantCardProps) => {
+    const [visible, setVisible] = useState<any | null>(approve.approve_ktm);
+    const [visible1, setVisible1] = useState<any | null>(approve.approve_follow);
+    const [visible2, setVisible2] = useState<any | null>(approve.approve_poster);
     const postData = async (approve:string, approve_idk:string) => {
         try{
           const response = await post("edit-gsic-admin",{
@@ -34,11 +34,6 @@ const TeamParticipantCard = ({id,leader_id,user_id_1,user_id_2,name,email,phone,
           console.log(error);
         }
       }
-      useEffect(() => {
-        setVisible(approve.approve_ktm);
-        setVisible1(approve.approve_follow);
-        setVisible2(approve.approve_poster);
-      });
     return(
         <div className="border-2 border-[#005CBA] rounded-md h-[auto]">
                 <div className="m-2">

@@ -9,9 +9,12 @@ interface GSICParticipantCardProps{
 }
 const GSICParticipantCard = ({row}:GSICParticipantCardProps ) => {
     const[visible,setVisible] =useState(row.approve_payment);
-    const[idx1,setIdx1] = useState(0);
-    const[idx2,setIdx2] = useState(0);
-    const[idxLeader,setIdxLeader] = useState(0);
+    const[row1,setRow1] = useState<any | null>(null);
+    const[row2,setRow2] = useState<any | null>(null);
+    const[row3,setRow3] = useState<any | null>(null);
+    const[idx1,setIdx1] = useState(-1);
+    const[idx2,setIdx2] = useState(-1);
+    const[idxLeader,setIdxLeader] = useState(-1);
     const loopIdx = () => {
         let temp = 1;
         for(let i = 0;i<3;i++){
@@ -37,10 +40,13 @@ const GSICParticipantCard = ({row}:GSICParticipantCardProps ) => {
         }catch(error){
           console.log(error);
         }
-      }
-      useEffect (() => {
+    }
+    useEffect (() => {
         loopIdx();
-      },[]);
+        setRow1(row.users[idxLeader]);
+        setRow2(row.users[idx1]);
+        setRow3(row.users[idx2]);
+    },[idxLeader, idx1, idx2]);
     return(
         <details className="px-5 xl:px-44 hover:cursor-pointer rounded-xl">
             <summary className="w-full h-[113px] text-lg bg-gradient-to-l from-[#060B81] to-[#005CBA] rounded-xl text-white px-5 mx-auto flex items-center justify-between shadow-lg">
@@ -56,9 +62,9 @@ const GSICParticipantCard = ({row}:GSICParticipantCardProps ) => {
             </summary>
             <div className="flex flex-col p-2 bg-white shadow-2xl rounded-b-xl">
                 <div className="flex flex-col lg:grid lg:grid-cols-3 p-2 gap-3 ">
-                    <TeamLeaderCard leader_id = {row.users[idxLeader].user_id} user_id_1 = {row.users[idx1].user_id} user_id_2 = {row.users[idx2].user_id} name={row.users[idxLeader].user.name} email={row.users[idxLeader].user.email} phone={row.users[idxLeader].user.phone} university={row.users[idxLeader].user.university} major={row.users[idxLeader].user.major} year={row.users[idxLeader].user.year} approve = {row.users[idxLeader]}/>
-                    <TeamParticipantCard id="1" leader_id = {row.users[idxLeader].user_id} user_id_1 = {row.users[idx1].user_id} user_id_2 = {row.users[idx2].user_id} name={row.users[idx1].user.name} email={row.users[idx1].user.email} phone={row.users[idx1].user.phone} university={row.users[idx1].user.university} major={row.users[idx1].user.major} year={row.users[idx1].user.year} approve={row.users[idx1]}/>
-                    <TeamParticipantCard id="2" leader_id = {row.users[idxLeader].user_id} user_id_1 = {row.users[idx1].user_id} user_id_2 = {row.users[idx2].user_id} name={row.users[idx2].user.name} email={row.users[idx2].user.email} phone={row.users[idx2].user.phone} university={row.users[idx2].user.university} major={row.users[idx2].user.major} year={row.users[idx2].user.year} approve={row.users[idx2]}/>  
+                    {idxLeader != -1 && row1 != null &&<TeamLeaderCard leader_id = {row.users[idxLeader].user_id} user_id_1 = {row.users[idx1].user_id} user_id_2 = {row.users[idx2].user_id} name={row.users[idxLeader].user.name} email={row.users[idxLeader].user.email} phone={row.users[idxLeader].user.phone} university={row.users[idxLeader].user.university} major={row.users[idxLeader].user.major} year={row.users[idxLeader].user.year} approve = {row1}/>}
+                    {idx1 != -1 && row2 != null && <TeamParticipantCard id="1" leader_id={row.users[idxLeader].user_id} user_id_1={row.users[idx1].user_id} user_id_2={row.users[idx2].user_id} name={row.users[idx1].user.name} email={row.users[idx1].user.email} phone={row.users[idx1].user.phone} university={row.users[idx1].user.university} major={row.users[idx1].user.major} year={row.users[idx1].user.year} approve={row2}/>}
+                    {idx2 != -1 && row3 != null && <TeamParticipantCard id="2" leader_id={row.users[idxLeader].user_id} user_id_1={row.users[idx1].user_id} user_id_2={row.users[idx2].user_id} name={row.users[idx2].user.name} email={row.users[idx2].user.email} phone={row.users[idx2].user.phone} university={row.users[idx2].user.university} major={row.users[idx2].user.major} year={row.users[idx2].user.year} approve={row3}/>}  
                 </div>
                 <div className="flex flex-row items-center gap-1 justify-between px-1">
                     <div className="flex flex-row items-center gap-1">
