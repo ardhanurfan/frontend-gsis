@@ -53,7 +53,7 @@ const TitleWebinarCard = () => {
   return (
     <>
       <PrevArrow />
-      <div className="overflow-auto w-[90vw] h-[850px] lg:h-[650px] bg-slate-100 bg-opacity-30 rounded-xl mx-auto lg:mt-10 shadow-lg shadow-blue-300">
+      <div className="overflow-auto w-[90vw] h-[875px] lg:h-[650px] bg-slate-100 bg-opacity-30 rounded-xl mx-auto lg:mt-10 shadow-lg shadow-blue-300">
         <div className="w-full h-auto">
           <Slider className="rounded-xl" ref={setSliderRef} {...settings}>
             <div className="attribute">
