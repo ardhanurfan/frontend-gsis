@@ -50,7 +50,6 @@ const DashboardCeremony = () => {
                       major={row.user.major}
                       year={row.user.year}
                       url={row.ss_poster_url}
-                      category="masterpiece"
                       approve={row.approve_poster}
                     />
                   );
@@ -59,9 +58,9 @@ const DashboardCeremony = () => {
             </div>
             <div className="fixed bottom-16 right-6"></div>
           </div>
-          <Footer></Footer>
         </>
       )}
+      <Footer></Footer>
     </>
   );
 };

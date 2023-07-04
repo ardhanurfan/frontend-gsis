@@ -10,7 +10,7 @@ import Nothing from "../../addingPages/nothing";
 
 const DashboardEx = () => {
   const announContext = useContext(AnnouncementContext);
-  const [data, setData] = useState<any | null>(null);
+  const [data, setData] = useState([]);
   const [dataTeam, setDataTeam] = useState([]);
   const [dataIndividu, setDataIndividu] = useState([]);
   const [type, setType] = useState("");
@@ -44,7 +44,7 @@ const DashboardEx = () => {
   return (
     <>
       <NavbarDashboard />
-      {data == null ? (
+      {data.length == 0 ? (
         <Nothing />
       ) : (
         <>
@@ -86,9 +86,9 @@ const DashboardEx = () => {
             </div>
           </div>
           <div className="fixed bottom-16 right-6"></div>
-          <Footer></Footer>
         </>
       )}
+      <Footer></Footer>
     </>
   );
 };

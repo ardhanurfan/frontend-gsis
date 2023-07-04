@@ -10,7 +10,7 @@ import Nothing from "../../addingPages/nothing";
 
 const DashboardGSIC = () => {
   const announContext = useContext(AnnouncementContext);
-  const [data, setData] = useState<any | null>(null);
+  const [data, setData] = useState([]);
 
   const getData = async () => {
     try {
@@ -28,7 +28,7 @@ const DashboardGSIC = () => {
   return (
     <>
       <NavbarDashboard></NavbarDashboard>
-      {data == null ? (
+      {data.length == 0 ? (
         <Nothing />
       ) : (
         <>
@@ -44,9 +44,9 @@ const DashboardGSIC = () => {
             </div>
             <div className="fixed bottom-16 right-6"></div>
           </div>
-          <Footer></Footer>
         </>
       )}
+      <Footer></Footer>
     </>
   );
 };

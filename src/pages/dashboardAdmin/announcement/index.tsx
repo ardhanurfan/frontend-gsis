@@ -25,7 +25,7 @@ const Announcement = () => {
     if (announContext?.dataRow == null) {
       return "" as string;
     }
-    return announContext?.dataRow.url;
+    return announContext?.dataRow.link;
   });
   const [type, setType] = useState(() => {
     if (announContext?.dataRow == null) {
@@ -42,7 +42,7 @@ const Announcement = () => {
           title: title,
           type: type,
           description: description,
-          url: url,
+          link: url,
           status: stat,
         });
         console.log(response);
@@ -54,7 +54,7 @@ const Announcement = () => {
           title: title,
           type: type,
           description: description,
-          url: url,
+          link: url,
           status: stat,
         });
         console.log(response);

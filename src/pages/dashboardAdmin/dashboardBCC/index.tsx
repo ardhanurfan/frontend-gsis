@@ -28,7 +28,7 @@ const DashboardBCC = () => {
   return (
     <>
       <NavbarDashboard />
-      {data.length == null ? (
+      {data.length == 0 ? (
         <Nothing />
       ) : (
         <>
@@ -46,9 +46,9 @@ const DashboardBCC = () => {
             </div>
             <div className="fixed bottom-16 right-6"></div>
           </div>
-          <Footer></Footer>
         </>
       )}
+      <Footer></Footer>
     </>
   );
 };

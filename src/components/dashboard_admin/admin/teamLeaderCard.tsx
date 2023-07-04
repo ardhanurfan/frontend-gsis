@@ -4,7 +4,6 @@ import up from "../../../assets/upload.svg";
 import Status from "../../dashboard_peserta/bcc/status";
 
 interface TeamLeaderCardProps {
-  idx:number,
   leader_id: number;
   user_id_1: number;
   user_id_2: number;
@@ -18,7 +17,6 @@ interface TeamLeaderCardProps {
 }
 
 const TeamLeaderCard = ({
-  idx,
   leader_id,
   user_id_1,
   user_id_2,

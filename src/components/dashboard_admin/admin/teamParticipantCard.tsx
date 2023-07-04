@@ -5,7 +5,6 @@ import Status from "../../dashboard_peserta/bcc/status";
 
 interface TeamParticipantCardProps {
     id: string,
-    idx:number,
     leader_id:number,
     user_id_1:number,
     user_id_2:number,
@@ -18,7 +17,7 @@ interface TeamParticipantCardProps {
     approve:any;
 }
 
-const TeamParticipantCard = ({id,idx, leader_id,user_id_1,user_id_2,name,email,phone,university,major,year,approve}:TeamParticipantCardProps) => {
+const TeamParticipantCard = ({id, leader_id,user_id_1,user_id_2,name,email,phone,university,major,year,approve}:TeamParticipantCardProps) => {
     const [visible, setVisible] = useState<any | null>(approve.approve_ktm);
     const [visible1, setVisible1] = useState<any | null>(approve.approve_follow);
     const [visible2, setVisible2] = useState<any | null>(approve.approve_poster);
@@ -35,9 +34,6 @@ const TeamParticipantCard = ({id,idx, leader_id,user_id_1,user_id_2,name,email,p
           console.log(error);
         }
       }
-      console.log("njer" + idx);
-    //   console.log(approve.users[idx].approve_ktm);
-    //   console.log(visible);
     return(
         <div className="border-2 border-[#005CBA] rounded-md h-[auto]">
                 <div className="m-2">
