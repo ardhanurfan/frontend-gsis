@@ -18,7 +18,7 @@ const AnnouncementCard = ({ title, date, content, link }: AnnouncementCardProps)
             {content}
           </p>
           {link != null && <h3 className="header3-mobile mt-6 text-primaryBlue">Link</h3>}
-          {link != null && <a href={link} className=" font-monserrat font-normal text-xs text-seccondaryBlue hover:text-primaryBlue">
+          {link != null && <a href={link} className="font-monserrat font-normal text-xs text-seccondaryBlue hover:text-primaryBlue break-all">
             {link}
           </a>}
         </div>
