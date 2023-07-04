@@ -21,6 +21,12 @@ const Announcement = () => {
     }
     return announContext?.dataRow.description;
   });
+  const [url, setUrl] = useState(() => {
+    if (announContext?.dataRow == null) {
+      return "" as string;
+    }
+    return announContext?.dataRow.url;
+  });
   const [type, setType] = useState(() => {
     if (announContext?.dataRow == null) {
       return "";
@@ -36,6 +42,7 @@ const Announcement = () => {
           title: title,
           type: type,
           description: description,
+          url: url,
           status: stat,
         });
         console.log(response);
@@ -47,6 +54,7 @@ const Announcement = () => {
           title: title,
           type: type,
           description: description,
+          url: url,
           status: stat,
         });
         console.log(response);
@@ -135,6 +143,19 @@ const Announcement = () => {
                       <option value="All">All</option>
                     </select>
                   </div>
+                </label>
+                <label className="link">
+                  <span className="body-text text-primaryText block text-left mt-3">
+                    Link <span className="text-red-600">*</span>
+                  </span>
+                  <input
+                    value={url}
+                    type="text"
+                    id="url"
+                    onChange={(val) => setUrl(val.target.value)}
+                    placeholder="Link"
+                    className="w-full h-10 lg:h-[60px] block py-2 text-primaryText text-sm rounded-md bg-slate-100 focus:placeholder-[#4F9BFD] border-none placeholder:text-seccondaryBlue"
+                  />
                 </label>
               </div>
             </div>

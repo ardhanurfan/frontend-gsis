@@ -196,7 +196,7 @@ const Ceremony = () => {
             Opening Ceremony
           </h1>
           <h2 className="w-[70vw] mx-auto inline-block header2-mobile lg:header2 text-primaryBlue pb-5">
-            Unleashing the Potential of AI:{" "}
+            Unleashing the Potential of IoT and AI:{" "}
             <span className="text-primaryBlue">
               Empowering Youth for Positive Breakthroughs in Art, Tech, and
               Business

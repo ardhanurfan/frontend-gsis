@@ -170,7 +170,7 @@ function HomePageGSIC() {
           Timeline
         </h1>
         <div className="overflow-auto w-full mx-auto pb-[22px]">
-          <div className="relative w-[355px] md:w-[760px] lg:w-[975px] 2xl:w-[1300px] h-auto mt-[45px] bg-slate-100 mx-auto rounded-xl shadow-lg shadow-slate-500 bg-opacity-30 overflow-auto">
+          <div className="relative w-[355px] md:w-[760px] lg:w-[975px] 2xl:w-[1300px] h-[900px] 2xl:h-[1140px] mt-[45px] bg-slate-100 mx-auto rounded-xl shadow-lg shadow-slate-500 bg-opacity-30 pb-36">
             <div className="h-auto w-[38px] flex justify-between absolute m-[4%] lg:m-[2%]">
               <div className="h-[10px] w-[10px] rounded-full bg-primaryGreen"></div>
               <div className="h-[10px] w-[10px] rounded-full bg-primaryYellow"></div>
@@ -180,10 +180,10 @@ function HomePageGSIC() {
               <div className="pt-[25%] md:pt-[15.25%] lg:pt-[10.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center ml-[11.25%] md:ml-[32%] lg:ml-[36%] 2xl:ml-[36%] mt-[9%] md:mt-[4.5%] lg:mt-[3.5%] 2xl:mt-[3.5%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
-                    14-20
+                    xx-xx
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
-                    August, 2023
+                    mm-mm, yyyy
                   </span>
                 </div>
                 <img
@@ -201,10 +201,10 @@ function HomePageGSIC() {
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center right-0 mr-[11.5%] md:mr-[32%] lg:mr-[36%] 2xl:mr-[36%] mt-[14%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
-                    21-27
+                  xx-xx
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
-                    August, 2023
+                  mm-mm, yyyy
                   </span>
                 </div>
                 <img
@@ -222,10 +222,10 @@ function HomePageGSIC() {
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center ml-[10.25%] md:ml-[31.5%] lg:ml-[35.6%] 2xl:ml-[36%] mt-[18.5%] md:mt-[11%] lg:mt-[8%] 2xl:mt-[9%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
-                    28-03
+                  xx-xx
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
-                    Ags-Sept 2023
+                  mm-mm, yyyy
                   </span>
                 </div>
                 <img
@@ -240,7 +240,7 @@ function HomePageGSIC() {
                   LATE <br className="md:hidden" /> REGISTRATION
                 </h3>
               </div>
-              <h1 className="text-primaryYellow header1-mobile lg:header1 mb-36 mt-48 text-center">
+              <h1 className="text-primaryYellow header1-mobile lg:header1 mt-48 text-center">
                 TO BE ANNOUNCED
               </h1>
             </div>

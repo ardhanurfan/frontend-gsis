@@ -85,7 +85,7 @@ const AboutUs = () => {
             achieving sustainable development goals. <br />
             <br />
             The series of events conducted is expected to serve as a catalyst
-            for students and students in Indonesia to continue collaborating and
+            for students in Indonesia to continue collaborating and
             innovating to create positive impacts for Indonesia and even the
             world. The implementation of the Ganesha Student Innovation Summit
             consists of the Innovation Competition, Business Case Competition,
@@ -156,10 +156,10 @@ const AboutUs = () => {
                       src="assets/Timeline1.svg"
                       alt="p"
                     />
-                    <h3 className="pt-[19.5%] md:pt-[9%] lg:pt-[7%] 2xl:pt-[7%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryBlue">
+                    <h3 className="pt-[19.5%] md:pt-[9%] lg:pt-[7%] 2xl:pt-[7%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue">
                       PRE-EVENT
                     </h3>
-                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryBlue 2xl:mr-[9.923%]">
+                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue 2xl:mr-[9.923%]">
                       OPENING/ <br className="md:hidden" /> CLOSING <br />{" "}
                       CEREMONY
                     </h3>
@@ -178,10 +178,10 @@ const AboutUs = () => {
                       src="assets/Timeline2.svg"
                       alt="p"
                     />
-                    <h3 className="pt-[23.75%] md:pt-[12.75%] lg:pt-[9.75%] 2xl:pt-[10.75%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
+                    <h3 className="pt-[23.75%] md:pt-[12.75%] lg:pt-[9.75%] 2xl:pt-[10.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
                       PRE-EVENT
                     </h3>
-                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryGreen 2xl:ml-[9.923%] text-right">
+                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen 2xl:ml-[9.923%] text-right">
                       SOCIAL <br className="md:hidden" /> IMPACT <br />{" "}
                       CHALLENGE
                     </h3>
@@ -200,10 +200,10 @@ const AboutUs = () => {
                       src="assets/Timeline3.svg"
                       alt="p"
                     />
-                    <h3 className="pt-[23.85%] md:pt-[12.5%] lg:pt-[9.85%] 2xl:pt-[11.25%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryOrange">
+                    <h3 className="pt-[23.85%] md:pt-[12.5%] lg:pt-[9.85%] 2xl:pt-[11.25%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange">
                       PRE-EVENT
                     </h3>
-                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryOrange 2xl:mr-[9.923%]">
+                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange 2xl:mr-[9.923%]">
                       INDIVIDUAL <br className="md:hidden" /> CASE <br />{" "}
                       CHALLENGE
                     </h3>
@@ -222,10 +222,10 @@ const AboutUs = () => {
                       src="assets/Timeline4.svg"
                       alt="p"
                     />
-                    <h3 className="pt-[23.85%] md:pt-[13%] lg:pt-[9.5%] 2xl:pt-[10.5%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
+                    <h3 className="pt-[23.85%] md:pt-[13%] lg:pt-[9.5%] 2xl:pt-[10.5%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
                       PRE-EVENT
                     </h3>
-                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryYellow 2xl:ml-[9.923%] text-right">
+                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow 2xl:ml-[9.923%] text-right">
                       TEAM <br className="md:hidden" /> CASE <br /> CHALLENGE
                     </h3>
                   </div>
@@ -243,10 +243,10 @@ const AboutUs = () => {
                       src="assets/Timeline1.svg"
                       alt="p"
                     />
-                    <h3 className="pt-[23.85%] md:pt-[12.75%] lg:pt-[9.85%] 2xl:pt-[11%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryBlue">
+                    <h3 className="pt-[23.85%] md:pt-[12.75%] lg:pt-[9.85%] 2xl:pt-[11%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue">
                       PRE-EVENT
                     </h3>
-                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryBlue 2xl:mr-[9.923%]">
+                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue 2xl:mr-[9.923%]">
                       COLOUR <br className="md:hidden" /> RUN
                     </h3>
                   </div>
@@ -264,10 +264,10 @@ const AboutUs = () => {
                       src="assets/Timeline2.svg"
                       alt="p"
                     />
-                    <h3 className="pt-[28.55%] md:pt-[15.25%] lg:pt-[11.55%] 2xl:pt-[12.75%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
+                    <h3 className="pt-[28.55%] md:pt-[15.25%] lg:pt-[11.55%] 2xl:pt-[12.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
                       PRE-EVENT
                     </h3>
-                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryGreen 2xl:ml-[9.923%] text-right">
+                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen 2xl:ml-[9.923%] text-right">
                       YOUTH <br className="md:hidden" /> CONFERENCE <br /> (HMJ,
                       UKM, <br className="md:hidden" />
                       ComPart)
@@ -287,10 +287,10 @@ const AboutUs = () => {
                       src="assets/Timeline3.svg"
                       alt="p"
                     />
-                    <h3 className="pt-[18.85%] md:pt-[12.85%] lg:pt-[9.85%] 2xl:pt-[11%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryOrange">
+                    <h3 className="pt-[18.85%] md:pt-[12.85%] lg:pt-[9.85%] 2xl:pt-[11%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange">
                       PRE-EVENT
                     </h3>
-                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryOrange 2xl:mr-[9.923%]">
+                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange 2xl:mr-[9.923%]">
                       EXHIBITION
                     </h3>
                   </div>
@@ -308,10 +308,10 @@ const AboutUs = () => {
                       src="assets/Timeline4.svg"
                       alt="p"
                     />
-                    <h3 className="pt-[33.25%] md:pt-[15.25%] lg:pt-[11.25%] 2xl:pt-[12.75%] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
+                    <h3 className="pt-[33.25%] md:pt-[15.25%] lg:pt-[11.25%] 2xl:pt-[12.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
                       PRE-EVENT
                     </h3>
-                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.2em] leading-none 2xl:text-[24px] text-primaryYellow 2xl:ml-[9.923%] text-right">
+                    <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow 2xl:ml-[9.923%] text-right">
                       GRAND <br className="md:hidden" /> SUMMIT
                     </h3>
                   </div>
