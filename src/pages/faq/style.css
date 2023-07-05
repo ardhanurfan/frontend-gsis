@@ -12,11 +12,13 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 details > summary::after {
+  display: inline-block;
   content: url(../../assets/dropdown.svg);
 }
 
 details[open] > summary::after {
   content: url(../../assets/dropdown.svg);
+  display: inline-block;
   @apply transform rotate-180 origin-center transition-all;
 }
 

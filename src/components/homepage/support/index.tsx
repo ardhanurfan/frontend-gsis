@@ -1,15 +1,18 @@
-
 const Supported = () => {
-    return (
-        <div className="flex flex-col items-center mt-[132px] lg:mt-[500px]">
-            <h1 className="flex header1-mobile lg:header1 justify-center  pb-[25px] lg:pb-[100px] text-primaryBlue">
-                Supported By
-            </h1>
-            <div className="brand-container w-[86%] h-[297px] lg:h-[763px] left-100 top-3975bg-slate-100 mx-auto rounded-xl  ">
-                
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="flex flex-col items-center my-10 lg:my-40">
+      <h1 className="flex header1-mobile lg:header1 justify-center pb-[25px] lg:pb-[50px] text-primaryBlue">
+        Media Partner
+      </h1>
+      <div className="brand-container w-[86%] h-auto bg-slate-100 mx-auto rounded-xl flex justify-center p-10 bg-opacity-30">
+        <img
+          src="sponsor/studentcatalyst.png"
+          alt=""
+          className="lg:h-36 h-20 object-contain"
+        />
+      </div>
+    </div>
+  );
+};
 
-export default Supported
+export default Supported;

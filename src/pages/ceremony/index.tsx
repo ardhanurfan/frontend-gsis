@@ -161,6 +161,16 @@ const Ceremony = () => {
               <h2 className="text-primaryBlue text-center header2-mobile lg:header2">
                 Proof of Poster Upload <span className="text-red-500"> *</span>
               </h2>
+              <h3 className="text-primaryBlue">
+                You can download the poster in{" "}
+                <a
+                  className="text-primaryOrange hover:text-seccondaryOrange"
+                  href="https://bit.ly/openingceremonygsis"
+                >
+                  {" "}
+                  here
+                </a>
+              </h3>
               <h3 className="text-primaryBlue text-center header3-mobile lg:header3">
                 UPLOAD FILES
               </h3>

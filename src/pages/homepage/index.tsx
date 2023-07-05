@@ -11,12 +11,19 @@ const Homepage = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full h-auto bg-cover bg-[url(./assets/background_homepage.svg)]">
+      <div className="w-full h-auto bg-cover bg-[url(./assets/background_homepage.svg)] overflow-auto">
         <Intro />
         <Event />
-        <Benefit  title="Benefit" b1="Get a platform to collaborate" b2="Gain relationships within the national to international scope" b3="Gain relationships within the national to international scope" b4="Get new insigtht " b5="Upgrading skills through events from GSIS"/>
-        <Supported />
+        <Benefit
+          title="Benefit"
+          b1="Get a platform to collaborate"
+          b2="Gain relationships within the national to international scope"
+          b3="Gain relationships within the national to international scope"
+          b4="Get new insigtht "
+          b5="Upgrading skills through events from GSIS"
+        />
         <Sponsored />
+        <Supported />
       </div>
       <Footer />
     </>
