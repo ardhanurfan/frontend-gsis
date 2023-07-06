@@ -136,6 +136,14 @@ const Exhibition = () => {
           <h1 className="w-auto header1-mobile lg:header1 text-primaryText text-center">
             EXHIBITION
           </h1>
+          <p className="small lg:body-text text-primaryText text-justify px-6 md:px-16 lg:px-56 py-12">
+            "The exhibition aims to spark a collaborative revolution, where
+            artists, activists, and individuals from all walks of life unite to
+            reimagine and co-create our future. Through art and technology, we
+            envision a world where sustainability is more than a word, but a
+            shared value and a driving force behind a global movement for
+            change."
+          </p>
         </div>
         <div className="mt-12 w-[90vw] max-w-[1300px] h-auto lg:h-[500px] mx-auto bg-slate-100 bg-opacity-30 rounded-xl shadow-lg shadow-slate-500 flex flex-col lg:flex-row overflow-hidden">
           <div className="h-auto w-[38px] flex justify-between absolute self-start m-[4%] lg:m-[2%]">
@@ -195,7 +203,7 @@ const Exhibition = () => {
                   <div className="pt-[25%] md:pt-[15.25%] lg:pt-[10.25%] relative">
                     <div className="absolute flex flex-col items-center text-primaryBlue justify-center ml-[14.75%] md:ml-[33.5%] lg:ml-[37%] 2xl:ml-[37%] mt-[9%] md:mt-[5%] lg:mt-[3.5%] 2xl:mt-[3.5%]">
                       <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
-                        15-31
+                        8-30
                       </span>
                       <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
                         July, 2023
@@ -214,12 +222,12 @@ const Exhibition = () => {
                     </h3>
                   </div>
                   <div className="pt-[1.25%] relative">
-                    <div className="absolute flex flex-col items-center text-primaryBlue justify-center right-0 mr-[8.25%] md:mr-[30.5%] lg:mr-[35%] 2xl:mr-[35%] mt-[14%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
+                    <div className="absolute flex flex-col items-center text-primaryBlue justify-center right-0 mr-[9.5%] md:mr-[31.5%] lg:mr-[35.5%] 2xl:mr-[35.5%] mt-[14%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
                       <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
-                        01
+                        28
                       </span>
                       <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
-                        September, 2023
+                        Agustus, 2023
                       </span>
                     </div>
                     <img
@@ -238,7 +246,7 @@ const Exhibition = () => {
                   <div className="pt-[1.25%] relative mb-48">
                     <div className="absolute flex flex-col items-center text-primaryBlue justify-center ml-[8.5%] md:ml-[30.5%] lg:ml-[35%] 2xl:ml-[35%] mt-[13%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
                       <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
-                        28-30
+                        29-30
                       </span>
                       <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
                         September, 2023
@@ -270,7 +278,13 @@ const Exhibition = () => {
               Submit Here
             </h1>
           </div>
-          <div className="flex justify-center items-center mt-5 lg:mt-10">
+          <div className="flex justify-center items-center mt-5 lg:mt-10 flex-col gap-10">
+            <a
+              href="https://docs.google.com/document/d/19N58eCLyGPGIdbQOzup-8OTdo6yZDtn0GMeA0mygGLU"
+              className="cursor-pointer button-text-mobile lg:button-text bg-primaryOrange hover:bg-seccondaryOrange text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-orange-500"
+            >
+              Guidebook
+            </a>
             {isRegistered ? (
               <button
                 disabled
@@ -281,11 +295,10 @@ const Exhibition = () => {
             ) : (
               <button
                 type="button"
-                disabled
                 className="cursor-pointer button-text-mobile lg:button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
                 onClick={goToRegistration}
               >
-                Coming Soon
+                Register Here
               </button>
             )}
           </div>
