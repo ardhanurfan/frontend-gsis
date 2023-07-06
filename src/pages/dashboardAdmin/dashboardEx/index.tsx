@@ -13,7 +13,7 @@ const DashboardEx = () => {
   const announContext = useContext(AnnouncementContext);
   const [data, setData] = useState([]);
   const [dataExport, setDataExport] = useState([]);
-  const [dataTect, setDataTech] = useState([]);
+  const [dataTech, setDataTech] = useState([]);
   const [dataArt, setDataArt] = useState([]);
   const [dataBus, setDataBus] = useState([]);
   const [type, setType] = useState("");
@@ -109,7 +109,7 @@ const DashboardEx = () => {
                     return <ExhibitionParticipantCard row={row} />;
                   })
                 : type == "Technology"
-                ? dataBus.map((row: any) => {
+                ? dataTech.map((row: any) => {
                     return <ExhibitionParticipantCard row={row} />;
                   })
                 : data.map((row: any) => {
