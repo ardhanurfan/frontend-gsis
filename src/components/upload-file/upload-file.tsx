@@ -39,25 +39,15 @@ const UploadFile = ({ type, childToParent, value }: DropzoneProps) => {
     childToParent(acceptedFiles[0]);
     return (
       <li key={file.path}>
-        {acceptedFiles[0] != null ? (
-          <div className="flex">
-            <img src="assets/doc-upload-success.svg" alt="" />
-            <div className=" ml-1">
-              <p>
-                {file.path} - {file.size} bytes
-              </p>
-              <p className=" text-success font-[8px]">Successfully uploaded!</p>
-            </div>
+        <div className="flex">
+          <img src="assets/doc-upload-success.svg" alt="" />
+          <div className=" ml-1">
+            <p>
+              {file.path} - {file.size} bytes
+            </p>
+            <p className=" text-success font-[8px]">Successfully uploaded!</p>
           </div>
-        ) : value != null && value != "" ? (
-          <a href={value} className="flex">
-            <img src="assets/doc-upload-success.svg" alt="" />
-            <div className=" ml-1">
-              <p>{value}</p>
-              <p className=" text-success font-[8px]">Successfully uploaded!</p>
-            </div>
-          </a>
-        ) : null}
+        </div>
       </li>
     );
   });
@@ -94,6 +84,23 @@ const UploadFile = ({ type, childToParent, value }: DropzoneProps) => {
         <ul className="text-primaryText font-semibold text-xs font-monserrat">
           <div>{files}</div>
         </ul>
+        {value != null && files.length == 0 && (
+          <a href={value} className="flex">
+            <img src="assets/doc-upload-success.svg" alt="" />
+            <div className="ml-1">
+              <p className="text-primaryBlue text-[12px] font-semibold">
+                {
+                  value.split(
+                    "https://backend.ganeshasummit.com/storage/exhibition/"
+                  )[1]
+                }
+              </p>
+              <p className=" text-success text-[12px] font-semibold">
+                Last uploaded!
+              </p>
+            </div>
+          </a>
+        )}
       </aside>
     </div>
   );

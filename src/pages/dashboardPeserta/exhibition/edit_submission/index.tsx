@@ -15,7 +15,6 @@ const EditSubmissionExhibition = () => {
   const [category, setCategory] = useState("INDIVIDU");
   const [description, setDescription] = useState("");
   const [year, setYear] = useState("");
-  const [size, setSize] = useState("");
   const [width, setWidth] = useState("");
   const [height, setHeight] = useState("");
   const [doc, setDoc] = useState<File | null>(null);
@@ -40,13 +39,11 @@ const EditSubmissionExhibition = () => {
         setDescription(response?.data?.data.description);
         setYear(response?.data?.data.year);
         setUrlDoc(response?.data?.data.documentation[0].url);
-        setSize(response?.data?.data.size);
         setInstagram(response?.data?.data.instagram);
         setYoutube(response?.data?.data.youtube);
         setTwitter(response?.data?.data.twitter);
-        const splitSize = size.split(" ");
-        setWidth(splitSize[0]);
-        setHeight(splitSize[2]);
+        setWidth(response?.data?.data.size.split(" x ")[0]);
+        setHeight(response?.data?.data.size.split(" x ")[1]);
       } catch (error) {
         console.log(error);
       }
@@ -116,7 +113,7 @@ const EditSubmissionExhibition = () => {
                       htmlFor="cat"
                       className="body-text text-primaryText block text-left"
                     >
-                      Category
+                      Stream
                     </label>
                     <select
                       value={category}
@@ -125,8 +122,9 @@ const EditSubmissionExhibition = () => {
                       placeholder="Enter Category"
                       className=" w-full block py-4 rounded-md bg-primaryBlue focus:placeholder-[#4F9BFD] border-none text-white"
                     >
-                      <option value="INDIVIDU">Individu</option>
-                      <option value="TEAM">Team</option>
+                      <option value="ART">Art</option>
+                      <option value="TECHNOLOGY">Technology</option>
+                      <option value="BUSINESS">Business</option>
                     </select>
                   </div>
                   <div>
@@ -247,7 +245,7 @@ const EditSubmissionExhibition = () => {
 
                   <div className="mx-auto w-[70%]">
                     <span className="body-text text-primaryText block text-left">
-                      Photo / Video
+                      Document
                     </span>
                     <div className="flex flex-col items-center">
                       <h3 className="py-2 text-primaryBlue text-center header3-mobile lg:header3">
@@ -256,7 +254,7 @@ const EditSubmissionExhibition = () => {
                       <div className="w-full">
                         <UploadFile
                           childToParent={childToParent}
-                          type={"photo/video"}
+                          type={"file"}
                           value={urlDoc}
                         />
                       </div>
