@@ -1,8 +1,8 @@
 interface submissionCardProps {
-  row:any;
+  row: any;
 }
 
-const SubmissionCard = ({row}:submissionCardProps) => {
+const SubmissionCard = ({ row }: submissionCardProps) => {
   return (
     <>
       <div className="w-full rounded-[10px] px-9 pt-[30px] pb-[50px] border border-primaryBlue mb-4">
@@ -18,7 +18,7 @@ const SubmissionCard = ({row}:submissionCardProps) => {
         <div className="w-full flex justify-between mb-3">
           <div className="flex gap-[100px]">
             <div>
-              <h3 className="body-text text-primaryText">Category</h3>
+              <h3 className="body-text text-primaryText">Stream</h3>
               <p className=" text-seccondaryBlue font-monserrat text-[12px]">
                 {row.category}
               </p>
@@ -41,7 +41,7 @@ const SubmissionCard = ({row}:submissionCardProps) => {
               className="cursor-pointer bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded px-[21px] py-[6px] flex justify-around items-center"
               href={row.documentation[0].url}
             >
-              Photo/Video
+              Document
             </a>
           </div>
         </div>
@@ -50,6 +50,28 @@ const SubmissionCard = ({row}:submissionCardProps) => {
           <p className=" text-seccondaryBlue font-monserrat text-[12px] text-justify">
             {row.description}
           </p>
+        </div>
+        <div className="w-full flex justify-between my-3">
+          <div className="flex gap-[100px]">
+            <div>
+              <h3 className="body-text text-primaryText">Instagram</h3>
+              <p className=" text-seccondaryBlue font-monserrat text-[12px]">
+                {row.instagram}
+              </p>
+            </div>
+            <div>
+              <h3 className="body-text text-primaryText">Youtube</h3>
+              <p className=" text-seccondaryBlue font-monserrat text-[12px]">
+                {row.youtube}
+              </p>
+            </div>
+            <div>
+              <h3 className="body-text text-primaryText">Twitter</h3>
+              <p className=" text-seccondaryBlue font-monserrat text-[12px]">
+                {row.twitter}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>

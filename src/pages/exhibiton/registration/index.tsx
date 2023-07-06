@@ -77,17 +77,18 @@ const RegistrationExhibition = () => {
                   htmlFor="cat"
                   className="body-text text-primaryText block text-left"
                 >
-                  Category <span className="text-red-600">*</span>
+                  Stream <span className="text-red-600">*</span>
                 </label>
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
                   id="cat"
-                  placeholder="Enter Category"
+                  placeholder="Enter Stream"
                   className=" w-full block py-4 rounded-md bg-primaryBlue focus:placeholder-[#4F9BFD] border-none text-white"
                 >
-                  <option value="INDIVIDU">Individu</option>
-                  <option value="TEAM">Team</option>
+                  <option value="ART">Art</option>
+                  <option value="TECHNOLOGY">Technology</option>
+                  <option value="BUSINESS">Business</option>
                 </select>
               </div>
               <div>
@@ -113,7 +114,7 @@ const RegistrationExhibition = () => {
                   htmlFor="ig"
                   className="body-text text-primaryText text-left"
                 >
-                  Instagram<span className=" text-error"> *</span>
+                  Instagram
                 </label>
                 <input
                   onChange={(e) => setInstagram(e.target.value)}
@@ -128,7 +129,7 @@ const RegistrationExhibition = () => {
                   htmlFor="yt"
                   className="body-text text-primaryText text-left"
                 >
-                  Youtube<span className=" text-error"> *</span>
+                  Youtube
                 </label>
                 <input
                   onChange={(e) => setYoutube(e.target.value)}
@@ -143,7 +144,7 @@ const RegistrationExhibition = () => {
                   htmlFor="tweet"
                   className="body-text text-primaryText text-left"
                 >
-                  Twitter<span className=" text-error"> *</span>
+                  Twitter
                 </label>
                 <input
                   onChange={(e) => setTwitter(e.target.value)}
@@ -203,17 +204,14 @@ const RegistrationExhibition = () => {
 
               <div className="mx-auto w-[70%]">
                 <span className="body-text text-primaryText block text-left">
-                  Photo / Video <span className="text-red-600">*</span>
+                  Document <span className="text-red-600">*</span>
                 </span>
                 <div className="flex flex-col items-center">
                   <h3 className="py-2 text-primaryBlue text-center header3-mobile lg:header3">
                     UPLOAD FILES
                   </h3>
                   <div className="w-full">
-                    <UploadFile
-                      childToParent={childToParent}
-                      type={"photo/video"}
-                    />
+                    <UploadFile childToParent={childToParent} type={"file"} />
                   </div>
                 </div>
               </div>

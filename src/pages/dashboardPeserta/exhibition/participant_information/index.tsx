@@ -42,7 +42,7 @@ const DashboardExhibition = () => {
             </h1>
             <SubmissionCard row={data} />
           </div>
-          <div className="w-full flex flex-col items-center">
+          <div className="w-full flex flex-col items-center mb-[34px]">
             <h2 className="header2 text-primaryText mb-[34px]">
               If you're having trouble, please contact
             </h2>
