@@ -43,16 +43,14 @@ const Overview = () => {
             ":" +
             dateFormat.getSeconds();
 
-          var desc = row.description
-            .split("\n")
-            .map(function (item: string, key: Key) {
-              return (
-                <span key={key}>
-                  {item}
-                  <br />
-                </span>
-              );
-            });
+          var desc = row.description.split("\n").map(function (item: string) {
+            return (
+              <span>
+                {item}
+                <br />
+              </span>
+            );
+          });
           return (
             <AnnouncementCard
               title={row.title}
