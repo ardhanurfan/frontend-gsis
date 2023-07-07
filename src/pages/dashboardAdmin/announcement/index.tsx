@@ -105,11 +105,11 @@ const Announcement = () => {
                     onChange={(e) => setDescription(e.target.value)}
                     name=""
                     id=""
-                    placeholder="Desctiption"
+                    placeholder="Description"
                     className="text-area w-full h-20 lg:h-[200px] resize-none text-primaryText text-sm placeholder:text-seccondaryBlue rounded-lg bg-slate-100 border-none"
                   ></textarea>
                   <p className="text-seccondaryBlue text-xs font-medium text-right">
-                    {description.length}/150
+                    {description.length}/10000
                   </p>
                 </div>
               </div>
