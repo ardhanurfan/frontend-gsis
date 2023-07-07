@@ -12,10 +12,7 @@ const DashboardOverview = () => {
   const getData = async () => {
     if (token) {
       try {
-        const user = await getWithAuth("user", token);
-        const id = user.data?.data.id;
-        const response = await getWithAuth("bcc-user?user_id=" + id, token);
-        console.log(response);
+        const response = await getWithAuth("announcement-by-user", token);
         setData(response?.data?.data);
       } catch (error) {
         console.log(error);
@@ -29,10 +26,8 @@ const DashboardOverview = () => {
   return (
     <>
       <NavbarDashboard />
-      {data == null ? (
-        <Nothing /> ) : (
-          <Overview />)}
-        <Footer></Footer>
+      {data == null ? <Nothing /> : <Overview />}
+      <Footer></Footer>
     </>
   );
 };
