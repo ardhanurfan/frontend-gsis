@@ -234,7 +234,7 @@ const Ceremony = () => {
               description1="The event that marks the start of the Ganesha Student Innovation Summit (GSIS)! It is designed to set the tone for the event and create a sense of excitement and anticipation among the participants and attendees. Opening ceremonies will bring webinars, workshops, performances, and other forms of entertainment, and may involve the formal introduction of key participants or guests of honor."
               description2="Explore the transformative power of artificial intelligence (AI) in unlocking the potential of youth in the realms of art, technology, and business. Discover how AI-driven innovations are revolutionizing creative expression, entrepreneurial endeavors, and technological advancements. Empower the youth to maximize AI's potentials, generate positive breakthroughs, and shape a future where art, tech, and business collaborate effectively. Don't miss this opportunity to gain insights, a workshop about AI potentials, network with industry experts, and unleash the untapped potential of AI for youth empowerment!"
               date="8 July 2023, 13.00"
-              place="Zoom Meeting (link TBA)"
+              place="Link Zoom Meeting"
             />
           </div>
           {/* Benefit */}

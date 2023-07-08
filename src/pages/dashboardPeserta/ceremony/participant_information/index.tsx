@@ -83,9 +83,12 @@ const ParticipantCer = () => {
                 <p className="body-text-mobile lg:body-text text-primaryText mt-4">
                   Link
                 </p>
-                <p className="body-text-mobile lg:small text-seccondaryBlue">
-                  TBA
-                </p>
+                <a
+                  href="https://bit.ly/OpeningCeremonyGSIS"
+                  className="body-text-mobile lg:small text-seccondaryBlue hover:text-seccondaryGreen"
+                >
+                  https://bit.ly/OpeningCeremonyGSIS
+                </a>
               </div>
             </div>
             <div className="w-full flex flex-col items-center">

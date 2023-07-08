@@ -62,10 +62,13 @@ const AboutWebinarCard = ({
               alt=""
             />
             <div className="w-full pl-1 lg:pl-">
-              <div className="w-full h-auto bg-white shadow-lg  shadow-blue-300 rounded-lg bg-opacity-60 ">
-                <h3 className="header3-mobile lg:header3 text-left p-5 text-primaryBlue">
+              <div className="w-full h-auto bg-white shadow-lg shadow-blue-300 rounded-lg bg-opacity-60 py-5 text-start">
+                <a
+                  href="https://bit.ly/OpeningCeremonyGSIS"
+                  className="header3-mobile lg:header3 text-left p-5 text-primaryBlue hover:text-seccondaryBlue"
+                >
                   {place}
-                </h3>
+                </a>
               </div>
             </div>
           </div>
