@@ -16,7 +16,7 @@ const SubmissionCard = ({ row }: submissionCardProps) => {
           </a>
         </div>
         <div className="w-full flex justify-between mb-3">
-          <div className="flex gap-[100px]">
+          <div className="flex flex-col lg:flex-row gap-[12px] lg:gap-[100px]">
             <div>
               <h3 className="body-text text-primaryText">Stream</h3>
               <p className=" text-seccondaryBlue font-monserrat text-[12px]">
@@ -52,7 +52,7 @@ const SubmissionCard = ({ row }: submissionCardProps) => {
           </p>
         </div>
         <div className="w-full flex justify-between my-3">
-          <div className="flex gap-[100px]">
+          <div className="flex flex-col lg:flex-row gap-[12px] lg:gap-[100px]">
             <div>
               <h3 className="body-text text-primaryText">Instagram</h3>
               <p className=" text-seccondaryBlue font-monserrat text-[12px]">

@@ -37,13 +37,13 @@ const DashboardExhibition = () => {
         <>
           <Toaster />
           <div className="w-full px-[70px] pt-[130px] pb-[100px]">
-            <h1 className="header1 text-primaryText mb-7">
+            <h1 className="header1-mobile lg:header1 text-center text-primaryText mb-7">
               Participant Exhibition Information
             </h1>
             <SubmissionCard row={data} />
           </div>
           <div className="w-full flex flex-col items-center mb-[34px]">
-            <h2 className="header2 text-primaryText mb-[34px]">
+            <h2 className="header2-mobile lg:header2 text-center text-primaryText mb-[34px]">
               If you're having trouble, please contact
             </h2>
             <ContactList line="felizhabalqis_" wa="081223216737" />
