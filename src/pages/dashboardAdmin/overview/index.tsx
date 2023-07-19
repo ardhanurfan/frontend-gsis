@@ -27,13 +27,13 @@ const Overview = () => {
     getData();
   }, []);
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <NavbarDashboard></NavbarDashboard>
       {announContext?.isAnnounce ? <Announcement /> : ""}
       {data.length == 0 ? (
         <Nothing />
-        ) : (
-          <>
+      ) : (
+        <>
           <div className="w-full h-auto bg-[#FCFCFC]">
             <h1 className="w-auto ml-6 lg:ml-14 mt-32 inline-block mobile-header1 lg:header1 lg:text-[64px] text-primaryText">
               Dashboard Overview
@@ -44,14 +44,15 @@ const Overview = () => {
               })}
             </div>
           </div>
-        </>)}
-            <div className="fixed bottom-16 right-6">
-              <Toa />
-            </div>
-          <Footer></Footer>{" "}
-      {" "}
-    </>
+        </>
+      )}
+      <div className="fixed bottom-16 right-6">
+        <Toa />
+      </div>
+      <div className="grow flex flex-col justify-end">
+        <Footer></Footer>
+      </div>
+    </div>
   );
-  
 };
 export default Overview;

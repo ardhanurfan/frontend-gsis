@@ -201,10 +201,10 @@ function HomePageGSIC() {
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center right-0 mr-[11.5%] md:mr-[32%] lg:mr-[36%] 2xl:mr-[36%] mt-[14%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
-                  xx-xx
+                    xx-xx
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
-                  mm-mm, yyyy
+                    mm-mm, yyyy
                   </span>
                 </div>
                 <img
@@ -222,10 +222,10 @@ function HomePageGSIC() {
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center ml-[10.25%] md:ml-[31.5%] lg:ml-[35.6%] 2xl:ml-[36%] mt-[18.5%] md:mt-[11%] lg:mt-[8%] 2xl:mt-[9%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
-                  xx-xx
+                    xx-xx
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
-                  mm-mm, yyyy
+                    mm-mm, yyyy
                   </span>
                 </div>
                 <img
@@ -270,11 +270,10 @@ function HomePageGSIC() {
               ) : (
                 <button
                   onClick={goToRegistration}
-                  disabled
                   type="button"
                   className="cursor-pointer button-text-mobile lg:button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
                 >
-                  Coming Soon
+                  Register Here
                 </button>
               )}
             </div>

@@ -52,6 +52,8 @@ const RegisterGSIC = () => {
       navigate("/gsic");
       NotifyStatus("Registration Successfully!", true);
     } catch (error) {
+      console.log(error);
+      console.log(member[0].value);
       const mess = error as any;
       NotifyStatus(mess.response.data.data.error, false);
     } finally {

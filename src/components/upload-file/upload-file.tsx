@@ -84,16 +84,12 @@ const UploadFile = ({ type, childToParent, value }: DropzoneProps) => {
         <ul className="text-primaryText font-semibold text-xs font-monserrat">
           <div>{files}</div>
         </ul>
-        {value != null && files.length == 0 && (
+        {value != "" && value != null && files.length == 0 && (
           <a href={value} className="flex">
             <img src="assets/doc-upload-success.svg" alt="" />
             <div className="ml-1">
               <p className="text-primaryBlue text-[12px] font-semibold">
-                {
-                  value.split(
-                    "https://backend.ganeshasummit.com/storage/exhibition/"
-                  )[1]
-                }
+                {value.split("https://backend.ganeshasummit.com/storage/")[1]}
               </p>
               <p className=" text-success text-[12px] font-semibold">
                 Last uploaded!
