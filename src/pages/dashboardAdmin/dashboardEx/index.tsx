@@ -69,7 +69,7 @@ const DashboardEx = () => {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <NavbarDashboard />
       {data.length == 0 ? (
         <Nothing />
@@ -120,8 +120,10 @@ const DashboardEx = () => {
           <div className="fixed bottom-16 right-6"></div>
         </>
       )}
-      <Footer></Footer>
-    </>
+      <div className="grow flex flex-col justify-end">
+        <Footer></Footer>
+      </div>
+    </div>
   );
 };
 

@@ -23,6 +23,18 @@ const EditDocumentGSIC = () => {
   const [idx2, setIdx2] = useState(0);
   const [idxLeader, setIdxLeader] = useState(0);
 
+  //data url
+  const [UrlktmLeader, setUrlKtmLeader] = useState("");
+  const [Urlktm1, setUrlKtm1] = useState("");
+  const [Urlktm2, setUrlKtm2] = useState("");
+  const [UrlfollowLeader, setUrlFollowLeader] = useState("");
+  const [Urlfollow1, setUrlFollow1] = useState("");
+  const [Urlfollow2, setUrlFollow2] = useState("");
+  const [UrlposterLeader, setUrlPosterLeader] = useState("");
+  const [Urlposter1, setUrlPoster1] = useState("");
+  const [Urlposter2, setUrlPoster2] = useState("");
+  const [Urlpayment, setUrlPayment] = useState("");
+
   const navigate = useNavigate();
 
   const token = localStorage.getItem("access_token");
@@ -40,6 +52,10 @@ const EditDocumentGSIC = () => {
             temp == 1
           ) {
             setIdx1(response?.data?.data.users[i].user_id);
+
+            setUrlKtm1(response?.data?.data.users[i].ktm_url);
+            setUrlFollow1(response?.data?.data.users[i].ss_follow_url);
+            setUrlPoster1(response?.data?.data.users[i].ss_poster_url);
             temp++;
           } else if (
             response?.data?.data.users[i].user_id !=
@@ -47,10 +63,19 @@ const EditDocumentGSIC = () => {
             temp == 2
           ) {
             setIdx2(response?.data?.data.users[i].user_id);
+
+            setUrlKtm2(response?.data?.data.users[i].ktm_url);
+            setUrlFollow2(response?.data?.data.users[i].ss_follow_url);
+            setUrlPoster2(response?.data?.data.users[i].ss_poster_url);
           } else {
             setIdxLeader(response?.data?.data.users[i].user_id);
+
+            setUrlKtmLeader(response?.data?.data.users[i].ktm_url);
+            setUrlFollowLeader(response?.data?.data.users[i].ss_follow_url);
+            setUrlPosterLeader(response?.data?.data.users[i].ss_poster_url);
           }
         }
+        setUrlPayment(response?.data?.data.payment_url);
       } catch (error) {
         console.log(error);
       }
@@ -117,7 +142,8 @@ const EditDocumentGSIC = () => {
               </h3>
               <UploadFile
                 childToParent={(e: File) => setKtmLeader(e)}
-                type={""}
+                type={"image"}
+                value={UrlktmLeader}
               />
             </div>
             <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
@@ -132,7 +158,8 @@ const EditDocumentGSIC = () => {
               </h3>
               <UploadFile
                 childToParent={(e: File) => setPosterLeader(e)}
-                type={""}
+                type={"image"}
+                value={UrlposterLeader}
               />
             </div>
             <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
@@ -147,7 +174,8 @@ const EditDocumentGSIC = () => {
               </h3>
               <UploadFile
                 childToParent={(e: File) => setFollowLeader(e)}
-                type={""}
+                type={"image"}
+                value={UrlfollowLeader}
               />
             </div>
           </div>
@@ -164,7 +192,11 @@ const EditDocumentGSIC = () => {
                 <h3 className="header3 text-primaryText self-center mb-3">
                   UPLOAD FILES
                 </h3>
-                <UploadFile childToParent={(e: File) => setKtm1(e)} type={""} />
+                <UploadFile
+                  childToParent={(e: File) => setKtm1(e)}
+                  type={"image"}
+                  value={Urlktm1}
+                />
               </div>
               <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
                 <label
@@ -178,7 +210,8 @@ const EditDocumentGSIC = () => {
                 </h3>
                 <UploadFile
                   childToParent={(e: File) => setPoster1(e)}
-                  type={""}
+                  type={"image"}
+                  value={Urlposter1}
                 />
               </div>
               <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
@@ -193,7 +226,8 @@ const EditDocumentGSIC = () => {
                 </h3>
                 <UploadFile
                   childToParent={(e: File) => setFollow1(e)}
-                  type={""}
+                  type={"image"}
+                  value={Urlfollow1}
                 />
               </div>
             </div>
@@ -209,7 +243,11 @@ const EditDocumentGSIC = () => {
                 <h3 className="header3 text-primaryText self-center mb-3">
                   UPLOAD FILES
                 </h3>
-                <UploadFile childToParent={(e: File) => setKtm2(e)} type={""} />
+                <UploadFile
+                  childToParent={(e: File) => setKtm2(e)}
+                  type={"image"}
+                  value={Urlktm2}
+                />
               </div>
               <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
                 <label
@@ -223,7 +261,8 @@ const EditDocumentGSIC = () => {
                 </h3>
                 <UploadFile
                   childToParent={(e: File) => setPoster2(e)}
-                  type={""}
+                  type={"image"}
+                  value={Urlposter2}
                 />
               </div>
               <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col justify-center">
@@ -238,7 +277,8 @@ const EditDocumentGSIC = () => {
                 </h3>
                 <UploadFile
                   childToParent={(e: File) => setFollow2(e)}
-                  type={""}
+                  type={"image"}
+                  value={Urlfollow2}
                 />
               </div>
             </div>
@@ -250,7 +290,11 @@ const EditDocumentGSIC = () => {
             <h3 className="header3 text-primaryText self-center mb-3">
               UPLOAD FILES
             </h3>
-            <UploadFile childToParent={(e: File) => setPayment(e)} type={""} />
+            <UploadFile
+              childToParent={(e: File) => setPayment(e)}
+              type={"image"}
+              value={Urlpayment}
+            />
           </div>
         </div>
         <div className="flex justify-center">

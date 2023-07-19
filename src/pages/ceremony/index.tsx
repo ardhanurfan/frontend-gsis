@@ -263,10 +263,11 @@ const Ceremony = () => {
                 </button>
               ) : (
                 <button
-                  className="bg-primaryBlue w-auto p-5 py-2 button-text-mobile lg:button-text rounded-xl text-white hover:bg-seccondaryBlue shadow-lg shadow-blue-500"
+                  disabled
+                  className="bg-seccondaryBlue w-auto p-5 py-2 button-text-mobile lg:button-text rounded-xl text-white"
                   onClick={() => setPopUp(true)}
                 >
-                  Register Here
+                  Already Done
                 </button>
               )}
             </div>

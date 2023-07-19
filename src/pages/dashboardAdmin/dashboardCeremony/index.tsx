@@ -40,7 +40,7 @@ const DashboardCeremony = () => {
     getData();
   }, []);
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <NavbarDashboard />
       {data.length == 0 || dataExport.length == 0 ? (
         <Nothing />
@@ -77,8 +77,10 @@ const DashboardCeremony = () => {
           </div>
         </>
       )}
-      <Footer></Footer>
-    </>
+      <div className="grow flex flex-col justify-end">
+        <Footer></Footer>
+      </div>
+    </div>
   );
 };
 
