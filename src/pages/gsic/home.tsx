@@ -170,7 +170,7 @@ function HomePageGSIC() {
           Timeline
         </h1>
         <div className="overflow-auto w-full mx-auto pb-[22px]">
-          <div className="relative w-[355px] md:w-[760px] lg:w-[975px] 2xl:w-[1300px] h-[900px] 2xl:h-[1140px] mt-[45px] bg-slate-100 mx-auto rounded-xl shadow-lg shadow-slate-500 bg-opacity-30 pb-36">
+          <div className="relative w-[355px] md:w-[760px] lg:w-[975px] 2xl:w-[1300px] h-[1900px] 2xl:h-[2640px] mt-[45px] bg-slate-100 mx-auto rounded-xl shadow-lg shadow-slate-500 bg-opacity-30 pb-36">
             <div className="h-auto w-[38px] flex justify-between absolute m-[4%] lg:m-[2%]">
               <div className="h-[10px] w-[10px] rounded-full bg-primaryGreen"></div>
               <div className="h-[10px] w-[10px] rounded-full bg-primaryYellow"></div>
@@ -180,10 +180,10 @@ function HomePageGSIC() {
               <div className="pt-[25%] md:pt-[15.25%] lg:pt-[10.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center ml-[11.25%] md:ml-[32%] lg:ml-[36%] 2xl:ml-[36%] mt-[9%] md:mt-[4.5%] lg:mt-[3.5%] 2xl:mt-[3.5%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
-                    xx-xx
+                    25-06
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
-                    mm-mm, yyyy
+                    Jul-Ags, 2023
                   </span>
                 </div>
                 <img
@@ -195,16 +195,16 @@ function HomePageGSIC() {
                   EVENT
                 </h3>
                 <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue ">
-                  EARLY <br className="md:hidden" /> BIRD <br /> REGISTRATION
+                  REGISTRATION
                 </h3>
               </div>
               <div className="pt-[1.25%] relative">
-                <div className="absolute flex flex-col items-center justify-center right-0 mr-[11.5%] md:mr-[32%] lg:mr-[36%] 2xl:mr-[36%] mt-[14%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
+                <div className="absolute flex flex-col items-center justify-center right-0 mr-[11.5%] md:mr-[32%] lg:mr-[36%] 2xl:mr-[36%] mt-[24%] md:mt-[11%] lg:mt-[8%] 2xl:mt-[9%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
-                    xx-xx
+                    07
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
-                    mm-mm, yyyy
+                    August, 2023
                   </span>
                 </div>
                 <img
@@ -212,20 +212,20 @@ function HomePageGSIC() {
                   src="assets/Timeline2.svg"
                   alt="p"
                 />
-                <h3 className="pt-[23.75%] md:pt-[12.75%] lg:pt-[9.75%] 2xl:pt-[10.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
+                <h3 className="pt-[33.5%] md:pt-[15%] lg:pt-[11.5%] 2xl:pt-[13%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
                   EVENT
                 </h3>
                 <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen  text-right">
-                  NORMAL <br className="md:hidden" /> REGISTRATION
+                  THEME <br className="md:hidden" /> RELEASE
                 </h3>
               </div>
               <div className="pt-[1.25%] relative">
-                <div className="absolute flex flex-col items-center justify-center ml-[10.25%] md:ml-[31.5%] lg:ml-[35.6%] 2xl:ml-[36%] mt-[18.5%] md:mt-[11%] lg:mt-[8%] 2xl:mt-[9%]">
+                <div className="absolute flex flex-col items-center justify-center ml-[11.5%] md:ml-[32%] lg:ml-[36%] 2xl:ml-[36%] mt-[18.5%] md:mt-[11%] lg:mt-[8%] 2xl:mt-[8.5%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
-                    xx-xx
+                    17
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
-                    mm-mm, yyyy
+                    August, 2023
                   </span>
                 </div>
                 <img
@@ -233,16 +233,160 @@ function HomePageGSIC() {
                   src="assets/Timeline3.svg"
                   alt="p"
                 />
-                <h3 className="pt-[28%] md:pt-[15%] lg:pt-[11.5%] 2xl:pt-[13%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange">
+                <h3 className="pt-[28.5%] md:pt-[15%] lg:pt-[11.5%] 2xl:pt-[13%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange">
                   EVENT
                 </h3>
                 <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange ">
-                  LATE <br className="md:hidden" /> REGISTRATION
+                  PROPOSAL <br className="md:hidden" /> SUBMISSION
                 </h3>
               </div>
-              <h1 className="text-primaryYellow header1-mobile lg:header1 mt-48 text-center">
-                TO BE ANNOUNCED
-              </h1>
+              <div className="pt-[1.25%] relative">
+                <div className="absolute flex flex-col items-center justify-center right-0 mr-[11.5%] md:mr-[32%] lg:mr-[36%] 2xl:mr-[36%] mt-[18.5%] md:mt-[10%] lg:mt-[7.5%] 2xl:mt-[8.5%]">
+                  <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryYellow text-center">
+                    23
+                  </span>
+                  <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryYellow text-center">
+                    August, 2023
+                  </span>
+                </div>
+                <img
+                  className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
+                  src="assets/Timeline4.svg"
+                  alt="p"
+                />
+                <h3 className="pt-[29%] md:pt-[15.25%] lg:pt-[11.5%] 2xl:pt-[12.5%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
+                  EVENT
+                </h3>
+                <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow  text-right">
+                  SEMIFINALISTS <br className="md:hidden" /> ANNOUNCEMENT
+                </h3>
+              </div>
+              <div className="pt-[1.25%] relative">
+                <div className="absolute flex flex-col items-center justify-center ml-[11.5%] md:ml-[32%] lg:ml-[36%] 2xl:ml-[36%] mt-[18.5%] md:mt-[10%] lg:mt-[7.5%] 2xl:mt-[8.75%]">
+                  <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
+                    26
+                  </span>
+                  <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
+                    August, 2023
+                  </span>
+                </div>
+                <img
+                  className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] -mt-[35px] float-left"
+                  src="assets/Timeline1.svg"
+                  alt="p"
+                />
+                <h3 className="pt-[29%] md:pt-[15.25%] lg:pt-[11.5%] 2xl:pt-[12.5%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue">
+                  EVENT
+                </h3>
+                <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue ">
+                  MENTORING <br className="md:hidden" /> DAY 1
+                </h3>
+              </div>
+              <div className="pt-[1.25%] relative">
+                <div className="absolute flex flex-col items-center justify-center right-0 mr-[11.5%] md:mr-[32%] lg:mr-[36%] 2xl:mr-[36%] mt-[18.5%] md:mt-[10%] lg:mt-[8%] 2xl:mt-[8.75%]">
+                  <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
+                    27
+                  </span>
+                  <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
+                    August, 2023
+                  </span>
+                </div>
+                <img
+                  className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
+                  src="assets/Timeline2.svg"
+                  alt="p"
+                />
+                <h3 className="pt-[29%] md:pt-[15.25%] lg:pt-[11.75%] 2xl:pt-[12.5%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
+                  EVENT
+                </h3>
+                <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen  text-right">
+                  MENTORING <br className="md:hidden" /> DAY 2
+                </h3>
+              </div>
+              <div className="pt-[1.25%] relative">
+                <div className="absolute flex flex-col items-center justify-center ml-[8.25%] md:ml-[30.5%] lg:ml-[35%] mt-[18.5%] md:mt-[10%] lg:mt-[7.5%] 2xl:mt-[8.75%]">
+                  <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
+                    07
+                  </span>
+                  <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
+                    September, 2023
+                  </span>
+                </div>
+                <img
+                  className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] -mt-[35px] float-left"
+                  src="assets/Timeline3.svg"
+                  alt="p"
+                />
+                <h3 className="pt-[29%] md:pt-[15.25%] lg:pt-[11.5%] 2xl:pt-[12.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange">
+                  EVENT
+                </h3>
+                <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange ">
+                  PITCHING <br className="md:hidden" /> DAY
+                </h3>
+              </div>
+              <div className="pt-[1.25%] relative">
+                <div className="absolute flex flex-col items-center justify-center right-0 mr-[8.25%] md:mr-[30.5%] lg:mr-[35%] mt-[18.5%] md:mt-[10%] lg:mt-[7.5%] 2xl:mt-[8.75%]">
+                  <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryYellow text-center">
+                    30
+                  </span>
+                  <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryYellow text-center">
+                    September, 2023
+                  </span>
+                </div>
+                <img
+                  className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
+                  src="assets/Timeline4.svg"
+                  alt="p"
+                />
+                <h3 className="pt-[29%] md:pt-[15.25%] lg:pt-[11.5%] 2xl:pt-[13%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
+                  EVENT
+                </h3>
+                <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow  text-right">
+                  FINALISTS <br className="md:hidden" /> ANNOUNCEMENT
+                </h3>
+              </div>
+              <div className="pt-[1.25%] relative">
+                <div className="absolute flex flex-col items-center justify-center ml-[8.25%] md:ml-[30.5%] lg:ml-[35%] mt-[18.5%] md:mt-[10%] lg:mt-[7.5%] 2xl:mt-[8.75%]">
+                  <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
+                    08-30
+                  </span>
+                  <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
+                    September, 2023
+                  </span>
+                </div>
+                <img
+                  className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] ml-[5%] md:ml-[29%] lg:ml-[33.7%] -mt-[35px] float-left"
+                  src="assets/Timeline1.svg"
+                  alt="p"
+                />
+                <h3 className="pt-[29%] md:pt-[15.25%] lg:pt-[11.5%] 2xl:pt-[12.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue">
+                  EVENT
+                </h3>
+                <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue ">
+                  IMPLEMENTING <br className="md:hidden" /> TRIAL
+                </h3>
+              </div>
+              <div className="pt-[1.25%] relative">
+                <div className="absolute flex flex-col items-center justify-center right-0 mr-[11.5%] md:mr-[32%] lg:mr-[36%] 2xl:mr-[36%] mt-[18.5%] md:mt-[10%] lg:mt-[8%] 2xl:mt-[8.75%]">
+                  <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
+                    01
+                  </span>
+                  <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
+                    October, 2023
+                  </span>
+                </div>
+                <img
+                  className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
+                  src="assets/Timeline2.svg"
+                  alt="p"
+                />
+                <h3 className="pt-[29%] md:pt-[15.25%] lg:pt-[11.5%] 2xl:pt-[12.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
+                  EVENT
+                </h3>
+                <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
+                  FINAL REPORT, <br/> AWARDING NIGHT
+                </h3>
+              </div>
             </div>
           </div>
         </div>
@@ -283,11 +427,12 @@ function HomePageGSIC() {
           </div>
         </div>
         <div className="w-auto h-auto mt-20">
-          <div className="flex flex-col items-center mt-14 pb-14">
-            <h1 className="header1-mobile lg:header1 text-primaryText text-center mb-9">
+          <div className="flex flex-col items-center mt-14 pb-14 gap-9">
+            <h1 className="header1-mobile lg:header1 text-primaryText text-center">
               Contact Person
             </h1>
-            <ContactList line={""} wa={""} />
+            <ContactList line={"Davina: rdavinasyarlaa"} wa={"Davina: 085767651073"} />
+            <ContactList line={"Lia: cifoliaz"} wa={"Lia: 087757851939"} />
           </div>
         </div>
         <Footer />
