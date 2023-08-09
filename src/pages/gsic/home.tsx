@@ -180,7 +180,7 @@ function HomePageGSIC() {
               <div className="pt-[25%] md:pt-[15.25%] lg:pt-[10.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center ml-[11.25%] md:ml-[32%] lg:ml-[36%] 2xl:ml-[36%] mt-[9%] md:mt-[4.5%] lg:mt-[3.5%] 2xl:mt-[3.5%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
-                    25-06
+                    24-17
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
                     Jul-Ags, 2023
@@ -222,7 +222,7 @@ function HomePageGSIC() {
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center ml-[11.5%] md:ml-[32%] lg:ml-[36%] 2xl:ml-[36%] mt-[18.5%] md:mt-[11%] lg:mt-[8%] 2xl:mt-[8.5%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
-                    17
+                    17-20
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
                     August, 2023
@@ -306,7 +306,7 @@ function HomePageGSIC() {
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center ml-[8.25%] md:ml-[30.5%] lg:ml-[35%] mt-[18.5%] md:mt-[10%] lg:mt-[7.5%] 2xl:mt-[8.75%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
-                    07
+                    04
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
                     September, 2023
@@ -327,7 +327,7 @@ function HomePageGSIC() {
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center right-0 mr-[8.25%] md:mr-[30.5%] lg:mr-[35%] mt-[18.5%] md:mt-[10%] lg:mt-[7.5%] 2xl:mt-[8.75%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryYellow text-center">
-                    30
+                    07
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryYellow text-center">
                     September, 2023
@@ -384,7 +384,7 @@ function HomePageGSIC() {
                   EVENT
                 </h3>
                 <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
-                  FINAL REPORT, <br/> AWARDING NIGHT
+                  FINAL REPORT, <br /> AWARDING NIGHT
                 </h3>
               </div>
             </div>
@@ -403,7 +403,13 @@ function HomePageGSIC() {
                 *To particiapte in any event, first you must create an account
               </p>
             </div>
-            <div className="flex justify-center items-center mt-10">
+            <div className="flex justify-center items-center mt-5 lg:mt-10 flex-col gap-10">
+              <a
+                href="https://docs.google.com/document/d/1ivKkNr0nGGYaqcM_-doxDIS1xUCWF0F8ss44_LpW1vU"
+                className="cursor-pointer button-text-mobile lg:button-text bg-primaryOrange hover:bg-seccondaryOrange text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-orange-500"
+              >
+                Guidebook
+              </a>
               {isRegistered ? (
                 <button
                   disabled
@@ -431,7 +437,10 @@ function HomePageGSIC() {
             <h1 className="header1-mobile lg:header1 text-primaryText text-center">
               Contact Person
             </h1>
-            <ContactList line={"Davina: rdavinasyarlaa"} wa={"Davina: 085767651073"} />
+            <ContactList
+              line={"Davina: rdavinasyarlaa"}
+              wa={"Davina: 085767651073"}
+            />
             <ContactList line={"Lia: cifoliaz"} wa={"Lia: 087757851939"} />
           </div>
         </div>
