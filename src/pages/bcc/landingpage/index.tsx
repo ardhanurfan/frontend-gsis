@@ -126,7 +126,7 @@ const BCC = () => {
       <div className="w-full h-auto bg-cover bg-[url(./assets/Background_BCC.svg)]">
         <div className="w-[90%] max-w-[1159px] pt-[150px] lg:pt-[200px] mx-auto text-center">
           <h1 className="header1-mobile lg:header1 text-primaryText">
-            Ganesha International Bussiness Case Competition (GIBCC)
+            Ganesha International Collaborative Case Competition
           </h1>
         </div>
         <div className="w-auto h-auto mx-auto pt-5">
@@ -165,10 +165,10 @@ const BCC = () => {
               </div>
               <div className="flex items-center m-[33px] lg:mr-[48px] text-justify body-text text-primaryText">
                 <p>
-                  The International Business case competition is an event where
-                  international participants compete to come up with the best
-                  solutions to real-life business problems within the scope of
-                  art, business, and technology.
+                  The Ganesha International Collaborative Case Competition is an
+                  event where international participants compete to come up with
+                  the best solutions to real-life business problems within the
+                  scope of art, business, and technology.
                 </p>
               </div>
             </div>
@@ -332,7 +332,7 @@ const BCC = () => {
                     <div className="pt-[25%] md:pt-[15.25%] lg:pt-[10.25%] relative">
                       <div className="absolute flex flex-col items-center justify-center ml-[11.25%] md:ml-[32%] lg:ml-[36%] 2xl:ml-[36%] mt-[9%] md:mt-[4.5%] lg:mt-[3.5%] 2xl:mt-[3.5%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
-                          14-20
+                          18-23
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
                           August, 2023
@@ -354,7 +354,7 @@ const BCC = () => {
                     <div className="pt-[1.25%] relative">
                       <div className="absolute flex flex-col items-center justify-center right-0 mr-[11.5%] md:mr-[32%] lg:mr-[36%] 2xl:mr-[36%] mt-[14%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
-                          21-27
+                          21
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
                           August, 2023
@@ -369,16 +369,17 @@ const BCC = () => {
                         EVENT
                       </h3>
                       <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen  text-right">
-                        NORMAL <br className="md:hidden" /> REGISTRATION
+                        PRELIMINARY <br className="md:hidden" /> CASE <br />{" "}
+                        DISTRIBUTION
                       </h3>
                     </div>
                     <div className="pt-[1.25%] relative">
-                      <div className="absolute flex flex-col items-center justify-center ml-[10.25%] md:ml-[31.5%] lg:ml-[35.6%] 2xl:ml-[36%] mt-[18.5%] md:mt-[11%] lg:mt-[8%] 2xl:mt-[9%]">
+                      <div className="absolute flex flex-col items-center justify-center ml-[13.55%] md:ml-[33.5%] lg:ml-[36.8%] 2xl:ml-[37%] mt-[14%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
-                          28-03
+                          18
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
-                          Ags-Sept 2023
+                          Sept 2023
                         </span>
                       </div>
                       <img
@@ -390,16 +391,17 @@ const BCC = () => {
                         EVENT
                       </h3>
                       <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange ">
-                        LATE <br className="md:hidden" /> REGISTRATION
+                        PROPOSAL & <br className="md:hidden" /> DECK <br />{" "}
+                        SUBMISSION
                       </h3>
                     </div>
                     <div className="pt-[1.25%] relative">
-                      <div className="absolute flex flex-col items-center justify-center right-0 mr-[10.25%] md:mr-[31.5%] lg:mr-[35.6%] 2xl:mr-[35.5%] mt-[18.5%] md:mt-[10%] lg:mt-[7.5%] 2xl:mt-[8.75%]">
+                      <div className="absolute flex flex-col items-center justify-center right-0 mr-[14%] md:mr-[33%] lg:mr-[37%] 2xl:mr-[36.5%] mt-[10%] md:mt-[6%] lg:mt-[4%] 2xl:mt-[5%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryYellow text-center">
-                          21-04
+                          19-23
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryYellow text-center">
-                          Ags-Sept, 2023
+                          Sept, 2023
                         </span>
                       </div>
                       <img
@@ -407,21 +409,21 @@ const BCC = () => {
                         src="assets/Timeline4.svg"
                         alt="p"
                       />
-                      <h3 className="pt-[29%] md:pt-[15.25%] lg:pt-[11.5%] 2xl:pt-[12.5%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
+                      <h3 className="pt-[24%] md:pt-[13.25%] lg:pt-[10.5%] 2xl:pt-[12.5%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
                         EVENT
                       </h3>
                       <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow  text-right">
                         PRELIMINARY <br className="md:hidden" /> CASE <br />{" "}
-                        DISTRIBUTION
+                        ASSESSMENT
                       </h3>
                     </div>
                     <div className="pt-[1.25%] relative">
-                      <div className="absolute flex flex-col items-center justify-center ml-[8.75%] md:ml-[30.75%] lg:ml-[35%] 2xl:ml-[35%] mt-[13%] md:mt-[8.5%] lg:mt-[5.56%] 2xl:mt-[7%]">
+                      <div className="absolute flex flex-col items-center justify-center ml-[13.55%] md:ml-[33.5%] lg:ml-[36.8%] 2xl:ml-[37%] mt-[10%] md:mt-[6%] lg:mt-[4%] 2xl:mt-[3.6%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
-                          14
+                          24
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
-                          September, 2023
+                          Sept, 2023
                         </span>
                       </div>
                       <img
@@ -433,17 +435,16 @@ const BCC = () => {
                         EVENT
                       </h3>
                       <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue ">
-                        PROPOSAL & <br className="md:hidden" /> DECK <br />{" "}
-                        DISTRIBUTION
+                        FINALIST <br className="md:hidden" /> ANNOUNCEMENT
                       </h3>
                     </div>
                     <div className="pt-[1.25%] relative">
-                      <div className="absolute flex flex-col items-center justify-center right-0 mr-[8.25%] md:mr-[30.5%] lg:mr-[35%] mt-[14%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
+                      <div className="absolute flex flex-col items-center justify-center right-0 mr-[14.25%] md:mr-[33.5%] lg:mr-[37%] mt-[14%] md:mt-[8%] lg:mt-[5%] 2xl:mt-[5%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
-                          23
+                          25
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
-                          September, 2023
+                          Sep, 2023
                         </span>
                       </div>
                       <img
@@ -455,16 +456,17 @@ const BCC = () => {
                         EVENT
                       </h3>
                       <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen  text-right">
-                        FINALIST <br className="md:hidden" /> ANNOUNCEMENT
+                        FINALIST <br />
+                        TECHNICAL MEETING
                       </h3>
                     </div>
                     <div className="pt-[1.25%] relative">
-                      <div className="absolute flex flex-col items-center justify-center ml-[8.25%] md:ml-[30.5%] lg:ml-[35%] mt-[18%] lg:mt-[6%] 2xl:mt-[8.3%]">
+                      <div className="absolute flex flex-col items-center justify-center ml-[13.55%] md:ml-[33.5%] lg:ml-[36.8%] 2xl:ml-[37%] mt-[13%] md:mt-[8%] lg:mt-[3%] 2xl:mt-[5%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
-                          25
+                          01
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
-                          September, 2023
+                          Okt, 2023
                         </span>
                       </div>
                       <img
@@ -476,30 +478,7 @@ const BCC = () => {
                         EVENT
                       </h3>
                       <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange ">
-                        TECHNICAL <br className="md:hidden" /> MEETING <br />{" "}
-                        FINALIST
-                      </h3>
-                    </div>
-                    <div className="pt-[1.25%] relative">
-                      <div className="absolute flex flex-col items-center justify-center right-0 mr-[8.25%] md:mr-[30.5%] lg:mr-[35%] mt-[14%] md:mt-[9%] lg:mt-[6%] 2xl:mt-[6.8%]">
-                        <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryYellow text-center">
-                          30
-                        </span>
-                        <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryYellow text-center">
-                          September, 2023
-                        </span>
-                      </div>
-                      <img
-                        className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
-                        src="assets/Timeline4.svg"
-                        alt="p"
-                      />
-                      <h3 className="pt-[23.25%] md:pt-[12.75%] lg:pt-[9.25%] 2xl:pt-[10.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
-                        EVENT
-                      </h3>
-                      <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow  text-right">
                         SHARING SESSION, <br /> FINAL PITCHING, <br /> AWARDING
-                        DAY
                       </h3>
                     </div>
                   </div>
@@ -520,7 +499,13 @@ const BCC = () => {
                   *To particiapte in any event, first you must create an account
                 </p>
               </div>
-              <div className="flex justify-center items-center mt-10">
+              <div className="flex justify-center items-center mt-5 lg:mt-10 flex-col gap-10">
+                <a
+                  href="https://bit.ly/ICCC2023_GSIS"
+                  className="cursor-pointer button-text-mobile lg:button-text bg-primaryOrange hover:bg-seccondaryOrange text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-orange-500"
+                >
+                  Guidebook
+                </a>
                 {isRegistered ? (
                   <button
                     disabled
@@ -531,11 +516,10 @@ const BCC = () => {
                 ) : (
                   <button
                     onClick={goToRegistration}
-                    disabled
                     type="button"
                     className="cursor-pointer button-text-mobile lg:button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
                   >
-                    Coming Soon
+                    Register Here
                   </button>
                 )}
               </div>
@@ -549,7 +533,7 @@ const BCC = () => {
               <h1 className="header1-mobile lg:header1 text-primaryText text-center mb-9">
                 Contact Person
               </h1>
-              <ContactList line={""} wa={""} />
+              <ContactList wa={"Amanda Daniswara: 085921543278"} />
             </div>
           </div>
         </div>
