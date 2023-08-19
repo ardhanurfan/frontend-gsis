@@ -56,8 +56,7 @@ const RegisterBCC = () => {
           </div>
           <div className="pt-[50px] lg:pt-[100px] max-w-[1159px] mx-auto text-center">
             <h1 className="w-auto header1-mobile lg:header1 text-primaryText">
-              Ganesha International Bussiness Case Competition (GIBCC)
-              Registration
+              Ganesha International Collaborative Case Competition Registration
             </h1>
           </div>
           <div className="mx-10 lg:mx-20 mt-9 lg:mt-20 w-auto h-auto mb-10">
