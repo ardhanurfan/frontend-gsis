@@ -2,18 +2,36 @@ import { Toaster } from "react-hot-toast";
 import UploadFile from "../../../../components/upload-file/upload-file";
 import Footer from "../../../../components/footer";
 import { NotifyStatus } from "../../../../components/toast_pop_up/toast";
-import { useState } from "react";
-import { postWithAuth } from "../../../../API/api";
+import { useEffect, useState } from "react";
+import { getWithAuth, postWithAuth } from "../../../../API/api";
 import { useNavigate } from "react-router-dom";
 import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
 
 const EditSubmissionBCC = () => {
   const [filePdf, setFilePdf] = useState<File | null>(null);
+  const [fileUrl, setfileUrl] = useState("");
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
   const token = localStorage.getItem("access_token");
+  const getData = async () => {
+    if (token) {
+      try {
+        const user = await getWithAuth("user", token);
+        const id = user.data?.data.id;
+        const response = await getWithAuth("bcc-user?user_id=" + id, token);
+        var data = response.data.data;
+        setfileUrl(data.papper_url);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   const editData = async () => {
     setLoading(true);
@@ -51,6 +69,7 @@ const EditSubmissionBCC = () => {
               setFilePdf(e);
             }}
             type={"file"}
+            value={fileUrl}
           />
         </div>
         <div className="flex justify-center mt-10">

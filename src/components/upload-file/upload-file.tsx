@@ -18,7 +18,7 @@ const UploadFile = ({ type, childToParent, value }: DropzoneProps) => {
     };
   } else if (type == "file") {
     accept = {
-      "application/*": [".pdf"],
+      "application/*": [".pdf", ".zip"],
     };
   } else {
     accept = {
