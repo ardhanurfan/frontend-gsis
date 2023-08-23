@@ -320,7 +320,7 @@ const Navbar = () => {
                       className="block w-full bg-transparent text-sm text-primaryBlue hover:text-seccondaryBlue"
                       href="/bcc"
                     >
-                      Bussiness Case Competition
+                      Ganesha International Collaborative Case Competition
                     </a>
                   </li>
                 </ul>

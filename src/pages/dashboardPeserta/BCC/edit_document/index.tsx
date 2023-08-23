@@ -3,8 +3,8 @@ import UploadFile from "../../../../components/upload-file/upload-file";
 import Footer from "../../../../components/footer";
 import { NotifyStatus } from "../../../../components/toast_pop_up/toast";
 import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
-import { postWithAuth } from "../../../../API/api";
-import { useState } from "react";
+import { getWithAuth, postWithAuth } from "../../../../API/api";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const EditDocumentBCC = () => {
@@ -12,6 +12,10 @@ const EditDocumentBCC = () => {
   const [follow, setFollow] = useState<File | null>(null);
   const [poster, setPoster] = useState<File | null>(null);
   const [payment, setPayment] = useState<File | null>(null);
+  const [ktmUrl, setKtmUrl] = useState("");
+  const [followUrl, setFollowUrl] = useState("");
+  const [posterUrl, setPosterUrl] = useState("");
+  const [paymentUrl, setPaymentUrl] = useState("");
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
@@ -43,6 +47,28 @@ const EditDocumentBCC = () => {
       }
     }
   };
+
+  const getData = async () => {
+    if (token) {
+      try {
+        const user = await getWithAuth("user", token);
+        const id = user.data?.data.id;
+        const response = await getWithAuth("bcc-user?user_id=" + id, token);
+        var data = response.data.data;
+        setFollowUrl(data.ss_follow_url);
+        setPosterUrl(data.ss_poster_url);
+        setKtmUrl(data.ktm_url);
+        setPaymentUrl(data.payment_url);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <>
       <Toaster />
@@ -51,29 +77,36 @@ const EditDocumentBCC = () => {
         <h1 className="header1-mobile lg:header1 text-primaryText mb-7">
           Edit Document
         </h1>
-        <div className="grid grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-x-[169px]">
+        <div className="grid grid-rows-4 lg:grid-cols-2 lg:grid-rows-2">
           <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col items-center justify-center">
             <label
-              className="header3-mobile self-start lg:header3 mb-[21px] text-primaryBlue"
+              className="header3-mobile self-start lg:header3 text-primaryBlue"
               htmlFor=""
             >
               Student ID Card
             </label>
+            <p className="text-error text-start w-full mb-2 text-sm">
+              Please merge all members' student id card into 1 file (.zip, .pdf)
+            </p>
             <h3 className="header3 text-primaryText mb-3">UPLOAD FILES</h3>
             <UploadFile
               childToParent={(e: File) => {
                 setKtm(e);
               }}
-              type={""}
+              type={"file"}
+              value={ktmUrl}
             />
           </div>
           <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col items-center justify-center">
             <label
-              className="header3-mobile self-start lg:header3 mb-[21px] lg:mb-[6px] text-primaryBlue"
+              className="header3-mobile self-start lg:header3 text-primaryBlue"
               htmlFor=""
             >
               Proof of Following GSIS Instagram
             </label>
+            <p className="text-error text-start w-full mb-2 text-sm">
+              Please merge all members' proof into 1 file (.zip, .pdf)
+            </p>
             <h3 className="header3 text-primaryText mb-3 lg:mb-[5px]">
               UPLOAD FILES
             </h3>
@@ -81,22 +114,27 @@ const EditDocumentBCC = () => {
               childToParent={(e: File) => {
                 setFollow(e);
               }}
-              type={""}
+              type={"file"}
+              value={followUrl}
             />
           </div>
           <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col items-center justify-center">
             <label
-              className="header3-mobile self-start lg:header3 mb-[21px] text-primaryBlue"
+              className="header3-mobile self-start lg:header3 text-primaryBlue"
               htmlFor=""
             >
               Proof of Poster Upload
             </label>
+            <p className="text-error text-start w-full mb-2 text-sm">
+              Please merge all members' proof into 1 file (.zip, .pdf)
+            </p>
             <h3 className="header3 text-primaryText mb-3">UPLOAD FILES</h3>
             <UploadFile
               childToParent={(e: File) => {
                 setPoster(e);
               }}
-              type={""}
+              type={"file"}
+              value={posterUrl}
             />
           </div>
           <div className="w-[90%] max-w-sm mx-auto pt-[14px] flex flex-col items-center justify-center">
@@ -111,7 +149,8 @@ const EditDocumentBCC = () => {
               childToParent={(e: File) => {
                 setPayment(e);
               }}
-              type={""}
+              type={"image"}
+              value={paymentUrl}
             />
           </div>
         </div>

@@ -15,7 +15,7 @@ const RegisterBCC = () => {
   const [follow, setFollow] = useState<File | null>(null);
   const [poster, setPoster] = useState<File | null>(null);
   const [payment, setPayment] = useState<File | null>(null);
-  const [stream, setStream] = useState("");
+  const [stream] = useState("TECHNOLOGY");
 
   const token = localStorage.getItem("access_token");
 
@@ -60,11 +60,11 @@ const RegisterBCC = () => {
             </h1>
           </div>
           <div className="mx-10 lg:mx-20 mt-9 lg:mt-20 w-auto h-auto mb-10">
-            <label htmlFor="stream" className=" text-primaryBlue field-text">
+            {/* <label htmlFor="stream" className=" text-primaryBlue field-text">
               Streams
             </label>
-            <form className="mt-2" id="stream">
-              <div className="select relative cursor-pointer button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto max-w-[214px] rounded-lg flex justify-around items-center shadow-lg shadow-blue-500">
+            <form className="mt-2" id="stream"> */}
+            {/* <div className="select relative cursor-pointer button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto max-w-[214px] rounded-lg flex justify-around items-center shadow-lg shadow-blue-500">
                 <select
                   className="small w-full bg-primaryBlue button-text text-white cursor-pointer outline-none shadow-none border-0 rounded-lg flex items-center justify-between"
                   name="select"
@@ -84,55 +84,65 @@ const RegisterBCC = () => {
                   <option value="ART">Art</option>
                   <option value="BUSINESS">Business</option>
                 </select>
-              </div>
-            </form>
+              </div> */}
+            {/* </form> */}
           </div>
           <div className="flex flex-col lg:flex-row justify-center items-center gap-[50px] mx-3">
             <div className="w-[90%] max-w-[500px] mx-auto pt-[14px] flex flex-col items-center justify-center">
               <label
-                className="header3-mobile self-start lg:header3 mb-[21px] lg:mb-[6px] text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
+                className="header3-mobile self-start lg:header3 text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
                 htmlFor=""
               >
                 Student ID Card
               </label>
+              <p className="text-error text-start w-full mb-2 text-sm">
+                Please merge all members' student id card into 1 file (.zip,
+                .pdf)
+              </p>
               <h3 className="header3 text-primaryText mb-3 lg:mb-[5px]">
                 UPLOAD FILES
               </h3>
               <UploadFile
                 childToParent={(e: File) => setKtm(e)}
-                type={"image"}
+                type={"file"}
               />
             </div>
             <div className="w-[90%] max-w-[500px] mx-auto pt-[14px] flex flex-col items-center justify-center">
               <label
-                className="header3-mobile self-start lg:header3 mb-[21px] lg:mb-[6px] text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
+                className="header3-mobile self-start lg:header3 text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
                 htmlFor=""
               >
                 Proof of Following GSIS Instagram
               </label>
+              <p className="text-error text-start w-full mb-2 text-sm">
+                Please merge all members' proof into 1 file (.zip, .pdf)
+              </p>
               <h3 className="header3 text-primaryText mb-3 lg:mb-[5px]">
                 UPLOAD FILES
               </h3>
               <UploadFile
                 childToParent={(e: File) => setFollow(e)}
-                type={"image"}
+                type={"file"}
               />
             </div>
           </div>
           <div className="flex flex-col lg:flex-row justify-center items-center gap-[50px] mt-[50px] mx-3">
             <div className="w-[90%] max-w-[500px] mx-auto pt-[14px] flex flex-col items-center justify-center">
               <label
-                className="header3-mobile self-start lg:header3 mb-[21px] lg:mb-[6px] text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
+                className="header3-mobile self-start lg:header3 text-primaryBlue after:content-['*'] after:text-error after:ml-0.5"
                 htmlFor=""
               >
                 Proof of Poster Upload
               </label>
+              <p className="text-error text-start w-full mb-2 text-sm">
+                Please merge all members' proof into 1 file (.zip, .pdf)
+              </p>
               <h3 className="header3 text-primaryText mb-3 lg:mb-[5px]">
                 UPLOAD FILES
               </h3>
               <UploadFile
                 childToParent={(e: File) => setPoster(e)}
-                type={"image"}
+                type={"file"}
               />
             </div>
             <div className="w-[90%] max-w-[500px] mx-auto pt-[14px] flex flex-col items-center justify-center">

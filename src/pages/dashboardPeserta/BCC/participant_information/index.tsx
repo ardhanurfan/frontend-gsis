@@ -7,9 +7,9 @@ import Footer from "../../../../components/footer";
 import NavbarDashboard from "../../../../components/navbarDashboard/NavbarDashboard";
 import { getWithAuth } from "../../../../API/api";
 import { Toaster } from "react-hot-toast";
-import str from "../../../../assets/tech.svg";
-import art from "../../../../assets/art.svg";
-import bus from "../../../../assets/business.svg";
+// import str from "../../../../assets/tech.svg";
+// import art from "../../../../assets/art.svg";
+// import bus from "../../../../assets/business.svg";
 import Nothing from "../../../addingPages/nothing";
 
 const ParticipantBCC = () => {
@@ -67,6 +67,30 @@ const ParticipantBCC = () => {
               </div>
               <div className="flex flex-col gap-[5px]">
                 <h3 className="header3-mobile lg:header3 text-primaryBlue">
+                  University
+                </h3>
+                <p className="small lg:body-text text-primaryBlue">
+                  {data.user.university}
+                </p>
+              </div>
+              <div className="flex flex-col gap-[5px]">
+                <h3 className="header3-mobile lg:header3 text-primaryBlue">
+                  Email
+                </h3>
+                <p className="small lg:body-text text-primaryBlue">
+                  {data.user.email}
+                </p>
+              </div>
+              <div className="flex flex-col gap-[5px]">
+                <h3 className="header3-mobile lg:header3 text-primaryBlue">
+                  Phone
+                </h3>
+                <p className="small lg:body-text text-primaryBlue">
+                  {data.user.phone}
+                </p>
+              </div>
+              {/* <div className="flex flex-col gap-[5px]">
+                <h3 className="header3-mobile lg:header3 text-primaryBlue">
                   Streams
                 </h3>
                 <div>
@@ -83,7 +107,7 @@ const ParticipantBCC = () => {
                     <p className="small text-primaryBlue">{data.stream}</p>
                   </span>
                 </div>
-              </div>
+              </div> */}
               <div className="flex flex-col lg:flex-row gap-[5px] lg:gap-[20px] mb-[14px]">
                 <h3 className="header3-mobile lg:header3 text-primaryBlue">
                   Student ID Card
