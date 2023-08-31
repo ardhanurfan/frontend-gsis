@@ -132,6 +132,14 @@ const ParticipantBCC = () => {
                 </h3>
                 <Status status={data.approve_payment} />
               </div>
+              <div className="flex flex-col gap-[5px] mb-[14px]">
+                <h3 className="header3-mobile lg:header3 text-primaryBlue">
+                  Referral Code
+                </h3>
+                <p className="text-primaryBlue">
+                  {data.referral ?? "Not have referral code"}
+                </p>
+              </div>
               <a
                 href="/submission-bcc"
                 className="bg-primaryBlue hover:bg-seccondaryBlue flex justify-center items-center mx-auto w-60 h-[25px] lg:h-[40px] button-text-mobile lg:button-text text-white rounded-lg py-4"

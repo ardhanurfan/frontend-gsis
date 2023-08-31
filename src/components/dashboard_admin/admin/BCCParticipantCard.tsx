@@ -244,6 +244,12 @@ const BCCParticipantCard = ({ row }: BCCParticipantCardProps) => {
                 )}
               </div>
             </div>
+            <div className="flex flex-col w-[120px]">
+              <p className="text-[#015CBA] body-text">Referral Code</p>
+              <p className="text-[#4F9BFD] small">
+                {row.referral ?? "Not have referral code"}
+              </p>
+            </div>
           </div>
           <p className="text-[#015CBA] body-text">Submission</p>
           <div className="flex items-center gap-1 text-[#4F9BFD] small mb-4">

@@ -24,11 +24,11 @@ const DashboardOverview = () => {
     getData();
   }, []);
   return (
-    <>
+    <div className="w-full h-min-screen">
       <NavbarDashboard />
-      {data == null ? <Nothing /> : <Overview />}
+      {data == null || data.length == 0 ? <Nothing /> : <Overview />}
       <Footer></Footer>
-    </>
+    </div>
   );
 };
 
