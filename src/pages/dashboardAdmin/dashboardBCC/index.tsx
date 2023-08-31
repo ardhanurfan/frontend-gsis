@@ -30,6 +30,7 @@ const DashboardBCC = () => {
         ktm_url: row.ktm_url,
         ss_follow_url: row.ss_follow_url,
         ss_poster_url: row.ss_poster_url,
+        referral: row.referral,
       }));
       setDataExport(exportData as any);
     } catch (error) {

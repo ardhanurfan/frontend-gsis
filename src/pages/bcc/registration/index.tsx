@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { postWithAuth } from "../../../API/api";
 import { NotifyStatus } from "../../../components/toast_pop_up/toast";
 import { Toaster } from "react-hot-toast";
+import TextField from "../../../components/account/text-field";
 
 const RegisterBCC = () => {
   const [loading, setLoading] = useState(false);
@@ -15,7 +16,7 @@ const RegisterBCC = () => {
   const [follow, setFollow] = useState<File | null>(null);
   const [poster, setPoster] = useState<File | null>(null);
   const [payment, setPayment] = useState<File | null>(null);
-  const [stream] = useState("TECHNOLOGY");
+  const [referral, setReferral] = useState("");
 
   const token = localStorage.getItem("access_token");
 
@@ -25,7 +26,7 @@ const RegisterBCC = () => {
       await postWithAuth(
         "register-bcc-user",
         {
-          stream: stream,
+          referral: referral,
           ktm_url: ktm,
           ss_follow_url: follow,
           ss_poster_url: poster,
@@ -161,6 +162,23 @@ const RegisterBCC = () => {
               />
             </div>
           </div>
+          <div className="w-[90%] max-w-[500px] mx-auto mt-12 flex flex-col items-center justify-center">
+            <label
+              className="header3-mobile self-start lg:header3 mb-[21px] lg:mb-[6px] text-primaryBlue"
+              htmlFor=""
+            >
+              Referral Code
+            </label>
+            <TextField
+              value={referral}
+              onChange={(val) => setReferral(val.target.value)}
+              label={""}
+              placeholder={"Ambassador Referral Code (optional)"}
+              type={"text"}
+              style={"mb-[38px]"}
+            ></TextField>
+          </div>
+
           <div className="flex justify-center items-center mt-10">
             <button
               disabled={loading}

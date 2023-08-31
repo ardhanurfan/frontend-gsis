@@ -264,7 +264,7 @@ const NavbarDashboard = () => {
                     : "#"
                 }
               >
-                BCC
+                GICCC
               </a>
               <a
                 className="cursor-pointer hover:text-seccondaryBlue w-full text-center"
