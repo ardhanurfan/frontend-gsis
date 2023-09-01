@@ -17,13 +17,13 @@ const DashboardGSIC = () => {
   const getData = async () => {
     try {
       const response = await get("gsic");
-      console.log(response);
       setData(response?.data?.data);
 
       const exportData = response.data?.data.map((row: any) => ({
         team_id: row.id,
         team_name: row.team_name,
-        submissions: row.submissions[0].url,
+        submissions:
+          row.submissions.length == 0 ? null : row.submissions[0].url,
         payment_url: row.payment_url,
         leader_id: row.leader_id,
         status: row.status,
@@ -42,6 +42,7 @@ const DashboardGSIC = () => {
         email_peserta_3: row.users[2].user.email,
         phone_peserta_3: row.users[2].user.phone,
         university_peserta_3: row.users[2].user.university,
+        referral: row.referral,
       }));
       setDataExport(exportData as any);
     } catch (error) {

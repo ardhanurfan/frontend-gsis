@@ -7,6 +7,7 @@ import SelectComponent from "../../components/SelectComponent";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { postWithAuth } from "../../API/api";
+import TextField from "../../components/account/text-field";
 
 // import ContactList from "../../components/contact_list";
 
@@ -25,6 +26,7 @@ const RegisterGSIC = () => {
   const [followUser2, setFollowUser2] = useState<File | null>(null);
   const [posterUser2, setPosterUser2] = useState<File | null>(null);
   const [payment, setPayment] = useState<File | null>(null);
+  const [referral, setReferral] = useState("");
   const token = localStorage.getItem("access_token");
 
   const handleSubmit = async () => {
@@ -46,6 +48,7 @@ const RegisterGSIC = () => {
           payment_url: payment,
           email_user_1: member[0].value,
           email_user_2: member[1].value,
+          referral: referral,
         },
         token ?? ""
       );
@@ -270,6 +273,22 @@ const RegisterGSIC = () => {
               type={"image"}
             />
           </div>
+        </div>
+        <div className="w-[90%] max-w-[500px] mx-auto mt-12 flex flex-col items-center justify-center">
+          <label
+            className="header3-mobile self-start lg:header3 mb-[21px] lg:mb-[6px] text-primaryBlue"
+            htmlFor=""
+          >
+            Referral Code
+          </label>
+          <TextField
+            value={referral}
+            onChange={(val) => setReferral(val.target.value)}
+            label={""}
+            placeholder={"Ambassador Referral Code (optional)"}
+            type={"text"}
+            style={"mb-[38px]"}
+          ></TextField>
         </div>
         <div className="flex justify-center mt-10">
           <button
