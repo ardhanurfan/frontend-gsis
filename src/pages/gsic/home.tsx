@@ -183,7 +183,7 @@ function HomePageGSIC() {
                     29-06
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
-                    Ags-Sept, 2
+                    Ags-Sept, 2023
                   </span>
                 </div>
                 <img
