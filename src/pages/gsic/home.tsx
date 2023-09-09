@@ -183,7 +183,7 @@ function HomePageGSIC() {
                     29-06
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
-                    Ags-Sept, 2023
+                    Ags-Sept, 2
                   </span>
                 </div>
                 <img
@@ -201,7 +201,7 @@ function HomePageGSIC() {
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center right-0 mr-[8.5%] md:mr-[30.7%] lg:mr-[35%] 2xl:mr-[35%] mt-[18.5%] md:mt-[10.5%] lg:mt-[8%] 2xl:mt-[9%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
-                    07-11
+                    07-15
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
                     September, 2023
@@ -222,7 +222,7 @@ function HomePageGSIC() {
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center ml-[8.5%] md:ml-[30.7%] lg:ml-[35%] 2xl:ml-[35%] mt-[18.5%] md:mt-[11%] lg:mt-[8%] 2xl:mt-[8.5%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
-                    07-11
+                    07-15
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
                     September, 2023
@@ -243,7 +243,7 @@ function HomePageGSIC() {
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center right-0 mr-[8.5%] md:mr-[30.7%] lg:mr-[35%] 2xl:mr-[35%] mt-[18.5%] md:mt-[10%] lg:mt-[7.5%] 2xl:mt-[8.5%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryYellow text-center">
-                    14
+                    18
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryYellow text-center">
                     September, 2023
@@ -264,7 +264,7 @@ function HomePageGSIC() {
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center ml-[8.5%] md:ml-[30.7%] lg:ml-[35%] 2xl:ml-[35%] mt-[18.5%] md:mt-[10%] lg:mt-[7.5%] 2xl:mt-[8.75%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
-                    16
+                    23
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
                     September, 2023
@@ -279,34 +279,13 @@ function HomePageGSIC() {
                   EVENT
                 </h3>
                 <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue ">
-                  MENTORING <br className="md:hidden" /> DAY 1
-                </h3>
-              </div>
-              <div className="pt-[1.25%] relative">
-                <div className="absolute flex flex-col items-center justify-center right-0 mr-[8.5%] md:mr-[30.7%] lg:mr-[35%] 2xl:mr-[35%] mt-[18.5%] md:mt-[10%] lg:mt-[8%] 2xl:mt-[8.75%]">
-                  <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
-                    23
-                  </span>
-                  <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
-                    September, 2023
-                  </span>
-                </div>
-                <img
-                  className="2xl:w-[219px] 2xl:h-[277px] h-[207.75px] w-[164.25px] mr-[5%] md:mr-[29%] lg:mr-[33.7%] -mt-[35px] float-right"
-                  src="assets/Timeline2.svg"
-                  alt="p"
-                />
-                <h3 className="pt-[29%] md:pt-[15.25%] lg:pt-[11.75%] 2xl:pt-[13%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
-                  EVENT
-                </h3>
-                <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen  text-right">
-                  MENTORING <br className="md:hidden" /> DAY 2
+                  MENTORING <br className="md:hidden" /> 1
                 </h3>
               </div>
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center ml-[8.5%] md:ml-[30.7%] lg:ml-[35%] mt-[18.5%] md:mt-[10%] lg:mt-[7.5%] 2xl:mt-[8.75%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
-                    17-28
+                    19-28
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
                     September, 2023
@@ -369,7 +348,7 @@ function HomePageGSIC() {
               <div className="pt-[1.25%] relative">
                 <div className="absolute flex flex-col items-center justify-center right-0 mr-[8.5%] md:mr-[30.7%] lg:mr-[35%] 2xl:mr-[35%] mt-[18.5%] md:mt-[10%] lg:mt-[8%] 2xl:mt-[8.75%]">
                   <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
-                    29
+                    30
                   </span>
                   <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
                     September, 2023
