@@ -330,12 +330,12 @@ const BCC = () => {
                   </div>
                   <div className="relative">
                     <div className="pt-[25%] md:pt-[15.25%] lg:pt-[10.25%] relative">
-                      <div className="absolute flex flex-col items-center justify-center ml-[11.25%] md:ml-[32%] lg:ml-[36%] 2xl:ml-[36%] mt-[9%] md:mt-[4.5%] lg:mt-[3.5%] 2xl:mt-[3.5%]">
+                      <div className="absolute flex flex-col items-center justify-center ml-[10.25%] md:ml-[31.5%] lg:ml-[35.6%] 2xl:ml-[35.6%] mt-[9%] md:mt-[4.5%] lg:mt-[3.5%] 2xl:mt-[3.5%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
-                          18-23
+                          18-16
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
-                          August, 2023
+                          Ags-Sept, 2023
                         </span>
                       </div>
                       <img
