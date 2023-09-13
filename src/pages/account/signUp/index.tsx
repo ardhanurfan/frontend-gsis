@@ -19,6 +19,7 @@ const SignUp = () => {
   const [university, setUniversity] = useState("");
   const [major, setMajor] = useState("");
   const [year, setYear] = useState("");
+  const [check, setCheck] = useState(false);
   const navigate = useNavigate();
 
   // const [isSucces, setIsSucces] = useState(false);
@@ -29,31 +30,35 @@ const SignUp = () => {
     setLoading(true);
 
     try {
-      const response = await post("register", {
-        name: name,
-        email: email,
-        password: password,
-        confirmPassword: confirmPassword,
-        username: username,
-        phone: phone,
-        university: university,
-        major: major,
-        year: year,
-      });
-      const access_token = response?.data?.data?.acess_token;
-      localStorage.setItem("access_token", access_token);
-      setName("");
-      setEmail("");
-      setPassword("");
-      setConfirmPassword("");
-      setUsername("");
-      setPhone("");
-      setUniversity("");
-      setMajor("");
-      setYear("");
-      // setIsSucces(true);
-      // setMessages("Sign Up Succesfully!");
-      navigate("/");
+      if (check) {
+        const response = await post("register", {
+          name: name,
+          email: email,
+          password: password,
+          confirmPassword: confirmPassword,
+          username: username,
+          phone: phone,
+          university: university,
+          major: major,
+          year: year,
+        });
+        const access_token = response?.data?.data?.acess_token;
+        localStorage.setItem("access_token", access_token);
+        setName("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+        setUsername("");
+        setPhone("");
+        setUniversity("");
+        setMajor("");
+        setYear("");
+        // setIsSucces(true);
+        // setMessages("Sign Up Succesfully!");
+        navigate("/");
+      } else {
+        NotifyStatus("Please Check the Statement", false);
+      }
     } catch (error) {
       console.log(error);
       const mess = error as any;
@@ -159,6 +164,17 @@ const SignUp = () => {
                   type={"Year"}
                   onChange={(e: string) => setYear(e)}
                 />
+              </div>
+              <div className="flex mb-[60px] items-center">
+                <input
+                  required
+                  type="checkbox"
+                  checked={check}
+                  onChange={(e) => setCheck(e.target.checked)}
+                />
+                <p className="text-primaryOrange ml-4">
+                  We will use your data for event and partner needs
+                </p>
               </div>
               <div className="flex justify-center">
                 <button
