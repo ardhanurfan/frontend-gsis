@@ -330,12 +330,12 @@ const BCC = () => {
                   </div>
                   <div className="relative">
                     <div className="pt-[25%] md:pt-[15.25%] lg:pt-[10.25%] relative">
-                      <div className="absolute flex flex-col items-center justify-center ml-[10.25%] md:ml-[31.5%] lg:ml-[35.6%] 2xl:ml-[35.6%] mt-[9%] md:mt-[4.5%] lg:mt-[3.5%] 2xl:mt-[3.5%]">
+                      <div className="absolute flex flex-col items-center justify-center ml-[14%] md:ml-[33%] lg:ml-[37%] 2xl:ml-[36%] mt-[9%] md:mt-[4.5%] lg:mt-[3.5%] 2xl:mt-[3.5%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
-                          18-16
+                          18-23
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
-                          Ags-Sept, 2023
+                          Ags, 2023
                         </span>
                       </div>
                       <img
@@ -354,7 +354,7 @@ const BCC = () => {
                     <div className="pt-[1.25%] relative">
                       <div className="absolute flex flex-col items-center justify-center right-0 mr-[11.5%] md:mr-[32%] lg:mr-[36%] 2xl:mr-[36%] mt-[14%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
-                          21
+                          24-30
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
                           August, 2023
@@ -369,17 +369,16 @@ const BCC = () => {
                         EVENT
                       </h3>
                       <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen  text-right">
-                        PRELIMINARY <br className="md:hidden" /> CASE <br />{" "}
-                        DISTRIBUTION
+                        NORMAL <br /> REGISTRATION
                       </h3>
                     </div>
                     <div className="pt-[1.25%] relative">
-                      <div className="absolute flex flex-col items-center justify-center ml-[13.55%] md:ml-[33.5%] lg:ml-[36.8%] 2xl:ml-[37%] mt-[14%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
+                      <div className="absolute flex flex-col items-center justify-center ml-[11%] md:ml-[32%] lg:ml-[35.5%] 2xl:ml-[36%] mt-[18%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
-                          18
+                          31-21
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
-                          Sept 2023
+                          Ags, Sept 2023
                         </span>
                       </div>
                       <img
@@ -391,17 +390,16 @@ const BCC = () => {
                         EVENT
                       </h3>
                       <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange ">
-                        PROPOSAL & <br className="md:hidden" /> DECK <br />{" "}
-                        SUBMISSION
+                        LATE <br /> REGISTRATION
                       </h3>
                     </div>
                     <div className="pt-[1.25%] relative">
-                      <div className="absolute flex flex-col items-center justify-center right-0 mr-[14%] md:mr-[33%] lg:mr-[37%] 2xl:mr-[36.5%] mt-[10%] md:mt-[6%] lg:mt-[4%] 2xl:mt-[5%]">
+                      <div className="absolute flex flex-col items-center justify-center right-0 mr-[14%] md:mr-[33%] lg:mr-[37%] 2xl:mr-[36.5%] mt-[18%] md:mt-[6%] lg:mt-[4%] 2xl:mt-[5%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryYellow text-center">
-                          19-23
+                          23
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryYellow text-center">
-                          Sept, 2023
+                          Sep, 2023
                         </span>
                       </div>
                       <img
@@ -409,18 +407,18 @@ const BCC = () => {
                         src="assets/Timeline4.svg"
                         alt="p"
                       />
-                      <h3 className="pt-[24%] md:pt-[13.25%] lg:pt-[10.5%] 2xl:pt-[12.5%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
+                      <h3 className="pt-[29%] md:pt-[13.25%] lg:pt-[10.5%] 2xl:pt-[12.5%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow text-right">
                         EVENT
                       </h3>
                       <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryYellow  text-right">
-                        PRELIMINARY <br className="md:hidden" /> CASE <br />{" "}
-                        ASSESSMENT
+                        PROPOSAL & <br className="md:hidden" /> DECK <br />{" "}
+                        SUBMISSION
                       </h3>
                     </div>
                     <div className="pt-[1.25%] relative">
-                      <div className="absolute flex flex-col items-center justify-center ml-[13.55%] md:ml-[33.5%] lg:ml-[36.8%] 2xl:ml-[37%] mt-[10%] md:mt-[6%] lg:mt-[4%] 2xl:mt-[3.6%]">
+                      <div className="absolute flex flex-col items-center justify-center ml-[13.55%] md:ml-[33.5%] lg:ml-[36.8%] 2xl:ml-[37%] mt-[13%] md:mt-[6%] lg:mt-[4%] 2xl:mt-[3.6%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryBlue text-center">
-                          24
+                          26
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryBlue text-center">
                           Sept, 2023
@@ -431,7 +429,7 @@ const BCC = () => {
                         src="assets/Timeline1.svg"
                         alt="p"
                       />
-                      <h3 className="pt-[23.85%] md:pt-[12.75%] lg:pt-[9.85%] 2xl:pt-[11%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue">
+                      <h3 className="pt-[24%] md:pt-[12.75%] lg:pt-[9.85%] 2xl:pt-[11%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue">
                         EVENT
                       </h3>
                       <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryBlue ">
@@ -439,9 +437,9 @@ const BCC = () => {
                       </h3>
                     </div>
                     <div className="pt-[1.25%] relative">
-                      <div className="absolute flex flex-col items-center justify-center right-0 mr-[14.25%] md:mr-[33.5%] lg:mr-[37%] mt-[14%] md:mt-[8%] lg:mt-[5%] 2xl:mt-[5%]">
+                      <div className="absolute flex flex-col items-center justify-center right-0 mr-[14.25%] md:mr-[33.5%] lg:mr-[37%] mt-[18%] md:mt-[8%] lg:mt-[5%] 2xl:mt-[5%]">
                         <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryGreen text-center">
-                          25
+                          27
                         </span>
                         <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryGreen text-center">
                           Sep, 2023
@@ -452,7 +450,7 @@ const BCC = () => {
                         src="assets/Timeline2.svg"
                         alt="p"
                       />
-                      <h3 className="pt-[23.85%] md:pt-[12.85%] lg:pt-[11.55%] 2xl:pt-[11%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
+                      <h3 className="pt-[28%] md:pt-[12.85%] lg:pt-[11.55%] 2xl:pt-[11%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen text-right">
                         EVENT
                       </h3>
                       <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryGreen  text-right">
@@ -474,7 +472,7 @@ const BCC = () => {
                         src="assets/Timeline3.svg"
                         alt="p"
                       />
-                      <h3 className="pt-[29%] md:pt-[15.25%] lg:pt-[9.85%] 2xl:pt-[12.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange">
+                      <h3 className="pt-[24%] md:pt-[15.25%] lg:pt-[9.85%] 2xl:pt-[12.75%] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange">
                         EVENT
                       </h3>
                       <h3 className="mt-[12px] font-montserrat text-[18px] font-bold tracking-[0.02em] leading-none 2xl:text-[24px] text-primaryOrange ">
