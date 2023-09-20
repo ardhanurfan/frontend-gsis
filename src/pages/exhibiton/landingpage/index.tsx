@@ -246,7 +246,7 @@ const Exhibition = () => {
                   <div className="pt-[1.25%] relative mb-48">
                     <div className="absolute flex flex-col items-center text-primaryBlue justify-center ml-[8.5%] md:ml-[30.5%] lg:ml-[35%] 2xl:ml-[35%] mt-[13%] md:mt-[8%] lg:mt-[6%] 2xl:mt-[7%]">
                       <span className="font-montserrat 2xl:text-[36px] font-bold text-[24px] text-primaryOrange text-center">
-                        29-30
+                        21-23
                       </span>
                       <span className="font-montserrat font-normal text-[12px] 2xl:text-[16px] text-primaryOrange text-center">
                         September, 2023
