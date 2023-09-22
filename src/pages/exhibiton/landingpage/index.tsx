@@ -4,7 +4,7 @@ import Footer from "../../../components/footer";
 import ContactList from "../../../components/contact_list";
 import Slides from "../../../components/gsic/Slides";
 import Slider from "react-slick";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import { getWithAuth } from "../../../API/api";
@@ -15,19 +15,23 @@ import "./style.css";
 // import d from '../../../assets/VectorAdminProfile.svg'
 
 const Exhibition = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [sliderRef, setSliderRef] = useState<any>(null);
   const [isRegistered, setRegistered] = useState(false);
   const [popUp, setPopUp] = useState(false);
   const token = localStorage.getItem("access_token");
 
-  function goToRegistration() {
-    if (token) {
-      navigate("/register-exhibition");
-    } else {
-      setPopUp(true);
-    }
+  // function goToRegistration() {
+  //   if (token) {
+  //     navigate("/register-exhibition");
+  //   } else {
+  //     setPopUp(true);
+  //   }
+  // }
+
+  function goToAttendance() {
+    window.location.replace('https://docs.google.com/forms/d/e/1FAIpQLScONZkHf9qrid47tMN57tRcbvlKUJ0JwKNOOpIUstUjqIl_dw/viewform');
   }
 
   const cekUser = async () => {
@@ -296,9 +300,9 @@ const Exhibition = () => {
               <button
                 type="button"
                 className="cursor-pointer button-text-mobile lg:button-text bg-primaryBlue hover:bg-seccondaryBlue text-white w-auto rounded-lg px-[21px] py-[6px] flex justify-around items-center shadow-lg shadow-blue-500"
-                onClick={goToRegistration}
+                onClick={goToAttendance}
               >
-                Register Here
+                Mark Attendance
               </button>
             )}
           </div>
